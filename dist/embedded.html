@@ -2,7 +2,7 @@
 <html lang="en" ng-app="mewApp">
 <head>
   <meta charset="utf-8">
-  <title>MyEtherWallet: Open Source JavaScript Client-Side Ubiq Wallet</title>
+  <title>Pyrus: Open Source JavaScript Client-Side Ubiq Wallet</title>
   <link rel="canonical" href="https://www.myetherwallet.com" />
   <meta name="description" content="Ubiq Wallet: Open Source JavaScript Client-Side Ubiq Wallet">
   <meta name="author" content="">

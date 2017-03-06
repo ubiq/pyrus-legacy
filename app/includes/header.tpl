@@ -2,7 +2,7 @@
 <html lang="en" ng-app="mewApp">
 <head>
   <meta charset="utf-8">
-  <title>MyEtherWallet: Open-Source & Client-Side Ubiq Wallet</title>
+  <title>Pyrus: Open-Source & Client-Side Ubiq Wallet</title>
   <link rel="canonical" href="https://www.myetherwallet.com" />
   <meta name="description" content="Open-Source & Client-Side Ubiq Wallet">
 
@@ -22,7 +22,7 @@
 
   <meta property="og:url"         content="https://www.MyEtherWallet.com" />
   <meta property="og:title"       content="When Great Minds Don’t Think Alike" />
-  <meta property="og:description" content="MyEtherWallet: Open-Source & Client-Side Ubiq Wallet" />
+  <meta property="og:description" content="Pyrus: Open-Source & Client-Side Ubiq Wallet" />
   <meta property="og:image"       content="images/fb-myetherwallet.png" />
   <meta property="og:image"       content="images/fb-mewtwo.jpg" />
 </head>
