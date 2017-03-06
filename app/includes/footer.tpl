@@ -12,19 +12,6 @@
       </div>
 
       <div class="col-sm-6 footer-2">
-        <h5> <i aria-hidden="true">💝</i> Donations are always appreciated!</h5>
-        <ul>
-          <li> ETH: <span class="mono wrap">0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8</span></li>
-          <li> BTC: <span class="mono wrap">1MEWT2SGbqtz6mPCgFcnea8XmWV5Z4Wc6</span></li>
-        </ul>
-
-        <h5> <i aria-hidden="true">👫</i> You can also support us by supporting our blockchain-family.</h5><p>Consider using our affiliate links to...</h5>
-        <ul>
-          <li><a aria-label="Swap Ether or Bitcoin via Bity.com" href="https://bity.com/af/jshkb37v" target="_blank">Swap ETH/BTC/EUR/CHF via Bity.com</a></li>
-          <li><a href="https://www.ledgerwallet.com/r/fa4b?path=/products/" target="_blank">Buy a Ledger Nano S</a></li>
-          <li><a href="https://trezor.io/?a=myetherwallet.com" target="_blank">Buy a TREZOR</a></li>
-        </ul>
-
         <h5> <i ng-hide="curLang=='en'">🏅</i> <span translate="Translator_Desc"> Thank you to our translators </span></h5>
         <ul><li>
           <span translate="TranslatorName_1"></span>
@@ -42,14 +29,8 @@
           <li><a aria-label="my ether wallet github" href="https://github.com/kvhnuke/etherwallet" target="_blank">Github: MyEtherWallet.com & CX</a></li>
           <li><a aria-label="our organization on github" href="https://github.com/MyEtherWallet" target="_blank">Github: MyEtherWallet (Org)</a></li>
           <li><a aria-label="twitter" href="https://twitter.com/myetherwallet" target="_blank">Twitter</a></li>
-          <li><a aria-label="facebook" href="https://www.facebook.com/MyEtherWallet/" target="_blank">Facebook</a></li>
         </ul>
 
-        <h5><i aria-hidden="true">🙏</i> Support</h5>
-        <ul>
-          <li><a aria-label="email myetherwallet at gmail.com" href="mailto:myetherwallet@gmail.com" target="_blank">Email</a></li>
-          <li><a aria-label="open a github issue" href="https://github.com/kvhnuke/etherwallet/issues" target="_blank">Github Issue</a></li>
-        </ul>
       </div>
 
     </section></section>
