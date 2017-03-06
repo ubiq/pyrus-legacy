@@ -141,8 +141,8 @@ x_TXT                       : 'TXT-Datei (unverschlüsselt) ',
 /* Header */
 MEW_Warning_1               : 'Bitte prüfe stets die URL, bevor du auf dein Wallet zugreifst oder ein neues Wallet erzeugst. Vorsicht vor Phishing-Seiten! ',
 CX_Warning_1                : 'Stelle sicher, dass du über eine **externe Sicherung** von allen Wallets verfügst, die du hier speicherst. Es gibt viele Möglichkeiten, die dazu führen können, dass deine in dieser Chrome-Extension gespeicherten Daten verloren gehen, z.B. Deinstallation oder Neu-Installation. Diese Extension erleichert den Zugang zu deinen Wallets, ist jedoch keine empfohlene Möglichkeit, diese zu sichern. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ',
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
 /* Footer */
 FOOTER_1                    : 'Ein quelloffenes, browserseitiges Werkzeug zur Erzeugung von Ethereum-Wallets und Versenden von Transaktionen. ',

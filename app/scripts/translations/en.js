@@ -47,9 +47,9 @@ x_TXT                       : 'TXT file (unencrypted) ',
 x_Wallet                    : 'Wallet ',
 
 /* Header */
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 CX_Warning_1                : 'Make sure you have **external backups** of any wallets you store here. Many things could happen that would cause you to lose the data in this Chrome Extension, including uninstalling and reinstalling the extension. This extension is a way to easily access your wallets, **not** a way to back them up. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ',
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
 MEW_Warning_1               : 'Always check the URL before accessing your wallet or creating a new wallet. Beware of phishing sites! ',
 
 /* Footer */

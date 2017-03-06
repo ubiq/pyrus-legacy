@@ -97,8 +97,8 @@ x_Wallet                    : 'Lommebok ',
 /* Header */
 MEW_Warning_1               : 'Sjekk alltid nettsideadressen før du bruker eller oppretter en lommebok. Pass opp for "phishing"-nettsider! ',
 CX_Warning_1                : 'Sørg for at du har **eksterne sikkerhetskopier** av alle lommebøker som du lagrer her. Mye kan hende som vil kunne medføre at du mister informasjonen i denne Chrome-utvidelsen, inkludert avinstallasjon og reinstallasjon av utvidelsen. Denne utvidelsen gir deg enkel tilgang til lommebøkene dine, men er **ikke** en måte å sikkerhetskopiere dem på. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ', /* Intentionally not translated */
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ', /* Intentionally not translated */
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ', /* Intentionally not translated */
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ', /* Intentionally not translated */
 
 /* Footer */
 FOOTER_1                    : 'Et åpen-kildekode-, javascript-, klient-side-verktøy for å opprette Ethereum-lommebøker & sende transaksjoner. ',

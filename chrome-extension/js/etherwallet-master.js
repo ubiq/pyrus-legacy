@@ -7769,8 +7769,8 @@ de.data = {
   /* Header */
   MEW_Warning_1: 'Bitte prüfe stets die URL, bevor du auf dein Wallet zugreifst oder ein neues Wallet erzeugst. Vorsicht vor Phishing-Seiten! ',
   CX_Warning_1: 'Stelle sicher, dass du über eine **externe Sicherung** von allen Wallets verfügst, die du hier speicherst. Es gibt viele Möglichkeiten, die dazu führen können, dass deine in dieser Chrome-Extension gespeicherten Daten verloren gehen, z.B. Deinstallation oder Neu-Installation. Diese Extension erleichert den Zugang zu deinen Wallets, ist jedoch keine empfohlene Möglichkeit, diese zu sichern. ',
-  MEW_Tagline: 'Open Source JavaScript Client-Side Ether Wallet ',
-  CX_Tagline: 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+  MEW_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet ',
+  CX_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
   /* Footer */
   FOOTER_1: 'Ein quelloffenes, browserseitiges Werkzeug zur Erzeugung von Ethereum-Wallets und Versenden von Transaktionen. ',
@@ -8864,9 +8864,9 @@ en.data = {
   x_Wallet: 'Wallet ',
 
   /* Header */
-  CX_Tagline: 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+  CX_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
   CX_Warning_1: 'Make sure you have **external backups** of any wallets you store here. Many things could happen that would cause you to lose the data in this Chrome Extension, including uninstalling and reinstalling the extension. This extension is a way to easily access your wallets, **not** a way to back them up. ',
-  MEW_Tagline: 'Open Source JavaScript Client-Side Ether Wallet ',
+  MEW_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet ',
   MEW_Warning_1: 'Always check the URL before accessing your wallet or creating a new wallet. Beware of phishing sites! ',
 
   /* Footer */
@@ -11883,8 +11883,8 @@ id.data = {
   /* Header */
   MEW_Warning_1: 'Pastikan menggunakan URL yang benar sebelum mengakses Dompet Anda atau sebelum membuat dompet baru. Waspadai situs phishing! ',
   CX_Warning_1: 'Pastikan membuat **backup eksternal** dari semua dompet yang ada. Banyak hal bisa terjadi yang bisa membuat data di Chrome Extension hilang, termasuk saat menginstall maupun menguninstall extension ini. Extension ini hanya untuk memudahkan mengakses dompet Anda, **BUKAN** untuk membackup. ',
-  MEW_Tagline: 'Open Source JavaScript Client-Side Ether Wallet ',
-  CX_Tagline: 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+  MEW_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet ',
+  CX_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
   /* Footer */
   FOOTER_1: 'Client-side tool open source berbasis javascript untuk membuat Dompet dan transaksi Ethereum. ',
@@ -13639,8 +13639,8 @@ nl.data = {
   /* Header */
   MEW_Warning_1: 'Check altijd de URL voordat je jouw wallet opent of een nieuwe wallet genereert. Pas op voor phishing sites! ',
   CX_Warning_1: 'Zorg voor **externe backups** van alle wallets die je hier opslaat. Er kan kunnen diverse dingen gebeuren die ervoor kunnen zorgen dat je gegevens in deze Chrome Extensie verloren gaan, inclusief het deinstalleren en installeren van de extensie. Deze extensie is een manier om je wallet gemakkelijk toegankelijk te maken, **geen** manier om ze te backuppen. ',
-  MEW_Tagline: 'Open Source JavaScript Client-Side Ether Wallet ',
-  CX_Tagline: 'Open Source JavaScript Client-Side Ether Wallet Chrome Extensie ',
+  MEW_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet ',
+  CX_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extensie ',
 
   /* Footer */
   FOOTER_1: 'Een open source, javascript, client-side tool om Ethereum Wallets te genereren & transacties te verzenden. ',
@@ -14232,8 +14232,8 @@ no.data = {
   /* Header */
   MEW_Warning_1: 'Sjekk alltid nettsideadressen før du bruker eller oppretter en lommebok. Pass opp for "phishing"-nettsider! ',
   CX_Warning_1: 'Sørg for at du har **eksterne sikkerhetskopier** av alle lommebøker som du lagrer her. Mye kan hende som vil kunne medføre at du mister informasjonen i denne Chrome-utvidelsen, inkludert avinstallasjon og reinstallasjon av utvidelsen. Denne utvidelsen gir deg enkel tilgang til lommebøkene dine, men er **ikke** en måte å sikkerhetskopiere dem på. ',
-  MEW_Tagline: 'Open Source JavaScript Client-Side Ether Wallet ', /* Intentionally not translated */
-  CX_Tagline: 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ', /* Intentionally not translated */
+  MEW_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet ', /* Intentionally not translated */
+  CX_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ', /* Intentionally not translated */
 
   /* Footer */
   FOOTER_1: 'Et åpen-kildekode-, javascript-, klient-side-verktøy for å opprette Ethereum-lommebøker & sende transaksjoner. ',
@@ -17270,8 +17270,8 @@ vi.data = {
   /* Header */
   MEW_Warning_1: 'Chú Ý! kiễm tra cẩn thận URL trước khi bạn muốn đăng nhập vào ví hoặc tạo một ví mới. Cảnh giác cao đối với những trang web lừa đảo! ',
   CX_Warning_1: 'Hãy chắc chắn rằng bạn đã thực hiện việc sao lưu dữ liệu cho những ví bạn đang sử dụng tại đây. Nhiều khả năng có thể xảy ra sẽ dẩn đến việc mất đi dữ liệu mà bạn lưu tại phần mở rộng của Chrome (bao gồm việc gỡ bỏ cài đặt và cài đặt lại các phần mở rộng). Phần mở rộng này là cách dễ dàng đễ truy cập vào ví của bạn, nhưng nó không phải là nơi đễ bạn sao lưu dữ liệu. ',
-  MEW_Tagline: 'Open Source JavaScript Client-Side Ether Wallet ',
-  CX_Tagline: 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+  MEW_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet ',
+  CX_Tagline: 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
   /* Footer */
   FOOTER_1: 'Open-Source, client-side tool for easily &amp; securely interacting with the Ethereum network. ',

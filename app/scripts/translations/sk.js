@@ -107,8 +107,8 @@ x_Mnemonic                  : 'Mnemonic Phrase (MetaMask / Jaxx ) ',
 /* Header */
 MEW_Warning_1               : 'Vždy skontrolujte URL adresu pred tým ako vytvoríte alebo sprístupnite vašu peňaženku. Davajte si pozor na Phisingové stránky! ',
 CX_Warning_1                : 'Uistita sa, že máťe  **externé zálohy** všetkych peňaženiek. Mnoho vecí može spôsobiť stratu dát tohoto Chrome rozširenia, vrátane odinštalovania a preinštalovania tohto rozšírenia. Toto rozšírenie pomáha jednoducho sprístupniť vašu peňaženku, **nie** ju zálohovať. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ',
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
 /* Footer */
 FOOTER_1                    : 'Open-Source, client-side tool for easily &amp; securely interacting with the Ethereum network. ',

@@ -112,8 +112,8 @@ x_Wallet                    : 'Ví ',
 /* Header */
 MEW_Warning_1               : 'Chú Ý! kiễm tra cẩn thận URL trước khi bạn muốn đăng nhập vào ví hoặc tạo một ví mới. Cảnh giác cao đối với những trang web lừa đảo! ',
 CX_Warning_1                : 'Hãy chắc chắn rằng bạn đã thực hiện việc sao lưu dữ liệu cho những ví bạn đang sử dụng tại đây. Nhiều khả năng có thể xảy ra sẽ dẩn đến việc mất đi dữ liệu mà bạn lưu tại phần mở rộng của Chrome (bao gồm việc gỡ bỏ cài đặt và cài đặt lại các phần mở rộng). Phần mở rộng này là cách dễ dàng đễ truy cập vào ví của bạn, nhưng nó không phải là nơi đễ bạn sao lưu dữ liệu. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ',
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
 /* Footer */
 FOOTER_1                    : 'Open-Source, client-side tool for easily &amp; securely interacting with the Ethereum network. ',

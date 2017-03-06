@@ -94,8 +94,8 @@ x_Wallet                    : 'Wallet ',
 /* Header */
 MEW_Warning_1               : 'Check altijd de URL voordat je jouw wallet opent of een nieuwe wallet genereert. Pas op voor phishing sites! ',
 CX_Warning_1                : 'Zorg voor **externe backups** van alle wallets die je hier opslaat. Er kan kunnen diverse dingen gebeuren die ervoor kunnen zorgen dat je gegevens in deze Chrome Extensie verloren gaan, inclusief het deinstalleren en installeren van de extensie. Deze extensie is een manier om je wallet gemakkelijk toegankelijk te maken, **geen** manier om ze te backuppen. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ',
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extensie ',
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extensie ',
 
 /* Footer */
 FOOTER_1                    : 'Een open source, javascript, client-side tool om Ethereum Wallets te genereren & transacties te verzenden. ',

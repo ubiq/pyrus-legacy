@@ -114,8 +114,8 @@ x_Wallet                    : 'Dompet ',
 /* Header */
 MEW_Warning_1               : 'Pastikan menggunakan URL yang benar sebelum mengakses Dompet Anda atau sebelum membuat dompet baru. Waspadai situs phishing! ',
 CX_Warning_1                : 'Pastikan membuat **backup eksternal** dari semua dompet yang ada. Banyak hal bisa terjadi yang bisa membuat data di Chrome Extension hilang, termasuk saat menginstall maupun menguninstall extension ini. Extension ini hanya untuk memudahkan mengakses dompet Anda, **BUKAN** untuk membackup. ',
-MEW_Tagline                 : 'Open Source JavaScript Client-Side Ether Wallet ',
-CX_Tagline                  : 'Open Source JavaScript Client-Side Ether Wallet Chrome Extension ',
+MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
+CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
 /* Footer */
 FOOTER_1                    : 'Client-side tool open source berbasis javascript untuk membuat Dompet dan transaksi Ethereum. ',

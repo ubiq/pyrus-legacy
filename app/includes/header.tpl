@@ -2,9 +2,9 @@
 <html lang="en" ng-app="mewApp">
 <head>
   <meta charset="utf-8">
-  <title>MyEtherWallet: Open-Source & Client-Side Ether Wallet</title>
+  <title>MyEtherWallet: Open-Source & Client-Side Ubiq Wallet</title>
   <link rel="canonical" href="https://www.myetherwallet.com" />
-  <meta name="description" content="Open-Source & Client-Side Ether Wallet">
+  <meta name="description" content="Open-Source & Client-Side Ubiq Wallet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/etherwallet-master.min.css">
@@ -22,7 +22,7 @@
 
   <meta property="og:url"         content="https://www.MyEtherWallet.com" />
   <meta property="og:title"       content="When Great Minds Don’t Think Alike" />
-  <meta property="og:description" content="MyEtherWallet: Open-Source & Client-Side Ether Wallet" />
+  <meta property="og:description" content="MyEtherWallet: Open-Source & Client-Side Ubiq Wallet" />
   <meta property="og:image"       content="images/fb-myetherwallet.png" />
   <meta property="og:image"       content="images/fb-mewtwo.jpg" />
 </head>
@@ -41,7 +41,7 @@
       @@if (site === 'mew' ) { <a class="brand" href="https://www.myetherwallet.com/" aria-label="Go to homepage"> <img src="images/logo-myetherwallet.svg"   height="64px" width="auto" alt="MyEtherWallet" /></a> }
       @@if (site === 'cx'  ) { <a class="brand" href="/cx-wallet.html" aria-label="Go to homepage">                <img src="images/logo-myetherwalletcx.svg" height="64px" width="auto" alt="MyEtherWallet" /></a> }
 
-      <div class="tagline"><span style="max-width: 395px">Open-Source & Client-Side Ether Wallet</span>
+      <div class="tagline"><span style="max-width: 395px">Open-Source & Client-Side Ubiq Wallet</span>
 
         &middot; v3.5.3 &nbsp;&nbsp;
 
