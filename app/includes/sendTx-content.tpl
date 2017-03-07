@@ -85,7 +85,7 @@
     <a class="btn btn-primary btn-block" data-toggle="modal" data-target="#sendTransaction" translate="SEND_trans"> Send Transaction </a>
   </div>
   <div class="alert alert-info" ng-show="tx.sendMode=='token'">
-    <p>If you are getting an insufficient balance for gas ... error, you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.01 ETH to this account and try again.</p>
+    <p>If you are getting an insufficient balance for gas ... error, you must have a small amount of UBQ in your account in order to cover the cost of gas. Add 0.01 UBQ to this account and try again.</p>
   </div>
   <div class="alert alert-danger" ng-show="tx.value > wallet.balance && tx.readOnly">
     <p>You do not have enough funds in your account to complete this swap. Please add more funds or access a different wallet.</p>

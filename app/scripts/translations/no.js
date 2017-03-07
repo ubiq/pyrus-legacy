@@ -29,7 +29,7 @@ CONTRACT_Write              : 'SKRIV ',
 /* Swap / Exchange */
 SWAP_rates                  : "Aktuelle vekslingskurser ",
 SWAP_init_1                 : "Jeg vil bytte mine ",
-SWAP_init_2                 : " med ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " med ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Gjennomfør! ", // "Let's do this!" or "Continue"
 SWAP_information            : "Din informasjon ",
 SWAP_send_amt               : "Beløp som sendes ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Ditt referansenummer ",
 SWAP_time                   : "Gjenstående tid til å sende ",
 SWAP_progress_1             : "Ordre initiert ",
 SWAP_progress_2             : "Venter på dine ", // Waiting for your BTC...
-SWAP_progress_3             : "Mottatt! ", // ETH Received!
+SWAP_progress_3             : "Mottatt! ", // UBQ Received!
 SWAP_progress_4             : "Sender dine {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Ordre fullført ",
 SWAP_order_CTA              : "Vennligst send ", // Please send 1 ETH...
-SWAP_unlock                 : "Lås opp din lommebok for å sende ETH eller Tokens direkte fra denne siden. ",
+SWAP_unlock                 : "Lås opp din lommebok for å sende UBQ eller Tokens direkte fra denne siden. ",
 
 NAV_Swap                    : 'Byttehandel ',
 
@@ -208,12 +208,12 @@ TRANS_warning               : 'Hvis du bruker "Kun ETH"- eller "Kun ETC"-funksjo
 TRANS_advanced              : '+Avansert: Legg til data ',
 TRANS_data                  : 'Data ',
 TRANS_gas                   : 'Gas Limit ',
-TRANS_sendInfo              : 'En standard transaksjon som bruker 21000 gas vil koste 0,000441 ETH. Vi bruker en litt-over-minimum gas-pris på 0,000000021 ETH for å sikre at transaksjonen blir raskt behandlet. Vi tar ikke noe transaksjonsgebyr. ',
+TRANS_sendInfo              : 'En standard transaksjon som bruker 21000 gas vil koste 0,000441 ETH. Vi bruker en litt-over-minimum gas-pris på 0,000000021 UBQ for å sikre at transaksjonen blir raskt behandlet. Vi tar ikke noe transaksjonsgebyr. ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : '"Kun ETH"- og "Kun ETC"-transaksjoner ',
 TRANSModal_Content_0        : 'En notis om forskjellige transaksjoner og tjenester: ',
-TRANSModal_Content_1        : '**ETH (Standardtransaksjon): ** Dette Oppretter en standardtransaksjon direkte fra en adresse ti en annen. Den har standard gas på 21000. Det er sannsynlig at ETH som sendes med denne metoden også vil bli sendt som ETC på ETC-kjeden (hvis kontoen inneholder både ETH og ETC). Dette er anbefalt metode hvis kontoen kun inneholder ETH. ',
+TRANSModal_Content_1        : '**ETH (Standardtransaksjon): ** Dette Oppretter en standardtransaksjon direkte fra en adresse ti en annen. Den har standard gas på 21000. Det er sannsynlig at UBQ som sendes med denne metoden også vil bli sendt som ETC på ETC-kjeden (hvis kontoen inneholder både UBQ og ETC). Dette er anbefalt metode hvis kontoen kun inneholder ETH. ',
 TRANSModal_Content_2        : '**Kun ETH: ** Dette sender via [Timon Rapp\'s replay-beskyttelseskontrakt (som anbefalt av VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) slik at du kun sender på **ETH**-kjeden. ',
 TRANSModal_Content_3        : '**Kun ETC: ** Dette sender via [Timon Rapp\'s replay-beskyttelseskontrakt (som anbefalt av VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) slik at du kun sender på **ETC**-kjeden. ',
 TRANSModal_Content_4        : '**Coinbase & ShapeShift: ** Send kun via Standard transaksjon. Hvis du sender via "Kun"-kontraktene, vil du måtte ta kontakt med deres kundestøttepersonell for å manuelt legge til saldoen din eller få en tilbakebetaling. [Du kan også prøve Shapeshift sitt "splitte"-verktøy.](https://split.shapeshift.io/) ',
@@ -373,7 +373,7 @@ TranslatorAddr_5            : '',
 HELP_Warning                : 'Hvis du opprettet en lommebok -eller- lastet ned repoet før **31. desember 2015**, vennligst sjekk lommebøkene dine &amp; last ned en ny versjon av repoet. Klikk for detaljer. ',
 HELP_Desc                   : 'Ser du noe som mangler? Har du flere spørsmål? [Ta kontakt med oss](mailto:myetherwallet@gmail.com), så vil vi ikke bare besvare spørsmålet ditt, men vi vil også oppdatere denne siden så den blir mer nyttig i framtiden! ',
 HELP_Remind_Title           : 'Noen påminnelser ',
-HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, og noen av de underliggende Javascript-bibliotekene vi benytter er under aktiv utvikling.** Selv om vi har testet grundig, og titusenvis av lommebøker har blitt opprettet uten feil av folk over hele kloden, så er det alltid en liten mulighet for at noe uventet kan skje som kan medføre at dine ETH kan tapes. Vennligst ikke invester mer enn du er villig til å tape, and vær så snill å være forsiktig. Hvis noe skulle skje, er vi lei oss for det, men **vi er ikke ansvarlige for eventuelt tapte etere**. ',
+HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, og noen av de underliggende Javascript-bibliotekene vi benytter er under aktiv utvikling.** Selv om vi har testet grundig, og titusenvis av lommebøker har blitt opprettet uten feil av folk over hele kloden, så er det alltid en liten mulighet for at noe uventet kan skje som kan medføre at dine UBQ kan tapes. Vennligst ikke invester mer enn du er villig til å tape, and vær så snill å være forsiktig. Hvis noe skulle skje, er vi lei oss for det, men **vi er ikke ansvarlige for eventuelt tapte etere**. ',
 HELP_Remind_Desc_2          : 'MyEtherWallet.com & Pyrus CX er ikke "web wallets" (internettlommebøker). Du oppretter ikke en konto eller gir oss dine ethere for oppbevaring hos oss. Alle data forblir på din PC / i din nettleser. Vi gjør det enkelt for deg å opprette, lagre og få tilgang til din informasjon og samhogle med blokkjeden. ',
 HELP_Remind_Desc_3          : 'Hvis du ikke lagrer din private nøkkel & passord, finnes det ingen måte å gjenopprette din lommebok på, eller midlene den inneholder. Sikkerhetskopier dem på flere fysiske lokasjoner &ndash; ikke bare på datamaskinen din! ',
 
@@ -539,7 +539,7 @@ HELP_12_Desc_27             : 'Etter at du har lykkes med å importere kontoen, 
 HELP_12_Desc_28             : 'Neste gangen du åpner "Ubiq Wallet"-programmet, vil kontoen din være listet under "Accounts". ',
 
 HELP_13_Title               : '13) Hva betyr "Utilstrekkelige midler. Kontoen du prøver å sende transaksjon fra har ikke nok midler. Påkrevd XXXXXXXXXXXXXXXXXXX og fått: XXXXXXXXXXXXXXXX." ? ',
-HELP_13_Desc_1              : 'Dette betyr at du ikke har nok UBQ på kontoen din til å dekke gas-kostnaden. Hver transaksjon (inkludert token- og kontrakt-transaksjoner) krever gas, og gas betales med Ether. Tallet som vises er beløpet som kreves for å dekke transaksjonskostnaden i Wei (1 ETH = 10^18 Wei). Ta dette tallet, del det på `1000000000000000000`, og trekk fra Ether-beløpet som du prøvde å sende (hvis du prøvde å sende Ether). Dette vil gi deg Ether-beløpet som du mangler på (trenger å sende til) denne kontoen for å gjennomføre transaksjonen. ',
+HELP_13_Desc_1              : 'Dette betyr at du ikke har nok UBQ på kontoen din til å dekke gas-kostnaden. Hver transaksjon (inkludert token- og kontrakt-transaksjoner) krever gas, og gas betales med Ether. Tallet som vises er beløpet som kreves for å dekke transaksjonskostnaden i Wei (1 UBQ = 10^18 Wei). Ta dette tallet, del det på `1000000000000000000`, og trekk fra Ether-beløpet som du prøvde å sende (hvis du prøvde å sende Ether). Dette vil gi deg Ether-beløpet som du mangler på (trenger å sende til) denne kontoen for å gjennomføre transaksjonen. ',
 
 HELP_14_Title               : '14) Noen nettsider randomiserer genereringen av den private nøkkelen via musebevegelser. Pyrus gjør ikke dette. Er metoden som MyEtherWallet bruker til å generere tilfeldige tall sikker? ',
 HELP_14_Desc_1              : 'Selv om musebevegelses-metoden er smart og vi skjønner hvorfor folk liker den, så er realiteten at window.crypto sikrer mer entropi (tilfeldighet) enn musebevegelser. Musebevegelses-metoden er ikke usikker, men det er bare det at vi (og mange andre kryptoeksperter) har tro på window.crypto. I tillegg kan Pyrus også benyttes på fingerstyrte enheter. Her er en [konversasjon mellom en sint redditor og Vitalik Buterin angående musebevegelser versus window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) og her er [window.crypto w3 spesifikasjonen](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',

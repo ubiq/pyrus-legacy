@@ -29,7 +29,7 @@ CONTRACT_Write              : 'ESCRIBIR ',
 /* Swap / Exchange */
 SWAP_rates                  : "Tipos de cambio actuales ",
 SWAP_init_1                 : "Quiero cambiar mis ",
-SWAP_init_2                 : " por ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " por ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Continuar", // or "Continue"
 SWAP_information            : "Tu información ",
 SWAP_send_amt               : "Cantidad a enviar ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Tu número de referencia ",
 SWAP_time                   : "Tiempo restante para enviar ",
 SWAP_progress_1             : "Pedido iniciado ",
 SWAP_progress_2             : "Esperando recibir tus ", // Waiting for your BTC...
-SWAP_progress_3             : "¡Recibido! ", // ETH Received!
+SWAP_progress_3             : "¡Recibido! ", // UBQ Received!
 SWAP_progress_4             : "Enviando tu {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Pedido completado ",
 SWAP_order_CTA              : "Por favor, envía ", // Please send 1 ETH...
-SWAP_unlock                 : "Desbloquea tu cartera para enviar ETH o tokens directamente desde esta página. ",
+SWAP_unlock                 : "Desbloquea tu cartera para enviar UBQ o tokens directamente desde esta página. ",
 
 NAV_Swap                    : 'Intercambiar ',
 NAV_SignMsg                 : 'Firmar mensaje ',
@@ -242,7 +242,7 @@ TRANS_sendInfo              : 'Una transacción estándar que utiliza 21000 gas 
 /* Send Transaction Modals */
 TRANSModal_Title            : 'Transacciones "Sólo ETH" y "Sólo ETC" ',
 TRANSModal_Content_0        : 'Una nota sobre las distintas transacciones y servicios: ',
-TRANSModal_Content_1        : '**ETH (transacción estándar): ** Esto genera una transacción predeterminada directamente de una dirección a otra. Utiliza gas predeterminado de 21000. Es probable que cualquier transacción de ETH enviada mediante este método se reproduzca (replay) en la cadena ETC. ',
+TRANSModal_Content_1        : '**ETH (transacción estándar): ** Esto genera una transacción predeterminada directamente de una dirección a otra. Utiliza gas predeterminado de 21000. Es probable que cualquier transacción de UBQ enviada mediante este método se reproduzca (replay) en la cadena ETC. ',
 TRANSModal_Content_2        : '**Sólo ETH: ** Esto envía a través del [contrato de protección contra replay de Timon Rapp (según recomienda VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) de modo que envías solamente en la cadena **ETH**. ',
 TRANSModal_Content_3        : '**Sólo ETC: ** Esto envía a través del [contrato de protección contra replay de Timon Rapp (según recomienda VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) de modo que envías solamente en la cadena **ETC**. ',
 TRANSModal_Content_4        : '**Coinbase y ShapeShift: ** Envía solamente utilizando transacción estándar. Si envías utilizando los contratos "Sólo ETH" o "Sólo ETC", será necesario que contactes con su equipo de soporte para que añadan manualmente el saldo o te lo devuelvan. [También puedes probar la herramienta de "split" de Shapeshift.](https://split.shapeshift.io/) ',

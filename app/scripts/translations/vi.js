@@ -29,7 +29,7 @@ CONTRACT_Write              : 'WRITE ',
 /* Swap / Exchange */
 SWAP_rates                  : "Current Rates ",
 SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " for ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Let's do this! ", // or "Continue"
 SWAP_information            : "Your Information ",
 SWAP_send_amt               : "Amount to send ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Your reference number ",
 SWAP_time                   : "Time remaining to send ",
 SWAP_progress_1             : "Order Initiated ",
 SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // ETH Received!
+SWAP_progress_3             : "Received! ", // UBQ Received!
 SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Order Complete ",
 SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock your wallet to send ETH or Tokens directly from this page. ",
+SWAP_unlock                 : "Unlock your wallet to send UBQ or Tokens directly from this page. ",
 
 NAV_Swap                    : 'Swap ',
 NAV_SignMsg                 : 'Sign Message ',
@@ -88,7 +88,7 @@ NAV_Contact                 : 'Liên Hệ ',
 
 /* General */
 x_Address                   : 'Địa Chỉ Của Bạn ',
-x_AddessDesc                : 'Bạn có thể xem đây là Địa chỉ ví cá nhân của bạn. Bạn có thể gửi "Địa chỉ ví" này đến người mà bạn muốn nhận ETH từ họ. Biểu tượng bên cạnh giúp việc nhận dạng "Địa chỉ ví" của bạn dễ dàng hơn. ',
+x_AddessDesc                : 'Bạn có thể xem đây là Địa chỉ ví cá nhân của bạn. Bạn có thể gửi "Địa chỉ ví" này đến người mà bạn muốn nhận UBQ từ họ. Biểu tượng bên cạnh giúp việc nhận dạng "Địa chỉ ví" của bạn dễ dàng hơn. ',
 x_CSV                       : 'Định Dạng CSV (Không mã hoá) ',
 x_Cancel                    : 'Huỷ ',
 x_Download                  : 'Tải Về Máy ',
@@ -209,12 +209,12 @@ TRANS_warning               : 'Nếu bạn sử dụng chức năng "Chỉ ETH" 
 TRANS_advanced              : 'Nâng Cao: Thêm Dữ Liệu ',
 TRANS_data                  : 'Dữ Liệu: ',
 TRANS_gas                   : 'Gas Limit: ',
-TRANS_sendInfo              : 'Mỗi Giao dịch Phổ Thông sử dụng hết 21000 gas có giá tương đương 0.000441 ETH. Chúng tôi áp dụng giá Gas dành cho một giao dịch cao hơn so với mức tối thiểu là 0.000000021 ETH nhằm đảm bảo một giao dịch được diễn ra nhanh. Chúng tôi hoàn toàn không nhận được khoản tiền phát sinh nào từ phí giao dịch. ',
+TRANS_sendInfo              : 'Mỗi Giao dịch Phổ Thông sử dụng hết 21000 gas có giá tương đương 0.000441 ETH. Chúng tôi áp dụng giá Gas dành cho một giao dịch cao hơn so với mức tối thiểu là 0.000000021 UBQ nhằm đảm bảo một giao dịch được diễn ra nhanh. Chúng tôi hoàn toàn không nhận được khoản tiền phát sinh nào từ phí giao dịch. ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : 'Giao Dịch "Chỉ ETH" Và "Chỉ ETC" ',
 TRANSModal_Content_0        : 'Một số lưu ý về sự khác biệt của từng loại giao dịch và sự khác biệt của từng dịch vụ: ',
-TRANSModal_Content_1        : '**ETH (Giao Dịch Phổ Thông): ** Phương pháp này mặc định rằng nó sẽ tạo giao dịch từ một địa chỉ gửi đến địa chỉ nhận khác và nó sẽ tiêu thụ hết 21000 gas. Theo giả thuyết thì bất kì số ETH gửi đi thông qua phương pháp này sẽ được thực hiện lại tương tự trên chuổi ETC. ',
+TRANSModal_Content_1        : '**ETH (Giao Dịch Phổ Thông): ** Phương pháp này mặc định rằng nó sẽ tạo giao dịch từ một địa chỉ gửi đến địa chỉ nhận khác và nó sẽ tiêu thụ hết 21000 gas. Theo giả thuyết thì bất kì số UBQ gửi đi thông qua phương pháp này sẽ được thực hiện lại tương tự trên chuổi ETC. ',
 TRANSModal_Content_2        : '**Chỉ ETH: ** Phương pháp này sẽ thực hiện giao dịch thông qua [Hợp đồng thông minh nhằm "tránh việc phát lại" được phát triển bởi Timon Rapp (theo lời cảnh báo của VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) vì vậy giao dịch này chỉ được thực hiện trên chuổi **ETH**. ',
 TRANSModal_Content_3        : '**Chỉ ETC: ** Phương pháp này sẽ thực hiện giao dịch thông qua [Hợp đồng thông minh nhằm "tránh việc phát lại" được phát triển bởi Timon Rapp (theo lời cảnh báo của VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) vì vậy giao dịch này chỉ được thực hiện trên chuổi **ETC**. ',
 TRANSModal_Content_4        : '**Coinbase & ShapeShift: ** Giao Dịch chỉ được thực hiện thông qua giao dịch phổ thông. Nếu bạn thực hiện thông qua hợp đồng "Chỉ", thì bạn cần phải liên hệ trực tiếp với nhân viên hỗ trợ của họ để họ tự thêm vào hoặc hoàn lại tiền cho bạn. [bạn cũng có thể thử với công cụ "chia tách" của Shapeshift.](https://split.shapeshift.io/) ',
@@ -373,7 +373,7 @@ TranslatorAddr_5            : '',
 HELP_Warning                : 'Nếu bạn đã khởi tạo Ví -hoặc- đã tải về máy tập tin có chứa dữ liệu ví trước **Ngày 31 Tháng 12 năm 2015**, xin vui lòng kiễm tra lại dữ liệu Ví; dễ tải về phiên bản mới của tập tin Ví. Chi tiết xem tại. ',
 HELP_Desc                   : 'Nếu bạn thấy có gì sai sót và có những câu hỏi nào khác cần được giải đáp. [Xin Liên Lạc Với Chúng Tôi](mailto:myetherwallet@gmail.com), và chúng tôi sẽ giải đáp những thắc mắc từ bạn, ngoài ra chúng tôi sẽ cập nhật lại trang web nhằm đem lại nhiều tiện lợi nhất có thể cho người sử dụng trong tương lai! ',
 HELP_Remind_Title           : 'Một số lưu ý! ',
-HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, và các nền tảng khác từ Javascript libraries mà chúng tôi sử dụng đang được phát triển một cách tích cực.** Mặc dù toàn bộ đã được chúng tôi kiễm tra rất kỹ lưỡng và hàng chục nghìn địa chỉ Ví đã được tạo thành công từ người sử dụng trên toàn cầu, nhưng vẫn có những vấn đề có thể xảy ra làm cho ETH của bạn bị mất đi. Xin vui lòng không nên đầu tư với số tiền nhiều hơn khả năng mà bạn đã cho rằng nó sẽ mất và hãy luôn cẩn thận. Trong trường hợp rủi ro xảy ra, chung tôi rất chân thành xin lỗi. Tuy nhiên **Chúng tôi sẽ không chịu bất cứ một trách nhiệm nào đối với số lượng UBQ mà bạn đã bị mất!**. ',
+HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, và các nền tảng khác từ Javascript libraries mà chúng tôi sử dụng đang được phát triển một cách tích cực.** Mặc dù toàn bộ đã được chúng tôi kiễm tra rất kỹ lưỡng và hàng chục nghìn địa chỉ Ví đã được tạo thành công từ người sử dụng trên toàn cầu, nhưng vẫn có những vấn đề có thể xảy ra làm cho UBQ của bạn bị mất đi. Xin vui lòng không nên đầu tư với số tiền nhiều hơn khả năng mà bạn đã cho rằng nó sẽ mất và hãy luôn cẩn thận. Trong trường hợp rủi ro xảy ra, chung tôi rất chân thành xin lỗi. Tuy nhiên **Chúng tôi sẽ không chịu bất cứ một trách nhiệm nào đối với số lượng UBQ mà bạn đã bị mất!**. ',
 HELP_Remind_Desc_2          : 'MyEtherWallet.com & Pyrus CX không phải "Ví Web". Vì vậy bạn không tạo tài khoản sau đó gửi số UBQ của bạn cho chúng tôi dễ giữ hộ. Toàn bộ Dữ liệu sẽ không bao giờ bị rò rỉ ra khỏi máy tính/trình duyệt của bạn. Chúng tôi xây dựng nó nhằm giúp người sử dụng có thể đễ dàng tạo mới, lưu trữ và truy cập thông tin Ví của bạn và tương tác với Blockchain. ',
 HELP_Remind_Desc_3          : 'Nếu bạn không lưu lại Private key và mật khẩu của bạn, thì sẽ không có bất cứ một cách nào có thể khôi phục lại Ví và tài sản hiện đang chứa trong Ví. Bạn nên sao lưu dữ liệu Ví tại nhiều nơi và những thiết bị lưu trữ khác nhau! ',
 

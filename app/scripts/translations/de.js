@@ -29,7 +29,7 @@ CONTRACT_Write              : 'WRITE ',
 /* Swap / Exchange */
 SWAP_rates                  : "Current Rates ",
 SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " for ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Let's do this! ", // or "Continue"
 SWAP_information            : "Your Information ",
 SWAP_send_amt               : "Amount to send ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Your reference number ",
 SWAP_time                   : "Time remaining to send ",
 SWAP_progress_1             : "Order Initiated ",
 SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // ETH Received!
+SWAP_progress_3             : "Received! ", // UBQ Received!
 SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Order Complete ",
 SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock your wallet to send ETH or Tokens directly from this page. ",
+SWAP_unlock                 : "Unlock your wallet to send UBQ or Tokens directly from this page. ",
 
 NAV_Swap                    : 'Swap ',
 NAV_SignMsg                 : 'Sign Message ',
@@ -235,7 +235,7 @@ TRANS_warning               : 'Wenn du die "Nur ETH" oder "Nur ETC" Funktionen b
 TRANS_advanced              : '+Fortgeschritten: Daten hinzufügen ',
 TRANS_data                  : 'Daten ',
 TRANS_gas                   : 'Gas Limit ',
-TRANS_sendInfo              : 'Eine Standard Transaktion mit 21000 Gas kostet 0.000441 ETH. Wir zahlen einen minimal höheren Gaspreis von 0.000000021 ETH um zu garantieren, dass die Transaktion schnell bearbeitet wird. Wir erheben keine Transaktionsgebühren. ',
+TRANS_sendInfo              : 'Eine Standard Transaktion mit 21000 Gas kostet 0.000441 ETH. Wir zahlen einen minimal höheren Gaspreis von 0.000000021 UBQ um zu garantieren, dass die Transaktion schnell bearbeitet wird. Wir erheben keine Transaktionsgebühren. ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : '"Nur ETH" und "Nur ETC" Transaktionen ',
@@ -320,7 +320,7 @@ ERROR_13                    : 'Ein Wallet mit diesem Spitznamen existiert bereit
 ERROR_14                    : 'Wallet nicht gefunden. ',
 ERROR_15                    : 'Es sieht nicht so aus als würde ein Proposal mit dieser ID existieren oder es gab einen Fehler beim Lesen des Proposal. ',
 ERROR_16                    : 'Es ist bereits ein Wallet mit dieser Adresse gespeichert. Bitte überprüfe die Seite deines Wallets. ',
-ERROR_17                    : 'Du brauchst zumindest 0.01 ETH in deinem Account um die Gaskosten zu decken. Bitte füge ETH hinzu und versuche es noch einmal. ',
+ERROR_17                    : 'Du brauchst zumindest 0.01 UBQ in deinem Account um die Gaskosten zu decken. Bitte füge UBQ hinzu und versuche es noch einmal. ',
 ERROR_18                    : 'Diese Transaktion würde dein gesamtes verbleibendes Gas verbrauchen. Das bedeutet, du hast bereits über dieses Proposal abgestimmt oder die Debattierphase ist zu Ende. ',
 ERROR_19                    : 'Ungültiges Symbol ',
 ERROR_20                    : 'Not a valid ERC-20 token ',

@@ -28,7 +28,7 @@ CONTRACT_Write              : 'ECRIRE ',
 /* Swap / Exchange */
 SWAP_rates                  : "Taux actuels ",
 SWAP_init_1                 : "Je veux échanger ",
-SWAP_init_2                 : " contre ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " contre ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Allons-y ! ", // or "Continue"
 SWAP_information            : "Vos informations ",
 SWAP_send_amt               : "Montant à envoyer ",
@@ -40,11 +40,11 @@ SWAP_ref_num                : "Votre numéro de référence ",
 SWAP_time                   : "Temps restant pour l'envoi ",
 SWAP_progress_1             : "Ordre déclenché ",
 SWAP_progress_2             : "En attente de vos ", // Waiting for your BTC...
-SWAP_progress_3             : "reçu ! ", // ETH Received!
+SWAP_progress_3             : "reçu ! ", // UBQ Received!
 SWAP_progress_4             : "Envoi de vos {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Ordre exécuté ",
 SWAP_order_CTA              : "Envoyer ", // Please send 1 ETH...
-SWAP_unlock                 : "Déverrouillez votre portefeuille pour envoyer des ETH ou des tokens directement depuis cette page. ",
+SWAP_unlock                 : "Déverrouillez votre portefeuille pour envoyer des UBQ ou des tokens directement depuis cette page. ",
 
 NAV_Swap                    : 'Échange ',
 
@@ -196,7 +196,7 @@ TRANS_desc                  : 'Si vous voulez envoyer des tokens, allez plutôt 
 TRANS_warning               : 'L\'emploi des fonctions "ETH seulement" et "ETC seulement" vous fait passer par un contrat. Certains services ont des problèmes avec ces transactions. En savoir plus. ',
 TRANS_advanced              : '+Avancé : Ajouter du gaz ',
 TRANS_data                  : 'Données ',
-TRANS_sendInfo              : 'Une transaction standard utilisant 21000 gaz coûtera 0.000441 ETH. Le prix du gaz de 0.000000021 ETH que nous avons choisi est légèrement supérieur au minimum ain d\'assurer une confirmation rapide. Nous ne prenons pas de frais de transaction. ',
+TRANS_sendInfo              : 'Une transaction standard utilisant 21000 gaz coûtera 0.000441 ETH. Le prix du gaz de 0.000000021 UBQ que nous avons choisi est légèrement supérieur au minimum ain d\'assurer une confirmation rapide. Nous ne prenons pas de frais de transaction. ',
 TRANS_gas                   : 'Limite en gaz ', // changed in ENG to Gas Limit:
 
 /* Send Transaction Modals */

@@ -26,7 +26,7 @@
             <label translate="NODE_Name">Node Name</label>
             <input class="form-control"
                    type="text"
-                   placeholder="My ETH Node"
+                   placeholder="My UBQ Node"
                    ng-model="customNode.name"
                    ng-class="Validator.isAlphaNumericSpace(customNode.name) ? 'is-valid' : 'is-invalid'">
           </div>
@@ -56,7 +56,7 @@
           </div>
 
           <div class="clearfix col-xs-12 radio">
-            <label><input name="options" type="radio" ng-model="customNode.options" value="eth"> ETH </label>
+            <label><input name="options" type="radio" ng-model="customNode.options" value="eth"> UBQ </label>
             <label><input name="options" type="radio" ng-model="customNode.options" value="etc"> ETC </label>
             <label><input name="options" type="radio" ng-model="customNode.options" value="rop"> Ropsten </label>
             <label><input name="options" type="radio" ng-model="customNode.options" value="cus"> Custom </label>

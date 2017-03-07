@@ -29,7 +29,7 @@ CONTRACT_Write              : 'ZAPISZ ',
 /* Swap / Exchange */
 SWAP_rates                  : "Aktualne Kursy ",
 SWAP_init_1                 : "Chcę wymienić ",
-SWAP_init_2                 : " na ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " na ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Zatwierdź! ", // or "Continue"
 SWAP_information            : "Twoja Adnotacja ",
 SWAP_send_amt               : "Kwota do wysłania ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Twój numer referencyjny ",
 SWAP_time                   : "Pozostały czas na wysyłkę ",
 SWAP_progress_1             : "Zlecenie Rozpoczęte ",
 SWAP_progress_2             : "Oczekiwanie na Twoje ", // Waiting for your BTC...
-SWAP_progress_3             : "Otrzymano! ", // ETH Received!
+SWAP_progress_3             : "Otrzymano! ", // UBQ Received!
 SWAP_progress_4             : "Wysyłanie Twoich {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Zlecenie Zakończone ",
 SWAP_order_CTA              : "Wyślij ", // Please send 1 ETH...
-SWAP_unlock                 : "Odblokuj Twój portfel, aby wysłać ETH lub Tokeny wprost z tej strony. ",
+SWAP_unlock                 : "Odblokuj Twój portfel, aby wysłać UBQ lub Tokeny wprost z tej strony. ",
 
 NAV_Swap                    : 'Giełda ',
 
@@ -193,13 +193,13 @@ TRANS_desc                  : 'Jeśli chcesz wysłać Tokeny, użyj zakładki "W
 TRANS_warning               : 'Jeśli używasz funkcji "Tylko ETH" lub "Tylko ETC" wysyłasz przez kontrakt. Niektóre serwisy mają problemy z rozpoznawaniem tego typu transakcji. Czytaj dalej. ',
 TRANS_advanced              : '+Zaawansowane: Dodaj Dane ',
 TRANS_data                  : 'Dane ',
-TRANS_sendInfo              : 'Standardowa transakcja, zużywająca 21000 paliwa, będzie kosztować 0.000441 ETH. My używamy ceny paliwa nieco-powyżej-minimum, co odpowiada 0.000000021 ETH aby upewnić się, że zostanie szybko zatwierdzona. Nie pobieramy żadnych dodatkowych opłat. ',
+TRANS_sendInfo              : 'Standardowa transakcja, zużywająca 21000 paliwa, będzie kosztować 0.000441 ETH. My używamy ceny paliwa nieco-powyżej-minimum, co odpowiada 0.000000021 UBQ aby upewnić się, że zostanie szybko zatwierdzona. Nie pobieramy żadnych dodatkowych opłat. ',
 TRANS_gas                   : 'Limit Paliwa ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : 'Transakcje "Tylko ETH" i "Tylko ETC" ',
 TRANSModal_Content_0        : 'Informacje na temat różnych transakcji i różnych odbiorców: ',
-TRANSModal_Content_1        : '**ETH (Standardowa Transakcja): ** generuje standardową transakcję bezpośrednio z jednego adresu do drugiego. Domyślnie spala 21000 paliwa. Prawdopodobnie transakcja ETH zostanie powielona na łańcuchu ETC jeżeli posiadasz obie waluty na tym samym adresie. ',
+TRANSModal_Content_1        : '**ETH (Standardowa Transakcja): ** generuje standardową transakcję bezpośrednio z jednego adresu do drugiego. Domyślnie spala 21000 paliwa. Prawdopodobnie transakcja UBQ zostanie powielona na łańcuchu ETC jeżeli posiadasz obie waluty na tym samym adresie. ',
 TRANSModal_Content_2        : '**Tylko ETH: ** wysyła przez [Kontrakt zapobiegający powielaniu Timon\'a Rapp\'a (zalecany przez VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/), który wysyła środki tylko na łańcuchu **ETH**. ',
 TRANSModal_Content_3        : '**Tylko ETC: ** wysyła przez [Kontrakt zapobiegający powielaniu Timon\'a Rapp\'a (zalecany przez VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/), który wysyła środki tylko na łańcuchu **ETC**. ',
 TRANSModal_Content_4        : '**Coinbase & ShapeShift: ** używaj tylko Transakcji Standardowych. Jeżeli wyślesz z opcją "Tylko...", będziesz musiał skontaktować się z pomocą techniczną usługodawcy w celu manualnego zatwierdzenia środków lub ich zwrotu. Możesz też użyć [narzędzia Shapeshift](https://split.shapeshift.io/)  do rozdzielenia środków. ',

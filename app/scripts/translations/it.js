@@ -30,7 +30,7 @@ CONTRACT_Write              : 'WRITE ',
 /* Swap / Exchange */
 SWAP_rates                  : "Current Rates ",
 SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " for ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Let's do this! ", // or "Continue"
 SWAP_information            : "Your Information ",
 SWAP_send_amt               : "Amount to send ",
@@ -42,11 +42,11 @@ SWAP_ref_num                : "Your reference number ",
 SWAP_time                   : "Time remaining to send ",
 SWAP_progress_1             : "Order Initiated ",
 SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // ETH Received!
+SWAP_progress_3             : "Received! ", // UBQ Received!
 SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Order Complete ",
 SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock your wallet to send ETH or Tokens directly from this page. ",
+SWAP_unlock                 : "Unlock your wallet to send UBQ or Tokens directly from this page. ",
 
 NAV_Swap                    : 'Swap ',
 
@@ -195,12 +195,12 @@ TRANS_warning               : 'Se usi le opzioni "Solo ETH" o "Solo ETC" inviera
 TRANS_advanced              : '+Avanzate: aggiungi dati ',
 TRANS_data                  : 'Dati ',
 TRANS_gas                   : 'Limite gas ',
-TRANS_sendInfo              : 'Una transazione standard che utilizza 21000 gas costerà 0,000441 ETH. Utilizziamo un prezzo del gas leggermente al di sopra del minimo pari a 0,000000021 ETH per assicurarci che venga elaborata velocemente. Noi non prendiamo commissioni. ',
+TRANS_sendInfo              : 'Una transazione standard che utilizza 21000 gas costerà 0,000441 ETH. Utilizziamo un prezzo del gas leggermente al di sopra del minimo pari a 0,000000021 UBQ per assicurarci che venga elaborata velocemente. Noi non prendiamo commissioni. ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : 'Transazioni "Solo ETH" e "Solo ETC" ',
 TRANSModal_Content_0        : 'Una nota sulle varie transazioni e sui vari servizi: ',
-TRANSModal_Content_1        : '**ETH (transazione standard): ** Genera una transazione di default direttamente da un indirizzo ad un altro. La quantità di gas predefinita è 21000. È probabile che ogni ETH inviato con questo metodo sarà replicato sulla catena ETC. ',
+TRANSModal_Content_1        : '**ETH (transazione standard): ** Genera una transazione di default direttamente da un indirizzo ad un altro. La quantità di gas predefinita è 21000. È probabile che ogni UBQ inviato con questo metodo sarà replicato sulla catena ETC. ',
 TRANSModal_Content_2        : '**Solo ETH: ** Invia tramite [il contratto di protezione dalle repliche di Timon Rapp (come consigliato da VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) in modo da inviare solamente sulla catena **ETH**. ',
 TRANSModal_Content_3        : '**Solo ETC: ** Invia tramite [il contratto di protezione dalle repliche di Timon Rapp (come consigliato da VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) in modo da inviare solamente sulla catena **ETC**. ',
 TRANSModal_Content_4        : '**Coinbase & ShapeShift: ** Inviare solamente tramite la transazione standard. Se utilizzi i contratti "Solo XXX", dovrai metterti in contatto con il loro staff di supporto in modo che aggiornino manualmente il tuo saldo o ti rimborsino. [Puoi anche provare lo strumento "split" di Shapeshift.](https://split.shapeshift.io/) ',
@@ -308,7 +308,7 @@ ERROR_13                    : 'Esiste già un portafoglio con questo nome. ',
 ERROR_14                    : 'Portafoglio non trovato. ',
 ERROR_15                    : 'Sembra che non esista ancora una proposta con questo ID o c\'è un errore nella lettura della proposta. ',
 ERROR_16                    : 'C\'è già un portafoglio con questo indirizzo fra quelli salvati. Controlla la pagina dei tuoi portafogli. ',
-ERROR_17                    : 'Devi avere almeno 0,01 ETH nel conto per coprire i costi del gas. Aggiungi un po\' di ether e riprova. ',
+ERROR_17                    : 'Devi avere almeno 0,01 UBQ nel conto per coprire i costi del gas. Aggiungi un po\' di ether e riprova. ',
 ERROR_18                    : 'Questa transazione consumerebbe tutto il gas. Ciò significa che hai già votato questa proposta o che il periodo di discussione è terminato. ',
 ERROR_19                    : 'Simbolo non valido ',
 ERROR_20                    : 'Non è un token ERC-20 valido. ',

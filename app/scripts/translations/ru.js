@@ -29,7 +29,7 @@ CONTRACT_Write              : 'ЗАПИСАТЬ ',
 /* Swap / Exchange */
 SWAP_rates                  : "Текущие котировки ",
 SWAP_init_1                 : "Я хочу обменять мои ",
-SWAP_init_2                 : " на ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " на ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Поехали! ", // or "Continue"
 SWAP_information            : "Дополнительная информация ",
 SWAP_send_amt               : "Сумма для отправки ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Идентификатор операции ",
 SWAP_time                   : "Время до отправки ",
 SWAP_progress_1             : "Заявка выставлена ",
 SWAP_progress_2             : "Ждём получения ваших ", // Waiting for your BTC...
-SWAP_progress_3             : "Получено! ", // ETH Received!
+SWAP_progress_3             : "Получено! ", // UBQ Received!
 SWAP_progress_4             : "Отправляем ваши {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Заявка выполнена ",
 SWAP_order_CTA              : "Пожалуйста, отправьте ", // Please send 1 ETH...
-SWAP_unlock                 : "Отоприте ваш кошелёк для отправки ETH или Tokens непосредственно с этой страницы. ",
+SWAP_unlock                 : "Отоприте ваш кошелёк для отправки UBQ или Tokens непосредственно с этой страницы. ",
 
 NAV_Swap                    : 'Обмен ',
 NAV_SignMsg                 : 'Подписать сообщение ',
@@ -375,7 +375,7 @@ TranslatorAddr_5            : '',
 HELP_Warning                : 'If you created a wallet -or- downloaded the repo before **Dec. 31st, 2015**, please check your wallets &amp; download a new version of the repo. Click for details. ',
 HELP_Desc                   : 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
 HELP_Remind_Title           : 'Some reminders ',
-HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
+HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your UBQ to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
 HELP_Remind_Desc_2          : 'MyEtherWallet.com & Pyrus CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
 HELP_Remind_Desc_3          : 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 

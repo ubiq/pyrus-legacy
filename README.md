@@ -19,7 +19,7 @@ MyEtherWallet is an open source, javascript, client-side tool for generating UBQ
 - Easily send UBQ and *any* ERC-20 Standard Token. Many tokens included as default: DGD, GNT, ICN, MKR, PLU, REP, SNGLS, and more.
 - Send "Only ETH" or "Only ETC" to ensure you are not victim of replay attacks.
 - Generate and send offline transactions, ensuring your private keys never touch an internet-connected device.
-- Securely access your ETH & Tokens on your [Ledger Nano S](http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-myetherwallet-with-your-nano-s) via the MyEtherWallet interface (Chrome & Opera natively, Firefox w/ [add-on](https://addons.mozilla.org/en-US/firefox/addon/u2f-support-add-on/))
+- Securely access your UBQ & Tokens on your [Ledger Nano S](http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-myetherwallet-with-your-nano-s) via the MyEtherWallet interface (Chrome & Opera natively, Firefox w/ [add-on](https://addons.mozilla.org/en-US/firefox/addon/u2f-support-add-on/))
 - Now in 18 languages thanks 100% to the amazing Ethereum community.
 - Supports URI Strings on Send Transaction Page. [Read More.](https://github.com/kvhnuke/etherwallet/issues/283#issuecomment-261849895)
     - to=[address]
@@ -125,9 +125,9 @@ If you want to help contribute, here's what you need to know to get it up and ru
 
 - Enter the port
 
-- Select whether it is a ETH / ETC / Ropsten / Custom chain.
+- Select whether it is a UBQ / ETC / Ropsten / Custom chain.
 
-    - **ETH**: Shows default ETH tokens, EIP-155=true, chainid=1, uses ubiqscan.io for links to addresses and txs.
+    - **ETH**: Shows default UBQ tokens, EIP-155=true, chainid=1, uses ubiqscan.io for links to addresses and txs.
 
     - **ETC**: Shows default ETC tokens (none...yet?), EIP-155=false, chainid=false, uses gastracker.io for links to addresses and txs.
 
@@ -145,7 +145,7 @@ You must run MyEtherWallet locally. This is due to the fact that our SSL site wo
 
 - Port: 8588
 
-- Select whether it is a ETH / ETC / Ropsten or Custom chain. (see above)
+- Select whether it is a UBQ / ETC / Ropsten or Custom chain. (see above)
 
 - Run gubiq using `gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"`
 
@@ -227,7 +227,7 @@ If you can think of any other features or run into bugs, let us know. You can fo
 - 1/2/17: [Announcing MyEtherWallet v3.4: The Node Switcher](https://www.reddit.com/r/ethereum/comments/5lqx90/announcing_myetherwallet_v34_the_node_switcher/)
 - 1/9/17: [Announcing MyEtherWallet v3.4.3: Interacting with Contracts](https://www.reddit.com/r/ethereum/comments/5n0dj0/announcing_myetherwallet_v343_interacting_with/?utm_content=title&utm_medium=user&utm_source=reddit&utm_name=frontpage)
 - 2/3/17: [MyEtherWallet.com v3.4.7: You can use your TREZOR on MEW. Thanks to all who made this a reality 🤗](https://www.reddit.com/r/ethereum/comments/5rsfu9/myetherwalletcom_v347_you_can_use_your_trezor_on/?utm_content=comments&utm_medium=user&utm_source=reddit&utm_name=frontpage)
-- 2/16/17: [MyEtherWallet v3.5.0: Swap ETH <-> BTC <-> REP via Bity, directly from MEW! (also: Parity backup phrase support + add'l contract features + our roadmap)](https://www.reddit.com/r/ethereum/comments/5ueysp/myetherwallet_v350_swap_eth_btc_rep_via_bity/?utm_content=comments&utm_medium=user&utm_source=reddit&utm_name=frontpage)
+- 2/16/17: [MyEtherWallet v3.5.0: Swap UBQ <-> BTC <-> REP via Bity, directly from MEW! (also: Parity backup phrase support + add'l contract features + our roadmap)](https://www.reddit.com/r/ethereum/comments/5ueysp/myetherwallet_v350_swap_eth_btc_rep_via_bity/?utm_content=comments&utm_medium=user&utm_source=reddit&utm_name=frontpage)
 
 
 #### Pyrus & Pyrus CX are licensed under The MIT License (MIT).

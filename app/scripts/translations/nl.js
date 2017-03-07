@@ -29,7 +29,7 @@ CONTRACT_Write              : 'SCHRIJF ',
 /* Swap / Exchange */
 SWAP_rates                  : "Actuele Koersen ",
 SWAP_init_1                 : "Ik wil mijn ",
-SWAP_init_2                 : " omwisselen voor ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " omwisselen voor ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Naar de volgende stap ", // or "Continue"
 SWAP_information            : "Je informatie ",
 SWAP_send_amt               : "Te verzenden bedrag ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Je referentie nummer ",
 SWAP_time                   : "Resterende tijd om te verzenden ",
 SWAP_progress_1             : "Bestelling Gestart ",
 SWAP_progress_2             : "Wachten op je ", // Waiting for your BTC...
-SWAP_progress_3             : "Ontvangen! ", // ETH Received!
+SWAP_progress_3             : "Ontvangen! ", // UBQ Received!
 SWAP_progress_4             : "Verzenden van je {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Bestelling Voltooid ",
 SWAP_order_CTA              : "Verzend alsjeblieft ", // Please send 1 ETH...
-SWAP_unlock                 : "Open je Wallet op deze pagina om ETH of Tokens direct te verzenden. ",
+SWAP_unlock                 : "Open je Wallet op deze pagina om UBQ of Tokens direct te verzenden. ",
 
 
 
@@ -191,12 +191,12 @@ TRANS_warning               : 'Als je gebruik maakt van de "Enkel ETH" of "Enkel
 TRANS_advanced              : '+Geavanceerd: Voeg Data toe ',
 TRANS_data                  : 'Data ',
 TRANS_gas                   : 'Gas Limit ',
-TRANS_sendInfo              : 'Een standaard transactie met 21000 gas zal 0.000441 ETH kosten. Wij gebruiken een iets-boven-minimum gas prijs van 0.000000021 ETH om te garranderen dat de transactie snel uitgevoerd zal worden. Wij zijn niet verantwoordelijk voor je transactie kosten. ',
+TRANS_sendInfo              : 'Een standaard transactie met 21000 gas zal 0.000441 UBQ kosten. Wij gebruiken een iets-boven-minimum gas prijs van 0.000000021 UBQ om te garranderen dat de transactie snel uitgevoerd zal worden. Wij zijn niet verantwoordelijk voor je transactie kosten. ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : '"Enkel ETH" en "Enkel ETC" Transacties ',
 TRANSModal_Content_0        : 'Een opmerking met betrekking tot de verschillende typen transacties en diensten: ',
-TRANSModal_Content_1        : '**ETH (Standaard Transactie): ** Hiermee genereer je een standaard transactie, direct van een adres naar een ander. Het verbruikt de standaard hoeveelheid gas van 21000. Het is waarschijnlijk dat elke verzonden ETH met deze methode zal worden nagespeeld (replayed) op de ETC blockchain. ',
+TRANSModal_Content_1        : '**ETH (Standaard Transactie): ** Hiermee genereer je een standaard transactie, direct van een adres naar een ander. Het verbruikt de standaard hoeveelheid gas van 21000. Het is waarschijnlijk dat elke verzonden UBQ met deze methode zal worden nagespeeld (replayed) op de ETC blockchain. ',
 TRANSModal_Content_2        : '**Enkel ETH: ** Hiermee verstuur je via [Timon Rapp\'s "replay protection contract" (zoals aanbevolen door VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) zodat je enkel verstuurd op de **ETH** blockchain. ',
 TRANSModal_Content_3        : '**Enkel ETC: ** Hiermee verstuur je via [Timon Rapp\'s "replay protection contract" (zoals aanbevolen door VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) zodat je enkel verstuurd op de **ETC** blockchain. ',
 TRANSModal_Content_4        : '**Coinbase & ShapeShift: ** Verstuur enkel via standaard transacties. Als je via de "Enkel" contracten hebt verstuurd zul je contact moeten opnemen met hun helpdesk zodat ze je kunnen restitueren [Je kunt ook Shapeshift\'s "split" tool uitproberen.](https://split.shapeshift.io/) ',
@@ -391,7 +391,7 @@ HELP_1_Desc_5               : 'Je wallet is nu gegenereerd. ',
 HELP_2a_Title               : '2a) Hoe bewaar/back-up ik mijn wallet? ',
 HELP_2a_Desc_1              : 'Zorg altijd voor een goede back-up van je wallet op meerdere fysiek verschillende lokaties - bijvoorbeeld op een USB drive en/of op een vel papier. ',
 HELP_2a_Desc_2              : 'Bewaar het adres. Je kunt het voor jezelf bewaren of met anderen delen. Op die manier kunnen anderen ether naar je versturen. ',
-HELP_2a_Desc_3              : 'Bewaar versies van je prive sleutel. Deel deze niet met anderen. Je prive sleutel heb je nodig wanneer je toegang tot je ETH wilt om het te versturen! Er zijn drie soorten prive sleutels: ',
+HELP_2a_Desc_3              : 'Bewaar versies van je prive sleutel. Deel deze niet met anderen. Je prive sleutel heb je nodig wanneer je toegang tot je UBQ wilt om het te versturen! Er zijn drie soorten prive sleutels: ',
 HELP_2a_Desc_4              : 'Plaats je adres, versies van je prive sleutel, en de PDF versie van je papieren wallet in een map. Bewaar deze op je computer en een USB drive. ',
 HELP_2a_Desc_5              : 'Druk je wallet af als je een printer hebt. Zo niet, schrijf dan je prive sleutel en adres op een vel papier. Bewaar dit op een veilige lokatie, ergens anders dan je computer en de USB drive. ',
 HELP_2a_Desc_6              : 'Houd in gedachte dat je moet voorkomen dan je je sleutels en wachtwoord kwijt raakt door een defect of verlies van je harde schijf, USB drive, of vel papier. Denk ook aan het fysieke verlies / schade van een complete ruimte (denk aan brand of overstroming). ',

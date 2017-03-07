@@ -132,7 +132,7 @@
       <h5 translate="sidebar_AccountBal">Account Balance:</h5>
 
       <ul class="account-info">
-        <li><strong>{{etherBalance}}</strong> ETH </li>
+        <li><strong>{{etherBalance}}</strong> UBQ </li>
       </ul>
 
       <h5 translate="sidebar_Equiv"> Equivalent Values: </h5>

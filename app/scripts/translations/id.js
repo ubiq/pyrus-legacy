@@ -29,7 +29,7 @@ CONTRACT_Write              : 'WRITE ',
 /* Swap / Exchange */
 SWAP_rates                  : "Nilai Tukar yang berlaku ",
 SWAP_init_1                 : "Saya ingin menukar ",
-SWAP_init_2                 : " menjadi ", // "I want to swap my X ETH for X BTC"
+SWAP_init_2                 : " menjadi ", // "I want to swap my X UBQ for X BTC"
 SWAP_init_CTA               : "Lanjutkan! ", // or "Continue"
 SWAP_information            : "Informasi Anda ",
 SWAP_send_amt               : "Jumlah untuk dikirim ",
@@ -41,11 +41,11 @@ SWAP_ref_num                : "Nomor referensi Anda ",
 SWAP_time                   : "Sisa waktu untuk mengirim ",
 SWAP_progress_1             : "Perintah Dijalankan ",
 SWAP_progress_2             : "Menunggu ", // Waiting for your BTC...
-SWAP_progress_3             : "Diterima! ", // ETH Received!
+SWAP_progress_3             : "Diterima! ", // UBQ Received!
 SWAP_progress_4             : "Mengirim {{orderResult.output.currency}} ",
 SWAP_progress_5             : "Perintah Selesai ",
 SWAP_order_CTA              : "Kirimkan ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock wallet Anda untuk mengirim ETH atau Token langsung dari halaman ini. ",
+SWAP_unlock                 : "Unlock wallet Anda untuk mengirim UBQ atau Token langsung dari halaman ini. ",
 
 NAV_Swap                    : 'Tukarkan ',
 
@@ -226,12 +226,12 @@ TRANS_warning               : 'Penggunaan fitur "Hanya ETH" atau "Hanya ETC" mem
 TRANS_advanced              : '+Advanced: Tambah Data ',
 TRANS_data                  : 'Data ',
 TRANS_gas                   : 'Gas Limit ',
-TRANS_sendInfo              : 'Transaksi standar menggunakan 21000 gas membutuhkan 0.000441 ETH. Kami memakai harga gas sedikit-diatas-harga-gas-minimum senilai 0.000000021 ETH untuk mempercepat. Kami tidak mengambil biaya atas transaksi. ',
+TRANS_sendInfo              : 'Transaksi standar menggunakan 21000 gas membutuhkan 0.000441 ETH. Kami memakai harga gas sedikit-diatas-harga-gas-minimum senilai 0.000000021 UBQ untuk mempercepat. Kami tidak mengambil biaya atas transaksi. ',
 
 /* Send Transaction Modals */
 TRANSModal_Title            : 'Transaksi "Hanya ETH" dan "Hanya ETC" ',
 TRANSModal_Content_0        : 'Catatan terkait jenis transaksi dan layanan: ',
-TRANSModal_Content_1        : '**ETH (Transaksi Standar): ** Transaksi default ini melakukan pengiriman langsung dari alamat pengirim ke alamat tujuan. Nilai Gas 21000. Besar kemungkinan ETH yang dikirim dengan metode ini akan di "replay" di rantai ETC. ',
+TRANSModal_Content_1        : '**ETH (Transaksi Standar): ** Transaksi default ini melakukan pengiriman langsung dari alamat pengirim ke alamat tujuan. Nilai Gas 21000. Besar kemungkinan UBQ yang dikirim dengan metode ini akan di "replay" di rantai ETC. ',
 TRANSModal_Content_2        : '**Hanya ETH: ** Pengiriman melalui [kontrak penangkal "replay" oleh Timon Rapp (direkomendasikan oleh VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) sehingga hanya dilaksanakan di rantai **ETH** saja. ',
 TRANSModal_Content_3        : '**Hanya ETC: ** Pengiriman melalui [kontrak penangkal "replay" oleh Timon Rapp (direkomendasikan oleh VB)](https://blog.ethereum.org/2016/07/26/onward_from_the_hard_fork/) sehingga hanya dilaksanakan di rantai **ETC** saja. ',
 TRANSModal_Content_4        : '**Coinbase & ShapeShift: ** Hanya melakukan pengiriman melalui Transaksi Standar saja. Jika Anda mengirim menggunakan "Hanya ETH" atau "Hanya ETC", hubungi layanan konsumen mereka untuk menambahkan saldo Anda secara manual atau membatalkan transaksinya. [Bisa juga dicoba fasilitas "split" dari Shapeshift.](https://split.shapeshift.io/) ',
@@ -374,7 +374,7 @@ TranslatorAddr_5            : '',
 HELP_Warning                : 'If you created a wallet -or- downloaded the repo before **Dec. 31st, 2015**, please check your wallets &amp; download a new version of the repo. Click for details. ',
 HELP_Desc                   : 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
 HELP_Remind_Title           : 'Some reminders ',
-HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
+HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your UBQ to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
 HELP_Remind_Desc_2          : 'MyEtherWallet.com & Pyrus CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
 HELP_Remind_Desc_3          : 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 

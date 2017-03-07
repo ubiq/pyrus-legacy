@@ -7,9 +7,8 @@
     </p>
     <p>
       <a href="https://pyrus.ubiqsmart.com/#help" target="_blank"> <span translate="NAV_Help">Help</span> / FAQs </a> &middot;
-      <a href="https://github.com/kvhnuke/etherwallet" target="_blank">Github</a> &middot;
-      <a href="https://twitter.com/myetherwallet" target="_blank"> @MyEtherWallet </a> &middot;
-      Created by <a href="https://github.com/kvhnuke" target="_blank">kvhnuke</a> & <a href="https://github.com/tayvano" target="_blank">tayvano</a>
+      <a href="https://github.com/ubiq/pyruswallet" target="_blank">Github</a> &middot;
+      <a href="https://twitter.com/ubiqsmart" target="_blank"> @UbiqSmart </a>
     </p>
   </div>
 </footer>
