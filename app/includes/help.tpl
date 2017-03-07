@@ -402,7 +402,7 @@
             <li translate="HELP_12_Desc_16"> Open Text Edit and paste this private key.</li>
             <li translate="HELP_12_Desc_17"> Go to the menu bar and click "Format" -> "Make Plain Text".</li>
             <li translate="HELP_12_Desc_18"> Save this file to your <code>desktop</code> as <code>nothing_special_delete_me.txt</code>. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. </li>
-            <li translate="HELP_12_Desc_19"> Open terminal and run the following command: <code>geth account import ~/Desktop/nothing_special_delete_me.txt</code></li>
+            <li translate="HELP_12_Desc_19"> Open terminal and run the following command: <code>gubiq account import ~/Desktop/nothing_special_delete_me.txt</code></li>
             <li translate="HELP_12_Desc_20"> This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don't forget it. </li>
             <li translate="HELP_12_Desc_21"> After successful import, delete <code>nothing_special_delete_me.txt</code></li>
             <li translate="HELP_12_Desc_22"> The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". </li>
@@ -411,7 +411,7 @@
           <ul>
             <li translate="HELP_12_Desc_23"> Open Notepad & paste the private key</li>
             <li translate="HELP_12_Desc_24"> Save the file as <code>nothing_special_delete_me.txt</code> at <code>C:\</code></li>
-            <li translate="HELP_12_Desc_25"> Run the command, <code>geth account import C:\nothing_special_delete_me.txt</code></li>
+            <li translate="HELP_12_Desc_25"> Run the command, <code>gubiq account import C:\nothing_special_delete_me.txt</code></li>
             <li translate="HELP_12_Desc_26"> This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don't forget it.</li>
             <li translate="HELP_12_Desc_27"> After successful import, delete <code>nothing_special_delete_me.txt</code></li>
             <li translate="HELP_12_Desc_28"> The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". </li>

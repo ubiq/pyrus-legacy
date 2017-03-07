@@ -325,7 +325,7 @@ SUCCESS_5                   : 'Bestand Geselecteerd ',
 
 WARN_Send_Link              : 'Je bent hier gekomen via een link waarbij het adres, bedrag, gas of data velden al ingevuld zijn. Indien gewenst kun je elk veld nog aanpassen voor het verzenden. Ontgrendel je wallet on te beginnen. ',
 
-/* Geth Error Messages */
+/* Gubiq Error Messages */
 GETH_InvalidSender          : 'Ongeldige verzender ',
 GETH_Nonce                  : 'Nonce te laag ',
 GETH_Cheap                  : 'Gas prijs te laag voor acceptatie ',
@@ -523,13 +523,13 @@ HELP_12_Desc_15b            : 'Als je op een PC werkt: ',
 HELP_12_Desc_16             : 'Open Tekst Editor en plak deze prive sleutel. ',
 HELP_12_Desc_17             : 'Ga naar de menu balk en klik "Formaat" -> "Maak Platte Tekst". ',
 HELP_12_Desc_18             : 'Sla dit bestand op op je bureaublad als `niets_bijzonders_verwijder_mij.txt`. Controleer dat de opties "UTF-8" en "If no extension is provided use .txt" gekozen zijn in het dialog. ',
-HELP_12_Desc_19             : 'Open terminal en voer het volgende commando uit: `geth account import ~/Desktop/niets_bijzonders_verwijder_mij.txt` ',
+HELP_12_Desc_19             : 'Open terminal en voer het volgende commando uit: `gubiq account import ~/Desktop/niets_bijzonders_verwijder_mij.txt` ',
 HELP_12_Desc_20             : 'Je zal gevraagd worden om een nieuw wachtwoord. Dit is het wachtwoord wat je zult gebruiken in gubiq / Ethereum Wallet / Fusion elke keer als je een transactie verzend, dus zorg dat je dit niet vergeet. ',
 HELP_12_Desc_21             : 'Verwijder het bestand `niets_bijzonders_verwijder_mij.txt` na een geslaagde import. ',
 HELP_12_Desc_22             : 'De volgende keer dat je de Ethereum Wallet applicatie opent, zal je account worden vermeld onder "Accounts". ',
 HELP_12_Desc_23             : 'Open Kladblok (Notepad) & plak de prive seutel ',
 HELP_12_Desc_24             : 'Sla het bestand op als `niets_bijzonders_verwijder_mij.txt` in `C:` ',
-HELP_12_Desc_25             : 'Open de command prompt en voer het volgende commando uit: `geth account import C:\\niets_bijzonders_verwijder_mij.txt` ',
+HELP_12_Desc_25             : 'Open de command prompt en voer het volgende commando uit: `gubiq account import C:\\niets_bijzonders_verwijder_mij.txt` ',
 HELP_12_Desc_26             : 'Je zal gevraagd worden om een nieuw wachtwoord. Dit is het wachtwoord wat je zult gebruiken in gubiq / Ethereum Wallet / Fusion elke keer als je een transactie verzend, dus zorg dat je dit niet vergeet. ',
 HELP_12_Desc_27             : 'Verwijder het bestand `niets_bijzonders_verwijder_mij.txt` na een geslaagde import. ',
 HELP_12_Desc_28             : 'De volgende keer dat je de Ethereum Wallet applicatie opent, zal je account worden vermeld onder "Accounts". ',
@@ -549,7 +549,7 @@ HELP_16_Desc_1              : 'Je kunt hiervoor een blockchain explorer gebruike
 HELP_17_Title               : '17) Waarom wordt mijn saldo niet weergegeven nadat ik mijn wallet heb ontsleuteld? ',
 HELP_17_Desc_1              : 'Dit wordt zeer waarschijnlijk veroorzaakt door het feit dat je achter een firwall zit. De API waarvan we gebruik maken om je saldo op te halen en te converteren wordt vaak geblokkeerd door firewalls om wat voor reden dan ook. Het is nog steeds mogelijk om transacties te verzenden, je hebt enkel een andere methode nodig om je saldo the checken, zoals bijvoorbeeld etherscan.io ',
 
-HELP_18_Title               : '18) Waar is mijn Geth wallet bestand? ',
+HELP_18_Title               : '18) Waar is mijn Gubiq wallet bestand? ',
 
 HELP_19_Title               : '19) Waar is mijn Fusion wallet bestand? ',
 HELP_19_Desc_1              : 'Fusion bestanden zijn normaliter te vinden op de bovenstaande bestandslocaties, maar het volgende is veel makkelijker: open Fusion, selecteer "Accounts" in de top balk, selecteer "Backup", en selecteer "Accounts". Hiermee open je de map waar je bestanden worden bewaard. ',

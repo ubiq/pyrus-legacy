@@ -328,7 +328,7 @@ SUCCESS_4                   : 'Votre portefeuille a été ajouté avec succès '
 SUCCESS_5                   : 'Fichier sélectionné ',
 WARN_Send_Link              : 'Vous être arrivé grâce à un lien qui a rempli l\'adresse, le montant, le gaz ou les champs de données pour vous. Vous pouvez modifier toutes les informations avant d\'envoyer. Débloquez votre portefeuille pour démarrer. ',
 
-/* Geth Error Messages */
+/* Gubiq Error Messages */
 GETH_InvalidSender          : 'Expéditeur invalide ',
 GETH_Nonce                  : 'Nonce trop bas ',
 GETH_Cheap                  : 'Prix du gaz trop bas pour être accepté ',
@@ -526,13 +526,13 @@ HELP_12_Desc_15b            : 'Si vous êtes sur un PC : ',    // Strange, alrea
 HELP_12_Desc_16             : 'Ouvez Text Edit et collez cette clef privée. ',
 HELP_12_Desc_17             : 'Dans la barre de menu, cliquez sur "Format" -> "Make Plain Text". ',
 HELP_12_Desc_18             : 'Sauvegardez ce fichier vers votre `Desktop/` en tant que `nothing_special_delete_me.txt`. Assurez-vous qu\'il précise "UTF-8" et "If no extension is provided use .txt" dans le dialogue de sauvegarde. ',
-HELP_12_Desc_19             : 'Ouvrez un terminal et lancez la commande suivante : `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
+HELP_12_Desc_19             : 'Ouvrez un terminal et lancez la commande suivante : `gubiq account import ~/Desktop/nothing_special_delete_me.txt` ',
 HELP_12_Desc_20             : 'Ceci vous invitera à choisir un nouveau mot de passe. C\'est celui que vous utiliserez dans gubiq / Ethereum Wallet / Fusion à chaque vois que vos enverrez une transaction, donc ne l\'oubliez pas. ',
 HELP_12_Desc_21             : 'Après que l\'import a réussi, supprimez `nothing_special_delete_me.txt` ',
 HELP_12_Desc_22             : 'La prochaine fois que vous ouvrirez l\'application Ethereum Wallet, votre compte sera listé sous "Accounts". ',
 HELP_12_Desc_23             : 'Ouvrez Notepad et collez-y la clef privée ',
 HELP_12_Desc_24             : 'Sauvegardez le fichier en tant que `nothing_special_delete_me.txt` sur `C:` ',
-HELP_12_Desc_25             : 'Lancez la commande `geth account import C:\\nothing_special_delete_me.txt` ',
+HELP_12_Desc_25             : 'Lancez la commande `gubiq account import C:\\nothing_special_delete_me.txt` ',
 HELP_12_Desc_26             : 'Ceci vous invitera à choisir un nouveau mot de passe. C\'est celui que vous utiliserz dans gubiq / Ethereum Wallet / Fusion à chaque foiq que vous enverrez une transaction donc ne l\'oubliez pas. ',
 HELP_12_Desc_27             : 'Après que l\'import a réussi, supprimez `nothing_special_delete_me.txt` ',
 HELP_12_Desc_28             : 'La prochaine fois que vous ouvrirez l\'application Ethereum Wallet, votre compte sera listé sous "Accounts". ',

@@ -328,7 +328,7 @@ SUCCESS_3                   : 'Giao dịch đã gửi đi, TX ID: ',
 SUCCESS_4                   : 'Ví của bạn đã được thêm thành công: ',
 SUCCESS_5                   : 'Tập Tin Được Chọn ',
 
-/* Geth Error Messages */
+/* Gubiq Error Messages */
 GETH_InvalidSender          : 'Sai người nhận ',
 GETH_Nonce                  : 'Nonce quá thấp ',
 GETH_Cheap                  : 'Gas quá thấp ',
@@ -526,13 +526,13 @@ HELP_12_Desc_15b            : 'Nếu bạn sử dụng máy PC: ',
 HELP_12_Desc_16             : 'Mở phần Text Edit và dán private key này vào. ',
 HELP_12_Desc_17             : 'Tại thanh menu bạn hãy chọn "Format" -> "Make Plain Text". ',
 HELP_12_Desc_18             : 'Lưu tập tin này trên `desktop/` của bạn như `nothing_special_delete_me.txt`. chắc chắn rằng nó được khai báo "UTF-8" và " Nếu không có phần mở rộng được cung cấp sử dụng .text" và lưu vào dialog. ',
-HELP_12_Desc_19             : 'Mở terminal và dùng câu lệnh như sau: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
+HELP_12_Desc_19             : 'Mở terminal và dùng câu lệnh như sau: `gubiq account import ~/Desktop/nothing_special_delete_me.txt` ',
 HELP_12_Desc_20             : 'Việc này sẽ yêu cầu bạn thực hiện một mật khẩu mới. Và nó sẽ là mật khẩu mà bạn sử dụng tại gubiq / Ví Ethereum / Fusion . Lưu ý, Bạn phải ghi nhớ mật khẩu này. ',
 HELP_12_Desc_21             : 'Sau khi hoàn thành việc nhập Ví trên ứng dụng, bạn nên xoá tập tin `nothing_special_delete_me.txt` ',
 HELP_12_Desc_22             : 'Trong lần sử dụng ứng dụng Ví Ethereum sau này, Tài khoản của bạn sẽ tự đọng liên kết và hiển thị dưới phần "Accounts". ',
 HELP_12_Desc_23             : 'Mở mục Notepad & dán private key vào ',
 HELP_12_Desc_24             : 'Lưu tập tin lại với tên như sau `nothing_special_delete_me.txt` tại ổ đĩa `C:` ',
-HELP_12_Desc_25             : 'Sử dụng câu lệnh, `geth account import C:\\nothing_special_delete_me.txt` ',
+HELP_12_Desc_25             : 'Sử dụng câu lệnh, `gubiq account import C:\\nothing_special_delete_me.txt` ',
 HELP_12_Desc_26             : 'Việc này sẽ yêu cầu bạn thực hiện một mật khẩu mới. Và nó sẽ là mật khẩu mà bạn sử dụng tại gubiq / Ví Ethereum / Fusion . Lưu ý, Bạn phải ghi nhớ mật khẩu này. ',
 HELP_12_Desc_27             : 'Sau khi hoàn thành việc nhập Ví trên ứng dụng, bạn nên xoá tập tin `nothing_special_delete_me.txt` ',
 HELP_12_Desc_28             : 'Trong lần sử dụng ứng dụng Ví Ethereum sau này, Tài khoản của bạn sẽ tự đọng liên kết và hiển thị dưới phần "Accounts". ',
@@ -552,7 +552,7 @@ HELP_16_Desc_1              : 'Bạn có thể sử dụng Blockchain Explorer d
 HELP_17_Title               : '17) Tại sao số dư tài khoản của tôi không hiển thị khi tôi truy cập vào tài khoản? ',
 HELP_17_Desc_1              : 'Vấn đề này rất có thể xảy ra nếu như máy tính của bạn đang kích hoạt tường lửa. Các API mà chúng tôi sử dụng nhằm tải xuống số Dư của hiện có của tài khoản và chuyển đổi số dư thường bị chặn bởi tường lửa bởi bất kì lý do nào. Nhưng bạn vẫn có thể gửi đi các giao dịch và bạn chỉ cần sử dụng một phương pháp khác dễ kiễm tra số dư của bạn hiện tại trước và sau khi giao dịch được thực hiện, ví dụ: etherscan.io ',
 
-HELP_18_Title               : '18) Tập tin chứa định dạng Geth của ví tôi nằm ở đâu? ',
+HELP_18_Title               : '18) Tập tin chứa định dạng Gubiq của ví tôi nằm ở đâu? ',
 
 HELP_19_Title               : '19) Tập tin chứa dịnh dạng Fusion của ví tôi nằm ở đâu? ',
 HELP_19_Desc_1              : 'Tập tin chứa định dạng dành cho Ví mist nằm ở mục the file locations phía trên, nó rất đễ dàng dễ mở Fusion, Chọn "Accounts" hàng đầu tiên của thanh công cụ, chọn "Backup", và chọn "Accounts". Nó sẽ mở ra thư mục hiện tại đang lưu trữ tập tin định dạng Ví của bạn. ',

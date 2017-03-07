@@ -12,7 +12,7 @@
           <ul class="small">
             <li> URL: http://127.0.0.1</li>
             <li> Port: 8588 </li>
-            <li> Run geth: <code>gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code></li>
+            <li> Run gubiq: <code>gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code></li>
             <li> Run Parity: <code>parity --rpccorsdomain "*" --keys-path "dont_put_secret_files_here_ever"</code></li>
           </ul>
         </p>
