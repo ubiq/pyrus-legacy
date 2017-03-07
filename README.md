@@ -1,4 +1,4 @@
-## Website: https://www.MyEtherWallet.com
+## Website: https://pyrus.ubiqsmart.com
 ## Chrome Extension: https://chrome.google.com/webstore/detail/myetherwallet-cx/nlbmnnijcnlegkjjpcfjclmcfggfefdm
 ## Download the Latest Release: https://github.com/kvhnuke/etherwallet/releases/latest
 - dist-vX.X.X.X.zip is the smaller package containing the gh-pages branch aka MyEtherWallet.com
@@ -28,8 +28,8 @@ MyEtherWallet is an open source, javascript, client-side tool for generating UBQ
     - tokenSymbol=[ARC | ICN | MKR | ....]
     - gasLimit=[number] OR gas=[number]
     - data=[hex data]
-    - Example 1: https://www.myetherwallet.com/?to=0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8&value=1&tokenSymbol=REP&gaslimit=50000#send-transaction
-    - Example 2: https://www.myetherwallet.com/?to=0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8&value=1&gaslimit=23000&data=0x5468616e6b20796f752c204d455720322e30#send-transaction
+    - Example 1: https://pyrus.ubiqsmart.com/?to=0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8&value=1&tokenSymbol=REP&gaslimit=50000#send-transaction
+    - Example 2: https://pyrus.ubiqsmart.com/?to=0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8&value=1&gaslimit=23000&data=0x5468616e6b20796f752c204d455720322e30#send-transaction
 
 **Goals**
 
@@ -49,7 +49,7 @@ MyEtherWallet is an open source, javascript, client-side tool for generating UBQ
 
 ### Users (non-developers)
 
-It is recommended you start with our help page @ https://www.myetherwallet.com/#help.
+It is recommended you start with our help page @ https://pyrus.ubiqsmart.com/#help.
 
 You can run Pyrus on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page.
 
@@ -94,7 +94,7 @@ If you want to help contribute, here's what you need to know to get it up and ru
 - `layouts` are the pages themselves. These basically take all the pieces of the pages and compile into one massive page. The navigation is also found here...sort of.
     * `index.html` is for MyEtherWallet.com.
     * `cx-wallet.html` is the main page for the Chrome Extension.
-    * `embedded.html` is for https://www.myetherwallet.com/embedded.html.
+    * `embedded.html` is for https://pyrus.ubiqsmart.com/embedded.html.
 
 - You can control what shows up on Pyrus vs the Chrome Extension by using: `@@if (site === 'cx' )  {  ...  }` and `@@if (site === 'mew' ) { ... }`. Check out `sendTransaction.tpl` to see it in action. The former will only compile to the Chrome Extension. The latter only to MyEtherWallet.com.
 - embedded.html is for embedding the wallet generation into third-party sites. [Read more about it and how to listen for the address generated here.](https://www.reddit.com/r/ethereum/comments/4gn37o/embeddable_myetherwallet_super_simple_wallet/)
@@ -199,7 +199,7 @@ Read more @ [Help us translate Pyrus into ALL THE LANGUAGES!](https://www.reddit
 
 
 ### Contact
-If you can think of any other features or run into bugs, let us know. You can fork, open a PR, open an issue, [message kvhnuke on reddit](https://www.reddit.com/message/compose/?to=kvhnuke), [email tayvano](mailto:tayvano@gmail.com) or [in any of these ways](https://www.myetherwallet.com/#contact).
+If you can think of any other features or run into bugs, let us know. You can fork, open a PR, open an issue, [message kvhnuke on reddit](https://www.reddit.com/message/compose/?to=kvhnuke), [email tayvano](mailto:tayvano@gmail.com) or [in any of these ways](https://pyrus.ubiqsmart.com/#contact).
 
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Pyrus: Open Source JavaScript Client-Side Ubiq Wallet</title>
-  <link rel="canonical" href="https://www.myetherwallet.com" />
+  <link rel="canonical" href="https://pyrus.ubiqsmart.com" />
   <meta name="description" content="Ubiq Wallet: Open Source JavaScript Client-Side Ubiq Wallet">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +32,6 @@
 
 <header class="bg-gradient text-white">
 <section class="container text-center">
-  <a href="https://www.myetherwallet.com/"><img src="images/logo-myetherwallet.svg" height="50px" width="auto" alt="Ubiq Wallet" /></a>
+  <a href="https://pyrus.ubiqsmart.com/"><img src="images/logo-myetherwallet.svg" height="50px" width="auto" alt="Ubiq Wallet" /></a>
 </section>
 </header>

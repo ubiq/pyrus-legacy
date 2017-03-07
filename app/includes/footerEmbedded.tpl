@@ -2,11 +2,11 @@
   <div class="container">
     <p>
       <span translate="FOOTER_3">Client-side wallet generation by</span>
-      <a href="https://www.myetherwallet.com" target="_blank">www.MyEtherWallet.com</a>:
+      <a href="https://pyrus.ubiqsmart.com" target="_blank">pyrus.ubiqsmart.com</a>:
       <span translate="MEW_Tagline">An open source, javascript, client-side tool for generating Ubiq Wallets & sending transactions.</span>
     </p>
     <p>
-      <a href="https://www.myetherwallet.com/#help" target="_blank"> <span translate="NAV_Help">Help</span> / FAQs </a> &middot;
+      <a href="https://pyrus.ubiqsmart.com/#help" target="_blank"> <span translate="NAV_Help">Help</span> / FAQs </a> &middot;
       <a href="https://github.com/kvhnuke/etherwallet" target="_blank">Github</a> &middot;
       <a href="https://twitter.com/myetherwallet" target="_blank"> @MyEtherWallet </a> &middot;
       Created by <a href="https://github.com/kvhnuke" target="_blank">kvhnuke</a> & <a href="https://github.com/tayvano" target="_blank">tayvano</a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Pyrus: Open-Source & Client-Side Ubiq Wallet</title>
-  <link rel="canonical" href="https://www.myetherwallet.com" />
+  <link rel="canonical" href="https://pyrus.ubiqsmart.com" />
   <meta name="description" content="Open-Source & Client-Side Ubiq Wallet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
   <meta name="msapplication-config" content="images/fav/browserconfig.xml">
   <meta name="theme-color" content="#163151">
 
-  <meta property="og:url"         content="https://www.MyEtherWallet.com" />
+  <meta property="og:url"         content="https://pyrus.ubiqsmart.com" />
   <meta property="og:title"       content="When Great Minds Don’t Think Alike" />
   <meta property="og:description" content="Pyrus: Open-Source & Client-Side Ubiq Wallet" />
   <meta property="og:image"       content="images/fb-myetherwallet.png" />
@@ -38,7 +38,7 @@
   <section class="bg-gradient header-branding">
     <section class="container">
 
-      @@if (site === 'mew' ) { <a class="brand" href="https://www.myetherwallet.com/" aria-label="Go to homepage"> <img src="images/logo-myetherwallet.svg"   height="64px" width="auto" alt="MyEtherWallet" /></a> }
+      @@if (site === 'mew' ) { <a class="brand" href="https://pyrus.ubiqsmart.com/" aria-label="Go to homepage"> <img src="images/logo-myetherwallet.svg"   height="64px" width="auto" alt="MyEtherWallet" /></a> }
       @@if (site === 'cx'  ) { <a class="brand" href="/cx-wallet.html" aria-label="Go to homepage">                <img src="images/logo-myetherwalletcx.svg" height="64px" width="auto" alt="MyEtherWallet" /></a> }
 
       <div class="tagline"><span style="max-width: 395px">Open-Source & Client-Side Ubiq Wallet</span>
