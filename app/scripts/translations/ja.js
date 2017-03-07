@@ -277,7 +277,7 @@ MSG_info2                   : '他人に使われないようにするため、�
 MSG_info3                   : '異なった目的で使用されないようにするために、利用目的を入れてください。 ',
 
 /* View Wallet Details */
-VIEWWALLET_Subtitle         : '異なったバージョンのプライベートキーをダウンロードしたり、ペーパーウォレットを再印刷することができます。[import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)する時に必要です。残高をチェックするためには、[etherscan.io](http://etherscan.io/)のようなブロックチェーンエクスプローラーサービスを使う事をおすすめします。 ',
+VIEWWALLET_Subtitle         : '異なったバージョンのプライベートキーをダウンロードしたり、ペーパーウォレットを再印刷することができます。[import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)する時に必要です。残高をチェックするためには、[ubiqscan.io](http://ubiqscan.io/)のようなブロックチェーンエクスプローラーサービスを使う事をおすすめします。 ',
 VIEWWALLET_Subtitle_Short   : '異なったバージョンのプライベートキーをダウンロードしたり、ペーパーウォレットを再印刷することができます。 ',
 VIEWWALLET_SuccessMsg       : '成功! ウォレットの詳細は以下の通りです。 ',
 
@@ -538,10 +538,10 @@ HELP_15_Title               : '15) Why hasn\'t the account I just created show u
 HELP_15_Desc_1              : 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
 
 HELP_16_Title               : '16) How do I check the balance of my account? ',
-HELP_16_Desc_1              : 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
+HELP_16_Desc_1              : 'You can use a blockchain explorer like [ubiqscan.io](http://ubiqscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://ubiqscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on ubiqscan.io ',
 
 HELP_17_Title               : '17) Why isn\'t my balance showing up when I unlock my wallet? ',
-HELP_17_Desc_1              : 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
+HELP_17_Desc_1              : 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like ubiqscan.io ',
 
 HELP_18_Title               : '18) Where is my gubiq wallet file? ',
 

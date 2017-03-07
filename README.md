@@ -127,11 +127,11 @@ If you want to help contribute, here's what you need to know to get it up and ru
 
 - Select whether it is a ETH / ETC / Ropsten / Custom chain.
 
-    - **ETH**: Shows default ETH tokens, EIP-155=true, chainid=1, uses etherscan.io for links to addresses and txs.
+    - **ETH**: Shows default ETH tokens, EIP-155=true, chainid=1, uses ubiqscan.io for links to addresses and txs.
 
     - **ETC**: Shows default ETC tokens (none...yet?), EIP-155=false, chainid=false, uses gastracker.io for links to addresses and txs.
 
-    - **Ropsten**: Shows default ROP tokens (none...yet?), EIP-155=true, chainid=3, uses testnet.etherscan.io for links to addresses and txs.
+    - **Ropsten**: Shows default ROP tokens (none...yet?), EIP-155=true, chainid=3, uses testnet.ubiqscan.io for links to addresses and txs.
 
     - **Custom**: Allows you to select whether EIP-155 is true or false, and provide a chainid if it's true.
 

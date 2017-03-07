@@ -23,8 +23,8 @@ nodes.customNodeObj = {
 nodes.nodeList = {
     'eth_mew': {
         'name': 'ETH',
-        'blockExplorerTX': 'https://etherscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://etherscan.io/address/[[address]]',
+        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
         'type': nodes.nodeTypes.ETH,
         'eip155': true,
         'chainId': 1,
@@ -36,8 +36,8 @@ nodes.nodeList = {
     },
     'eth_ethscan': {
         'name': 'ETH',
-        'blockExplorerTX': 'https://etherscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://etherscan.io/address/[[address]]',
+        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
         'type': nodes.nodeTypes.ETH,
         'eip155': true,
         'chainId': 1,
@@ -50,8 +50,8 @@ nodes.nodeList = {
     'rop_mew': {
         'name': 'Ropsten',
         'type': nodes.nodeTypes.Ropsten,
-        'blockExplorerTX': 'https://testnet.etherscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://testnet.etherscan.io/address/[[address]]',
+        'blockExplorerTX': 'https://testnet.ubiqscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://testnet.ubiqscan.io/address/[[address]]',
         'eip155': true,
         'chainId': 3,
         'tokenList': require('./tokens/ropstenTokens.json'),

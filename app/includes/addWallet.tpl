@@ -146,7 +146,7 @@
 
       <h5 translate="sidebar_TransHistory"> Transaction History: </h5>
       <ul class="account-info">
-        <li><a href="https://etherscan.io/address/{{wallet.getAddressString()}}" target="_blank">https://etherscan.io/address/ {{wallet.getAddressString()}}</a></li>
+        <li><a href="https://ubiqscan.io/address/{{wallet.getAddressString()}}" target="_blank">https://ubiqscan.io/address/ {{wallet.getAddressString()}}</a></li>
       </ul>
 
 

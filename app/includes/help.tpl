@@ -464,7 +464,7 @@
         <h4 translate="HELP_16_Title">16. How do I check the balance of my account? </h4>
       </div>
       <div ng-show="h16">
-        <p translate="HELP_16_Desc_1"> You can use a blockchain explorer like <a href="http://etherscan.io/" target="_blank">etherscan.io</a>. Paste your address into the search bar and it will pull up your address and transaction history. For example, here's what our <a href="http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8" target="_blank">donation account</a> looks like on etherscan.io</p>
+        <p translate="HELP_16_Desc_1"> You can use a blockchain explorer like <a href="http://ubiqscan.io/" target="_blank">ubiqscan.io</a>. Paste your address into the search bar and it will pull up your address and transaction history. For example, here's what our <a href="http://ubiqscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8" target="_blank">donation account</a> looks like on ubiqscan.io</p>
     </div>
   </article>
 
@@ -476,7 +476,7 @@
         <h4 translate="HELP_17_Title">17. Why isn't my balance showing up when I unlock my wallet? </h4>
       </div>
       <div ng-show="h17">
-        <p translate="HELP_17_Desc_1"> This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io</p>
+        <p translate="HELP_17_Desc_1"> This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like ubiqscan.io</p>
     </div>
   </article>
 

@@ -294,7 +294,7 @@ MYWAL_Content_2             : 'Stelle sicher, dass du **die private Key/JSON Dat
 MYWAL_Content_3             : 'Wenn du dieses Wallet in Zukunft mit MyEtherWallet CX verwenden willst, musst du es mittels der privaten Key/JSON Datei und deinem Passwort manuell wieder hinzufügen. ',
 
 /* View Wallet Details */
-VIEWWALLET_Subtitle         : 'Dies erlaubt dir den Download verschiedener Versionen deines privaten Schlüssel sowie das erneute Drucken deines Papier-Wallets. Es wird empfohlen, dies zu tun um [Deinen Account in Gubiq/Fusion zu importieren.](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Zum Überprüfen deines Kontostands empfehlen wir, einen Blockchain Explorer wie [etherscan.io](http://etherscan.io/) zu verwenden. ',
+VIEWWALLET_Subtitle         : 'Dies erlaubt dir den Download verschiedener Versionen deines privaten Schlüssel sowie das erneute Drucken deines Papier-Wallets. Es wird empfohlen, dies zu tun um [Deinen Account in Gubiq/Fusion zu importieren.](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Zum Überprüfen deines Kontostands empfehlen wir, einen Blockchain Explorer wie [ubiqscan.io](http://ubiqscan.io/) zu verwenden. ',
 VIEWWALLET_Subtitle_Short   : 'Dies erlaubt dir den Download verschiedener Versionen deines privaten Schlüssel sowie das erneute Drucken deines Papier-Wallets. ',
 VIEWWALLET_SuccessMsg       : 'Erfolgreich! Hier sind die Daten deines Wallets. ',
 
@@ -547,10 +547,10 @@ HELP_15_Title               : '15) Why hasn\'t the account I just created show u
 HELP_15_Desc_1              : 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
 
 HELP_16_Title               : '16) How do I check the balance of my account? ',
-HELP_16_Desc_1              : 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
+HELP_16_Desc_1              : 'You can use a blockchain explorer like [ubiqscan.io](http://ubiqscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://ubiqscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on ubiqscan.io ',
 
 HELP_17_Title               : '17) Why isn\'t my balance showing up when I unlock my wallet? ',
-HELP_17_Desc_1              : 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
+HELP_17_Desc_1              : 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like ubiqscan.io ',
 
 HELP_18_Title               : '18) Where is my gubiq wallet file? ',
 
