@@ -11,7 +11,7 @@
     </div>
     <div ng-show="!hRemind">
       <ul>
-        <li translate="HELP_Remind_Desc_1">**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but we are not responsible for the lost Ether.</li>
+        <li translate="HELP_Remind_Desc_1">**Ethereum, Pyrus & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but we are not responsible for the lost Ether.</li>
         <li translate="HELP_Remind_Desc_2">MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain.</li>
         <li translate="HELP_Remind_Desc_3">If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer!</li>
       </ul>
@@ -122,7 +122,7 @@
         <li translate="HELP_3_Desc_2"> Navigate to the "View Wallet Info" page. </li>
         }
         @@if (site === 'cx' )  {
-        <li translate="HELP_3_Desc_3"> Navigate to the MyEtherWallet.com "View Wallet Info" page. </li>
+        <li translate="HELP_3_Desc_3"> Navigate to the Pyrus "View Wallet Info" page. </li>
         }
         <li translate="HELP_3_Desc_4"> Select your wallet file -or- your private key and unlock your wallet. </li>
         <li translate="HELP_3_Desc_5"> If the wallet is encrypted, a text box will automatically appear. Enter the password. </li>
@@ -206,10 +206,10 @@
   <article class="collapse-container">
     <div  ng-click="h5 = !h5">
       <a class="collapse-button"><span ng-show="!h5">+</span><span ng-show="h5">-</span></a>
-      <h4 translate="HELP_5_Title">5. How do I run MyEtherWallet.com offline/locally? </h4>
+      <h4 translate="HELP_5_Title">5. How do I run Pyrus offline/locally? </h4>
     </div>
     <div ng-show="h5">
-    <p translate="HELP_5_Desc_1"> You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generatea a wallet completely offline and send transactions from the "Offline Transaction" page. </p>
+    <p translate="HELP_5_Desc_1"> You can run Pyrus on your computer instead of from the GitHub servers. You can generatea a wallet completely offline and send transactions from the "Offline Transaction" page. </p>
     <ol>
       <li translate="HELP_2b_Desc_1">Go to https://github.com/kvhnuke/etherwallet/releases/latest:</li>
       <li translate="HELP_2b_Desc_2">Click the file below that looks like dist-vX.X.X.zip</li>
@@ -303,7 +303,7 @@
     </div>
     <div ng-show="h8">
       <p translate="HELP_8_Desc_1">MyEtherWallet is not a web wallet. You don't have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain.</p>
-      <p translate="HELP_8_Desc_2">If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn't have to "get" your UBQ out of MyEtherWallet because it's not in MyEtherWallet. It's in whatever wallet your generated via our site.</p>
+      <p translate="HELP_8_Desc_2">If Pyrus goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn't have to "get" your UBQ out of MyEtherWallet because it's not in MyEtherWallet. It's in whatever wallet your generated via our site.</p>
       <p translate="HELP_8_Desc_3"> You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #10 below. </p>
       <p translate="HELP_8_Desc_4">In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren't storing any information. If we do take the domain down, it still is, and always will be, publicly available at <a href="https://github.com/kvhnuke/etherwallet/tree/gh-pages" target="_blank">https://github.com/kvhnuke/etherwallet</a>. You can download the ZIP there and run it locally. </p>
     </div>
@@ -433,10 +433,10 @@
   <article class="collapse-container">
     <div ng-click="h14 = !h14" >
       <a class="collapse-button"><span ng-show="!h14">+</span><span ng-show="h14">-</span></a>
-        <h4 translate="HELP_14_Title"> 14. Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn't do this. Is the random number generation for MyEtherWallet safe?</h4>
+        <h4 translate="HELP_14_Title"> 14. Some sites randomize (seed) the private key generation via mouse movements. Pyrus doesn't do this. Is the random number generation for MyEtherWallet safe?</h4>
       </div>
       <div ng-show="h14">
-        <p translate="HELP_14_Desc_1">While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren't unsafe, it's just that we (and tons of other crypto experments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here's a <a href="https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm" target="_blank">conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto</a> and here is the <a href="https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto" target="_blank">the window.crypto w3 spec</a>.</p>
+        <p translate="HELP_14_Desc_1">While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren't unsafe, it's just that we (and tons of other crypto experments) believe in window.crypto. In addition, Pyrus can be used on touch devices. Here's a <a href="https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm" target="_blank">conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto</a> and here is the <a href="https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto" target="_blank">the window.crypto w3 spec</a>.</p>
     </div>
   </article>
 
@@ -551,7 +551,7 @@
       <h6 translate="HELP_SecCX_Desc_3"> What information is saved? </h6>
       <p translate="HELP_SecCX_Desc_4"> The address, nickname, private key is stored in chrome.storage. The private key is encrypted using the password you set when you added the wallet. The nickname and wallet address is not encrypted. </p>
       <h6 translate="HELP_SecCX_Desc_5"> Why aren't the nickname and wallet address encrypted? </h6>
-      <p translate="HELP_SecCX_Desc_6"> If we were to encrypt these items, you would need to enter a password each time you wanted to view your account balance or view the nicknames. If this concerns you, we recommend you use MyEtherWallet.com instead of this Chrome Extension. </p>
+      <p translate="HELP_SecCX_Desc_6"> If we were to encrypt these items, you would need to enter a password each time you wanted to view your account balance or view the nicknames. If this concerns you, we recommend you use Pyrus instead of this Chrome Extension. </p>
     </div>
   </article>
 }
