@@ -13,9 +13,6 @@ var walletDecryptDrtv = function() {
     <label class=\"radio\"><input aria-flowto="aria1" aria-label=\"Keystore JSON file\" type=\"radio\" ng-model=\"walletType\" value=\"fileupload\" \/><span translate=\"x_Keystore2\">Keystore \/ JSON File<\/span><\/label>\r\n \
     <label class=\"radio\"><input aria-flowto="aria2" aria-label=\"private key\" type=\"radio\" ng-model=\"walletType\" value=\"pasteprivkey\" \/><span translate=\"x_PrivKey2\">Private Key<\/span><\/label>\r\n \
     <label class=\"radio\"><input aria-flowto="aria3" aria-label=\"mnemonic phrase\" type=\"radio\" ng-model=\"walletType\" value=\"pastemnemonic\" \/><span translate=\"x_Mnemonic\">Mnemonic Phrase<\/span><\/label>\r\n \
-    <label class=\"radio\"><input aria-flowto="aria4" aria-label=\"parity phrase\" type=\"radio\" ng-model=\"walletType\" value=\"parityBWallet\" \/><span translate=\"x_ParityPhrase\">Parity Phrase<\/span><\/label>\r\n \
-    <label class=\"radio\" ng-hide=\"globalService.currentTab==globalService.tabs.signMsg.id\"><input aria-flowto="aria5" type=\"radio\" aria-label=\"Ledger Nano S hardware wallet\" ng-model=\"walletType\" value=\"ledger\" \/>Ledger Nano S<\/label>\r\n \
-    <label class=\"radio\" ng-hide=\"globalService.currentTab==globalService.tabs.signMsg.id\"><input aria-flowto="aria6" type=\"radio\" aria-label=\"Trezor hardware wallet\" ng-model=\"walletType\" value=\"trezor\" \/>TREZOR<\/label>\r\n \
     <label class=\"radio\" ng-hide=\"globalService.currentTab!==globalService.tabs.viewWalletInfo.id\"><input aria-label=\"address\" type=\"radio\" ng-model=\"walletType\" value=\"addressOnly\" \/><span>View with Address Only<\/span><\/label>\r\n \
   <\/section>\r\n \
   <!-- Column 1 - Select Type of Key -->\r\n \
