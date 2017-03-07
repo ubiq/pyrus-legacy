@@ -135,7 +135,7 @@ If you want to help contribute, here's what you need to know to get it up and ru
 
     - **Custom**: Allows you to select whether EIP-155 is true or false, and provide a chainid if it's true.
 
-**If you want to connect to your own local geth or parity...**
+**If you want to connect to your own local gubiq or parity...**
 
 You must run MyEtherWallet locally. This is due to the fact that our SSL site won't connect to your non-SSL local node. [Download the latest version of MyEtherWallet here](https://github.com/kvhnuke/etherwallet/releases/latest) and use that to connect to your local node.
 
@@ -143,11 +143,11 @@ You must run MyEtherWallet locally. This is due to the fact that our SSL site wo
 
 - URL: http://127.0.0.1
 
-- Port: 8545
+- Port: 8588
 
 - Select whether it is a ETH / ETC / Ropsten or Custom chain. (see above)
 
-- Run geth using `geth --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"`
+- Run gubiq using `gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"`
 
 - or run parity using `parity --rpccorsdomain "*" --keys-path "dont_put_secret_files_here_ever"`
 

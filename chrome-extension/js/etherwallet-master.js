@@ -7757,7 +7757,7 @@ de.data = {
   x_PrivKeyDesc: 'Dies ist die unverschlüsselte Textversion deines privaten Schlüssels, d. h. du benötigst kein Passwort. Wenn jemand über diesen unverschlüsselten privaten Schlüssel verfügt, hat er/sie ohne Passwort Zugang zu deinem Wallet. Es wird daher empfohlen, den privaten Schlüssel zu verschlüsseln. ',
   x_Keystore: 'Keystore File (UTC / JSON · Empfohlen · Verschlüsselt) ',
   x_Keystore2: 'Keystore File (UTC / JSON) ',
-  x_KeystoreDesc: 'Diese Keystore-Datei passt zu dem Format, das von Mist verwendet wird, sodass du diese Datei dort zukünftig einfach importieren kannst. Es ist empfehlenswert, diese Datei herunterzuladen und zu sichern. ',
+  x_KeystoreDesc: 'Diese Keystore-Datei passt zu dem Format, das von Fusion verwendet wird, sodass du diese Datei dort zukünftig einfach importieren kannst. Es ist empfehlenswert, diese Datei herunterzuladen und zu sichern. ',
   x_Json: 'JSON-Datei (unverschlüsselt) ',
   x_JsonDesc: 'Dies ist die unverschlüsselte Version deines privaten Schlüssels im JSON-Format. Du benötigst daher kein Passwort, aber jeder, der über diese JSON-Datei verfügt, hat ohne Passwort Zugang zu deinem Wallet und dem darin enthaltenen Ether. ',
   x_PrintShort: 'Drucken ',
@@ -7922,7 +7922,7 @@ de.data = {
   MYWAL_Content_3: 'Wenn du dieses Wallet in Zukunft mit MyEtherWallet CX verwenden willst, musst du es mittels der privaten Key/JSON Datei und deinem Passwort manuell wieder hinzufügen. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Dies erlaubt dir den Download verschiedener Versionen deines privaten Schlüssel sowie das erneute Drucken deines Papier-Wallets. Es wird empfohlen, dies zu tun um [Deinen Account in Geth/Mist zu importieren.](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Zum Überprüfen deines Kontostands empfehlen wir, einen Blockchain Explorer wie [etherscan.io](http://etherscan.io/) zu verwenden. ',
+  VIEWWALLET_Subtitle: 'Dies erlaubt dir den Download verschiedener Versionen deines privaten Schlüssel sowie das erneute Drucken deines Papier-Wallets. Es wird empfohlen, dies zu tun um [Deinen Account in Gubiq/Fusion zu importieren.](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Zum Überprüfen deines Kontostands empfehlen wir, einen Blockchain Explorer wie [etherscan.io](http://etherscan.io/) zu verwenden. ',
   VIEWWALLET_Subtitle_Short: 'Dies erlaubt dir den Download verschiedener Versionen deines privaten Schlüssel sowie das erneute Drucken deines Papier-Wallets. ',
   VIEWWALLET_SuccessMsg: 'Erfolgreich! Hier sind die Daten deines Wallets. ',
 
@@ -8097,7 +8097,7 @@ de.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -8108,8 +8108,8 @@ de.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -8133,13 +8133,13 @@ de.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -8154,13 +8154,13 @@ de.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -8179,10 +8179,10 @@ de.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -8195,7 +8195,7 @@ de.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -8358,7 +8358,7 @@ el.data = {
   x_PrivKeyDesc: 'Αυτό το κείμενο είναι η μη κρυπτογραφημένη εκδοχή του Ιδιωτικού Κλειδιού σας που σημαίνει ότι δεν απαιτείται κωδικός. Στην περίπτωση που κάποιος βρει το μη κρυπτογραφημένο Ιδιωτικό Κλειδί σας, έχει πρόσβαση στο πορτοφόλι σας χωρίς κωδικό. Για αυτόν τον λόγο, συνήθως συνιστώνται οι κρυπτογραφημένες εκδοχές. ',
   x_Keystore: 'Αρχείο Keystore (UTC / JSON · Συνιστάται · Κρυπτογραφημένο) ',
   x_Keystore2: 'Αρχείο Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Αυτό το Αρχείο Keystore έχει την ίδια μορφή που χρησιμοποιείται από το Mist ώστε να μπορείτε εύκολα να το εισάγετε στο μέλλον. Είναι το συνιστώμενο αρχείο για λήψη και δημιουργία αντιγράφου ασφαλείας. ',
+  x_KeystoreDesc: 'Αυτό το Αρχείο Keystore έχει την ίδια μορφή που χρησιμοποιείται από το Fusion ώστε να μπορείτε εύκολα να το εισάγετε στο μέλλον. Είναι το συνιστώμενο αρχείο για λήψη και δημιουργία αντιγράφου ασφαλείας. ',
   x_Json: 'Αρχείο JSON (μη κρυπτογραφημένο) ',
   x_JsonDesc: 'Αυτή είναι η μη κρυπτογραφημένη, JSON μορφή του Ιδιωτικού Κλειδιού σας. Αυτό σημαίνει ότι δεν απαιτείται κωδικός όμως οποιοσδήποτε βρει το JSON σας έχει πρόσβαση στο πορτοφόλι και τα Ether σας χωρίς κωδικό. ',
   x_PrintShort: 'Εκτύπωση ',
@@ -8516,7 +8516,7 @@ el.data = {
   MYWAL_Content_3: 'Αν θέλετε να χρησιμοποιήσετε το ποροτοφόλι αυτό με το MyEtherWalletCX στο μέλλον, θα χρειαστεί να το ξαναπροσθέσετε χειροκίνητα χρησιμοποιώντας το Ιδιωτικό Κλειδί/JSON και τον κωδικό. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Αυτό σας επιτρέπει να κατεβάσετε διαφορετικές εκδοχές των ιδιωτικών κλειδιών σας και να επανεκτυπώσετε το χάρτινο πορτοφόλι σας. Ίσως επιθυμείτε να το κάνετε προκειμένου να [εισάγετε τον Λογαριασμό σας στο Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Αν επιθυμείτε να ελέγξετε το υπόλοιπό σας, συνιστούμε να χρησιμοποιήσετε ένα εργαλείο εξερεύνησης blockchain όπως το [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Αυτό σας επιτρέπει να κατεβάσετε διαφορετικές εκδοχές των ιδιωτικών κλειδιών σας και να επανεκτυπώσετε το χάρτινο πορτοφόλι σας. Ίσως επιθυμείτε να το κάνετε προκειμένου να [εισάγετε τον Λογαριασμό σας στο Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Αν επιθυμείτε να ελέγξετε το υπόλοιπό σας, συνιστούμε να χρησιμοποιήσετε ένα εργαλείο εξερεύνησης blockchain όπως το [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Αυτό σας επιτρέπει να κατεβάσετε διαφορετικές εκδοχές των ιδιωτικών κλειδιών σας και να επανεκτυπώσετε το χάρτινο πορτοφόλι σας. ',
   VIEWWALLET_SuccessMsg: 'Επιτυχία! Εδώ είναι οι πληροφορίες για το πορτοφόλι σας. ',
 
@@ -8690,7 +8690,7 @@ el.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -8701,8 +8701,8 @@ el.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -8726,13 +8726,13 @@ el.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -8747,13 +8747,13 @@ el.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -8772,10 +8772,10 @@ el.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -8788,7 +8788,7 @@ el.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -8849,7 +8849,7 @@ en.data = {
   x_JsonDesc: 'This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & Ether without the password. ',
   x_Keystore: 'Keystore File (UTC / JSON · Recommended · Encrypted) ',
   x_Keystore2: 'Keystore File (UTC / JSON) ',
-  x_KeystoreDesc: 'This Keystore file matches the format used by Mist so you can easily import it in the future. It is the recommended file to download and back up. ',
+  x_KeystoreDesc: 'This Keystore file matches the format used by Fusion so you can easily import it in the future. It is the recommended file to download and back up. ',
   x_Mnemonic: 'Mnemonic Phrase ',
   x_ParityPhrase: 'Parity Phrase ',
   x_Password: 'Password ',
@@ -9078,7 +9078,7 @@ en.data = {
   MSG_info3: 'Include a specific reason for the message so it cannot be reused for a different purpose. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'This allows you to download different versions of private keys and re-print your paper wallet. ',
   VIEWWALLET_SuccessMsg: 'Success! Here are your wallet details. ',
 
@@ -9266,7 +9266,7 @@ en.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -9277,8 +9277,8 @@ en.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -9302,13 +9302,13 @@ en.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -9323,13 +9323,13 @@ en.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -9348,10 +9348,10 @@ en.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: ' This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -9364,7 +9364,7 @@ en.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -9516,7 +9516,7 @@ es.data = {
   x_PrivKeyDesc: 'Esta es la versión en texto sin encriptar de tu clave privada, lo cual quiere decir que no hace falta contraseña. Si alguien encontrase tu clave privada sin encriptar, podrían acceder a tu cartera sin necesitar contraseña. Por esta razón, normalmente se recomiendan las versiones encriptadas. ',
   x_Keystore: 'Archivo Keystore (UTC / JSON · Recomendado · Encriptado) ',
   x_Keystore2: 'Archivo Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Este archivo Keystore/JSON concuerda con el formato usado por Mist para una fácil importación en el futuro. Es el archivo recomendado para descargar y guardar como copia de seguridad. ',
+  x_KeystoreDesc: 'Este archivo Keystore/JSON concuerda con el formato usado por Fusion para una fácil importación en el futuro. Es el archivo recomendado para descargar y guardar como copia de seguridad. ',
   x_Json: 'Archivo JSON (sin encriptar) ',
   x_JsonDesc: 'Esta es tu clave privada sin encriptar en formato JSON. Esto significa que no necesitas una contraseña, pero cualquiera que encuentre tu archivo JSON puede acceder a tu cartera y ether sin necesitar ninguna contraseña. ',
   x_PrintShort: 'Imprimir ',
@@ -9682,7 +9682,7 @@ es.data = {
   MYWAL_Content_3: 'Si en el futuro quieres utilizar esta cartera con MyEtherWallet CX, tendrás que volver a añadirla manualmente utilizando Clave Privada/JSON y contraseña. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Esto te permite descargar múltiples versiones de claves privadas e imprimir de nuevo tu cartera en papel. Puede que te interese hacer esto para [importar tu cuenta en Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Si quieres comprobar tu saldo, recomendamos utilizar un explorador de blockchain como [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Esto te permite descargar múltiples versiones de claves privadas e imprimir de nuevo tu cartera en papel. Puede que te interese hacer esto para [importar tu cuenta en Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Si quieres comprobar tu saldo, recomendamos utilizar un explorador de blockchain como [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Esto te permite descargar múltiples versiones de claves privadas e imprimir de nuevo tu cartera en papel. ',
   VIEWWALLET_SuccessMsg: '¡Enhorabuena! Estos son los detalles de tu cartera. ',
 
@@ -9858,7 +9858,7 @@ es.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -9869,8 +9869,8 @@ es.data = {
 
   HELP_8_Title: '8) ¿Qué ocurre si vuestro sitio web deja de funcionar? ',
   HELP_8_Desc_1: 'MyEtherWallet no es una cartera web. No tienes un login y nunca se graba nada en nuestros servidores. You don\'t have a login and nothing ever gets saved to our servers. Simplemente es una interfaz que te permite interactuar con la cadena de bloques. ',
-  HELP_8_Desc_2: 'Si MyEtherWallet.com desapareciera, tendrías que encontrar otra manera de poder hacer lo que haces con nosotros (como por ejemplo obtener geth o Ethereum Wallet / Mist). Pero no necesitarías retirar tus ether de MyEtherWallet porque no están en MyEtherWallet. Están en la cartera que hayas generado a través de nuestro sitio. ',
-  HELP_8_Desc_3: 'Puedes importar tu clave privada sin cifrar y tus archivos en formato Geth/Mist (cifrados) directamente en geth / Ethereum Wallet / Mist con mucha facilidad actualmente. Ver más abajo la pregunta #12. ',
+  HELP_8_Desc_2: 'Si MyEtherWallet.com desapareciera, tendrías que encontrar otra manera de poder hacer lo que haces con nosotros (como por ejemplo obtener gubiq o Ethereum Wallet / Fusion). Pero no necesitarías retirar tus ether de MyEtherWallet porque no están en MyEtherWallet. Están en la cartera que hayas generado a través de nuestro sitio. ',
+  HELP_8_Desc_3: 'Puedes importar tu clave privada sin cifrar y tus archivos en formato Gubiq/Fusion (cifrados) directamente en gubiq / Ethereum Wallet / Fusion con mucha facilidad actualmente. Ver más abajo la pregunta #12. ',
   HELP_8_Desc_4: 'Además, la probabilidad de que cerremos MyEtherWallet es casi nula. No nos cuesta prácticamente nada mantenerlo ya que no almacenamos ninguna información. Si borramos el dominio, continúa estando disponible y siempre lo estará en [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Puedes descargar desde ahí el archivo ZIP y ejecutarlo localmente. ',
 
   HELP_8CX_Title: '8) ¿Qué ocurre si MyEtherWallet CX desaparece? ',
@@ -9894,13 +9894,13 @@ es.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click "Enviar Ether y Tokens". This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -9915,13 +9915,13 @@ es.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -9940,10 +9940,10 @@ es.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -9956,7 +9956,7 @@ es.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Seguridad - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: '¿Dónde está guardando mi información esta extensión? ',
@@ -10122,7 +10122,7 @@ fi.data = {
   x_JsonDesc: 'Tämä on salaamaton JSON tiedosto yksityisestä salausavaimestasi. Tämä tarkoittaa että et tarvitse salasanaa mutta kuka tahansa joka löytää JSON tiedostosi saa pääsyn lompakkoosi ja sen sisältämään Etheriin ilman salasanaa. ',
   x_Keystore: 'Avainsäilö Tiedosto (UTC / JSON · Suositeltu · Salattu) ',
   x_Keystore2: 'Avainsäilö Tiedosto (UTC / JSON) ',
-  x_KeystoreDesc: 'Tämä Avainsäilö tiedosto vastaa sitä tiedostoformaattia jota Mist käyttävät, joten voit helposti importata sen tulevaisuudessa. Se on suositeltu tiedostomuoto ladata ja varmuuskopioida. ',
+  x_KeystoreDesc: 'Tämä Avainsäilö tiedosto vastaa sitä tiedostoformaattia jota Fusion käyttävät, joten voit helposti importata sen tulevaisuudessa. Se on suositeltu tiedostomuoto ladata ja varmuuskopioida. ',
   x_Password: 'Salasana ',
   x_Print: 'Tulosta Paperi Lompakko ',
   x_PrintDesc: 'ProTip: Klikkaa Tulosta ja tallenna tämä PDF:nä, vaikka et omistaisikaan tulostinta! ',
@@ -10290,7 +10290,7 @@ fi.data = {
   MYWAL_Content_3: 'Jos tahdot käyttää tätä lompakkoa MyEtherWallet CX:si kanssa tulevaisuudessa, sinun täytyy manuaalisesti uudelleen-lisätä se käyttäen yksityistä salausavaintasi/JSONia ja salasanaa. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Tämä antaa sinun ladata eri versiota yksityisistä salausavaimistasi ja uudelleen-tulostaa paperi lompakkosi. Saatat tahtoa tehdä tämän [tuodaksesi sinun tilisi Gethiin/Mistiin](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Jos haluat tarkistaa saldosi, me suosittelemme käyttämään blockchain exploreria kuten [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Tämä antaa sinun ladata eri versiota yksityisistä salausavaimistasi ja uudelleen-tulostaa paperi lompakkosi. Saatat tahtoa tehdä tämän [tuodaksesi sinun tilisi Gethiin/Fusioniin](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Jos haluat tarkistaa saldosi, me suosittelemme käyttämään blockchain exploreria kuten [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Tämä antaa sinun ladata eri versiota yksityisistä salausavaimistasi ja uudelleen-tulostaa paperi lompakkosi. ',
   VIEWWALLET_SuccessMsg: 'Onnistui! Tässä ovat lompakkosi yksityiskohdat. ',
 
@@ -10466,7 +10466,7 @@ fi.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -10477,8 +10477,8 @@ fi.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -10502,13 +10502,13 @@ fi.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -10523,13 +10523,13 @@ fi.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -10548,10 +10548,10 @@ fi.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -10564,7 +10564,7 @@ fi.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -10669,7 +10669,7 @@ fr.data = {
   x_JsonDesc: 'C\'est la version non-chiffrée au format JSON de votre clé privée. Cela signifie que vous n\'avez pas besoin de votre mot de passe pour l\'utiliser mais que toute personne qui trouve ce JSON peut accéder à votre portefeuille et vos Ether sans mot de passe. ',
   x_Keystore: 'Fichier Keystore (UTC / JSON · Recommandé · Chiffré) ',
   x_Keystore2: 'Fichier Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Ce fichier Keystore utilise le même format que celui que Mist, vous pouvez donc facilement l\'importer plus tard dans ces logiciels. C\'est le fichier que nous vous recommandons de télécharger et sauvegarder. ',
+  x_KeystoreDesc: 'Ce fichier Keystore utilise le même format que celui que Fusion, vous pouvez donc facilement l\'importer plus tard dans ces logiciels. C\'est le fichier que nous vous recommandons de télécharger et sauvegarder. ',
   x_Ledger: 'Ledger Nano S ',
   x_Mnemonic: 'Phrase mnémonique ',
   x_Password: 'Mot de passe ',
@@ -10851,7 +10851,7 @@ fr.data = {
   MYWAL_Content_3: 'Si vous voulez utiliser ce portefeuille avec MyEtherWallet CX à l\'avenir, vous devrez le rajouter manuellement en utilisant la clé privée/fichier JSON et le mot de passe. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Ceci vous permet de télécharger plusieurs versions des clefs privées et de ré-imprimer votre portefeuille papier. Vous devrez le faire pour [importer votre compte dans Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Si vous voulez consulter votre solde, nous recommandons d\'utiliser un explorateur de blockchain comme [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Ceci vous permet de télécharger plusieurs versions des clefs privées et de ré-imprimer votre portefeuille papier. Vous devrez le faire pour [importer votre compte dans Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Si vous voulez consulter votre solde, nous recommandons d\'utiliser un explorateur de blockchain comme [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Ceci vous permet de télécharger plusieurs versions des clefs privées et de ré-imprimer votre portefeuille papier. ',
   VIEWWALLET_SuccessMsg: 'Succès ! Voici les détails de votre portefeuille. ',
 
@@ -11055,7 +11055,7 @@ fr.data = {
   HELP_7_Desc_5: 'Sélectionnez le token que vous désirez envoyer. ',
   HELP_7_Desc_6: 'Si celui-ci n\'est pas listé : ',
   HELP_7_Desc_7: 'Cliquez sur "Spécifique". ',
-  HELP_7_Desc_8: 'Entrez l\'adresse, le nom et les décimales du token. Ces informations sont fournies par les développeurs du token et sont également nécessaires quand vous faites "Add a Watch Token" dans Mist. ',
+  HELP_7_Desc_8: 'Entrez l\'adresse, le nom et les décimales du token. Ces informations sont fournies par les développeurs du token et sont également nécessaires quand vous faites "Add a Watch Token" dans Fusion. ',
   HELP_7_Desc_9: 'Cliquez sur "Sauver". ',
   HELP_7_Desc_10: 'Vous pouvez maintenant envoyer ces tokens ainsi qu\'en voir le solde dans la zone sur le côté. ',
   HELP_7_Desc_11: 'Cliquez sur "Générer la transaction". ',
@@ -11066,8 +11066,8 @@ fr.data = {
 
   HELP_8_Title: '8) Que se passe-t-il si votre site tombe ? ',
   HELP_8_Desc_1: 'MyEtherWallet n\'est pas un portefeuille sur le web. Vous n\'avez pas de login et rien n\'est jamais stocké sur nos serveurs. Ce n\'est qu\'une interface qui vous permet d\'interagir avec la blockchain. ',
-  HELP_8_Desc_2: 'Si MyEtherWallet.com tombe, vous devrez trouver un autre moyen (comme geth ou Ethereum Wallet / Mist) pour faire la même chose. Mais vous n\'aurez pas à "récupérer" votre Ether depuis MyEtherWallet parce qu\'il ne se trouve pas dans MyEtherWallet. Il est chez vous, dans le portefeuille que vous avez généré par notre site. ',
-  HELP_8_Desc_3: 'Vous pouvez maintenant importer facilement votre clef privée non chiffrée et vos fichiers (chiffrés) au format Geth/Mist, directement dans geth / Ethereum Wallet / Mist. Voir question #12 ci-dessous. ',
+  HELP_8_Desc_2: 'Si MyEtherWallet.com tombe, vous devrez trouver un autre moyen (comme gubiq ou Ethereum Wallet / Fusion) pour faire la même chose. Mais vous n\'aurez pas à "récupérer" votre Ether depuis MyEtherWallet parce qu\'il ne se trouve pas dans MyEtherWallet. Il est chez vous, dans le portefeuille que vous avez généré par notre site. ',
+  HELP_8_Desc_3: 'Vous pouvez maintenant importer facilement votre clef privée non chiffrée et vos fichiers (chiffrés) au format Gubiq/Fusion, directement dans gubiq / Ethereum Wallet / Fusion. Voir question #12 ci-dessous. ',
   HELP_8_Desc_4: 'De plus, la probabilité que nous laissions tomber MyEtherWallet approche zéro. Il ne nous coûte presque rien de le maintenir comme nous n\'y stockons aucune information. Si le domaine venait à être perdu, le logiciel sera toujours disponible publiquement sur [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Vous pourrez y télécharger le ZIP et le faire tourner localement. ',
 
   HELP_8CX_Title: '8) Que se passe-t-il si MyEtherWallet CX disparaît ? ',
@@ -11091,13 +11091,13 @@ fr.data = {
   HELP_10_Desc_10: 'Le champ de données sous ce bouton se remplit avec votre transaction signée. Copiez-la et revenez avec elle sur votre ordinateur en ligne. ',
   HELP_10_Desc_11: 'Sur votre ordinateur en ligne, collez la transaction signée dans le champ texte et cliquez sur "Envoyez l\'Ether". Ceci émettra votre transaction. ',
 
-  HELP_12_Title: '12) Comment puis-je importer un portefeuille créé par MyEtherWallet dans geth / Ethereum Wallet / Mist ? ',
-  HELP_12_Desc_1: 'Avec un fichier Geth/Mist JSON de MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) Comment puis-je importer un portefeuille créé par MyEtherWallet dans gubiq / Ethereum Wallet / Fusion ? ',
+  HELP_12_Desc_1: 'Avec un fichier Gubiq/Fusion JSON de MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Allez à la page "Visualisation d\'un portefeuille". ',
   HELP_12_Desc_3: 'Déverrouillez votre portefeuille avec votre clef privée **chiffrée** ou votre fichier JSON. ',
   HELP_12_Desc_4: 'Allez à la page "Mes portefeuilles". ',
-  HELP_12_Desc_5: 'Sélectionnez le portefeuille que vous désirez importer dans Mist, cliquez sur l\'icône "View", entrez votre mot de passe et accédez à votre portefeuille. ',
-  HELP_12_Desc_6: 'Allez à la section "Téléchargez le fichier JSON file - Format Geth/Mist (chiffé)". Cliquez sur le bouton "Télécharger" en dessous. Vous avez maintenant votre fichier *keystore.* ',
+  HELP_12_Desc_5: 'Sélectionnez le portefeuille que vous désirez importer dans Fusion, cliquez sur l\'icône "View", entrez votre mot de passe et accédez à votre portefeuille. ',
+  HELP_12_Desc_6: 'Allez à la section "Téléchargez le fichier JSON file - Format Gubiq/Fusion (chiffé)". Cliquez sur le bouton "Télécharger" en dessous. Vous avez maintenant votre fichier *keystore.* ',
   HELP_12_Desc_7: 'Ouvrez l\'application Ethereum Wallet. ',
   HELP_12_Desc_8: 'Dans la barre de menu, allez sur "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'Ceci ouvre votre dossier de keystores. Copiez-y le fichier que vous venez de télécharger (`UTC--2016-04-14......../`) dans ce dossier. ',
@@ -11112,13 +11112,13 @@ fr.data = {
   HELP_12_Desc_17: 'Dans la barre de menu, cliquez sur "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Sauvegardez ce fichier vers votre `Desktop/` en tant que `nothing_special_delete_me.txt`. Assurez-vous qu\'il précise "UTF-8" et "If no extension is provided use .txt" dans le dialogue de sauvegarde. ',
   HELP_12_Desc_19: 'Ouvrez un terminal et lancez la commande suivante : `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'Ceci vous invitera à choisir un nouveau mot de passe. C\'est celui que vous utiliserez dans geth / Ethereum Wallet / Mist à chaque vois que vos enverrez une transaction, donc ne l\'oubliez pas. ',
+  HELP_12_Desc_20: 'Ceci vous invitera à choisir un nouveau mot de passe. C\'est celui que vous utiliserez dans gubiq / Ethereum Wallet / Fusion à chaque vois que vos enverrez une transaction, donc ne l\'oubliez pas. ',
   HELP_12_Desc_21: 'Après que l\'import a réussi, supprimez `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'La prochaine fois que vous ouvrirez l\'application Ethereum Wallet, votre compte sera listé sous "Accounts". ',
   HELP_12_Desc_23: 'Ouvrez Notepad et collez-y la clef privée ',
   HELP_12_Desc_24: 'Sauvegardez le fichier en tant que `nothing_special_delete_me.txt` sur `C:` ',
   HELP_12_Desc_25: 'Lancez la commande `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'Ceci vous invitera à choisir un nouveau mot de passe. C\'est celui que vous utiliserz dans geth / Ethereum Wallet / Mist à chaque foiq que vous enverrez une transaction donc ne l\'oubliez pas. ',
+  HELP_12_Desc_26: 'Ceci vous invitera à choisir un nouveau mot de passe. C\'est celui que vous utiliserz dans gubiq / Ethereum Wallet / Fusion à chaque foiq que vous enverrez une transaction donc ne l\'oubliez pas. ',
   HELP_12_Desc_27: 'Après que l\'import a réussi, supprimez `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'La prochaine fois que vous ouvrirez l\'application Ethereum Wallet, votre compte sera listé sous "Accounts". ',
 
@@ -11137,10 +11137,10 @@ fr.data = {
   HELP_17_Title: '17) Pourquoi mon solde n\'apparaît-il pas quand je déverrouille mon portefeuille ? ',
   HELP_17_Desc_1: 'C\'est probablement dû au fait que vous vous trouvez derrière un firewall. L\'API que nous utilisons pour obtenir le solde et converir celui-ci est souvent bloquée par des firewalls pour des raisons diverses. Vous êtes toujours capable d\'envoyer des transactions mais il vous faut employer une autre méthode pour voir le solde, comme etherscan.io ',
 
-  HELP_18_Title: '18) Où est le fichier de mon portefeuille geth ? ',
+  HELP_18_Title: '18) Où est le fichier de mon portefeuille gubiq ? ',
 
-  HELP_19_Title: '19) Où est le fichier de mon portefeuille Mist ? ',
-  HELP_19_Desc_1: 'Les fichiers Mist se trouvent généralement aux endroits ci-dessus mais il est beaucoup plus facile d\'ouvrir Mist, de sélectionner "Accounts" dans la barre du haut, puis "Backup" et "Accounts". Cela ouvre le dossier où vos fichiers sont stockés. ',
+  HELP_19_Title: '19) Où est le fichier de mon portefeuille Fusion ? ',
+  HELP_19_Desc_1: 'Les fichiers Fusion se trouvent généralement aux endroits ci-dessus mais il est beaucoup plus facile d\'ouvrir Fusion, de sélectionner "Accounts" dans la barre du haut, puis "Backup" et "Accounts". Cela ouvre le dossier où vos fichiers sont stockés. ',
 
   HELP_20_Title: '20) Où est le fichier de mon portefeuille de *pre-sale* (pré-vente) ? ',
   HELP_20_Desc_1: 'Là où vous l\'avez mis. ;) Il vous a aussi été envoyé donc allez vérifier vos mails. Cherchez le fichier appelé `"ethereum_wallet_backup.json"` et choisissez ce fichier. Il est chiffré avec un mot de passe que vous avez créé pendant l\'achat au moment de la pré-vente. ',
@@ -11153,7 +11153,7 @@ fr.data = {
   HELP_21_Desc_5: 'Et OUI, en théorie, on peut taper une chaîne de 64 caractères hexadécimaux jusqu\'à en trouver un qui correspond. Il est d\'ailleurs possible d\'écrire un programme qui vérifie très rapidement des clefs privée aléatoires. C\'est ce que l\'on appelle utiliser la "brute force" ou miner des clefs privées. Beaucoup de monde y a pensé très fort et très longtemps. Quelques serveurs haut de gamme peuvent vérifier plus de 1 million de clefs par seconde. Pourtant, même ce chiffre ne donnerait pas accès à un compte suffisamment approvisionné pour en valoir la chandelle ; il est bien plus probable que vous, vos enfant et vos petits-enfants mourront avant d\'obtenir une correspondance. ',
   HELP_21_Desc_6: 'Si vous connaissez un peu Bitcoin, [ceci remettra les choses en perspective :](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *Pour illustrer l\'improbabilité de tout ceci : supposons quqe chaque satoshi de chaque bitcoin qui sera jamais produit soit affecté à sa propre clef privée distincte.  La probabilité que, parmi ces clefs, s\'en trouvent deux qui correspondent à la même adresse serait d\'environ 1 sur 100 quintillons. ',
   HELP_21_Desc_7: '[Si vous voulez un argumentaire un peu plus technique :](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *Ces nombres n\'ont rien à voir avec la technologie des systèmes ; ce sont les maximums autorisés par la thermodynamique. Et ils impliquent clairement qu\'une attaque par brute force contre des clefs de 256 bits restera impossible jusqu\'à ce que l\'on construise des ordinateurs avec autre chose que de la matière et qu\'ils occupent autre chose que l\'espace. ',
-  HELP_21_Desc_8: 'Cela suppose bien entendu que les clefs sont générées d\'une manière totalement aléatoire avec suffisamment d\'entropie. C\'est le cas des clefs générées ici, tout comme celles de Jaxx et de Mist/geth. Les portefeuilles Ethereum sont tous assez bons de ce point de vue. Les clefs générées par des cerveaux humains ne le sont pas, car ces derniers ne sont pas capables de partir d\'un nombre parfaitement aléatoire. Il y a eu des cas d\'autres problèmes d\'entropie insuffisante ou de nombres imparfaitement aléatoires dans le monde de Bitcoin mais il s\'agit là d\'un tout autre problème qui peut attendre un peu. ',
+  HELP_21_Desc_8: 'Cela suppose bien entendu que les clefs sont générées d\'une manière totalement aléatoire avec suffisamment d\'entropie. C\'est le cas des clefs générées ici, tout comme celles de Jaxx et de Fusion/Gubiq. Les portefeuilles Ethereum sont tous assez bons de ce point de vue. Les clefs générées par des cerveaux humains ne le sont pas, car ces derniers ne sont pas capables de partir d\'un nombre parfaitement aléatoire. Il y a eu des cas d\'autres problèmes d\'entropie insuffisante ou de nombres imparfaitement aléatoires dans le monde de Bitcoin mais il s\'agit là d\'un tout autre problème qui peut attendre un peu. ',
 
   HELP_SecCX_Title: 'Securité - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Où cette extension sauve-t-elle mes informations ? ',
@@ -11277,7 +11277,7 @@ hu.data = {
   x_JsonDesc: 'Ez a titkosítotatlan, JSON formátumú változata a privát kulcsodnak. Ez azt jelenti, hogy nincs szükség jelszóra az eléréséhez, viszont ha bárki megtalálja a JSON fájlt, akkor hozzáférhet a tárcádhoz és az Etheredhez a jelszó ismerete nélkül. ',
   x_Keystore: 'Keystore Fájl (UTC / JSON · Ajánlott · Titkosított) ',
   x_Keystore2: 'Keystore Fájl (UTC / JSON) ',
-  x_KeystoreDesc: 'Ez a Keystore fájl ugyanolyan formátumú, amit a Mist használ, tehát könnyedén importálhatod a későbbiekben. Leginkább ezt a fájlt ajánlott letölteni és elmenteni. ',
+  x_KeystoreDesc: 'Ez a Keystore fájl ugyanolyan formátumú, amit a Fusion használ, tehát könnyedén importálhatod a későbbiekben. Leginkább ezt a fájlt ajánlott letölteni és elmenteni. ',
   x_Mnemonic: 'Mnemonikus frázis ',
   x_Password: 'Jelszó ',
   x_Print: 'PapírTárca Nyomtatása ',
@@ -11450,7 +11450,7 @@ hu.data = {
   MYWAL_Content_3: 'Ha használni akarod ezt a tárcát a MyEtherWallet CX-szel a jövőben, manuálisan újra hozzá kell majd adnod a privát kulcs/JSON-nal és jelszóval. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Ez lehetővé teszi számodra, hogy különböző változatú privát kulcsokat tölts le és újranyomtasd a papírtárcádat.  Ezt megteheted úgy, hogy [importálod a számládat a Geth/Mist-be](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Ha ellenőrizni akarod a számládat, azt ajánljuk, hogy használj blokklánc explorert mint az [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Ez lehetővé teszi számodra, hogy különböző változatú privát kulcsokat tölts le és újranyomtasd a papírtárcádat.  Ezt megteheted úgy, hogy [importálod a számládat a Gubiq/Fusion-be](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Ha ellenőrizni akarod a számládat, azt ajánljuk, hogy használj blokklánc explorert mint az [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Ez lehetővé teszi számodra, hogy különböző változatú privát kulcsokat tölts le és újranyomtasd a papírtárcádat. ',
   VIEWWALLET_SuccessMsg: 'Sikerült! Itt vannak a tárcád részletei. ',
 
@@ -11648,7 +11648,7 @@ hu.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -11659,8 +11659,8 @@ hu.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -11684,13 +11684,13 @@ hu.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -11705,13 +11705,13 @@ hu.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -11730,10 +11730,10 @@ hu.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -11746,7 +11746,7 @@ hu.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -11866,7 +11866,7 @@ id.data = {
   x_JsonDesc: 'Ini adalah "Private Key" Anda dalam format JSON yang tidak ter-enkripsi. Tidak diperlukan password dan siapapun yang memiliki JSON Anda dapat mengakses dompet dan Ether Anda tanpa password. ',
   x_Keystore: 'File Keystore (UTC / JSON · Format yang direkomendasikan · Ter-enkripsi) ',
   x_Keystore2: 'File Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'File Keystore ini sesuai dengan format yang dipakai Mist sehingga memudahkan untuk diimpor di kemudian hari. File ini yang disarankan untuk di unduh dan di backup. ',
+  x_KeystoreDesc: 'File Keystore ini sesuai dengan format yang dipakai Fusion sehingga memudahkan untuk diimpor di kemudian hari. File ini yang disarankan untuk di unduh dan di backup. ',
   x_Ledger: 'Ledger Nano S ',
   x_Mnemonic: '"Mnemonic Phrase" ',
   x_Password: 'Password ',
@@ -12063,7 +12063,7 @@ id.data = {
   MYWAL_Content_3: 'Jika Anda akan memakai dompet ini dengan MyEtherWallet CX Anda ke depan, private key/JSON dan password harus ditambahkan lagi secara manual. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Memungkinkan Anda untuk mencetak Dompet Kertas dari berbagai format atau versi "private key". Hal ini diperlukan pada saat anda ingin [mengimpor akun Anda ke Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Jika Anda hanya ingin pengecekan saldo, pakailah salah satu layanan blockchain explorer seperti [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Memungkinkan Anda untuk mencetak Dompet Kertas dari berbagai format atau versi "private key". Hal ini diperlukan pada saat anda ingin [mengimpor akun Anda ke Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Jika Anda hanya ingin pengecekan saldo, pakailah salah satu layanan blockchain explorer seperti [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Untuk pencetakan Dompet Kertas dari berbagai format "private key". ',
   VIEWWALLET_SuccessMsg: 'Berhasil! Berikut detil dari dompet Anda. ',
 
@@ -12240,7 +12240,7 @@ id.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -12251,8 +12251,8 @@ id.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -12276,13 +12276,13 @@ id.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -12297,13 +12297,13 @@ id.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -12322,10 +12322,10 @@ id.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -12338,7 +12338,7 @@ id.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -12445,7 +12445,7 @@ it.data = {
   x_JsonDesc: 'Questa è la tua chiave privata in formato JSON non crittografato. Significa che non hai bisogno della password, ma chiunque trovi questo file JSON potrà avere accesso al tuo portafoglio e ai tuoi ether senza password. ',
   x_Keystore: 'File Keystore (UTC / JSON · Consigliato · Crittografato) ',
   x_Keystore2: 'File Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Questo file Keystore è compatibile con il formato usato da Mist, in modo da poterlo facilmente importare in futuro. È il file consigliato da scaricare e conservare. ',
+  x_KeystoreDesc: 'Questo file Keystore è compatibile con il formato usato da Fusion, in modo da poterlo facilmente importare in futuro. È il file consigliato da scaricare e conservare. ',
   x_Mnemonic: 'Frase mnemonica ',
   x_Password: 'Password ',
   x_Print: 'Stampa portafoglio cartaceo ',
@@ -12626,7 +12626,7 @@ it.data = {
   MYWAL_Content_3: 'Se vorrai utilizzare questo portafoglio con MyEtherWallet CX in futuro, dovrai ri-aggiungerlo manualmente tramite la chiave privata/JSON e password. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Qui è possibile scaricare diverse versioni delle chiavi private e ristampare il portafoglio cartaceo. Potresti volerlo fare per  [importare il tuo conto in Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Se vuoi controllare il tuo saldo, ti consigliamo di utilizzare uno strumento per esplorare la *blockchain* come [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Qui è possibile scaricare diverse versioni delle chiavi private e ristampare il portafoglio cartaceo. Potresti volerlo fare per  [importare il tuo conto in Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Se vuoi controllare il tuo saldo, ti consigliamo di utilizzare uno strumento per esplorare la *blockchain* come [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Qui è possibile scaricare diverse versioni delle chiavi private e ristampare il portafoglio cartaceo. ',
   VIEWWALLET_SuccessMsg: 'Perfetto! Questi sono i dettagli del tuo portafoglio. ',
 
@@ -12833,7 +12833,7 @@ it.data = {
   HELP_7_Desc_5: 'Seleziona il token che vuoi inviare. ',
   HELP_7_Desc_6: 'Se non vedi il token nell\'elenco: ',
   HELP_7_Desc_7: 'Fai clic su "Altro". ',
-  HELP_7_Desc_8: 'Inserisci l\'indirizzo, il nome, e i decimali del token. Questi valori sono forniti dagli sviluppatori del token e sono necessari anche quando aggiungi il token in Mist per osservarlo. ',
+  HELP_7_Desc_8: 'Inserisci l\'indirizzo, il nome, e i decimali del token. Questi valori sono forniti dagli sviluppatori del token e sono necessari anche quando aggiungi il token in Fusion per osservarlo. ',
   HELP_7_Desc_9: 'Fai clic su "Salva". ',
   HELP_7_Desc_10: 'Ora puoi inviare il token e anche vederne il saldo nella barra laterale. ',
   HELP_7_Desc_11: 'Fai clic su "Genera transazione". ',
@@ -12844,8 +12844,8 @@ it.data = {
 
   HELP_8_Title: '8) Che succede se il vostro sito va giù? ',
   HELP_8_Desc_1: 'MyEtherWallet non è un portafoglio web. Non hai un login e niente viene mai salvato nei nostri server. È semplicemente un\'interfaccia che ti consente di interagire con la *blockchain*. ',
-  HELP_8_Desc_2: 'Se MyEtherWallet.com va giù, dovrai trovare un altro modo (come geth o Ethereum Wallet / Mist) per fare quello che facciamo noi. Ma non dovrai "tirare fuori" i tuoi ether da MyEtherWallet perché non si trovano in MyEtherWallet. Sono in qualunque portafoglio tu abbia generato tramite il nostro sito. ',
-  HELP_8_Desc_3: 'Ora puoi importare direttamente e molto facilmente in geth / Ethereum Wallet / Mist la tua chiave privata non crittografata e i tuoi file in formato Geth/Mist (crittografati). Vedi la domanda n. 12 qui sotto. ',
+  HELP_8_Desc_2: 'Se MyEtherWallet.com va giù, dovrai trovare un altro modo (come gubiq o Ethereum Wallet / Fusion) per fare quello che facciamo noi. Ma non dovrai "tirare fuori" i tuoi ether da MyEtherWallet perché non si trovano in MyEtherWallet. Sono in qualunque portafoglio tu abbia generato tramite il nostro sito. ',
+  HELP_8_Desc_3: 'Ora puoi importare direttamente e molto facilmente in gubiq / Ethereum Wallet / Fusion la tua chiave privata non crittografata e i tuoi file in formato Gubiq/Fusion (crittografati). Vedi la domanda n. 12 qui sotto. ',
   HELP_8_Desc_4: 'Inoltre, la probabilità che tiriamo giù MyEtherWallet è prossima allo zero. Non ci costa praticamente nulla mantenerlo dal momento che non stiamo memorizzando alcuna informazione. Se anche disattivassimo il dominio, è ancora, e sarà sempre, disponibile pubblicamente su [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Puoi scaricare lo ZIP da lì ed eseguirlo in locale. ',
 
   HELP_8CX_Title: '8) Che succede se MyEtherWallet CX sparisce? ',
@@ -12869,13 +12869,13 @@ it.data = {
   HELP_10_Desc_10: 'I campi sotto il pulsante saranno riempiti con la transazione firmata. Copiala e ritorna al tuo computer online. ',
   HELP_10_Desc_11: 'Sul tuo computer online, incolla la transazione firmata nel campo di testo nel passo n. 3 e fai clic su "Invia transazione". In questo modo la transazione verrà trasmessa. ',
 
-  HELP_12_Title: '12) Come faccio a importare un portafoglio creato con MyEtherWallet in geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Con un file JSON Geth/Mist generato da MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) Come faccio a importare un portafoglio creato con MyEtherWallet in gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Con un file JSON Gubiq/Fusion generato da MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Vai alla pagina "Informazioni portafoglio". ',
   HELP_12_Desc_3: 'Sblocca il portafoglio usando la tua chiave privata **crittografata** o il file JSON. ',
   HELP_12_Desc_4: 'Vai alla pagina "I miei portafogli". ',
-  HELP_12_Desc_5: 'Seleziona il portafoglio che vuoi importare in Mist, fai clic sull\'icona "Mostra", inserisci la password, e accedi al portafoglio. ',
-  HELP_12_Desc_6: 'Individua la sezione "File Keystore/JSON (Consigliato · Crittografato · Formato Mist/Geth)". Premi il pulsante "Download" al di sotto. Ora hai il file keystore. ',
+  HELP_12_Desc_5: 'Seleziona il portafoglio che vuoi importare in Fusion, fai clic sull\'icona "Mostra", inserisci la password, e accedi al portafoglio. ',
+  HELP_12_Desc_6: 'Individua la sezione "File Keystore/JSON (Consigliato · Crittografato · Formato Fusion/Gubiq)". Premi il pulsante "Download" al di sotto. Ora hai il file keystore. ',
   HELP_12_Desc_7: 'Apri l\'applicazione Ethereum Wallet. ',
   HELP_12_Desc_8: 'Nella barra dei menu, vai su "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'Si aprirà la tua cartella keystore. Copia il file che hai appena scaricato (`UTC--2016-04-14........`) dentro questa cartella. ',
@@ -12890,13 +12890,13 @@ it.data = {
   HELP_12_Desc_17: 'Vai sulla barra dei menu e fai clic su "Formato" -> "Converti in formato Solo testo". ',
   HELP_12_Desc_18: 'Salva questo file sulla tua `Scrivania` come `niente_di_speciale_cancellami.txt`. Assicurati che siano selezionati "UTF-8" e "Se non è indicata nessuna estensione, usa .”txt”" nella finestra di salvataggio. ',
   HELP_12_Desc_19: 'Apri il terminale ed esegui il seguente comando: `geth account import ~/Desktop/niente_di_speciale_cancellami.txt` ',
-  HELP_12_Desc_20: 'Ti verrà chiesto di creare una nuova password. È la password che userai in geth / Ethereum Wallet / Mist ogni volta che invierai una transazione, quindi non dimenticarla. ',
+  HELP_12_Desc_20: 'Ti verrà chiesto di creare una nuova password. È la password che userai in gubiq / Ethereum Wallet / Fusion ogni volta che invierai una transazione, quindi non dimenticarla. ',
   HELP_12_Desc_21: 'A importazione conclusa positivamente, cancella `niente_di_speciale_cancellami.txt` ',
   HELP_12_Desc_22: 'Alla prossima apertura dell\'applicazione Ethereum Wallet, il tuo conto sarà mostrato sotto "Accounts". ',
   HELP_12_Desc_23: 'Apri Blocco note e incolla la chiave privata ',
   HELP_12_Desc_24: 'Salva il file come `niente_di_speciale_cancellami.txt` in `C:\\` ',
   HELP_12_Desc_25: 'Esegui il comando `geth account import C:\\niente_di_speciale_cancellami.txt` ',
-  HELP_12_Desc_26: 'Ti verrà chiesto di creare una nuova password. È la password che userai in geth / Ethereum Wallet / Mist ogni volta che invierai una transazione, quindi non dimenticarla. ',
+  HELP_12_Desc_26: 'Ti verrà chiesto di creare una nuova password. È la password che userai in gubiq / Ethereum Wallet / Fusion ogni volta che invierai una transazione, quindi non dimenticarla. ',
   HELP_12_Desc_27: 'A importazione conclusa positivamente, cancella `niente_di_speciale_cancellami.txt` ',
   HELP_12_Desc_28: 'Alla prossima apertura dell\'applicazione Ethereum Wallet, il tuo conto sarà mostrato sotto "Accounts". ',
 
@@ -12917,8 +12917,8 @@ it.data = {
 
   HELP_18_Title: '18) Dov\'è il mio file portafoglio di geth? ',
 
-  HELP_19_Title: '19) Dov\'è il mio file portafoglio di Mist? ',
-  HELP_19_Desc_1: 'I file di Mist si trovano di solito nelle posizioni qui sopra, ma è molto più facile aprire Mist, selezionare "Accounts" nella barra dei menu, selezionare "Backup", e selezionare "Accounts". Si aprirà la cartella in cui sono memorizzati i tuoi file. ',
+  HELP_19_Title: '19) Dov\'è il mio file portafoglio di Fusion? ',
+  HELP_19_Desc_1: 'I file di Fusion si trovano di solito nelle posizioni qui sopra, ma è molto più facile aprire Fusion, selezionare "Accounts" nella barra dei menu, selezionare "Backup", e selezionare "Accounts". Si aprirà la cartella in cui sono memorizzati i tuoi file. ',
 
   HELP_20_Title: '20) Dov\'è il mio file portafoglio della prevendita? ',
   HELP_20_Desc_1: 'Dove l\'hai salvato. ;) Ti è anche stato spedito in mail, quindi controllala. Cerca un file chiamato `"ethereum_wallet_backup.json"` e selezionalo. Questo portafoglio sarà crittografato con la password che hai creato durante l\'acquisto della prevendita. ',
@@ -12931,7 +12931,7 @@ it.data = {
   HELP_21_Desc_5: 'E SÌ, in teoria potresti semplicemente digitare stringhe di 64 caratteri esadecimali fino a trovarne una che corrisponda. Infatti, persone intelligenti potrebbero scrivere un programma per controllare molto rapidamente chiavi private casuali. Questo procedimento è conosciuto come *"attacco a forza bruta"* o *"mining"* delle chiavi private. Ci hanno pensato molto e a lungo. Con qualche server di altissimo livello potrebbero essere in grado di controllare più di 1 milione di chiavi al secondo. Però nemmeno controllarne così tante al secondo porterebbe all\'accesso in una maniera tale da rendere il costo dell\'utilizzo di quei server vagamente vicino all\'essere proficuo - è più probabile che tu, e i tuoi pronipoti, moriate prima di trovare una corrispondenza. ',
   HELP_21_Desc_6: 'Se sai qualcosa di Bitcoin, [questo ti darà un\'idea:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *"Per illustrare quanto ciò sia improbabile: supponi che ogni satoshi di ogni bitcoin che sarà mai generato sia inviato a una sua chiave privata unica. La probabilità che fra queste chiavi ce ne possano essere due che corrispondano allo stesso indirizzo è circa di uno in 100 trilioni"*. ',
   HELP_21_Desc_7: '[Se preferisci qualcosa di un po\' più tecnico:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *"Questi numeri non hanno niente a che fare con la tecnologia dei dispositivi; sono i massimi che la termodinamica consente. E implicano fortemente che gli attacchi a forza bruta contro le chiavi a 256 bit saranno impraticabili almeno fino a quando i computer non saranno costruiti con qualcosa di diverso dalla materia e non occuperanno qualcosa di diverso dallo spazio."* ',
-  HELP_21_Desc_8: 'Certo, tutto ciò assume che le chiavi siano generate in una maniera veramente casuale e con sufficiente entropia. Le chiavi generate qui soddisfano questi criteri, come anche Jaxx e Mist/geth. I portafogli Ethereum sono tutti piuttosto buoni. Le chiavi generate dai *brainwallet* non lo sono, dal momento che il cervello di una persona non è capace di creare un seme veramente casuale. Ci sono stati un numero di altri problemi relativi alla mancanza di entropia o a semi non generati in maniera veramente casuale nel mondo di Bitcoin, ma quella è un\'altra questione di cui non parleremo oggi. ',
+  HELP_21_Desc_8: 'Certo, tutto ciò assume che le chiavi siano generate in una maniera veramente casuale e con sufficiente entropia. Le chiavi generate qui soddisfano questi criteri, come anche Jaxx e Fusion/Gubiq. I portafogli Ethereum sono tutti piuttosto buoni. Le chiavi generate dai *brainwallet* non lo sono, dal momento che il cervello di una persona non è capace di creare un seme veramente casuale. Ci sono stati un numero di altri problemi relativi alla mancanza di entropia o a semi non generati in maniera veramente casuale nel mondo di Bitcoin, ma quella è un\'altra questione di cui non parleremo oggi. ',
 
   HELP_SecCX_Title: 'Sicurezza - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Dov\'è che questa estensione salva le mie informazioni? ',
@@ -12994,7 +12994,7 @@ ja.data = {
   x_JsonDesc: 'これはパスワードが不要な暗号化されていないJSONフォーマットのプライベートキーです。この暗号化されていないJSONフォーマットのプライベートキーを使えば、誰でもパスワードを使わずに自分のウォレットとEtherにアクセスできます。 ',
   x_Keystore: 'Keystore ファイル (UTC / JSON · 推奨 · 暗号化) ',
   x_Keystore2: 'Keystore ファイル (UTC / JSON) ',
-  x_KeystoreDesc: 'この Keystore / JSON ファイルは、後で容易にインポートするため、Mistで使われているフォーマットと一致させる必要があります。ダウンロードしてバックアップを取ることをおすすめします。 ',
+  x_KeystoreDesc: 'この Keystore / JSON ファイルは、後で容易にインポートするため、Fusionで使われているフォーマットと一致させる必要があります。ダウンロードしてバックアップを取ることをおすすめします。 ',
   x_Ledger: 'Ledger Nano S ',
   x_Mnemonic: 'ニーモニックフレーズ ',
   x_ParityPhrase: 'Parityフレーズ ',
@@ -13237,7 +13237,7 @@ ja.data = {
   MSG_info3: '異なった目的で使用されないようにするために、利用目的を入れてください。 ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: '異なったバージョンのプライベートキーをダウンロードしたり、ペーパーウォレットを再印刷することができます。[import your account into Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)する時に必要です。残高をチェックするためには、[etherscan.io](http://etherscan.io/)のようなブロックチェーンエクスプローラーサービスを使う事をおすすめします。 ',
+  VIEWWALLET_Subtitle: '異なったバージョンのプライベートキーをダウンロードしたり、ペーパーウォレットを再印刷することができます。[import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)する時に必要です。残高をチェックするためには、[etherscan.io](http://etherscan.io/)のようなブロックチェーンエクスプローラーサービスを使う事をおすすめします。 ',
   VIEWWALLET_Subtitle_Short: '異なったバージョンのプライベートキーをダウンロードしたり、ペーパーウォレットを再印刷することができます。 ',
   VIEWWALLET_SuccessMsg: '成功! ウォレットの詳細は以下の通りです。 ',
 
@@ -13420,7 +13420,7 @@ ja.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -13431,8 +13431,8 @@ ja.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -13456,13 +13456,13 @@ ja.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -13477,13 +13477,13 @@ ja.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -13502,10 +13502,10 @@ ja.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -13518,7 +13518,7 @@ ja.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -13623,7 +13623,7 @@ nl.data = {
   x_JsonDesc: 'Dit is het onversleutelde, JSON formaat van je prive sleutel. Dit betekend dat je het wachtwoord niet nodig hebt, maar ook dat een ieder die je JSON bestand vind toegang heeft tot je wallet & Ether zonder wachtwoord. ',
   x_Keystore: 'Keystore Bestand (UTC / JSON · Aangeraden · versleuteld) ',
   x_Keystore2: 'Keystore Bestand (UTC / JSON) ',
-  x_KeystoreDesc: 'Dit Keystore bestand voldoet aan het formaat zoals gebruikt door Mist waardoor je het gemakkelijk kunt importeren in de toekomst. Dit is de aanbevolen methode voor download en back up. ',
+  x_KeystoreDesc: 'Dit Keystore bestand voldoet aan het formaat zoals gebruikt door Fusion waardoor je het gemakkelijk kunt importeren in de toekomst. Dit is de aanbevolen methode voor download en back up. ',
   x_Mnemonic: 'Mnemonic Zin ',
   x_Password: 'Wachtwoord ',
   x_Print: 'Druk je papieren wallet af ',
@@ -13804,7 +13804,7 @@ nl.data = {
   MYWAL_Content_3: 'Als je deze wallet in de toekomst nog wilt gebruiken met MyEtherWallet CX, zul je het met de hand moeten toevoegen door gebruik te maken van de prive sleutel/JSON en wachtwoord. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Hiermee kun je verschillende versies van je prive sleutels downloaden en je papieren wallet opnieuw afdrukken. Je zou dit kunnen doen om [je account in Geth/Mist te importeren](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Als je enkel je saldo wilt checken adviseren we je om gebruik te maken van een blockchain explorer zoals [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Hiermee kun je verschillende versies van je prive sleutels downloaden en je papieren wallet opnieuw afdrukken. Je zou dit kunnen doen om [je account in Gubiq/Fusion te importeren](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Als je enkel je saldo wilt checken adviseren we je om gebruik te maken van een blockchain explorer zoals [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Hiermee kun je verschillende versies van je prive sleutels downloaden en je papieren wallet opnieuw afdrukken. ',
   VIEWWALLET_SuccessMsg: 'Gelukt! Hier zijn je wallet details. ',
 
@@ -14012,7 +14012,7 @@ nl.data = {
   HELP_7_Desc_5: 'Selecteer welk token je zou willen verzenden ',
   HELP_7_Desc_6: 'Als het token niet wordt vermeld: ',
   HELP_7_Desc_7: 'Klik op "Aangepast". ',
-  HELP_7_Desc_8: 'Voer het adres, naam, en decimalen van het token in. Deze worden verschaft door de ontwikkelaars van het token en zijn tevens benodigd wanneer je een "Add a Watch Token" aan Mist toevoegd. ',
+  HELP_7_Desc_8: 'Voer het adres, naam, en decimalen van het token in. Deze worden verschaft door de ontwikkelaars van het token en zijn tevens benodigd wanneer je een "Add a Watch Token" aan Fusion toevoegd. ',
   HELP_7_Desc_9: 'Klik op "Opslaan". ',
   HELP_7_Desc_10: 'Je kunt nu dit token verzenden en tevens zul je het saldo kunnen zien in the zijbalk. ',
   HELP_7_Desc_11: 'Klik "Genereer Transactie". ',
@@ -14023,8 +14023,8 @@ nl.data = {
 
   HELP_8_Title: '8) Wat gebeurd er als deze website stopt? ',
   HELP_8_Desc_1: 'MyEtherWallet is geen web wallet. Je hoeft niet in te loggen en er zal nooit iets van je op onze servers worden bewaard. Onze website is enkel een interface om toegang te verkrijgen tot de blockchain. ',
-  HELP_8_Desc_2: 'Als MyEtherWallet.com er mee stopt, zul je een andere manier moeten zien te vinden (zoals geth of Ethereum Wallet / Mist) om te doen wat wij doen. Maar wat je niet zult hoeven te doen is je Ether uit MyEtherWallet halen omdat het niet in MyEtherWallet zit. Je Ether zit in in welk wallet dan ook je op onze site hebt gegenereerd. ',
-  HELP_8_Desc_3: 'Je kunt je  onversleutelde (unencrypted) prive sleutel en je Geth/Mist Formaat (encrypted) bestanden heel gemakkelijk en direct in geth / Ethereum Wallet / Mist importeren. Zie onderstaande vraag #12. ',
+  HELP_8_Desc_2: 'Als MyEtherWallet.com er mee stopt, zul je een andere manier moeten zien te vinden (zoals gubiq of Ethereum Wallet / Fusion) om te doen wat wij doen. Maar wat je niet zult hoeven te doen is je Ether uit MyEtherWallet halen omdat het niet in MyEtherWallet zit. Je Ether zit in in welk wallet dan ook je op onze site hebt gegenereerd. ',
+  HELP_8_Desc_3: 'Je kunt je  onversleutelde (unencrypted) prive sleutel en je Gubiq/Fusion Formaat (encrypted) bestanden heel gemakkelijk en direct in gubiq / Ethereum Wallet / Fusion importeren. Zie onderstaande vraag #12. ',
   HELP_8_Desc_4: 'Daarnaast is de kans dat wij MyEtherWallet offline halen is miniem tot onmogelijk. Het kost ons vrijwel niets om de site in stand te houden omdat we geen informatie opslaan. Als we toch het domijn offline halen, is het ook altijd nog publiekelijk beschikbaar op [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Je kunt daar de ZIP downloaden en het lokaal draaien. ',
 
   HELP_8CX_Title: '8) Wat gebeurd er als MyEtherWallet CX verdwijnt? ',
@@ -14048,13 +14048,13 @@ nl.data = {
   HELP_10_Desc_10: 'Het data veld eronder zal worden ingevuld met je ondertekende transactie. Kopier dit veld en neem het mee terug naar je online computer. ',
   HELP_10_Desc_11: 'Plak de ondertekende transactie op je online computer in het tekst veld van stap #3 em klik send. Dit zal je transactie publiceren op de blockchain (broadcasten). ',
 
-  HELP_12_Title: '12) Hoe importeer ik een MyEtherWallet  wallet in geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Door gebruik te maken van een Geth/Mist JSON bestand van MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) Hoe importeer ik een MyEtherWallet  wallet in gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Door gebruik te maken van een Gubiq/Fusion JSON bestand van MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Ga naar de "Bekijk Wallet Info" pagina. ',
   HELP_12_Desc_3: 'Ontsleutel je wallet met je **versleutelde** prive sleutel of JSON bestand. ',
   HELP_12_Desc_4: 'Ga naar de "Mijn Wallets" pagina. ',
-  HELP_12_Desc_5: 'Selecteer het wallet dat je wilt importeren in Mist, klik op het "Bekijken" icoon, voer je wachtwoord in, en verkrijg toegang tot je wallet. ',
-  HELP_12_Desc_6: 'Zoek naar de "Download JSON bestand - Geth/Mist Formaat (encrypted)" sectie. Druk op de "Download" knop eronder. Je hebt nu je keystore bestand. ',
+  HELP_12_Desc_5: 'Selecteer het wallet dat je wilt importeren in Fusion, klik op het "Bekijken" icoon, voer je wachtwoord in, en verkrijg toegang tot je wallet. ',
+  HELP_12_Desc_6: 'Zoek naar de "Download JSON bestand - Gubiq/Fusion Formaat (encrypted)" sectie. Druk op de "Download" knop eronder. Je hebt nu je keystore bestand. ',
   HELP_12_Desc_7: 'Open de Ethereum Wallet applicatie. ',
   HELP_12_Desc_8: 'In de menu balk, ga naar "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'Hiermee open je de keystore map. Kopier het bestand wat je zojuist hebt gedownload (`UTC--2016-04-14......../`) naar deze keystore map. ',
@@ -14069,13 +14069,13 @@ nl.data = {
   HELP_12_Desc_17: 'Ga naar de menu balk en klik "Formaat" -> "Maak Platte Tekst". ',
   HELP_12_Desc_18: 'Sla dit bestand op op je bureaublad als `niets_bijzonders_verwijder_mij.txt`. Controleer dat de opties "UTF-8" en "If no extension is provided use .txt" gekozen zijn in het dialog. ',
   HELP_12_Desc_19: 'Open terminal en voer het volgende commando uit: `geth account import ~/Desktop/niets_bijzonders_verwijder_mij.txt` ',
-  HELP_12_Desc_20: 'Je zal gevraagd worden om een nieuw wachtwoord. Dit is het wachtwoord wat je zult gebruiken in geth / Ethereum Wallet / Mist elke keer als je een transactie verzend, dus zorg dat je dit niet vergeet. ',
+  HELP_12_Desc_20: 'Je zal gevraagd worden om een nieuw wachtwoord. Dit is het wachtwoord wat je zult gebruiken in gubiq / Ethereum Wallet / Fusion elke keer als je een transactie verzend, dus zorg dat je dit niet vergeet. ',
   HELP_12_Desc_21: 'Verwijder het bestand `niets_bijzonders_verwijder_mij.txt` na een geslaagde import. ',
   HELP_12_Desc_22: 'De volgende keer dat je de Ethereum Wallet applicatie opent, zal je account worden vermeld onder "Accounts". ',
   HELP_12_Desc_23: 'Open Kladblok (Notepad) & plak de prive seutel ',
   HELP_12_Desc_24: 'Sla het bestand op als `niets_bijzonders_verwijder_mij.txt` in `C:` ',
   HELP_12_Desc_25: 'Open de command prompt en voer het volgende commando uit: `geth account import C:\\niets_bijzonders_verwijder_mij.txt` ',
-  HELP_12_Desc_26: 'Je zal gevraagd worden om een nieuw wachtwoord. Dit is het wachtwoord wat je zult gebruiken in geth / Ethereum Wallet / Mist elke keer als je een transactie verzend, dus zorg dat je dit niet vergeet. ',
+  HELP_12_Desc_26: 'Je zal gevraagd worden om een nieuw wachtwoord. Dit is het wachtwoord wat je zult gebruiken in gubiq / Ethereum Wallet / Fusion elke keer als je een transactie verzend, dus zorg dat je dit niet vergeet. ',
   HELP_12_Desc_27: 'Verwijder het bestand `niets_bijzonders_verwijder_mij.txt` na een geslaagde import. ',
   HELP_12_Desc_28: 'De volgende keer dat je de Ethereum Wallet applicatie opent, zal je account worden vermeld onder "Accounts". ',
 
@@ -14096,8 +14096,8 @@ nl.data = {
 
   HELP_18_Title: '18) Waar is mijn Geth wallet bestand? ',
 
-  HELP_19_Title: '19) Waar is mijn Mist wallet bestand? ',
-  HELP_19_Desc_1: 'Mist bestanden zijn normaliter te vinden op de bovenstaande bestandslocaties, maar het volgende is veel makkelijker: open Mist, selecteer "Accounts" in de top balk, selecteer "Backup", en selecteer "Accounts". Hiermee open je de map waar je bestanden worden bewaard. ',
+  HELP_19_Title: '19) Waar is mijn Fusion wallet bestand? ',
+  HELP_19_Desc_1: 'Fusion bestanden zijn normaliter te vinden op de bovenstaande bestandslocaties, maar het volgende is veel makkelijker: open Fusion, selecteer "Accounts" in de top balk, selecteer "Backup", en selecteer "Accounts". Hiermee open je de map waar je bestanden worden bewaard. ',
 
   HELP_20_Title: '20) Waar is mijn pre-sale wallet bestand? ',
   HELP_20_Desc_1: 'Waat jij het opgeslagen hebt. ;) Het was ook naar je gemailed, dus kijk ook daar. Zoek naar het bestand genaamd "ethereum_wallet_backup.json" en selecteer dit bestand. Dit wallet bestand zal versleuteld (encrypted) zijn met een wachtwoord dat je aangemaakt hebt tijdens de aankoop van de pre-sale. ',
@@ -14110,7 +14110,7 @@ nl.data = {
   HELP_21_Desc_5: 'En JA, in theorie zou je een serie van 64 hexadecimale karakters kunnen intypen tot je er een hebt die matched. Sterker nog, een slim persoon zou een programma kunnen schrijven om heel snel willekeurige prive sleutels te controleren. Dit wordt ook wel "brute-forcing" van prive sleutels genoemd. Mensen hebben hier lang en goed over nagedacht. Met enkele krachtige servers zouden ze misschien wel zo’n miljoen sleutels per seconde kunnen controleren. Echter, zelfs wanneer er zoveel sleutels per seconde gecontroleed kunnen worden zou de opbrengst ervan niet eens in de buurt komen bij de kosten om de servers te onderhouden - het is waarschijnlijker dat jij, en je achterkleinkinderen, zijn overleden voordat je een match vind. ',
   HELP_21_Desc_6: 'Als je Bitcoin een beetje kent, [biedt dit een aardig perspectief:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[Als je het iets technischer wilt:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Uiteraard gaat bovenstaande er vanuit dat de sleutels worden gegenereerd met een volledige willekeur & met afdoende entropie. De sleutels die hier gegenreerd worden voldoen aan dat criterium, net als Jaxx en Mist/geth. De Ethereum wallets zijn allemaal best goed. Sleutels gegenereerd door "brainwallets" doen dit niet, omdat een het brein van een persoon niet capabel is om een werkelijk willekeurige "seed" te maken. Er zijn een heel aantal kwesties geweest met betrekking tot het gebrek entropie en "seeds" die niet in een volledig willekeurige manier waren gemaakt in Bitcoin-land, maar dat is een ander verhaal en kan wachten tot een andere keer. ',
+  HELP_21_Desc_8: 'Uiteraard gaat bovenstaande er vanuit dat de sleutels worden gegenereerd met een volledige willekeur & met afdoende entropie. De sleutels die hier gegenreerd worden voldoen aan dat criterium, net als Jaxx en Fusion/Gubiq. De Ethereum wallets zijn allemaal best goed. Sleutels gegenereerd door "brainwallets" doen dit niet, omdat een het brein van een persoon niet capabel is om een werkelijk willekeurige "seed" te maken. Er zijn een heel aantal kwesties geweest met betrekking tot het gebrek entropie en "seeds" die niet in een volledig willekeurige manier waren gemaakt in Bitcoin-land, maar dat is een ander verhaal en kan wachten tot een andere keer. ',
 
   HELP_SecCX_Title: 'Beveiliging - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Waar bewaard deze extentie mijn informatie? ',
@@ -14216,7 +14216,7 @@ no.data = {
   x_JsonDesc: 'Dette er det ukrypterte JSON-formatet av din private nøkkel. Dette betyr at du ikke trenger noe passord, men også at den som finner din JSON kan få tilgang til lommeboken din og etherne dine uten passord. ',
   x_Keystore: 'Keystore-fil (UTC / JSON · Anbefalt · Kryptert) ',
   x_Keystore2: 'Keystore-fil (UTC / JSON) ',
-  x_KeystoreDesc: 'Denne Keystore-filen samsvarer med formatet som brukes av Mist, så du enkelt kan importere den i fremtiden. Det er den anbefalte filen å laste ned og sikkerhetskopiere. ',
+  x_KeystoreDesc: 'Denne Keystore-filen samsvarer med formatet som brukes av Fusion, så du enkelt kan importere den i fremtiden. Det er den anbefalte filen å laste ned og sikkerhetskopiere. ',
   x_Mnemonic: 'Mnemonisk Frase ',
   x_Password: 'Passord ',
   x_Print: 'Skriv ut papirlommebok ',
@@ -14417,7 +14417,7 @@ no.data = {
   MYWAL_Content_3: 'Hvis du ønsker å bruke denne lommeboken med din MyEtherWallet Chrome-utvidelse i fremtiden, må du manuelt legge den til igjen ved å bruke den private nøkkelen/JSON og passord. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Dette gir deg muligheten til å laste ned ulike versjoner av private nøkler og skrive ut papirlommeboken din på nytt. Du vil kanskje gjøre dette for å [importere kontoen din til Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Hvis du bare ønsker å sjekke saldoen din, anbefaler vi at du bruker en "blockchain explorer" som f.eks. [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Dette gir deg muligheten til å laste ned ulike versjoner av private nøkler og skrive ut papirlommeboken din på nytt. Du vil kanskje gjøre dette for å [importere kontoen din til Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Hvis du bare ønsker å sjekke saldoen din, anbefaler vi at du bruker en "blockchain explorer" som f.eks. [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Dette gir deg muligheten til å laste ned ulike versjoner av private nøkler og skrive ut papirlommeboken din på nytt. ',
   VIEWWALLET_SuccessMsg: 'Suksess! Her er detaljene om din lommebok. ',
 
@@ -14605,7 +14605,7 @@ no.data = {
   HELP_7_Desc_5: 'Velg hvilken type token du vil sende . ',
   HELP_7_Desc_6: 'Hvis du ikke ser token-typen på listen: ',
   HELP_7_Desc_7: 'Klikk "Tilpasning". ',
-  HELP_7_Desc_8: 'Oppgi adressen, navnet, og antall desimaler for token-et. Disse er oppgitt fra utviklerne av token-et og er også nødvendige når du skal "Add a Watch Token" i Mist. ', //Mist not translated to Norw yet :-)//
+  HELP_7_Desc_8: 'Oppgi adressen, navnet, og antall desimaler for token-et. Disse er oppgitt fra utviklerne av token-et og er også nødvendige når du skal "Add a Watch Token" i Fusion. ', //Fusion not translated to Norw yet :-)//
   HELP_7_Desc_9: 'Klikk "Lagre". ',
   HELP_7_Desc_10: 'Du kan nå sende denne typen token, samt se saldoen for aktuell token i sidefeltet. ',
   HELP_7_Desc_11: 'Klikk "Generer transaksjon". ',
@@ -14616,8 +14616,8 @@ no.data = {
 
   HELP_8_Title: '8) Hva skjer hvis nettsiden går ned? ',
   HELP_8_Desc_1: 'MyEtherWallet er ikke en nett-lommebok (web wallet). Du har ingen innlogging og ingenting blir noensinne lagret på våre servere. Det er ganske enkelt et grensesnitt som tillater deg å samhandle med blokkjeden. ',
-  HELP_8_Desc_2: 'Hvis MyEtherWallet.com går ned, må du finne en annen måte (som f.eks. geth eller Ethereum Wallet / Mist) å gjøre det på. Men du vil ikke trenge å "hente" eteren din ut av MyEtherWallet, fordi den ikke befinner seg i MyEtherWallet. Den befinner seg i den lommeboka/kontoen som du opprettet ved hjelp av nettsiden vår. ',
-  HELP_8_Desc_3: 'Du kan nå svært enkelt importere din ukrypterte private nøkkel og dine Geth/Mist-format (krypterte) filer direkte inn i geth / Ethereum Wallet / Mist. Se spørsmål #12 nedenfor. ',
+  HELP_8_Desc_2: 'Hvis MyEtherWallet.com går ned, må du finne en annen måte (som f.eks. gubiq eller Ethereum Wallet / Fusion) å gjøre det på. Men du vil ikke trenge å "hente" eteren din ut av MyEtherWallet, fordi den ikke befinner seg i MyEtherWallet. Den befinner seg i den lommeboka/kontoen som du opprettet ved hjelp av nettsiden vår. ',
+  HELP_8_Desc_3: 'Du kan nå svært enkelt importere din ukrypterte private nøkkel og dine Gubiq/Fusion-format (krypterte) filer direkte inn i gubiq / Ethereum Wallet / Fusion. Se spørsmål #12 nedenfor. ',
   HELP_8_Desc_4: 'I tillegg er sannsynligheten for at vi tar ned MyEtherWallet svært liten. Det koster oss nesten ingenting å opprettholde den siden vi ikke lagrer noen informasjon. Hvis vi tar ned domenet, er det fortsatt, og vil alltid være, offentlig tilgjengelig på [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Du kan laste ned zip-fila der og kjøre den lokalt. ',
 
   HELP_8CX_Title: '8) Hva skjer hvis MyEtherWallet CX (Chrome-utvidelsen) forsvinner? ',
@@ -14641,13 +14641,13 @@ no.data = {
   HELP_10_Desc_10: 'Datafeltet under denne knappen vil fylles med din signerte transaksjon. Kopier denne og flytt den tilbake til din tilkoblede datamaskin. ',
   HELP_10_Desc_11: 'Lim inn den signerte transaksjonen i tekstfeltet i steg #3 på den tilkoblede maskinen og klikk "Send Ether & Tokens". Dette vil kringkaste transaksjonen din. ',
 
-  HELP_12_Title: '12) Hvordan kan jeg importere en lommebok opprettet med MyEtherWallet til geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Ved å bruke en Geth/Mist JSON-fil fra MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) Hvordan kan jeg importere en lommebok opprettet med MyEtherWallet til gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Ved å bruke en Gubiq/Fusion JSON-fil fra MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Gå til "Vis lommebok-info"-siden. ',
   HELP_12_Desc_3: 'Lås opp lommeboken din ved hjelp av din **krypterte** private nøkkel eller JSON-fil. ',
   HELP_12_Desc_4: 'Gå til "Mine lommebøker"-siden. ',
-  HELP_12_Desc_5: 'Velg lommeboken som du ønsker å importere til Mist, klikk "Vis"-ikonet, oppgi passordet, og få tilgang til lommeboken. ',
-  HELP_12_Desc_6: 'Finn "Last ned JSON-fil - Geth/Mist-format (kryptert)"-seksjonen. Trykk "Last ned"-knappen nedenfor. Du har nå fått keystore-filen til lommeboken din. ',
+  HELP_12_Desc_5: 'Velg lommeboken som du ønsker å importere til Fusion, klikk "Vis"-ikonet, oppgi passordet, og få tilgang til lommeboken. ',
+  HELP_12_Desc_6: 'Finn "Last ned JSON-fil - Gubiq/Fusion-format (kryptert)"-seksjonen. Trykk "Last ned"-knappen nedenfor. Du har nå fått keystore-filen til lommeboken din. ',
   HELP_12_Desc_7: 'Åpne "Ethereum Wallet"-programmet. ',
   HELP_12_Desc_8: 'I menyfeltet, gå til "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'Dette vil åpne keystore-mappen på harddisken din. Kopier filen du nettopp lastet ned (`UTC--2016-04-14......../`) inn i denne keystore-mappen. ',
@@ -14662,13 +14662,13 @@ no.data = {
   HELP_12_Desc_17: 'Gå til menylinjen og klikk "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Lagre denne fila på skrivebordet ditt som `ikke_noe_spesielt_slett_meg.txt`. Pass på at det står "UTF-8" og "If no extension is provided use .txt" i lagringsdialogen. ',
   HELP_12_Desc_19: 'Åpne terminalen og kjør følgende kommando: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i geth / Ethereum Wallet / Mist hver gang du skal sende en transaksjon, så ikke glem det. ',
+  HELP_12_Desc_20: 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i gubiq / Ethereum Wallet / Fusion hver gang du skal sende en transaksjon, så ikke glem det. ',
   HELP_12_Desc_21: 'Etter at du har lykkes med å importere kontoen, slett `ikke_noe_spesielt_slett_meg.txt` ',
   HELP_12_Desc_22: 'Neste gangen du åpner "Ethereum Wallet"-programmet, vil kontoen din være listet under "Accounts". ',
   HELP_12_Desc_23: 'Åpne Notisblokk/Notepad & lim inn den private nøkkelen ',
   HELP_12_Desc_24: 'Lagre fila som `ikke_noe_spesielt_slett_meg.txt` på `C:` ',
   HELP_12_Desc_25: 'Kjør ledetekst (Windowstast + "cmd")-kommandoen, `geth account import C:\\ikke_noe_spesielt_slett_meg.txt` ',
-  HELP_12_Desc_26: 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i geth / Ethereum Wallet / Mist hver gang du skal sende en transaksjon, så ikke glem det. ',
+  HELP_12_Desc_26: 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i gubiq / Ethereum Wallet / Fusion hver gang du skal sende en transaksjon, så ikke glem det. ',
   HELP_12_Desc_27: 'Etter at du har lykkes med å importere kontoen, slett `ikke_noe_spesielt_slett_meg.txt` ',
   HELP_12_Desc_28: 'Neste gangen du åpner "Ethereum Wallet"-programmet, vil kontoen din være listet under "Accounts". ',
 
@@ -14687,10 +14687,10 @@ no.data = {
   HELP_17_Title: '17) Hvorfor vises ikke saldoen min når jeg låser opp lommeboken min? ',
   HELP_17_Desc_1: 'Dette er mest sannsynlig fordi du er bak en brannmur. API-en vi bruker for å innhente saldoen blokkeres ofte av brannmurer av ymse årsaker. Du vil fortsatt være i stand til å sende transaksjoner, du må bare bruke en annen metode for å se nevnte saldo, som etherscan.io ',
 
-  HELP_18_Title: '18) Hvor er min geth lommebok-fil ',
+  HELP_18_Title: '18) Hvor er min gubiq lommebok-fil ',
 
-  HELP_19_Title: '19) Hvor er min Mist lommebok-fil? ',
-  HELP_19_Desc_1: 'Mist-filer lagres typisk i lokasjonene ovenfor, men det er mye enklere å åpne Mist, velge "Accounts" i topp-menylinjen, velge "Backup", og velge "Accounts". Dette vil åpne mappen hvor filene dine er lagret. ',
+  HELP_19_Title: '19) Hvor er min Fusion lommebok-fil? ',
+  HELP_19_Desc_1: 'Fusion-filer lagres typisk i lokasjonene ovenfor, men det er mye enklere å åpne Fusion, velge "Accounts" i topp-menylinjen, velge "Backup", og velge "Accounts". Dette vil åpne mappen hvor filene dine er lagret. ',
 
   HELP_20_Title: '20) Hvor er pre-sale lommebok-filen? ',
   HELP_20_Desc_1: 'Der du lagret den. ;) Den ble også sendt deg på e-post, så sjekk der. Se etter fila som heter `"ethereum_wallet_backup.json"` og velg den fila. Denne fila vil være kryptert med et passord som du opprettet under "pre-sale"-kjøpet. ',
@@ -14703,7 +14703,7 @@ no.data = {
   HELP_21_Desc_5: 'og JA, i teorien kunne du bare taste inn en streng med 64 hexadesimaltegn helt dil du fant en som passet. Faktisk kunne smarte folk skrive et program som svært hurtig kunne sjekke tilfeldige private nøkler. Dette kalles "brute-forcing" eller "mining" private nøkler. Folk har tenkt lenge og hardt på dette. Med noen få svært gode servere, kunne de kanskje klare å sjekke >1M nøkler/sekund. Likevel, selv når så mange sjekkes per sekund, ville det ikke gi tilgang midler som ville gjøre det i nærheten av å være lønnsomt å kjøre disse serverne.  - Det er mer sannsynlig at du, eller dine oldebarn, vil dø før du får en match. ',
   HELP_21_Desc_6: 'Hvis du vet noe om Bitcoin, [dette vil sette det i perspektiv:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *For å illustrere hvor usannsynlig det er: anta at alle satoshi av alle bitcoin som noensinne blir generert ble sendt til hver sin egen unike private nøkkel. Sannsynligheten for at det blant disse nøklene kunne være to som ville korrespondere med samme adresse er ca 1 til 10^20. ',
   HELP_21_Desc_7: '[Hvis du ønsker en mer teknisk forklaring:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *Disse tallene har ikke noe å gjøre med teknologien til enhetene; de er det maksimale som termodynamikken vil tillate. Og de impliserer sterkt at "brute-force"-angrep mot 256-bit nøkler vil være uoppnåelig fram til datamaskiner lages av noe annet enn materie og befinner seg i noe annet enn rom. ',
-  HELP_21_Desc_8: 'Selvsagt betinger alt dette at nøkler blir generert på en virkelig tilfeldig måte & med tilstrekkelig entropi. Nøklene som genereres her tilfredsstiller dette kriteriet, det samme gjør Jaxx og Mist/geth. Alle Ethereum-lommebøker er OK. Nøkler som genereres av "brainwallets" er ikke like gode, siden en persons hjerne ikke er i stand til å lage en virkelig tilfeldig "seed". Det har vært noen andre tilfeller av manglende entropi eller "seeds" som ikke er generert på en virkelig tilfeldig måte i Bitcoin-land, men det er en historie som kan vente til en annen dag. ',
+  HELP_21_Desc_8: 'Selvsagt betinger alt dette at nøkler blir generert på en virkelig tilfeldig måte & med tilstrekkelig entropi. Nøklene som genereres her tilfredsstiller dette kriteriet, det samme gjør Jaxx og Fusion/Gubiq. Alle Ethereum-lommebøker er OK. Nøkler som genereres av "brainwallets" er ikke like gode, siden en persons hjerne ikke er i stand til å lage en virkelig tilfeldig "seed". Det har vært noen andre tilfeller av manglende entropi eller "seeds" som ikke er generert på en virkelig tilfeldig måte i Bitcoin-land, men det er en historie som kan vente til en annen dag. ',
 
   HELP_SecCX_Title: 'Sikring - MyEtherWallet CX (Chrome-utvidelsen) ',
   HELP_SecCX_Desc_1: 'Hvor lagrer denne utvidelsen informasjonen min? ',
@@ -14809,7 +14809,7 @@ pl.data = {
   x_JsonDesc: 'Nieszyfrowany klucz prywatny, plik w formacie JSON. Nie wymaga podania hasła, ale każdy kto zdobędzie ten plik uzyska również pełny dostęp do Twojego portfela i zgromadzonych na nim środków. ',
   x_Keystore: 'Plik Keystore (UTC / JSON · Zalecany · Szyfrowany) ',
   x_Keystore2: 'Plik Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Ten plik Keystore odpowiada formatowi stosowanemu przez Mist, więc może być w prosty sposób zaimportowany w przyszłości. Jest to zalecana forma pliku do pobrania i przechowywania jako kopii zapasowej. ',
+  x_KeystoreDesc: 'Ten plik Keystore odpowiada formatowi stosowanemu przez Fusion, więc może być w prosty sposób zaimportowany w przyszłości. Jest to zalecana forma pliku do pobrania i przechowywania jako kopii zapasowej. ',
   x_Mnemonic: 'Mnemonik ',
   x_Password: 'Hasło ',
   x_Print: 'Drukuj Portfel Papierowy ',
@@ -14990,7 +14990,7 @@ pl.data = {
   MYWAL_Content_3: 'Jeśli będziesz chciał w przyszłości używać ten portfel ze swoim MyEtherWallet CX, będziesz musiał go ponownie dodać używając klucza prywatnego/pliku JSON i hasła. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Ta zakładka pozwoli Ci na odczyt kluczy prywatnych, pobranie kopii portfeli oraz wydrukowanie portfeli papierowych. Pobrane za jej pomocą portfele możesz [zaimportować do Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Jeśli chcesz sprawdzić stan Twojego konta, zalecamy użyć eksploratora bloków np. [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Ta zakładka pozwoli Ci na odczyt kluczy prywatnych, pobranie kopii portfeli oraz wydrukowanie portfeli papierowych. Pobrane za jej pomocą portfele możesz [zaimportować do Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Jeśli chcesz sprawdzić stan Twojego konta, zalecamy użyć eksploratora bloków np. [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Ta zakładka pozwala Ci na pobranie różnych typów kluczy prywatnych oraz ponowne wydrukowanie portfeli papierowych. ',
   VIEWWALLET_SuccessMsg: 'Sukces! Oto dane twojego portfela. ',
 
@@ -15196,7 +15196,7 @@ pl.data = {
   HELP_7_Desc_5: 'Wybierz typ tokena, który chcesz wysłać. ',
   HELP_7_Desc_6: 'Jeśli nie widzisz danego tokena: ',
   HELP_7_Desc_7: 'Kliknij "Inny". ',
-  HELP_7_Desc_8: 'Wpisz adres, symbol i ilość miejsc po przecinku tokena. Wartości te są podawane przez twórców tokena, są również potrzebne podczas dodawania tokena do obserwowanych w aplikacji Mist. ',
+  HELP_7_Desc_8: 'Wpisz adres, symbol i ilość miejsc po przecinku tokena. Wartości te są podawane przez twórców tokena, są również potrzebne podczas dodawania tokena do obserwowanych w aplikacji Fusion. ',
   HELP_7_Desc_9: 'Kliknij "Zapisz". ',
   HELP_7_Desc_10: 'Możesz teraz wysyłać ten token, jak również odczytać stan konta dla tokenu w kolumnie obok. ',
   HELP_7_Desc_11: 'Kliknij "Generuj Transakcję". ',
@@ -15207,8 +15207,8 @@ pl.data = {
 
   HELP_8_Title: '8) Co się stanie, jeżeli wasza strona zniknie z sieci? ',
   HELP_8_Desc_1: 'MyEtherWallet nie jest usługą portfela internetowego. Nie posiadasz loginu i nic nie jest zapisywane na naszych serwerach. To tylko interfejs, który pozwala korzystać z sieci Ethereum. ',
-  HELP_8_Desc_2: 'Jeżeli MyEtherWallet.com zostanie wyłączona, musiałbyś znaleźć inny sposób (jak Ethereum Wallet / Mist) na korzystanie z sieci Ethereum. Nie musiałbyś jednak wypłacić swoich środków z MyEtherWallet, ponieważ one nie znajdują się na MyEtherWallet, a na portfelach, które zostały wygenerowane za pomocą naszej strony. ',
-  HELP_8_Desc_3: 'Możesz w każdej chwili, w bardzo prosty sposób, zaimportować swoje nieszyfrowane klucze prywatne lub szyfrowane pliki w formacie Geth/Mist wprost do geth / Ethereum Wallet / Mist. Zobacz pytanie 12 poniżej. ',
+  HELP_8_Desc_2: 'Jeżeli MyEtherWallet.com zostanie wyłączona, musiałbyś znaleźć inny sposób (jak Ethereum Wallet / Fusion) na korzystanie z sieci Ethereum. Nie musiałbyś jednak wypłacić swoich środków z MyEtherWallet, ponieważ one nie znajdują się na MyEtherWallet, a na portfelach, które zostały wygenerowane za pomocą naszej strony. ',
+  HELP_8_Desc_3: 'Możesz w każdej chwili, w bardzo prosty sposób, zaimportować swoje nieszyfrowane klucze prywatne lub szyfrowane pliki w formacie Gubiq/Fusion wprost do gubiq / Ethereum Wallet / Fusion. Zobacz pytanie 12 poniżej. ',
   HELP_8_Desc_4: 'W dodatku prawdopodobieństwo zamknięcia przez nas strony MyEtherWallet.com jest bliskie zeru. Koszty utrzymania strony są prawie żadne, ponieważ nie przechowujmy żadnych informacji. Jeśli nawet strona zostanie zamknięta, jest ona również i zawsze będzie publicznie dostępna na [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Możesz ściągnąć paczkę ZIP i uruchomić MyEtherWallet lokalnie na własnym komputerze. ',
 
   HELP_8CX_Title: '8) Co się stanie jeżeli MyEtherWallet CX zniknie? ',
@@ -15232,13 +15232,13 @@ pl.data = {
   HELP_10_Desc_10: 'W polu poniżej pojawią się dane podpisanej transakcji. Skopiuj jego zawartość na komputer z dostępem do internetu. ',
   HELP_10_Desc_11: 'Na komputerze z internetem wklej podpisaną transakcję w pole tekstowe w kroku 3 i kliknij "Wyślij Transakcję". To spowoduje rozgłoszenie transakcji. ',
 
-  HELP_12_Title: '12) Jak zaimportować portfel utworzony w MyEtherWallet do geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Używając pliku Keystore Geth/Mist z MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) Jak zaimportować portfel utworzony w MyEtherWallet do gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Używając pliku Keystore Gubiq/Fusion z MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Wejdź na zakładkę "Wyświetl informacje o portfelu". ',
   HELP_12_Desc_3: 'Odblokuj portfel używając Twojego klucza prywatnego lub pliku portfela. ',
   HELP_12_Desc_4: 'Wejdź na zakładkę "Moje Portfele". ',
-  HELP_12_Desc_5: 'Zaznacz portfel jaki chcesz zaimportować do Mist, kliknij ikonkę "Podgląd", wpisz hasło i wejdź do podglądu. ',
-  HELP_12_Desc_6: 'Znajdź sekcję "Plik Keystore/JSON (Zalecany · Szyfrowany · Format Mist/Geth)". Kliknij przycisk "Pobierz" pod spodem. W ten sposób uzyskałeś plik Keystore. ',
+  HELP_12_Desc_5: 'Zaznacz portfel jaki chcesz zaimportować do Fusion, kliknij ikonkę "Podgląd", wpisz hasło i wejdź do podglądu. ',
+  HELP_12_Desc_6: 'Znajdź sekcję "Plik Keystore/JSON (Zalecany · Szyfrowany · Format Fusion/Gubiq)". Kliknij przycisk "Pobierz" pod spodem. W ten sposób uzyskałeś plik Keystore. ',
   HELP_12_Desc_7: 'Uruchom aplikację Ethereum Wallet. ',
   HELP_12_Desc_8: 'W menu programu wejdź w: "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'Otworzy się folder z plikami ustawień. Skopiuj pobrany przed chwilą plik portfela (`UTC--2016-04-14......../`) do folderu keystore. ',
@@ -15253,13 +15253,13 @@ pl.data = {
   HELP_12_Desc_17: 'Wejdź do paska menu i kliknij "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Zapisz ten plik na `desktop/` jako `nic_specjalnego_usun_mnie.txt`. Podczas zapisywania ustaw "UTF-8" i "If no extension is provided use .txt". ',
   HELP_12_Desc_19: 'Otwórz terminal systemowy i uruchom następującą komendę: `geth account import ~/Desktop/nic_specjalnego_usun_mnie.txt` ',
-  HELP_12_Desc_20: 'Zostaniesz zapytany o hasło. To będzie hasło portfela w geth / Ethereum Wallet / Mist, które należy podać przy każdej transakcji, nie zapomnij tego hasła. ',
+  HELP_12_Desc_20: 'Zostaniesz zapytany o hasło. To będzie hasło portfela w gubiq / Ethereum Wallet / Fusion, które należy podać przy każdej transakcji, nie zapomnij tego hasła. ',
   HELP_12_Desc_21: 'Po zaimportowaniu portfela, usuń `nic_specjalnego_usun_mnie.txt` ',
   HELP_12_Desc_22: 'Po ponownym uruchomieniu aplikacji Ethereum Wallet Twój portfel pojawi się na zakładce "Accounts". ',
   HELP_12_Desc_23: 'Otwórz Notatnik i wklej klucz prywatny ',
   HELP_12_Desc_24: 'Zapisz plik notatnika jako `nic_specjalnego_usun_mnie.txt` na `C:\\` ',
   HELP_12_Desc_25: 'Uruchom wiersz poleceń i wykonaj komendę: `geth account import C:\\nic_specjalnego_usun_mnie.txt` ',
-  HELP_12_Desc_26: 'Zostaniesz zapytany o hasło. To będzie hasło portfela w geth / Ethereum Wallet / Mist, które należy podać przy każdej transakcji, nie zapomnij tego hasła. ',
+  HELP_12_Desc_26: 'Zostaniesz zapytany o hasło. To będzie hasło portfela w gubiq / Ethereum Wallet / Fusion, które należy podać przy każdej transakcji, nie zapomnij tego hasła. ',
   HELP_12_Desc_27: 'Po zaimportowaniu portfela, usuń `nic_specjalnego_usun_mnie.txt` ',
   HELP_12_Desc_28: 'Po ponownym uruchomieniu aplikacji Ethereum Wallet Twój portfel pojawi się na zakładce "Accounts". ',
 
@@ -15280,8 +15280,8 @@ pl.data = {
 
   HELP_18_Title: '18) Gdzie jest plik mojego portfela w geth? ',
 
-  HELP_19_Title: '19) Gdzie jest plik mojego portfela w Mist? ',
-  HELP_19_Desc_1: 'Pliki programu Mist można znaleźć zazwyczaj w lokalizacjach wymienionych w pkt. 18, ale prościej jest uruchomić Mist, wybrać "Accounts" w górnym pasku, następnie "Backup" i "Accounts". Otworzy się folder, w którym znajdują się wspomniane pliki. ',
+  HELP_19_Title: '19) Gdzie jest plik mojego portfela w Fusion? ',
+  HELP_19_Desc_1: 'Pliki programu Fusion można znaleźć zazwyczaj w lokalizacjach wymienionych w pkt. 18, ale prościej jest uruchomić Fusion, wybrać "Accounts" w górnym pasku, następnie "Backup" i "Accounts". Otworzy się folder, w którym znajdują się wspomniane pliki. ',
 
   HELP_20_Title: '20) Gdzie jest mój plik portfela przed-sprzedaży? ',
   HELP_20_Desc_1: 'Tam gdzie go zapisałeś ;). Był też wysłany mailem, sprawdź również tam. Szukaj pliku `"ethereum_wallet_backup.json"`. Portfel ten będzie zaszyfrowany hasłem jakie podałeś podczas procesu kupna na przed-sprzedaży. ',
@@ -15294,7 +15294,7 @@ pl.data = {
   HELP_21_Desc_5: 'Więc TAK, teoretycznie można by po prostu wpisywać 64 znaki w kodzie szesnastkowym do momentu trafienia na taki, który nie jest pusty. Co więcej zdolni ludzie mogą napisać program, który będzie bardzo szybko, automatycznie sprawdzał kolejne losowe kombinacje kluczy. Taka metoda nazywa się "brute-forcing" lub "mining". Różni ludzie zastanawiali się nad jej zastosowaniem długo i intensywnie. Z pomocą kilku wysokiej klasy serwerów mogliby być w stanie sprawdzać ponad 1 milion kluczy na sekundę. Jednak nawet wtedy koszt utrzymania pracy tych serwerów byłby wiele razy wyższy niż potencjalne zyski ze znalezienia jakichkolwiek środków. Bardziej prawdopodobne byłoby, że pierwsze trafienie nastąpi dopiero po śmierci Twojej i Twoich prawnuków. ',
   HELP_21_Desc_6: 'Jeśli wiesz coś na temat Bitcoina, [to może dać Ci perspektywę:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *Aby zilustrować jak mało prawdopodobne to jest: załóżmy, że każdy satoshi (najmniejsza część Bitcoina, 0.00000001 BTC), każdego Bitcoina jaki kiedykolwiek będzie istnieć (21 milionów), został wysłany na swój własny unikalny klucz prywatny. Prawdopodobieństwo, że spośród wszystkich tych kluczy 2 odpowiadałyby tym samym adresom jest jak 1 do 100 kwintylionów. ',
   HELP_21_Desc_7: '[Jeżeli byś chciał coś bardziej technicznego:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *Te liczby nie mają nic wspólnego z technologią na jakiej opiera się urządzenie. Są maksimami na jakie pozwala termodynamika, co silnie sugeruje, że skuteczne ataki brute-force przeciwko 256-bitowym kluczom będą nieosiągalne, dopóki komputery nie będą zbudowane z czegoś innego niż materia i będą zajmować trochę więcej niż wszechświat. ',
-  HELP_21_Desc_8: 'Oczywiście to wszystko ma miejsce przy założeniu, że klucze są generowane w prawdziwie losowy sposób i z wystarczającą entropią. Klucze tu wygenerowane spełniają te kryteria, tak samo jak klucze w Jaxx i Mist/geth. Portfele Ethereum są w większości całkiem niezłe. Z drugiej strony np. klucze wygenerowane przez ludzki umysł nie spełniają tych kryteriów, jako że ludzki umysł nie jest w stanie wygenerować prawdziwie losowego źródła. W otoczeniu Bitcoina w przeszłości pojawiło się kilka problemów związanych z brakiem odpowiedniej entropii lub brakiem pełnej losowości, ale to całkiem inny temat, być może na inny dzień. ',
+  HELP_21_Desc_8: 'Oczywiście to wszystko ma miejsce przy założeniu, że klucze są generowane w prawdziwie losowy sposób i z wystarczającą entropią. Klucze tu wygenerowane spełniają te kryteria, tak samo jak klucze w Jaxx i Fusion/Gubiq. Portfele Ethereum są w większości całkiem niezłe. Z drugiej strony np. klucze wygenerowane przez ludzki umysł nie spełniają tych kryteriów, jako że ludzki umysł nie jest w stanie wygenerować prawdziwie losowego źródła. W otoczeniu Bitcoina w przeszłości pojawiło się kilka problemów związanych z brakiem odpowiedniej entropii lub brakiem pełnej losowości, ale to całkiem inny temat, być może na inny dzień. ',
 
   HELP_SecCX_Title: 'Bezpieczeństwo - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Gdzie są zapisywane informacje przechowywane przez to rozszerzenie? ',
@@ -15475,7 +15475,7 @@ pt.data = {
   x_JsonDesc: 'Este é o descriptografado, formato JSON da sua chave privada. Isto significa que você não precisa da senha, mas qualquer um que encontrar o seu JSON pode acessar sua carteira & Éter sem a senha. ',
   x_Keystore: 'Arquivo de armazenamento de chaves (UTC / JSON · Recomendado · Criptografado) ',
   x_Keystore2: 'Arquivo de armazenamento de chaves (UTC / JSON) ',
-  x_KeystoreDesc: 'Este arquivo de armazenamento de chaves corresponde ao formato usado pela Mist para que você possa facilmente importá-lo no futuro. É recomendado que o arquivo seja transferido e feito seu backup. ',
+  x_KeystoreDesc: 'Este arquivo de armazenamento de chaves corresponde ao formato usado pela Fusion para que você possa facilmente importá-lo no futuro. É recomendado que o arquivo seja transferido e feito seu backup. ',
   x_Mnemonic: 'Frase Mnemonic ',
   x_Password: 'Senha ',
   x_Print: 'Imprimir Carteira de Papel ',
@@ -15647,7 +15647,7 @@ pt.data = {
   MYWAL_Content_3: 'Se pretender utilizar esta carteira com o MyEtherWallet CX no futuro, terá de voltar a adicioná-la manualmente utilizando a chave privada/JSON e a palavra-passe. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'This allows you to download different versions of private keys and re-print your paper wallet. ',
   VIEWWALLET_SuccessMsg: 'Success! Here are your wallet details. ',
 
@@ -15790,7 +15790,7 @@ pt.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -15801,8 +15801,8 @@ pt.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -15826,13 +15826,13 @@ pt.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -15847,13 +15847,13 @@ pt.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -15872,10 +15872,10 @@ pt.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -15888,7 +15888,7 @@ pt.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -16041,7 +16041,7 @@ ru.data = {
   x_PrivKeyDesc: 'Это незашифрованное текстовое представление Вашего закрытого ключа, для использования которого не требуется вводить пароль. Если посторонние узнают Ваш закрытый ключ, они смогут распоряжаться Вашим кошельком без ввода пароля. По этой причине, обычно рекомендуют использовать зашифрованную версию закрытого ключа. ',
   x_Keystore: 'Файл Keystore (UTC / JSON · рекомендуется · зашифрован) ',
   x_Keystore2: 'Файл Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Этот файл Keystore использует формат совместимый с Mist. Вы сможете в будущем импортировать его. Рекомендуется скачать этот файл и сделать резервную копию. ',
+  x_KeystoreDesc: 'Этот файл Keystore использует формат совместимый с Fusion. Вы сможете в будущем импортировать его. Рекомендуется скачать этот файл и сделать резервную копию. ',
   x_Json: 'Файл JSON (не зашифрован) ',
   x_JsonDesc: 'Это Ваш незашифрованный закрытый ключ в формате JSON, для использования которого не требуется воодить пароль. Любой, у кого есть этот файл, может распоряжаться вашим кошельком и эфиром (ether) без ввода пароля. ',
   x_PrintShort: 'Печать ',
@@ -16206,7 +16206,7 @@ ru.data = {
   MYWAL_Content_3: 'Если Вы планируете в будущем использовать этот кошелёк в MyEtherWallet CX, Вам надо будет вручную заново добавить его, указав закрытый ключ или файл JSON и пароль. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Позволяет скачать закрытые ключи в различных форматах, а также повторно напечатать Ваши бумажные кошельки. Вам это понадобится, когда Вы захотите [импортировать Ваши счета в geth или Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Для проверки баланса Ваших счетов мы рекомендуем использовать браузер блокчейна, например [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Позволяет скачать закрытые ключи в различных форматах, а также повторно напечатать Ваши бумажные кошельки. Вам это понадобится, когда Вы захотите [импортировать Ваши счета в gubiq или Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Для проверки баланса Ваших счетов мы рекомендуем использовать браузер блокчейна, например [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Позволяет Вам скачать Ваши закрытые ключи в различных форматах, а также повторно напечатать Ваши бумажные кошельки. ',
   VIEWWALLET_SuccessMsg: 'Поздравляем! Вот информация о Вашем кошельке. ',
 
@@ -16383,7 +16383,7 @@ ru.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -16394,8 +16394,8 @@ ru.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -16419,13 +16419,13 @@ ru.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -16440,13 +16440,13 @@ ru.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -16465,10 +16465,10 @@ ru.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -16481,7 +16481,7 @@ ru.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -16595,7 +16595,7 @@ tr.data = {
   ADD_Trezor_select: 'This is a TREZOR seed ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'This allows you to download different versions of private keys and re-print your paper wallet. ',
   VIEWWALLET_SuccessMsg: 'Success! Here are your wallet details. ',
 
@@ -16646,7 +16646,7 @@ tr.data = {
   x_JsonDesc: 'Bu özel anahtarinin sifresiz, JSON formatidir. Demekki parolasiz cüzdanini acabilirsin. Özel anahatarina sahip olan herkez sifresiz cüzdani aca bilir. ',
   x_Keystore: 'Keystore dosya (UTC / JSON · Tavsiye edilen · şifrelenmiş) ',
   x_Keystore2: 'Keystore dosya (UTC / JSON) ',
-  x_KeystoreDesc: 'This Keystore file matches the format used by Mist so you can easily import it in the future. It is the recommended file to download and back up. ',
+  x_KeystoreDesc: 'This Keystore file matches the format used by Fusion so you can easily import it in the future. It is the recommended file to download and back up. ',
   x_Password: 'Parola ',
   x_Print: 'Cüzdanin kağıt versiyonunu yazdir ',
   x_PrintDesc: 'ProTavsiye: Eğer yazıcınız olmasa bile, "Yazdır" seçeneğini tıklayın ve PDF dosyası olarak kaydedin! ',
@@ -16976,7 +16976,7 @@ tr.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -16987,8 +16987,8 @@ tr.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -17012,13 +17012,13 @@ tr.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click "SEND Ether". This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -17033,13 +17033,13 @@ tr.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -17058,10 +17058,10 @@ tr.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -17074,7 +17074,7 @@ tr.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -17252,9 +17252,9 @@ vi.data = {
   x_Download: 'Tải Về Máy ',
   x_Json: 'Định Dạng JSON (Không mã hoá) ',
   x_JsonDesc: 'Định Dạng JSON là một tập tin chứa dữ liệu ví chưa được mã hoá của Private Key. Bạn có thể đăng nhập vào ví của bạn bằng việc sử dụng định dạng JSON mà không cần đến mật khẩu. Vì vậy, bất kỳ người nào sở hữu định dạng  JSON của bạn thì họ đều có khả năng đăng nhập vào ví của bạn mà không cần đến mật khẩu. ',
-  x_Keystore: 'Định Dạng Keystore (UTC / JSON) (Đã mã hoá. Định Dạng này sử dụng cho Mist) ',
+  x_Keystore: 'Định Dạng Keystore (UTC / JSON) (Đã mã hoá. Định Dạng này sử dụng cho Fusion) ',
   x_Keystore2: 'Định Dạng Keystore (UTC / JSON) ',
-  x_KeystoreDesc: 'Định dạng Keystore là tập một tin chứa dữ liệu ví đã được mã hoá của Private Key và sử dụng cho Mist. Do đó bạn có thể dễ dàng bỏ nó vào bên trong Mist và tiếp tục sử dụng ví của bạn. Đây là một tập tin được đề xuất nhằm sao lưu dữ liệu ví cá nhân. ',
+  x_KeystoreDesc: 'Định dạng Keystore là tập một tin chứa dữ liệu ví đã được mã hoá của Private Key và sử dụng cho Fusion. Do đó bạn có thể dễ dàng bỏ nó vào bên trong Fusion và tiếp tục sử dụng ví của bạn. Đây là một tập tin được đề xuất nhằm sao lưu dữ liệu ví cá nhân. ',
   x_Mnemonic: 'Cụm từ dễ nhớ ',
   x_Password: 'Mật Khẩu ',
   x_Print: 'Tạo Ví Giấy ',
@@ -17436,7 +17436,7 @@ vi.data = {
   MYWAL_Content_3: 'Nếu bạn muốn sử dụng địa chỉ Ví này với MyEtherWallet CX trong tương lai, bạn sẽ cần phải tự thêm vào lại bằng cách sử dụng tập tin Private Key / JSON và mật khẩu. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'Việc này cho phép bạn tải về các phiên bản khác nhau của Private Key và in lại ví giấy của bạn. Bạn có thể muốn làm điều này để [nhập tài khoản của bạn vào Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Nếu bạn muốn kiễm tra số dư của bạn, chúng tôi khuyên bạn sử dụng một blockchain explorer như [etherscan.io] (http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'Việc này cho phép bạn tải về các phiên bản khác nhau của Private Key và in lại ví giấy của bạn. Bạn có thể muốn làm điều này để [nhập tài khoản của bạn vào Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Nếu bạn muốn kiễm tra số dư của bạn, chúng tôi khuyên bạn sử dụng một blockchain explorer như [etherscan.io] (http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'Việc này cho phép bạn tải về các phiên bản khác nhau của Private Key và in lại ví giấy của bạn. ',
   VIEWWALLET_SuccessMsg: 'Đã Thành Công! Đây là thông tin chi tiết về Ví của bạn. ',
 
@@ -17628,7 +17628,7 @@ vi.data = {
   HELP_7_Desc_5: 'Chọn loại Token mà bạn muốn gửi đi. ',
   HELP_7_Desc_6: 'Nếu bạn không thấy Token của bạn hiển thị trên trang chúng tôi: ',
   HELP_7_Desc_7: 'Chọn vào "Custom". ',
-  HELP_7_Desc_8: 'Điền địa chỉ, tên, đơn vị số thập phân của loại Token mà bạn muốn. Chúng được cung cấp bởi các nhà phát triển Token và nó cũng cần thiết khi bạn "thêm vào dễ xem Token" trên Mist. ',
+  HELP_7_Desc_8: 'Điền địa chỉ, tên, đơn vị số thập phân của loại Token mà bạn muốn. Chúng được cung cấp bởi các nhà phát triển Token và nó cũng cần thiết khi bạn "thêm vào dễ xem Token" trên Fusion. ',
   HELP_7_Desc_9: 'Chọn "Lưu". ',
   HELP_7_Desc_10: 'Bạn có thể gửi token cũng như bạn sẽ nhìn thấy số dư của nó nằm ở khung bên cạnh. ',
   HELP_7_Desc_11: 'Chọn "Khởi tạo giao dịch". ',
@@ -17639,8 +17639,8 @@ vi.data = {
 
   HELP_8_Title: '8) Những gì sẽ xảy ra nếu trang của chúng tôi bị sập? ',
   HELP_8_Desc_1: 'MyEtherWallet không phải là Ví online. Bạn không cần phải đăng nhập và không có bất cứ gì được lưu lại trên máy chủ của chúng tôi. Đây chỉ đơn giản là một giao diện cho phép bạn tương tác với blockchain. ',
-  HELP_8_Desc_2: 'Nếu MyEtherWallet.com bị sập, bạn sẽ phải tìm một giải pháp khác (như là geth hoặc Ví Ethereum / Mist) dễ tiếp tục thực hiện giao dịch. Nhưng bạn không cần thiết phải "Mang" Ether của bạn ra khỏi MyEtherWallet bởi vì số Ether đó không nằm trong MyEtherWallet. Bởi vì số Ether đó đang nằm trong Ví Ethereum được khởi tạo thông qua trang của chúng tôi. ',
-  HELP_8_Desc_3: 'Bạn chỉ cần bỏ tập tin chứa định dạng mã hoá Private key của bạn vào và Geth/Mist sẽ tự động giải mã tập tin (mã hoá) trực tiếp bên trong  geth / Ví Ethereum / Mist một cách dễ dàng. Xem câu hỏi #12. ',
+  HELP_8_Desc_2: 'Nếu MyEtherWallet.com bị sập, bạn sẽ phải tìm một giải pháp khác (như là gubiq hoặc Ví Ethereum / Fusion) dễ tiếp tục thực hiện giao dịch. Nhưng bạn không cần thiết phải "Mang" Ether của bạn ra khỏi MyEtherWallet bởi vì số Ether đó không nằm trong MyEtherWallet. Bởi vì số Ether đó đang nằm trong Ví Ethereum được khởi tạo thông qua trang của chúng tôi. ',
+  HELP_8_Desc_3: 'Bạn chỉ cần bỏ tập tin chứa định dạng mã hoá Private key của bạn vào và Gubiq/Fusion sẽ tự động giải mã tập tin (mã hoá) trực tiếp bên trong  gubiq / Ví Ethereum / Fusion một cách dễ dàng. Xem câu hỏi #12. ',
   HELP_8_Desc_4: 'Ngoài ra, Khả năng xảy ra vấn đề trang MyEtherWallet bị sập là rất khó. Cũng như việc chúng tôi không lưu trữ lại bất cứ dữ liệu gì vì vậy giá trị của nó sở hữu hoàn toàn bằng không. Nếu chúng tôi buộc phải  tháo tên miền này xuống, thì toàn bộ sẽ vẫn còn, tồn tại và công khai trên trang  [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Bạn có thể tải tập tin nén của nó và chạy nó trực tiếp trên máy tính của bạn. ',
 
   HELP_8CX_Title: '8) Những gì sẽ xảy ra néu MyEtherWallet CX hoàn toàn biến mất? ',
@@ -17664,13 +17664,13 @@ vi.data = {
   HELP_10_Desc_10: 'Các trường dữ liệu phía dưới nút này sẽ dùng dễ chứng thực chữ ký cho giao dịch của bạn. Cóp hết đoạn dữ liệu này và chuyển đến máy tính online của bạn. ',
   HELP_10_Desc_11: 'Trên máy tính online của bạn, bạn hãy dán chữ ký giao dịch vào khung điền văn bản tại bước #3 và chọn nút "Gửi Ether". Việc làm này sẽ phát sóng đi giao dịch của bạn. ',
 
-  HELP_12_Title: '12) Làm thế nào dễ tôi sử dụng Ví được khởi tạo từ MyEtherWallet trên geth / Ví Ethereum / Mist? ',
-  HELP_12_Desc_1: 'Bạn phải sử dụng tập tin chứa định dạng JSON dành cho Geth/Mist từ MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) Làm thế nào dễ tôi sử dụng Ví được khởi tạo từ MyEtherWallet trên gubiq / Ví Ethereum / Fusion? ',
+  HELP_12_Desc_1: 'Bạn phải sử dụng tập tin chứa định dạng JSON dành cho Gubiq/Fusion từ MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Đi đến trang "Xem Thông Tin Ví". ',
   HELP_12_Desc_3: 'Mở khoá Ví và sử dụng định dạng **mã hoá** private key của bạn hoặc tập tin chứa định dạng JSON. ',
   HELP_12_Desc_4: 'Đi đến trang "Ví Của Tôi". ',
-  HELP_12_Desc_5: 'Chọn Ví mà bạn muốn dùng dễ sử dụng trên Mist, chon vào biểu tượng "Xem", Điền mật khẩu của bạn, và đăng nhập vào Ví của bạn. ',
-  HELP_12_Desc_6: 'Tìm phần "Tải về định dạng JSON - định dạng Geth/Mist (Mã hoá)". Nhấn vào nút "Tải về máy" nằm phía dưới. Bây giờ bạn đã sở hữu định dạng Keystone. ',
+  HELP_12_Desc_5: 'Chọn Ví mà bạn muốn dùng dễ sử dụng trên Fusion, chon vào biểu tượng "Xem", Điền mật khẩu của bạn, và đăng nhập vào Ví của bạn. ',
+  HELP_12_Desc_6: 'Tìm phần "Tải về định dạng JSON - định dạng Gubiq/Fusion (Mã hoá)". Nhấn vào nút "Tải về máy" nằm phía dưới. Bây giờ bạn đã sở hữu định dạng Keystone. ',
   HELP_12_Desc_7: 'Truy cập Ví trên ứng dụng Ví Ethereum. ',
   HELP_12_Desc_8: 'Tại thanh Menu, bạn chọn như sau "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'Bạn sẽ mở thư mục keystore của bạn ra. Sao chép tập tin mà bạn đã tải về máy (`UTC--2016-04-14......../`) vào trong thư mục keystone. ',
@@ -17685,13 +17685,13 @@ vi.data = {
   HELP_12_Desc_17: 'Tại thanh menu bạn hãy chọn "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Lưu tập tin này trên `desktop/` của bạn như `nothing_special_delete_me.txt`. chắc chắn rằng nó được khai báo "UTF-8" và " Nếu không có phần mở rộng được cung cấp sử dụng .text" và lưu vào dialog. ',
   HELP_12_Desc_19: 'Mở terminal và dùng câu lệnh như sau: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'Việc này sẽ yêu cầu bạn thực hiện một mật khẩu mới. Và nó sẽ là mật khẩu mà bạn sử dụng tại geth / Ví Ethereum / Mist . Lưu ý, Bạn phải ghi nhớ mật khẩu này. ',
+  HELP_12_Desc_20: 'Việc này sẽ yêu cầu bạn thực hiện một mật khẩu mới. Và nó sẽ là mật khẩu mà bạn sử dụng tại gubiq / Ví Ethereum / Fusion . Lưu ý, Bạn phải ghi nhớ mật khẩu này. ',
   HELP_12_Desc_21: 'Sau khi hoàn thành việc nhập Ví trên ứng dụng, bạn nên xoá tập tin `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'Trong lần sử dụng ứng dụng Ví Ethereum sau này, Tài khoản của bạn sẽ tự đọng liên kết và hiển thị dưới phần "Accounts". ',
   HELP_12_Desc_23: 'Mở mục Notepad & dán private key vào ',
   HELP_12_Desc_24: 'Lưu tập tin lại với tên như sau `nothing_special_delete_me.txt` tại ổ đĩa `C:` ',
   HELP_12_Desc_25: 'Sử dụng câu lệnh, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'Việc này sẽ yêu cầu bạn thực hiện một mật khẩu mới. Và nó sẽ là mật khẩu mà bạn sử dụng tại geth / Ví Ethereum / Mist . Lưu ý, Bạn phải ghi nhớ mật khẩu này. ',
+  HELP_12_Desc_26: 'Việc này sẽ yêu cầu bạn thực hiện một mật khẩu mới. Và nó sẽ là mật khẩu mà bạn sử dụng tại gubiq / Ví Ethereum / Fusion . Lưu ý, Bạn phải ghi nhớ mật khẩu này. ',
   HELP_12_Desc_27: 'Sau khi hoàn thành việc nhập Ví trên ứng dụng, bạn nên xoá tập tin `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'Trong lần sử dụng ứng dụng Ví Ethereum sau này, Tài khoản của bạn sẽ tự đọng liên kết và hiển thị dưới phần "Accounts". ',
 
@@ -17712,8 +17712,8 @@ vi.data = {
 
   HELP_18_Title: '18) Tập tin chứa định dạng Geth của ví tôi nằm ở đâu? ',
 
-  HELP_19_Title: '19) Tập tin chứa dịnh dạng Mist của ví tôi nằm ở đâu? ',
-  HELP_19_Desc_1: 'Tập tin chứa định dạng dành cho Ví mist nằm ở mục the file locations phía trên, nó rất đễ dàng dễ mở Mist, Chọn "Accounts" hàng đầu tiên của thanh công cụ, chọn "Backup", và chọn "Accounts". Nó sẽ mở ra thư mục hiện tại đang lưu trữ tập tin định dạng Ví của bạn. ',
+  HELP_19_Title: '19) Tập tin chứa dịnh dạng Fusion của ví tôi nằm ở đâu? ',
+  HELP_19_Desc_1: 'Tập tin chứa định dạng dành cho Ví mist nằm ở mục the file locations phía trên, nó rất đễ dàng dễ mở Fusion, Chọn "Accounts" hàng đầu tiên của thanh công cụ, chọn "Backup", và chọn "Accounts". Nó sẽ mở ra thư mục hiện tại đang lưu trữ tập tin định dạng Ví của bạn. ',
 
   HELP_20_Title: '20) Tập tin Pre-sale cho Ví của tôi nằm ở đâu? ',
   HELP_20_Desc_1: 'Cho dù bạn lưu trữ nó ở đâu. ;) nó cũng đều được gửi đến email của bạn, vì vậy hãy kiễm tra email. Kiếm tập tin mang tên `"ethereum_wallet_backup.json"` và sau đó chọn tập tin này. Tập tin Ví này thường đc mã hoá bởi một mật khẩu khi bạn khởi tạo nó trong lúc bạn thanh toán trong thời gian pre-sale. ',
@@ -17726,7 +17726,7 @@ vi.data = {
   HELP_21_Desc_5: 'Vẫn có thẻ xảy ra, theo lý thuyết thì bạn sẽ sử dụng một chuỗi gồn 64 ký tự cho đến khi bạn nhận được một kết quả đúng. Thực tế, một cá nhân thông minh có thể lập trình lên một chương trình rà kết quả đúng với Private key của bạn một cách nhanh chóng. Trường hợp này giống như "brute-forcing" hoặc "mining" private keys. Nhưng viêc làm này vẫn mất rất nhièu thời gian và rất khó. Cùng với một hệ thống Server công nghệ cao, họ có khả năng dò ngẫu nhiên 1 triệu ký tự / giây. Tuy nhiên, Việc kiễm tra ngẩu nghiên này nhằm mang lại quyền đột nhập vào tài khoản của bạn sẽ phải mất một lượng chi phí rất cao đễ duy trì hệ thống Server của họ - và dễ rà soát cho đến khi hoàn toàn chính xác được Private key của bạn thì có lẽ cá nhân đó đã già vì phải mất cả gần trăm năm dễ cho ra kết quả chính xác. ',
   HELP_21_Desc_6: 'Nếu bạn hiểu toàn bộ về Bitcoin, [Điều này có thể xem qua tại:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *Nhằm làm rõ cho việc: Cho rằng mỗi satoshi của mỗi bitcoin từng được tạo ra đã gửi đến nó những private key được nó sở hữu mà không có trường hợp khác thay thế. Xác xuất dễ có một mã khoá bị trùng lặp tại hai địa chỉ khác nhau là một trong 100 quintillion, bởi vậy được coi là hoàn toàn không thể. ',
   HELP_21_Desc_7: '[Nếu bạn cần một phương pháp bảo mật cao hơn có thể tham khảo:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *Đối với đoạn mã của Private thì hầu như những công nghệ tiên tiến trên máy tính của bạn chỉ là vô nghĩa, vì khi người nào đó muốn dò ngẫu nhiên nó thì họ không cần thiết phải tấn công vào thiết bị của bạn. Nhưng đối với một mã khoá 265-bit sẽ bất khả thi đối với việc làm trên trừ khi máy tính của họ được xây dựng bởi một cái gì đó khác biệt và cực kì tiên tiến thì mới rà được và cho ra kết quả tốt nhất và trường hợp này sẽ cần rất rất nhiều thời gian và những công nghệ đó có lẽ còn phải mất rất nhiều thời gian trong tương lai dễ nghiên cứu . ',
-  HELP_21_Desc_8: 'Tất cả những giả đinh trên nhằm xác định rõ đoạn mã được tạo ra một cách hoàn toàn ngẫu nhiên. các mã khoá được tạo ra ở đây đáp ứng các tiêu chí, mà có thể tương tích đc với Jaxx và Mist/Geth. Ví Ethereum là tất cả những gì tuyệt vời nhất. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Tất cả những giả đinh trên nhằm xác định rõ đoạn mã được tạo ra một cách hoàn toàn ngẫu nhiên. các mã khoá được tạo ra ở đây đáp ứng các tiêu chí, mà có thể tương tích đc với Jaxx và Fusion/Gubiq. Ví Ethereum là tất cả những gì tuyệt vời nhất. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Bảo mật - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Những thông tin dữ liệu được kho tiện ích lưu trữ ở đâu? ',
@@ -17875,7 +17875,7 @@ zhcn.data = {
   x_JsonDesc: '这是你的未加密JSON格式的私钥文件。 这意味着你发送交易时不需要密码，也意味着拿到你的JSON文件的可以无需密码就可以控制你的钱包和以太币。 ',
   x_Keystore: 'Keystore File (UTC / JSON · 推荐加密的) ',
   x_Keystore2: 'Keystore File (UTC / JSON) ',
-  x_KeystoreDesc: '这个Keystore/JSON文件和Mist、Geth使用的钱包文件是一样的，所以将来你可以非常容易地导入。 It is the recommended file to download and back up.推荐下载和备份这个文件。 ',
+  x_KeystoreDesc: '这个Keystore/JSON文件和Fusion、Geth使用的钱包文件是一样的，所以将来你可以非常容易地导入。 It is the recommended file to download and back up.推荐下载和备份这个文件。 ',
   x_Password: '密码 ',
   x_Print: '打印纸钱包 ',
   x_PrintDesc: '小技巧：点击打印，并保存为PDF格式，即使你没有打印机。 ',
@@ -18043,7 +18043,7 @@ zhcn.data = {
   MYWAL_Content_3: '如果你想将来在MyEtherWallet插件中使用该钱包，你需要手动添加私钥/JSON文件和密码。 ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: '这允许你下载不同格式的私钥和重新打印你的纸钱包。为了将[你的账户导入到Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)，你可能需要这个操作。如果你想查看你的余额，我们推荐使用区块浏览器，例如[etherscan.io](http://etherscan.io/)。 ',
+  VIEWWALLET_Subtitle: '这允许你下载不同格式的私钥和重新打印你的纸钱包。为了将[你的账户导入到Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/)，你可能需要这个操作。如果你想查看你的余额，我们推荐使用区块浏览器，例如[etherscan.io](http://etherscan.io/)。 ',
   VIEWWALLET_Subtitle_Short: '这允许你下载不同格式的私钥和重新打印你的纸钱包。 ',
   VIEWWALLET_SuccessMsg: '成功！这是你的钱包细节！ ',
 
@@ -18219,7 +18219,7 @@ zhcn.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed: ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -18230,8 +18230,8 @@ zhcn.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -18255,13 +18255,13 @@ zhcn.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -18276,13 +18276,13 @@ zhcn.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -18301,10 +18301,10 @@ zhcn.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -18317,7 +18317,7 @@ zhcn.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -18378,7 +18378,7 @@ zhtw.data = {
   x_JsonDesc: '這是未加密的JSON格式私鑰檔。這表示你不需要密碼就可以控制錢包，但任何持有此JSON文件的人也都無須密碼便能控制你的錢包和乙太幣。 ',
   x_Keystore: 'Keystore 檔 (UTC / JSON · 推薦 · 經過加密) ',
   x_Keystore2: 'Keystore 檔 (UTC / JSON) ',
-  x_KeystoreDesc: '此Keystore檔和Mist錢包相容，因此你可以輕鬆地匯入錢包。我們推薦你下載並備份此檔案。 ',
+  x_KeystoreDesc: '此Keystore檔和Fusion錢包相容，因此你可以輕鬆地匯入錢包。我們推薦你下載並備份此檔案。 ',
   x_Mnemonic: '助憶口令 ',
   x_ParityPhrase: 'Parity口令 ',
   x_Password: '密碼 ',
@@ -18607,7 +18607,7 @@ zhtw.data = {
   MSG_info3: 'Include a specific reason for the message so it cannot be reused for a different purpose. ',
 
   /* View Wallet Details */
-  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
+  VIEWWALLET_Subtitle: 'This allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like [etherscan.io](http://etherscan.io/). ',
   VIEWWALLET_Subtitle_Short: 'This allows you to download different versions of private keys and re-print your paper wallet. ',
   VIEWWALLET_SuccessMsg: 'Success! Here are your wallet details. ',
 
@@ -18795,7 +18795,7 @@ zhtw.data = {
   HELP_7_Desc_5: 'Select which token you would like to send. ',
   HELP_7_Desc_6: 'If you do not see the token listed ',
   HELP_7_Desc_7: 'Click "Custom". ',
-  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
+  HELP_7_Desc_8: 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
   HELP_7_Desc_9: 'Click "Save". ',
   HELP_7_Desc_10: 'You can now send that token as well as see it\'s balance in the sidebar. ',
   HELP_7_Desc_11: 'Click "Generate Transaction". ',
@@ -18806,8 +18806,8 @@ zhtw.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-  HELP_8_Desc_3: 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
   HELP_8CX_Title: '8) What happens if MyEtherWallet CX disappears? ',
@@ -18831,13 +18831,13 @@ zhtw.data = {
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
   HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
-  HELP_12_Desc_1: 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
+  HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion? ',
+  HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
   HELP_12_Desc_2: 'Go to the "View Wallet Info" page. ',
   HELP_12_Desc_3: 'Unlock your wallet using your **encrypted** private key or JSON file. ',
   HELP_12_Desc_4: 'Go to the "My Wallets" page. ',
-  HELP_12_Desc_5: 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
-  HELP_12_Desc_6: 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+  HELP_12_Desc_5: 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
+  HELP_12_Desc_6: 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
   HELP_12_Desc_7: 'Open the Ethereum Wallet application. ',
   HELP_12_Desc_8: 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
   HELP_12_Desc_9: 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
@@ -18852,13 +18852,13 @@ zhtw.data = {
   HELP_12_Desc_17: 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
   HELP_12_Desc_18: 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
   HELP_12_Desc_19: 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_20: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_21: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_22: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
   HELP_12_Desc_23: 'Open Notepad & paste the private key ',
   HELP_12_Desc_24: 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
   HELP_12_Desc_25: 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
-  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
+  HELP_12_Desc_26: 'This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
   HELP_12_Desc_27: 'After successful import, delete `nothing_special_delete_me.txt` ',
   HELP_12_Desc_28: 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
@@ -18877,10 +18877,10 @@ zhtw.data = {
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: ' This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-  HELP_18_Title: '18) Where is my geth wallet file? ',
+  HELP_18_Title: '18) Where is my gubiq wallet file? ',
 
-  HELP_19_Title: '19) Where is my Mist wallet file? ',
-  HELP_19_Desc_1: 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+  HELP_19_Title: '19) Where is my Fusion wallet file? ',
+  HELP_19_Desc_1: 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
   HELP_20_Title: '20) Where is my pre-sale wallet file? ',
   HELP_20_Desc_1: 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -18893,7 +18893,7 @@ zhtw.data = {
   HELP_21_Desc_5: 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
   HELP_21_Desc_6: 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
   HELP_21_Desc_7: '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+  HELP_21_Desc_8: 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
   HELP_SecCX_Title: 'Security - MyEtherWallet CX ',
   HELP_SecCX_Desc_1: 'Where is this extension saving my information? ',
@@ -82530,7 +82530,7 @@ exports.toRpcSig = function (v, r, s) {
     throw new Error('Invalid recovery id')
   }
 
-  // geth (and the RPC eth_sign method) uses the 65 byte format used by Bitcoin
+  // gubiq (and the RPC eth_sign method) uses the 65 byte format used by Bitcoin
   // FIXME: this might change in the future - https://github.com/ethereum/go-ethereum/issues/2053
   return exports.bufferToHex(Buffer.concat([
     exports.setLengthLeft(r, 32),

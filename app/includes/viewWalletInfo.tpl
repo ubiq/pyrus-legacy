@@ -10,7 +10,7 @@
     </div>
     <div ng-show="!wd">
         <p translate="VIEWWALLET_Subtitle">
-          This page allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like <a href="http://etherscan.io/" target="_blank">etherscan.io</a>.
+          This page allows you to download different versions of private keys and re-print your paper wallet. You may want to do this in order to [import your account into Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). If you want to check your balance, we recommend using a blockchain explorer like <a href="http://etherscan.io/" target="_blank">etherscan.io</a>.
         </p>
         <wallet-decrypt-drtv></wallet-decrypt-drtv>
     </div>
@@ -73,8 +73,8 @@
       <div ng-show='showEnc'>
         <div class="account-help-icon">
           <img src="images/icon-help.svg" class="help-icon" />
-          <p class="account-help-text" translate="x_KeystoreDesc">This Keystore / JSON file matches the format used by Mist & Geth so you can easily import it in the future. It is the recommended file to download and back up.</p>
-          <h5 translate="x_Keystore">Keystore/JSON File (Recommended • Encrypted • Mist/Geth Format)</h5>
+          <p class="account-help-text" translate="x_KeystoreDesc">This Keystore / JSON file matches the format used by Fusion & Gubiq so you can easily import it in the future. It is the recommended file to download and back up.</p>
+          <h5 translate="x_Keystore">Keystore/JSON File (Recommended • Encrypted • Fusion/Gubiq Format)</h5>
         </div>
         <a class="btn btn-info btn-block" href="{{blobEnc}}" download="{{encFileName}}" translate="x_Download"> DOWNLOAD </a>
       </div>

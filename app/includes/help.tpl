@@ -76,7 +76,7 @@
         <li translate="HELP_2a_Desc_3"> Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: </li>
 
         <ul>
-          <li><strong translate="x_Keystore">Keystore/JSON File (Recommended · Encrypted · Mist/Geth Format):</strong> <span translate="x_KeystoreDesc">This Keystore / JSON file matches the format used by Mist & Geth so you can easily import it in the future. It is the recommended file to download and back up.</span></li>
+          <li><strong translate="x_Keystore">Keystore/JSON File (Recommended · Encrypted · Fusion/Gubiq Format):</strong> <span translate="x_KeystoreDesc">This Keystore / JSON file matches the format used by Fusion & Gubiq so you can easily import it in the future. It is the recommended file to download and back up.</span></li>
           <li><strong translate="x_Json">JSON File (unencrypted):</strong> <span translate="x_JsonDesc">This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & Ether without the password.</span></li>
           <li><strong translate="x_PrivKey">Private Key (unencrypted):</strong> <span translate="x_PrivKeyDesc">This is the unencrypted text version of your private key, meaning no password is necessary. If someone were to find your unencrypted private key, they could access your wallet without a password. For this reason, encrypted versions are typically recommended.</span></li>
         </ul>
@@ -260,7 +260,7 @@
         <li> Verify the URL you entered is correct. </li>
         <li> Verify the port you entered is correct. </li>
         <li> Verify that if you are connecting to an http:// node you are running MyEtherWallet locally (NOT over https://). </li>
-        <li> Verify geth is running with <code>geth --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code> or parity is running with <code>parity --rpccorsdomain "*" --keys-path "dont_put_secret_files_here_ever"</code> </li>
+        <li> Verify gubiq is running with <code>gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code> or parity is running with <code>parity --rpccorsdomain "*" --keys-path "dont_put_secret_files_here_ever"</code> </li>
         <li> Verify your node is actually up and running. </li>
         <li> Try removing the node and adding it again. </li>
       </ul>
@@ -284,7 +284,7 @@
         <li translate="HELP_7_Desc_6"> If you do not see the token listed:</li>
         <ol>
           <li translate="HELP_7_Desc_7">Click "Custom".</li>
-          <li translate="HELP_7_Desc_8">Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist.</li>
+          <li translate="HELP_7_Desc_8">Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion.</li>
           <li translate="HELP_7_Desc_9"> Click "Save". </li>
           <li translate="HELP_7_Desc_10"> You can now send that token as well as see it's balance in the sidebar. </li>
         </ol>
@@ -307,8 +307,8 @@
     </div>
     <div ng-show="h8">
       <p translate="HELP_8_Desc_1">MyEtherWallet is not a web wallet. You don't have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain.</p>
-      <p translate="HELP_8_Desc_2">If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn't have to "get" your Ether out of MyEtherWallet because it's not in MyEtherWallet. It's in whatever wallet your generated via our site.</p>
-      <p translate="HELP_8_Desc_3"> You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #10 below. </p>
+      <p translate="HELP_8_Desc_2">If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ethereum Wallet / Fusion) to do what we are doing. But you wouldn't have to "get" your Ether out of MyEtherWallet because it's not in MyEtherWallet. It's in whatever wallet your generated via our site.</p>
+      <p translate="HELP_8_Desc_3"> You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ethereum Wallet / Fusion very easily now. See question #10 below. </p>
       <p translate="HELP_8_Desc_4">In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren't storing any information. If we do take the domain down, it still is, and always will be, publicly available at <a href="https://github.com/kvhnuke/etherwallet/tree/gh-pages" target="_blank">https://github.com/kvhnuke/etherwallet</a>. You can download the ZIP there and run it locally. </p>
     </div>
   </article>
@@ -372,10 +372,10 @@
   <article class="collapse-container">
     <div ng-click="h12 = !h12">
       <a class="collapse-button" ><span ng-show="!h12">+</span><span ng-show="h12">-</span></a>
-      <h4 translate="HELP_12_Title">12. How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist?</h4>
+      <h4 translate="HELP_12_Title">12. How do I import a wallet created with MyEtherWallet into gubiq / Ethereum Wallet / Fusion?</h4>
     </div>
     <div ng-show="h12">
-      <p class="strong" translate="HELP_12_Desc_1"> Using an Geth/Mist JSON file from MyEtherWallet v2+....</p>
+      <p class="strong" translate="HELP_12_Desc_1"> Using an Gubiq/Fusion JSON file from MyEtherWallet v2+....</p>
       <ol>
         @@if (site === 'mew' ) {
           <li translate="HELP_12_Desc_2"> Go to the "View Wallet Info" page.</li>
@@ -383,9 +383,9 @@
         }
         @@if (site === 'cx' ) {
           <li translate="HELP_12_Desc_4"> Go to the "My Wallets" page.</li>
-          <li translate="HELP_12_Desc_5"> Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. </li>
+          <li translate="HELP_12_Desc_5"> Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. </li>
         }
-        <li translate="HELP_12_Desc_6"> Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file.</li>
+        <li translate="HELP_12_Desc_6"> Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file.</li>
         <li translate="HELP_12_Desc_7"> Open the Ethereum Wallet application. </li>
         <li translate="HELP_12_Desc_8"> In the menu bar, go "Accounts" -> "Backup" -> "Accounts"</li>
         <li translate="HELP_12_Desc_9"> This will open your keystore folder. Copy the file you just downloaded (<code>UTC--2016-04-14........</code>) into that keystore folder.</li>
@@ -403,7 +403,7 @@
             <li translate="HELP_12_Desc_17"> Go to the menu bar and click "Format" -> "Make Plain Text".</li>
             <li translate="HELP_12_Desc_18"> Save this file to your <code>desktop</code> as <code>nothing_special_delete_me.txt</code>. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. </li>
             <li translate="HELP_12_Desc_19"> Open terminal and run the following command: <code>geth account import ~/Desktop/nothing_special_delete_me.txt</code></li>
-            <li translate="HELP_12_Desc_20"> This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don't forget it. </li>
+            <li translate="HELP_12_Desc_20"> This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don't forget it. </li>
             <li translate="HELP_12_Desc_21"> After successful import, delete <code>nothing_special_delete_me.txt</code></li>
             <li translate="HELP_12_Desc_22"> The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". </li>
           </ul>
@@ -412,7 +412,7 @@
             <li translate="HELP_12_Desc_23"> Open Notepad & paste the private key</li>
             <li translate="HELP_12_Desc_24"> Save the file as <code>nothing_special_delete_me.txt</code> at <code>C:\</code></li>
             <li translate="HELP_12_Desc_25"> Run the command, <code>geth account import C:\nothing_special_delete_me.txt</code></li>
-            <li translate="HELP_12_Desc_26"> This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don't forget it.</li>
+            <li translate="HELP_12_Desc_26"> This will prompt you to make a new password. This is the password you will use in gubiq / Ethereum Wallet / Fusion whenever you send a transaction, so don't forget it.</li>
             <li translate="HELP_12_Desc_27"> After successful import, delete <code>nothing_special_delete_me.txt</code></li>
             <li translate="HELP_12_Desc_28"> The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". </li>
           </ul>
@@ -485,7 +485,7 @@
   <article class="collapse-container">
     <div ng-click="h18 = !h18">
       <a class="collapse-button" ><span ng-show="!h18">+</span><span ng-show="h18">-</span></a>
-        <h4 translate="HELP_18_Title">18. Where is my geth wallet file? </h4>
+        <h4 translate="HELP_18_Title">18. Where is my gubiq wallet file? </h4>
       </div>
       <div ng-show="h18">
         <ul>
@@ -501,10 +501,10 @@
   <article class="collapse-container">
     <div ng-click="h19 = !h19" >
       <a class="collapse-button" ><span ng-show="!h19">+</span><span ng-show="h19">-</span></a>
-      <h4 translate="HELP_19_Title">19. Where is my Mist wallet file? </h4>
+      <h4 translate="HELP_19_Title">19. Where is my Fusion wallet file? </h4>
     </div>
     <div ng-show="h19">
-      <p translate="HELP_19_Desc_1"> Mist files are typically found in the file locations above, but it's much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored.</p>
+      <p translate="HELP_19_Desc_1"> Fusion files are typically found in the file locations above, but it's much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored.</p>
   </div>
   </article>
 
@@ -535,7 +535,7 @@
       <p translate="HELP_21_Desc_5">And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match.</p>
       <p translate="HELP_21_Desc_6">If you know anything about Bitcoin, <a href="http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver" target="_blank">this will put it in perspective:</a> *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion.*</p>
       <p translate="HELP_21_Desc_7"><a href="http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392" target="_blank">If you want something a bit more technical:</a> *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space.*</p>
-      <p translate="HELP_21_Desc_8"> Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person's brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that's a separate issue that can wait for another day. </p>
+      <p translate="HELP_21_Desc_8"> Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person's brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that's a separate issue that can wait for another day. </p>
       <hr />
     </div>
   </article>

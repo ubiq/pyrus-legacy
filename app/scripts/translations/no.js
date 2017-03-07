@@ -81,7 +81,7 @@ x_Json                      : 'JSON-fil (ukryptert) ',
 x_JsonDesc                  : 'Dette er det ukrypterte JSON-formatet av din private nøkkel. Dette betyr at du ikke trenger noe passord, men også at den som finner din JSON kan få tilgang til lommeboken din og etherne dine uten passord. ',
 x_Keystore                  : 'Keystore-fil (UTC / JSON · Anbefalt · Kryptert) ',
 x_Keystore2                 : 'Keystore-fil (UTC / JSON) ',
-x_KeystoreDesc              : 'Denne Keystore-filen samsvarer med formatet som brukes av Mist, så du enkelt kan importere den i fremtiden. Det er den anbefalte filen å laste ned og sikkerhetskopiere. ',
+x_KeystoreDesc              : 'Denne Keystore-filen samsvarer med formatet som brukes av Fusion, så du enkelt kan importere den i fremtiden. Det er den anbefalte filen å laste ned og sikkerhetskopiere. ',
 x_Mnemonic                  : 'Mnemonisk Frase ',
 x_Password                  : 'Passord ',
 x_Print                     : 'Skriv ut papirlommebok ',
@@ -282,7 +282,7 @@ MYWAL_Content_2             : 'Vær sikker på at du har **lagret den private n�
 MYWAL_Content_3             : 'Hvis du ønsker å bruke denne lommeboken med din MyEtherWallet Chrome-utvidelse i fremtiden, må du manuelt legge den til igjen ved å bruke den private nøkkelen/JSON og passord. ',
 
 /* View Wallet Details */
-VIEWWALLET_Subtitle         : 'Dette gir deg muligheten til å laste ned ulike versjoner av private nøkler og skrive ut papirlommeboken din på nytt. Du vil kanskje gjøre dette for å [importere kontoen din til Geth/Mist](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Hvis du bare ønsker å sjekke saldoen din, anbefaler vi at du bruker en "blockchain explorer" som f.eks. [etherscan.io](http://etherscan.io/). ',
+VIEWWALLET_Subtitle         : 'Dette gir deg muligheten til å laste ned ulike versjoner av private nøkler og skrive ut papirlommeboken din på nytt. Du vil kanskje gjøre dette for å [importere kontoen din til Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Hvis du bare ønsker å sjekke saldoen din, anbefaler vi at du bruker en "blockchain explorer" som f.eks. [etherscan.io](http://etherscan.io/). ',
 VIEWWALLET_Subtitle_Short   : 'Dette gir deg muligheten til å laste ned ulike versjoner av private nøkler og skrive ut papirlommeboken din på nytt. ',
 VIEWWALLET_SuccessMsg       : 'Suksess! Her er detaljene om din lommebok. ',
 
@@ -470,7 +470,7 @@ HELP_7_Desc_4               : 'Oppgi beløpet som du vil sende. ',
 HELP_7_Desc_5               : 'Velg hvilken type token du vil sende . ',
 HELP_7_Desc_6               : 'Hvis du ikke ser token-typen på listen: ',
 HELP_7_Desc_7               : 'Klikk "Tilpasning". ',
-HELP_7_Desc_8               : 'Oppgi adressen, navnet, og antall desimaler for token-et. Disse er oppgitt fra utviklerne av token-et og er også nødvendige når du skal "Add a Watch Token" i Mist. ', //Mist not translated to Norw yet :-)//
+HELP_7_Desc_8               : 'Oppgi adressen, navnet, og antall desimaler for token-et. Disse er oppgitt fra utviklerne av token-et og er også nødvendige når du skal "Add a Watch Token" i Fusion. ', //Fusion not translated to Norw yet :-)//
 HELP_7_Desc_9               : 'Klikk "Lagre". ',
 HELP_7_Desc_10              : 'Du kan nå sende denne typen token, samt se saldoen for aktuell token i sidefeltet. ',
 HELP_7_Desc_11              : 'Klikk "Generer transaksjon". ',
@@ -481,8 +481,8 @@ HELP_7_Desc_15              : 'Transaksjonen vil bli sendt inn. Transaksjons-ID-
 
 HELP_8_Title                : '8) Hva skjer hvis nettsiden går ned? ',
 HELP_8_Desc_1               : 'MyEtherWallet er ikke en nett-lommebok (web wallet). Du har ingen innlogging og ingenting blir noensinne lagret på våre servere. Det er ganske enkelt et grensesnitt som tillater deg å samhandle med blokkjeden. ',
-HELP_8_Desc_2               : 'Hvis MyEtherWallet.com går ned, må du finne en annen måte (som f.eks. geth eller Ethereum Wallet / Mist) å gjøre det på. Men du vil ikke trenge å "hente" eteren din ut av MyEtherWallet, fordi den ikke befinner seg i MyEtherWallet. Den befinner seg i den lommeboka/kontoen som du opprettet ved hjelp av nettsiden vår. ',
-HELP_8_Desc_3               : 'Du kan nå svært enkelt importere din ukrypterte private nøkkel og dine Geth/Mist-format (krypterte) filer direkte inn i geth / Ethereum Wallet / Mist. Se spørsmål #12 nedenfor. ',
+HELP_8_Desc_2               : 'Hvis MyEtherWallet.com går ned, må du finne en annen måte (som f.eks. gubiq eller Ethereum Wallet / Fusion) å gjøre det på. Men du vil ikke trenge å "hente" eteren din ut av MyEtherWallet, fordi den ikke befinner seg i MyEtherWallet. Den befinner seg i den lommeboka/kontoen som du opprettet ved hjelp av nettsiden vår. ',
+HELP_8_Desc_3               : 'Du kan nå svært enkelt importere din ukrypterte private nøkkel og dine Gubiq/Fusion-format (krypterte) filer direkte inn i gubiq / Ethereum Wallet / Fusion. Se spørsmål #12 nedenfor. ',
 HELP_8_Desc_4               : 'I tillegg er sannsynligheten for at vi tar ned MyEtherWallet svært liten. Det koster oss nesten ingenting å opprettholde den siden vi ikke lagrer noen informasjon. Hvis vi tar ned domenet, er det fortsatt, og vil alltid være, offentlig tilgjengelig på [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Du kan laste ned zip-fila der og kjøre den lokalt. ',
 
 HELP_8CX_Title              : '8) Hva skjer hvis MyEtherWallet CX (Chrome-utvidelsen) forsvinner? ',
@@ -506,13 +506,13 @@ HELP_10_Desc_9              : 'Trykk på "GENERER SIGNERT TRANSAKSJON"-knappen. 
 HELP_10_Desc_10             : 'Datafeltet under denne knappen vil fylles med din signerte transaksjon. Kopier denne og flytt den tilbake til din tilkoblede datamaskin. ',
 HELP_10_Desc_11             : 'Lim inn den signerte transaksjonen i tekstfeltet i steg #3 på den tilkoblede maskinen og klikk "Send Ether & Tokens". Dette vil kringkaste transaksjonen din. ',
 
-HELP_12_Title               : '12) Hvordan kan jeg importere en lommebok opprettet med MyEtherWallet til geth / Ethereum Wallet / Mist? ',
-HELP_12_Desc_1              : 'Ved å bruke en Geth/Mist JSON-fil fra MyEtherWallet v2+.... ',
+HELP_12_Title               : '12) Hvordan kan jeg importere en lommebok opprettet med MyEtherWallet til gubiq / Ethereum Wallet / Fusion? ',
+HELP_12_Desc_1              : 'Ved å bruke en Gubiq/Fusion JSON-fil fra MyEtherWallet v2+.... ',
 HELP_12_Desc_2              : 'Gå til "Vis lommebok-info"-siden. ',
 HELP_12_Desc_3              : 'Lås opp lommeboken din ved hjelp av din **krypterte** private nøkkel eller JSON-fil. ',
 HELP_12_Desc_4              : 'Gå til "Mine lommebøker"-siden. ',
-HELP_12_Desc_5              : 'Velg lommeboken som du ønsker å importere til Mist, klikk "Vis"-ikonet, oppgi passordet, og få tilgang til lommeboken. ',
-HELP_12_Desc_6              : 'Finn "Last ned JSON-fil - Geth/Mist-format (kryptert)"-seksjonen. Trykk "Last ned"-knappen nedenfor. Du har nå fått keystore-filen til lommeboken din. ',
+HELP_12_Desc_5              : 'Velg lommeboken som du ønsker å importere til Fusion, klikk "Vis"-ikonet, oppgi passordet, og få tilgang til lommeboken. ',
+HELP_12_Desc_6              : 'Finn "Last ned JSON-fil - Gubiq/Fusion-format (kryptert)"-seksjonen. Trykk "Last ned"-knappen nedenfor. Du har nå fått keystore-filen til lommeboken din. ',
 HELP_12_Desc_7              : 'Åpne "Ethereum Wallet"-programmet. ',
 HELP_12_Desc_8              : 'I menyfeltet, gå til "Accounts" -> "Backup" -> "Accounts" ',
 HELP_12_Desc_9              : 'Dette vil åpne keystore-mappen på harddisken din. Kopier filen du nettopp lastet ned (`UTC--2016-04-14......../`) inn i denne keystore-mappen. ',
@@ -527,13 +527,13 @@ HELP_12_Desc_16             : 'Åpne Text Edit og lim inn denne private nøkkele
 HELP_12_Desc_17             : 'Gå til menylinjen og klikk "Format" -> "Make Plain Text". ',
 HELP_12_Desc_18             : 'Lagre denne fila på skrivebordet ditt som `ikke_noe_spesielt_slett_meg.txt`. Pass på at det står "UTF-8" og "If no extension is provided use .txt" i lagringsdialogen. ',
 HELP_12_Desc_19             : 'Åpne terminalen og kjør følgende kommando: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
-HELP_12_Desc_20             : 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i geth / Ethereum Wallet / Mist hver gang du skal sende en transaksjon, så ikke glem det. ',
+HELP_12_Desc_20             : 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i gubiq / Ethereum Wallet / Fusion hver gang du skal sende en transaksjon, så ikke glem det. ',
 HELP_12_Desc_21             : 'Etter at du har lykkes med å importere kontoen, slett `ikke_noe_spesielt_slett_meg.txt` ',
 HELP_12_Desc_22             : 'Neste gangen du åpner "Ethereum Wallet"-programmet, vil kontoen din være listet under "Accounts". ',
 HELP_12_Desc_23             : 'Åpne Notisblokk/Notepad & lim inn den private nøkkelen ',
 HELP_12_Desc_24             : 'Lagre fila som `ikke_noe_spesielt_slett_meg.txt` på `C:` ',
 HELP_12_Desc_25             : 'Kjør ledetekst (Windowstast + "cmd")-kommandoen, `geth account import C:\\ikke_noe_spesielt_slett_meg.txt` ',
-HELP_12_Desc_26             : 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i geth / Ethereum Wallet / Mist hver gang du skal sende en transaksjon, så ikke glem det. ',
+HELP_12_Desc_26             : 'Du vil bli bedt om å lage et nytt passord. Dette er passordet du vil bruke i gubiq / Ethereum Wallet / Fusion hver gang du skal sende en transaksjon, så ikke glem det. ',
 HELP_12_Desc_27             : 'Etter at du har lykkes med å importere kontoen, slett `ikke_noe_spesielt_slett_meg.txt` ',
 HELP_12_Desc_28             : 'Neste gangen du åpner "Ethereum Wallet"-programmet, vil kontoen din være listet under "Accounts". ',
 
@@ -552,10 +552,10 @@ HELP_16_Desc_1              : 'Du kan bruke en blokkjede-utforsker som [ethersca
 HELP_17_Title               : '17) Hvorfor vises ikke saldoen min når jeg låser opp lommeboken min? ',
 HELP_17_Desc_1              : 'Dette er mest sannsynlig fordi du er bak en brannmur. API-en vi bruker for å innhente saldoen blokkeres ofte av brannmurer av ymse årsaker. Du vil fortsatt være i stand til å sende transaksjoner, du må bare bruke en annen metode for å se nevnte saldo, som etherscan.io ',
 
-HELP_18_Title               : '18) Hvor er min geth lommebok-fil ',
+HELP_18_Title               : '18) Hvor er min gubiq lommebok-fil ',
 
-HELP_19_Title               : '19) Hvor er min Mist lommebok-fil? ',
-HELP_19_Desc_1              : 'Mist-filer lagres typisk i lokasjonene ovenfor, men det er mye enklere å åpne Mist, velge "Accounts" i topp-menylinjen, velge "Backup", og velge "Accounts". Dette vil åpne mappen hvor filene dine er lagret. ',
+HELP_19_Title               : '19) Hvor er min Fusion lommebok-fil? ',
+HELP_19_Desc_1              : 'Fusion-filer lagres typisk i lokasjonene ovenfor, men det er mye enklere å åpne Fusion, velge "Accounts" i topp-menylinjen, velge "Backup", og velge "Accounts". Dette vil åpne mappen hvor filene dine er lagret. ',
 
 HELP_20_Title               : '20) Hvor er pre-sale lommebok-filen? ',
 HELP_20_Desc_1              : 'Der du lagret den. ;) Den ble også sendt deg på e-post, så sjekk der. Se etter fila som heter `"ethereum_wallet_backup.json"` og velg den fila. Denne fila vil være kryptert med et passord som du opprettet under "pre-sale"-kjøpet. ',
@@ -568,7 +568,7 @@ HELP_21_Desc_4              : 'Når det er sagt, JA, hvis noen andre har din pri
 HELP_21_Desc_5              : 'og JA, i teorien kunne du bare taste inn en streng med 64 hexadesimaltegn helt dil du fant en som passet. Faktisk kunne smarte folk skrive et program som svært hurtig kunne sjekke tilfeldige private nøkler. Dette kalles "brute-forcing" eller "mining" private nøkler. Folk har tenkt lenge og hardt på dette. Med noen få svært gode servere, kunne de kanskje klare å sjekke >1M nøkler/sekund. Likevel, selv når så mange sjekkes per sekund, ville det ikke gi tilgang midler som ville gjøre det i nærheten av å være lønnsomt å kjøre disse serverne.  - Det er mer sannsynlig at du, eller dine oldebarn, vil dø før du får en match. ',
 HELP_21_Desc_6              : 'Hvis du vet noe om Bitcoin, [dette vil sette det i perspektiv:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *For å illustrere hvor usannsynlig det er: anta at alle satoshi av alle bitcoin som noensinne blir generert ble sendt til hver sin egen unike private nøkkel. Sannsynligheten for at det blant disse nøklene kunne være to som ville korrespondere med samme adresse er ca 1 til 10^20. ',
 HELP_21_Desc_7              : '[Hvis du ønsker en mer teknisk forklaring:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *Disse tallene har ikke noe å gjøre med teknologien til enhetene; de er det maksimale som termodynamikken vil tillate. Og de impliserer sterkt at "brute-force"-angrep mot 256-bit nøkler vil være uoppnåelig fram til datamaskiner lages av noe annet enn materie og befinner seg i noe annet enn rom. ',
-HELP_21_Desc_8              : 'Selvsagt betinger alt dette at nøkler blir generert på en virkelig tilfeldig måte & med tilstrekkelig entropi. Nøklene som genereres her tilfredsstiller dette kriteriet, det samme gjør Jaxx og Mist/geth. Alle Ethereum-lommebøker er OK. Nøkler som genereres av "brainwallets" er ikke like gode, siden en persons hjerne ikke er i stand til å lage en virkelig tilfeldig "seed". Det har vært noen andre tilfeller av manglende entropi eller "seeds" som ikke er generert på en virkelig tilfeldig måte i Bitcoin-land, men det er en historie som kan vente til en annen dag. ',
+HELP_21_Desc_8              : 'Selvsagt betinger alt dette at nøkler blir generert på en virkelig tilfeldig måte & med tilstrekkelig entropi. Nøklene som genereres her tilfredsstiller dette kriteriet, det samme gjør Jaxx og Fusion/Gubiq. Alle Ethereum-lommebøker er OK. Nøkler som genereres av "brainwallets" er ikke like gode, siden en persons hjerne ikke er i stand til å lage en virkelig tilfeldig "seed". Det har vært noen andre tilfeller av manglende entropi eller "seeds" som ikke er generert på en virkelig tilfeldig måte i Bitcoin-land, men det er en historie som kan vente til en annen dag. ',
 
 HELP_SecCX_Title            : 'Sikring - MyEtherWallet CX (Chrome-utvidelsen) ',
 HELP_SecCX_Desc_1           : 'Hvor lagrer denne utvidelsen informasjonen min? ',

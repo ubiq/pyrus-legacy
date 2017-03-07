@@ -11,8 +11,8 @@
           <strong translate="NODE_Subtitle">To connect to a local node...</strong>
           <ul class="small">
             <li> URL: http://127.0.0.1</li>
-            <li> Port: 8545 </li>
-            <li> Run geth: <code>geth --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code></li>
+            <li> Port: 8588 </li>
+            <li> Run geth: <code>gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code></li>
             <li> Run Parity: <code>parity --rpccorsdomain "*" --keys-path "dont_put_secret_files_here_ever"</code></li>
           </ul>
         </p>
@@ -38,7 +38,7 @@
 
           <div class="clearfix col-xs-3">
             <label class="NODE_Port">Port</label>
-            <input class="form-control" type="text" placeholder="8545" ng-model="customNode.port" ng-class="Validator.isPositiveNumber(customNode.port) || customNode.port=='' ? 'is-valid' : 'is-invalid'">
+            <input class="form-control" type="text" placeholder="8588" ng-model="customNode.port" ng-class="Validator.isPositiveNumber(customNode.port) || customNode.port=='' ? 'is-valid' : 'is-invalid'">
           </div>
 
           <div class="clearfix col-xs-12 radio">
