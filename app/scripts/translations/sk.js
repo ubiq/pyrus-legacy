@@ -111,7 +111,7 @@ MEW_Tagline                 : 'Open Source JavaScript Client-Side Ubiq Wallet ',
 CX_Tagline                  : 'Open Source JavaScript Client-Side Ubiq Wallet Chrome Extension ',
 
 /* Footer */
-FOOTER_1                    : 'Open-Source, client-side tool for easily &amp; securely interacting with the Ethereum network. ',
+FOOTER_1                    : 'Open-Source, client-side tool for easily &amp; securely interacting with the Ubiq network. ',
 FOOTER_1b                   : 'Vytvorené ',
 FOOTER_2                    : 'Dotácie srdečne vítane: ',
 FOOTER_3                    : 'Client-side wallet generation by ',

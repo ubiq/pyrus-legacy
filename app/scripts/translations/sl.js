@@ -65,7 +65,7 @@ MSG_info3                   : 'Include a specific reason for the message so it c
 
 /* Mnemonic */
 ADD_Radio_5                 : 'Paste/Type Your Mnemonic ',
-FOOTER_1                    : 'Open-Source, client-side tool for easily &amp; securely interacting with the Ethereum network. ',
+FOOTER_1                    : 'Open-Source, client-side tool for easily &amp; securely interacting with the Ubiq network. ',
 FOOTER_4                    : 'Disclaimer ',
 MNEM_1                      : 'Please select the address you would like to interact with. ',
 MNEM_2                      : 'Your single HD mnemonic phrase can access a number of wallets / addresses. Please select the address you would like to interact with at this time. ',
