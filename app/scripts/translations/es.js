@@ -293,7 +293,7 @@ MYWAL_Edit_2                : 'Editar cartera ',
 MYWAL_Name                  : 'Nombre de la cartera ',
 MYWAL_Content_1             : '¡Atención! Estás a punto de eliminar tu cartera ',
 MYWAL_Content_2             : 'Asegúrate de haber **guardado tu clave privada y/o archivo almacén de clave y la contraseña** antes de eliminarlo. ',
-MYWAL_Content_3             : 'Si en el futuro quieres utilizar esta cartera con MyEtherWallet CX, tendrás que volver a añadirla manualmente utilizando Clave Privada/JSON y contraseña. ',
+MYWAL_Content_3             : 'Si en el futuro quieres utilizar esta cartera con Pyrus CX, tendrás que volver a añadirla manualmente utilizando Clave Privada/JSON y contraseña. ',
 
 /* View Wallet Details */
 VIEWWALLET_Subtitle         : 'Esto te permite descargar múltiples versiones de claves privadas e imprimir de nuevo tu cartera en papel. Puede que te interese hacer esto para [importar tu cuenta en Gubiq/Fusion](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Si quieres comprobar tu saldo, recomendamos utilizar un explorador de blockchain como [ubiqscan.io](http://ubiqscan.io/). ',
@@ -375,8 +375,8 @@ TranslatorAddr_5            : '',
 HELP_Warning                : 'Si creaste una cartera -o- descargaste el repositorio antes del **31 de diciembre de 2015**, por favor comprueba tus carteras y descarga una nueva versión del repositorio. Haz clic para más información. ',
 HELP_Desc                   : '¿Echas algo en falta? ¿Tienes alguna otra pregunta? [Contacta con nosotros](mailto:myetherwallet@gmail.com) y no solamente contestaremos tu pregunta, sino que mejoraremos esta página para que sea más útil en el futuro. ',
 HELP_Remind_Title           : 'Algunos recordatorios ',
-HELP_Remind_Desc_1          : '**Ethereum, Pyrus y MyEtherWallet CX, así como algunas de las librerías JavaScript que utilizamos están en desarrollo activo.** Aunque hemos testeado ampliamente y decenas de miles de carteras han sido creadas exitosamente por personas en todo el planeta, siempre existe la remota posibilidad de que ocurra algo inesperado que haga que se pierdan tus ETH. Por favor no inviertas más de lo que estés dispuesto a perder y, por favor, sé cuidadoso. Si algo ocurriera, lo lamentamos, pero **no somos responsables del UBQ perdido**. ',
-HELP_Remind_Desc_2          : 'MyEtherWallet.com y MyEtherWallet CX no son "carteras web". No estás creando una cuenta ni nos estás entregando tus UBQ para que los guardemos. Toda tu información nunca abandona tu equipo o tu navegador. Te facilitamos que puedas crear, guardar y acceder a tu información e interactuar con la blockchain. ',
+HELP_Remind_Desc_1          : '**Ethereum, Pyrus y Pyrus CX, así como algunas de las librerías JavaScript que utilizamos están en desarrollo activo.** Aunque hemos testeado ampliamente y decenas de miles de carteras han sido creadas exitosamente por personas en todo el planeta, siempre existe la remota posibilidad de que ocurra algo inesperado que haga que se pierdan tus ETH. Por favor no inviertas más de lo que estés dispuesto a perder y, por favor, sé cuidadoso. Si algo ocurriera, lo lamentamos, pero **no somos responsables del UBQ perdido**. ',
+HELP_Remind_Desc_2          : 'MyEtherWallet.com y Pyrus CX no son "carteras web". No estás creando una cuenta ni nos estás entregando tus UBQ para que los guardemos. Toda tu información nunca abandona tu equipo o tu navegador. Te facilitamos que puedas crear, guardar y acceder a tu información e interactuar con la blockchain. ',
 HELP_Remind_Desc_3          : 'Si no guardas tu clave privada y contraseña, no hay modo alguno de recuperar el acceso a tu cartera o a los fondos que ésta contiene. ¡Haz copias de seguridad en múltiples ubicaciones físicas, no solamente en tu equipo! ',
 
 HELP_0_Title                : '0) Soy nuevo. ¿Qué hago? ',
@@ -435,7 +435,7 @@ HELP_4_Desc_11              : 'Haz clic en el botón azul "Enviar transacción" 
 HELP_4_Desc_12              : 'Aparecerá un cuadro emergente. Verifica que la cantidad y la dirección a la que estás enviando son correctos. Entonces, haz clic en el botón "Sí, estoy seguro. Hacer la transacción.". ',
 HELP_4_Desc_13              : 'Se enviará la transacción y se mostrará el ID de transacción. Puedes hacer clic en el ID de transacción para verla en la cadena de bloques. ',
 
-HELP_4CX_Title              : '4) ¿Cómo envío ether utilizando MyEtherWallet CX? ',
+HELP_4CX_Title              : '4) ¿Cómo envío ether utilizando Pyrus CX? ',
 HELP_4CX_Desc_1             : 'Antes de nada, necesitas añadir una cartera. Una vez hecho, tienes dos opciones: la función "Enviar" del icono de la extensión de Chrome o la página "Enviar UBQ y Tokens". ',
 HELP_4CX_Desc_2             : 'Envío: ',
 HELP_4CX_Desc_3             : 'Haz clic en el icono de la extensión de Chrome. ',
@@ -488,10 +488,10 @@ HELP_8_Desc_2               : 'Si Pyrus desapareciera, tendrías que encontrar o
 HELP_8_Desc_3               : 'Puedes importar tu clave privada sin cifrar y tus archivos en formato Gubiq/Fusion (cifrados) directamente en gubiq / Ubiq Wallet / Fusion con mucha facilidad actualmente. Ver más abajo la pregunta #12. ',
 HELP_8_Desc_4               : 'Además, la probabilidad de que cerremos MyEtherWallet es casi nula. No nos cuesta prácticamente nada mantenerlo ya que no almacenamos ninguna información. Si borramos el dominio, continúa estando disponible y siempre lo estará en [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Puedes descargar desde ahí el archivo ZIP y ejecutarlo localmente. ',
 
-HELP_8CX_Title              : '8) ¿Qué ocurre si MyEtherWallet CX desaparece? ',
+HELP_8CX_Title              : '8) ¿Qué ocurre si Pyrus CX desaparece? ',
 HELP_8CX_Desc_1             : 'En primer lugar, los datos se guardan en tu equipo, no en nuestros servidores. Sabemos que puede parecer confuso, pero si miras nuestra extensión de Chrome, NO estás mirando a algo almacenado en nuestros servidores en alguna parte - todo se guarda en tu equipo. ',
-HELP_8CX_Desc_2             : 'Dicho esto, es **muy importante** que respaldes toda tu información para todas las nuevas carteras generadas con MyEtherWallet CX. De este modo, si algo le ocurre a MyEtherWallet CX o a tu equipo, seguirás teniendo toda la información necesaria para poder acceder a tus ether. Ver la pregunta #2a sobre cómo respaldar tus carteras. ',
-HELP_8CX_Desc_3             : 'Si por algún motivo MyEtherWallet CX desaparece de Chrome Store, puedes encontrar el código fuente en Github y cargarlo manualmente. Ver #5 más arriba. ',
+HELP_8CX_Desc_2             : 'Dicho esto, es **muy importante** que respaldes toda tu información para todas las nuevas carteras generadas con Pyrus CX. De este modo, si algo le ocurre a Pyrus CX o a tu equipo, seguirás teniendo toda la información necesaria para poder acceder a tus ether. Ver la pregunta #2a sobre cómo respaldar tus carteras. ',
+HELP_8CX_Desc_3             : 'Si por algún motivo Pyrus CX desaparece de Chrome Store, puedes encontrar el código fuente en Github y cargarlo manualmente. Ver #5 más arriba. ',
 
 HELP_9_Title                : '9) Is the "Enviar ether y tokens" page offline? ',
 HELP_9_Desc_1               : 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
@@ -573,7 +573,7 @@ HELP_21_Desc_6              : 'If you know anything about Bitcoin, [this will pu
 HELP_21_Desc_7              : '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
 HELP_21_Desc_8              : 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
-HELP_SecCX_Title            : 'Seguridad - MyEtherWallet CX ',
+HELP_SecCX_Title            : 'Seguridad - Pyrus CX ',
 HELP_SecCX_Desc_1           : '¿Dónde está guardando mi información esta extensión? ',
 HELP_SecCX_Desc_2           : 'La información que guardas en esta extensión de Chrome se guarda por medio de [chrome.storage](http://chrome.storage/). - este es el mismo lugar en el que se guardan tus contraseñas cuando guardas tus contraseñas en Chrome. ',
 HELP_SecCX_Desc_3           : '¿Qué información se guarda? ',

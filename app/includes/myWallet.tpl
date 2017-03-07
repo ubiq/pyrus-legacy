@@ -290,7 +290,7 @@
         </div>
         <div class="modal-body">
           <p translate="MYWAL_Content_2"> Be sure you have **saved the private key and/or Keystore File and the password** before you remove it.</p>
-          <p translate="MYWAL_Content_3"> If you want to use this wallet with your MyEtherWallet CX in the future, you will need to manually re-add.</p>
+          <p translate="MYWAL_Content_3"> If you want to use this wallet with your Pyrus CX in the future, you will need to manually re-add.</p>
           <h4 translate="SENDModal_Content_3">Are you sure you want to do this?</h4>
         </div>
         <div class="modal-footer text-center">

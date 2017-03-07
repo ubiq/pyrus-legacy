@@ -230,4 +230,4 @@ If you can think of any other features or run into bugs, let us know. You can fo
 - 2/16/17: [MyEtherWallet v3.5.0: Swap ETH <-> BTC <-> REP via Bity, directly from MEW! (also: Parity backup phrase support + add'l contract features + our roadmap)](https://www.reddit.com/r/ethereum/comments/5ueysp/myetherwallet_v350_swap_eth_btc_rep_via_bity/?utm_content=comments&utm_medium=user&utm_source=reddit&utm_name=frontpage)
 
 
-#### Pyrus & MyEtherWallet CX are licensed under The MIT License (MIT).
+#### Pyrus & Pyrus CX are licensed under The MIT License (MIT).

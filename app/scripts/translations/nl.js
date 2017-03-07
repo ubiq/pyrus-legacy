@@ -256,7 +256,7 @@ MYWAL_Edit_2                : 'Bewerk Wallet ',
 MYWAL_Name                  : 'Wallet Naam ',
 MYWAL_Content_1             : 'Waarschuwing! Je staat op het punt om je Wallet te verwijderen ',
 MYWAL_Content_2             : 'Wees er zeker van dat je **de prive sleutel/JSON bestand en het wachtwoord opgeslagen hebt** van deze wallet voordat je het verwijderd. ',
-MYWAL_Content_3             : 'Als je deze wallet in de toekomst nog wilt gebruiken met MyEtherWallet CX, zul je het met de hand moeten toevoegen door gebruik te maken van de prive sleutel/JSON en wachtwoord. ',
+MYWAL_Content_3             : 'Als je deze wallet in de toekomst nog wilt gebruiken met Pyrus CX, zul je het met de hand moeten toevoegen door gebruik te maken van de prive sleutel/JSON en wachtwoord. ',
 
 /* View Wallet Details */
 VIEWWALLET_Subtitle         : 'Hiermee kun je verschillende versies van je prive sleutels downloaden en je papieren wallet opnieuw afdrukken. Je zou dit kunnen doen om [je account in Gubiq/Fusion te importeren](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Als je enkel je saldo wilt checken adviseren we je om gebruik te maken van een blockchain explorer zoals [ubiqscan.io](http://ubiqscan.io/). ',
@@ -370,8 +370,8 @@ TranslatorAddr_5            : '',
 HELP_Warning                : 'Als je een wallet aangemaakt hebt -of repo hebt gedownload- voor **31 december 2015**, check dan alsjebieft je wallets en download een nieuwe versie van de repo. Klik voor detais. ',
 HELP_Desc                   : 'Zie je dat er iets mist? Of heb je een andere vraag? [Neem contact met ons op](mailto:myetherwallet@gmail.com), en we zullen niet alleen je vraag beantwoorden, maar ook deze help pagina bijwerken zodat deze nog nuttiger wordt voor toekomstige gebruikers! ',
 HELP_Remind_Title           : 'Enkele herinneringen ',
-HELP_Remind_Desc_1          : '**Ethereum, Pyrus & MyEtherWallet CX, en enkele onderliggende Javascript libraries waar we gebruik van maken zijn onderheving aan active ontwikkeling.** Hoewel we grondig testen & er inmiddels tienduizenden wallets succesvol zijn aangemaakt door mensen over de hele wereld, blijft er altijd een geringe kans dat iets er onverwachts optreedt waardoor je je ether kunt verliezen. Investeer alsjeblieft niet meer dan dat je bereid bent om te verliezen, en wees voorzichtig. Zou er onverhoopt toch iets gebeuren vinden we dat zeer spijtig, echter **zullen wij nooit verantwoordelijk zijn voor de verloren Ether**. ',
-HELP_Remind_Desc_2          : 'MyEtherWallet.com & MyEtherWallet CX zijn geen "web wallets". Je maakt bij ons geen account aan noch geef je ooit je UBQ aan ons in bezit. Alle gegevens verlaten nooit je computer/je browser. We helpen je alleen gemakkelijk toegang te verkrijgen tot de blockchain zodat je er informatie in kunt opslaan en kunt uitlezen. ',
+HELP_Remind_Desc_1          : '**Ethereum, Pyrus & Pyrus CX, en enkele onderliggende Javascript libraries waar we gebruik van maken zijn onderheving aan active ontwikkeling.** Hoewel we grondig testen & er inmiddels tienduizenden wallets succesvol zijn aangemaakt door mensen over de hele wereld, blijft er altijd een geringe kans dat iets er onverwachts optreedt waardoor je je ether kunt verliezen. Investeer alsjeblieft niet meer dan dat je bereid bent om te verliezen, en wees voorzichtig. Zou er onverhoopt toch iets gebeuren vinden we dat zeer spijtig, echter **zullen wij nooit verantwoordelijk zijn voor de verloren Ether**. ',
+HELP_Remind_Desc_2          : 'MyEtherWallet.com & Pyrus CX zijn geen "web wallets". Je maakt bij ons geen account aan noch geef je ooit je UBQ aan ons in bezit. Alle gegevens verlaten nooit je computer/je browser. We helpen je alleen gemakkelijk toegang te verkrijgen tot de blockchain zodat je er informatie in kunt opslaan en kunt uitlezen. ',
 HELP_Remind_Desc_3          : 'Als je je prive sleutel en wachtwoord niet opslaat, is er geen enkele manier om toegang tot je wallet te verkrijgen of het saldo dat het bevat. Maak back-up`s en bewaar deze op meerdere fysieke lokaties en dus niet alleen op je eigen computer! ',
 
 HELP_0_Title                : '0) Ik ben nieuw. Waar begin ik? ',
@@ -430,7 +430,7 @@ HELP_4_Desc_11              : 'Klik op de blauwe "Verzend Transactie" knop erond
 HELP_4_Desc_12              : 'Een pop-up zal verschijnen. Controleer dat het bedrag en het adres waarnaar je gaat verzenden correct zijn. Klik vervolgens op de "Ja, ik weet het zeker! Maak de transactie." knop. ',
 HELP_4_Desc_13              : 'De transactie zal worden verstuurt. Het TX ID zal worden weergegeven. Je kunt op dit TX ID klikken om het in de blockchain te bekijken. ',
 
-HELP_4CX_Title              : '4) Hoe verzend ik UBQ met MyEtherWallet CX? ',
+HELP_4CX_Title              : '4) Hoe verzend ik UBQ met Pyrus CX? ',
 HELP_4CX_Desc_1             : 'Ten eerste heb je een wallet nodig. Zodra je die hebt, heb je 2 opties: De "VerzendSnel" functionalitiet vanuit het Chrome Extensie icoon of de "Verzend UBQ en Tokens" pagina. ',
 HELP_4CX_Desc_2             : 'VerzendSnel: ',
 HELP_4CX_Desc_3             : 'Klik op het Chrome Extensie icoon. ',
@@ -483,10 +483,10 @@ HELP_8_Desc_2               : 'Als Pyrus er mee stopt, zul je een andere manier 
 HELP_8_Desc_3               : 'Je kunt je  onversleutelde (unencrypted) prive sleutel en je Gubiq/Fusion Formaat (encrypted) bestanden heel gemakkelijk en direct in gubiq / Ubiq Wallet / Fusion importeren. Zie onderstaande vraag #12. ',
 HELP_8_Desc_4               : 'Daarnaast is de kans dat wij MyEtherWallet offline halen is miniem tot onmogelijk. Het kost ons vrijwel niets om de site in stand te houden omdat we geen informatie opslaan. Als we toch het domijn offline halen, is het ook altijd nog publiekelijk beschikbaar op [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Je kunt daar de ZIP downloaden en het lokaal draaien. ',
 
-HELP_8CX_Title              : '8) Wat gebeurd er als MyEtherWallet CX verdwijnt? ',
+HELP_8CX_Title              : '8) Wat gebeurd er als Pyrus CX verdwijnt? ',
 HELP_8CX_Desc_1             : 'Ten eerste is alle je data op jouw computer opgeslagen, niet op onze servers. We snappen dat het verwarrend kan zijn, maar als je naar de Chrome Extensie kijkt, kijk je NIET naar dingen die ergens op onze servers staan opgeslagen - alles is bewaard op je eigen computer. ',
-HELP_8CX_Desc_2             : 'Dat gezegd hebbende, is het dan ook **erg belangrijk** dat je een back-up maakt van je wallets die met MyEtherWallet CX zijn gegenereerd. Als er iets met MyEtherWallet CX of jouw computer gebeurd blijft op die manier je wallet bewaard, en heb alle noodzakelijke informatie bij de hand om toegang tot je UBQ te verkrijgen. Zie vraag #2a om te leren hoe een back-up van je wallet kunt maken. ',
-HELP_8CX_Desc_3             : 'Als om wat voor reden dan ook MyEtherWallet CX verdwijnt van de Chrome Store, kunt je het altijd nog handmatig laden met de broncode van Github. Zie #5 hierboven. ',
+HELP_8CX_Desc_2             : 'Dat gezegd hebbende, is het dan ook **erg belangrijk** dat je een back-up maakt van je wallets die met Pyrus CX zijn gegenereerd. Als er iets met Pyrus CX of jouw computer gebeurd blijft op die manier je wallet bewaard, en heb alle noodzakelijke informatie bij de hand om toegang tot je UBQ te verkrijgen. Zie vraag #2a om te leren hoe een back-up van je wallet kunt maken. ',
+HELP_8CX_Desc_3             : 'Als om wat voor reden dan ook Pyrus CX verdwijnt van de Chrome Store, kunt je het altijd nog handmatig laden met de broncode van Github. Zie #5 hierboven. ',
 
 HELP_9_Title                : '9) Is de "Verzend UBQ en Tokens" pagina offline? ',
 HELP_9_Desc_1               : 'Nee. De pagina heeft een internet verbinding nodig voor het bepalen van de actuele gas prijs, nonce van je account, en het versturen (broadcasten) van de transactie. Echter, het enige wat verstuurd wordt is je ondertekende transactie. Je prive sleutel blijft veilig bij je. We hebben nu ook een "Offline Transactie" pagina zodat je ervoor kunt zorgen dat je prive sleutels ten alle tijden op een offline/airgapped computer blijven. ',
@@ -568,7 +568,7 @@ HELP_21_Desc_6              : 'Als je Bitcoin een beetje kent, [biedt dit een aa
 HELP_21_Desc_7              : '[Als je het iets technischer wilt:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
 HELP_21_Desc_8              : 'Uiteraard gaat bovenstaande er vanuit dat de sleutels worden gegenereerd met een volledige willekeur & met afdoende entropie. De sleutels die hier gegenreerd worden voldoen aan dat criterium, net als Jaxx en Fusion/Gubiq. De Ethereum wallets zijn allemaal best goed. Sleutels gegenereerd door "brainwallets" doen dit niet, omdat een het brein van een persoon niet capabel is om een werkelijk willekeurige "seed" te maken. Er zijn een heel aantal kwesties geweest met betrekking tot het gebrek entropie en "seeds" die niet in een volledig willekeurige manier waren gemaakt in Bitcoin-land, maar dat is een ander verhaal en kan wachten tot een andere keer. ',
 
-HELP_SecCX_Title            : 'Beveiliging - MyEtherWallet CX ',
+HELP_SecCX_Title            : 'Beveiliging - Pyrus CX ',
 HELP_SecCX_Desc_1           : 'Waar bewaard deze extentie mijn informatie? ',
 HELP_SecCX_Desc_2           : 'De informatie die je bewaard in deze Chrome Extensie wordt opgeslagen via [chrome.storage](http://chrome.storage/). - dit is dezelfde plek als waar je wachtwoorden staan opgeslagen als je je wachtwoorden bewaard in Chrome. ',
 HELP_SecCX_Desc_3           : 'Welke informatie wordt bewaard? ',
