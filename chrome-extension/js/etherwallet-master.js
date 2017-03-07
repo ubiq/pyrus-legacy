@@ -7732,7 +7732,7 @@ de.data = {
   NAV_AddWallet: 'Wallet hinzufügen ',
   NAV_GenerateWallet: 'Wallet erstellen ',
   NAV_BulkGenerate: 'Mehrere Wallets erstellen ',
-  NAV_SendEther: 'Sende Ether und Tokens ',
+  NAV_SendEther: 'Sende UBQ und Tokens ',
   NAV_SendTokens: 'Sende Tokens ',
   NAV_Offline: 'Sende offline ',
   NAV_DeployContract: 'Vertrag aufstellen ',
@@ -7751,7 +7751,7 @@ de.data = {
   x_Address: 'Deine Adresse ',
   x_Save: 'Sichern ',
   x_Cancel: 'Abbrechen ',
-  x_AddessDesc: 'Dies ist deine "Kontonummer" oder dein "Öffentlicher Schlüssel". Du benötigst diese Adresse, wenn dir jemand Ether senden möchte. Das Icon ist eine einfache Möglichkeit, die Adresse zu überprüfen ',
+  x_AddessDesc: 'Dies ist deine "Kontonummer" oder dein "Öffentlicher Schlüssel". Du benötigst diese Adresse, wenn dir jemand UBQ senden möchte. Das Icon ist eine einfache Möglichkeit, die Adresse zu überprüfen ',
   x_PrivKey: 'Privater Schlüssel (unverschlüsselt) ',
   x_PrivKey2: 'Privater Schlüssel ',
   x_PrivKeyDesc: 'Dies ist die unverschlüsselte Textversion deines privaten Schlüssels, d. h. du benötigst kein Passwort. Wenn jemand über diesen unverschlüsselten privaten Schlüssel verfügt, hat er/sie ohne Passwort Zugang zu deinem Wallet. Es wird daher empfohlen, den privaten Schlüssel zu verschlüsseln. ',
@@ -7812,7 +7812,7 @@ de.data = {
   ADD_Label_2: 'Wähle ein Kürzel ',
   ADD_Label_3: 'Deine Datei ist verschlüsselt. Bitte gib das Passwort ein ',
   ADD_Label_4: 'Kontoadresse zur Beobachtung hinzufügen ',
-  ADD_Warning_1: 'Du kannst unter dem "Wallet-Tab" eine Kontoadresse "beobachten", ohne den privaten Schlüssel hochzuladen. Du hast damit **keinen** Zugang zu diesem Wallet und kannst auch keinen Ether daraus versenden. ',
+  ADD_Warning_1: 'Du kannst unter dem "Wallet-Tab" eine Kontoadresse "beobachten", ohne den privaten Schlüssel hochzuladen. Du hast damit **keinen** Zugang zu diesem Wallet und kannst auch keinen UBQ daraus versenden. ',
   ADD_Label_5: 'Kontoadresse eingeben ',
   ADD_Label_6: 'Wallet entsperren ',
   ADD_Label_6_short: 'Entsperren ',
@@ -7832,7 +7832,7 @@ de.data = {
   BULK_Label_2: 'Wallets erstellen ',
   BULK_SuccessMsg: 'Erfolgreich! Deine Wallets wurden erstellt. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'An Adresse ',
   SEND_amount: 'Zu sendender Betrag ',
   SEND_amount_short: 'Betrag ',
@@ -7848,7 +7848,7 @@ de.data = {
   SENDModal_Content_1: 'Du bist dabei, ',
   SENDModal_Content_2: 'an die Adresse ',
   SENDModal_Content_3: 'zu senden. Bis du sicher, dass du das willst? ',
-  SENDModal_Content_4: 'HINWEIS: Wenn du eine Fehlermeldung erhälst, musst du vermutlich deinen Ether-Saldo erhöhen, um die Gas-Kosten des Token-Versands zu bezahlen. Gas wird in Ether bezahlt. ',
+  SENDModal_Content_4: 'HINWEIS: Wenn du eine Fehlermeldung erhälst, musst du vermutlich deinen Ether-Saldo erhöhen, um die Gas-Kosten des Token-Versands zu bezahlen. Gas wird in UBQ bezahlt. ',
   SENDModal_No: 'Nein, ich möchte diesen Vorgang abbrechen! ',
   SENDModal_Yes: 'Ja, ich bin mir sicher! Führe die Transaktion durch. ',
 
@@ -7999,16 +7999,16 @@ de.data = {
   HELP_Warning: 'Falls du vor dem **31.12.2015** ein Wallet generiert, oder das Repository heruntergeladen hast, bitte überprüfe deine Wallets &amp; lade eine neue Version des Repositories herunter. Klick für details. ',
   HELP_Desc: 'Hast du das Gefühl etwas fehlt? Hast du eine andere Frage? [Schreib uns](mailto:myetherwallet@gmail.com) und wir werden nicht nur deine Frage beantworten, wir werden auch die Seite updaten, damit diese in der Zukunft noch einfacher zu bedienen sein wird! ',
   HELP_Remind_Title: 'Ein paar Reminder ',
-  HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, sowie einige der verwendeten Javascript Bibliotheken, die wir verwenden, befinden sich noch in Entwicklung.** Zwar haben wir alles umfassend getestet und es wurden erfolgeich tausende Wallets von Menschen aus aller Welt kreiert, jedoch bestimmt immer eine gewisse Gefahr, dass etwas unerwartetes passiert und dein Ether verloren geht. Bitte investiere nicht mehr als du verlieren kannst, und sei immer vorsichtig. Sollte etwas schlimmes passieren, **können wir uns leider nicht verantwortlich für einen Verlust zeichnen**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX sind keine "web wallets". Du erstellst keinen Account oder sendest uns Ether den wir halten. Alle Daten bleiben auf deinem Computer, bzw. Browser. Unser Auftrag ist es, dir das Erstellen, Speichern und Zugreifen auf deine Accounts zu vereinfachen, sowie dir eine simple Möglichkeit zur Interaktion mit der Blockchain zu bieten. ',
+  HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, sowie einige der verwendeten Javascript Bibliotheken, die wir verwenden, befinden sich noch in Entwicklung.** Zwar haben wir alles umfassend getestet und es wurden erfolgeich tausende Wallets von Menschen aus aller Welt kreiert, jedoch bestimmt immer eine gewisse Gefahr, dass etwas unerwartetes passiert und dein UBQ verloren geht. Bitte investiere nicht mehr als du verlieren kannst, und sei immer vorsichtig. Sollte etwas schlimmes passieren, **können wir uns leider nicht verantwortlich für einen Verlust zeichnen**. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX sind keine "web wallets". Du erstellst keinen Account oder sendest uns UBQ den wir halten. Alle Daten bleiben auf deinem Computer, bzw. Browser. Unser Auftrag ist es, dir das Erstellen, Speichern und Zugreifen auf deine Accounts zu vereinfachen, sowie dir eine simple Möglichkeit zur Interaktion mit der Blockchain zu bieten. ',
   HELP_Remind_Desc_3: 'Falls du deinen privaten Schlüssel und Passwort nicht speicherst, gibt es keine Möglichkeit den Zugriff auf das Konto und die darauf befindlichen Mittel wieder herzustellen. Bitte erstelle Back-ups und speichere deine Zugriffsdaten an verschiedenen Orten &ndash; nicht nur deinem Computer! ',
 
   HELP_0_Title: '0) Ich bin neu. Was soll ich machen? ',
-  HELP_0_Desc_1: 'MyEtherWallet bietet dir die Möglichkeit neue Wallets zu generieren, damit du deinen Ether selbst speichern kannst, und keine Exchange nutzen musst. Dieser Prozess findet ausschließlich auf deinem Computer statt. Daher bist auch **du dafür Verantwortlich, Back-ups zu erstellen** wenn du ein Wallet verwenden möchtest. ',
+  HELP_0_Desc_1: 'MyEtherWallet bietet dir die Möglichkeit neue Wallets zu generieren, damit du deinen UBQ selbst speichern kannst, und keine Exchange nutzen musst. Dieser Prozess findet ausschließlich auf deinem Computer statt. Daher bist auch **du dafür Verantwortlich, Back-ups zu erstellen** wenn du ein Wallet verwenden möchtest. ',
   HELP_0_Desc_2: 'Erstelle ein neues Wallet. ',
   HELP_0_Desc_3: 'Erstelle ein Back-up deines Wallets. ',
   HELP_0_Desc_4: 'Verifiziere, dass du Zugriff auf dein neues Wallet hast und alle nötigen Informationen korrekt gespeichert sind. ',
-  HELP_0_Desc_5: 'Überweise Ether auf das neue Wallet. ',
+  HELP_0_Desc_5: 'Überweise UBQ auf das neue Wallet. ',
 
   HELP_1_Title: '1) Wie erstelle ich ein neues Wallet? ',
   HELP_1_Desc_1: 'Geh zur "Wallet hinzufügen" Seite. ',
@@ -8019,8 +8019,8 @@ de.data = {
 
   HELP_2a_Title: '2a) Wie speichere ich/erstelle Back-ups meines Wallets? ',
   HELP_2a_Desc_1: 'Du solltest dein Wallet immer an verschiedenen physischen Orten abspeichern - beispielsweise auf einem USB-Stick und/oder einem Stück Papier. ',
-  HELP_2a_Desc_2: 'Speichere die Adresse. Du kannst sie für dich behalten oder mit anderen teilen. Auf diese Adresse können andere Ether an dich senden. ',
-  HELP_2a_Desc_3: 'Speiche verschiedene Versionen deines privaten Schlüssels. Teile ihn nicht mit jemand anderem. Dein privater Schlüssel ist notwendig, wenn du auf deinen Ether zugreifen willst, um eine Überweisung zu tätigen! Es gibt 3 Arten des privaten Schlüssels ',
+  HELP_2a_Desc_2: 'Speichere die Adresse. Du kannst sie für dich behalten oder mit anderen teilen. Auf diese Adresse können andere UBQ an dich senden. ',
+  HELP_2a_Desc_3: 'Speiche verschiedene Versionen deines privaten Schlüssels. Teile ihn nicht mit jemand anderem. Dein privater Schlüssel ist notwendig, wenn du auf deinen UBQ zugreifen willst, um eine Überweisung zu tätigen! Es gibt 3 Arten des privaten Schlüssels ',
   HELP_2a_Desc_4: 'Speichere deine Adresse, die verschiedenen Versionen des privaten Schlüssels, sowie eine PDF deines Papier-Wallets in einem Ordner. Speichere diesen auf deinem Computer und einem USB-Stick. ',
   HELP_2a_Desc_5: 'Drucke das Wallet falls du einen Drucker hast. Andernfalls, schreibe deinen privaten Schlüssel und die Adresse auf ein Blatt Papier. Lagere dieses an einem sicheren Ort, abseits von deinem Computer und dem USB-Stick. ',
   HELP_2a_Desc_6: 'Bitte denk daran, dass du den Verlust des Schlüssels aufgrund des Verlusts oder Versagen deiner Festplatte, des USB-Sticks oder dem Papier, selbst verhindern musst. Erwäge daher auch Situationen wie ein Feuer oder eine Überflutung. ',
@@ -8036,7 +8036,7 @@ de.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -8045,9 +8045,9 @@ de.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find you account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) Wie kann ich Ether von einer Wallet zur anderen senden? ',
+  HELP_4_Title: '4) Wie kann ich UBQ von einer Wallet zur anderen senden? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
-  HELP_4_Desc_2: 'Navigate to the "Sende Ether und Tokens" page. ',
+  HELP_4_Desc_2: 'Navigate to the "Sende UBQ und Tokens" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_4_Desc_4: 'If the wallet is encrypted, a text box will automatically appear. Enter the password. ',
   HELP_4_Desc_5: 'Click the "Unlock Wallet" button. ',
@@ -8059,8 +8059,8 @@ de.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) Wie kann ich Ether über MyEtherWallet CX senden? ',
-  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Sende Ether und Tokens" page. ',
+  HELP_4CX_Title: '4) Wie kann ich UBQ über MyEtherWallet CX senden? ',
+  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Sende UBQ und Tokens" page. ',
   HELP_4CX_Desc_2: 'QuickSend ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
   HELP_4CX_Desc_4: 'Click the "QuickSend" button. ',
@@ -8071,7 +8071,7 @@ de.data = {
   HELP_4CX_Desc_9: 'Verify the address and the amount you are sending is correct. ',
   HELP_4CX_Desc_10: 'Enter the password for that wallet. ',
   HELP_4CX_Desc_11: 'Click "Send Transaction." ',
-  HELP_4CX_Desc_12: 'Using "Sende Ether und Tokens" Page ',
+  HELP_4CX_Desc_12: 'Using "Sende UBQ und Tokens" Page ',
 
   HELP_5_Title: '5) Wie kann ich MyEtherWallet.com offline/lokal starten? ',
   HELP_5_Desc_1: 'You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page. ',
@@ -8090,7 +8090,7 @@ de.data = {
 
   HELP_7_Title: '7) How do I send Tokens & add custom tokens? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) is a great way to explore tokens and find the decimals of a token. ',
-  HELP_7_Desc_1: 'Navigate to the "Sende Ether und Tokens" page. ',
+  HELP_7_Desc_1: 'Navigate to the "Sende UBQ und Tokens" page. ',
   HELP_7_Desc_2: 'Unlock your wallet. ',
   HELP_7_Desc_3: 'Enter the address you would like to send to in the "To Address:" field. ',
   HELP_7_Desc_4: 'Enter the amount you would like to send. ',
@@ -8108,7 +8108,7 @@ de.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -8117,7 +8117,7 @@ de.data = {
   HELP_8CX_Desc_2: 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
   HELP_8CX_Desc_3: 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
-  HELP_9_Title: '9) Is the "Sende Ether und Tokens" page offline? ',
+  HELP_9_Title: '9) Is the "Sende UBQ und Tokens" page offline? ',
   HELP_9_Desc_1: 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
 
   HELP_10_Title: '10) How do I make an offline transaction? ',
@@ -8165,13 +8165,13 @@ de.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -8337,7 +8337,7 @@ el.data = {
   NAV_AddWallet: 'Προσθήκη Πορτοφολιού ',
   NAV_GenerateWallet: 'Δημηουργία Πορτοφολιού ',
   NAV_BulkGenerate: 'Δημιουργία Πολλών Πορτοφολιών ',
-  NAV_SendEther: 'Αποστολή Ether και Tokens ',
+  NAV_SendEther: 'Αποστολή UBQ και Tokens ',
   NAV_SendTokens: 'Αποστολή Tokens ',
   NAV_Offline: 'Αποστολή εκτός Σύνδεσης ',
   NAV_MyWallets: 'Τα Πορτοφόλια μου ',
@@ -8360,7 +8360,7 @@ el.data = {
   x_Keystore2: 'Αρχείο Keystore (UTC / JSON) ',
   x_KeystoreDesc: 'Αυτό το Αρχείο Keystore έχει την ίδια μορφή που χρησιμοποιείται από το Fusion ώστε να μπορείτε εύκολα να το εισάγετε στο μέλλον. Είναι το συνιστώμενο αρχείο για λήψη και δημιουργία αντιγράφου ασφαλείας. ',
   x_Json: 'Αρχείο JSON (μη κρυπτογραφημένο) ',
-  x_JsonDesc: 'Αυτή είναι η μη κρυπτογραφημένη, JSON μορφή του Ιδιωτικού Κλειδιού σας. Αυτό σημαίνει ότι δεν απαιτείται κωδικός όμως οποιοσδήποτε βρει το JSON σας έχει πρόσβαση στο πορτοφόλι και τα Ether σας χωρίς κωδικό. ',
+  x_JsonDesc: 'Αυτή είναι η μη κρυπτογραφημένη, JSON μορφή του Ιδιωτικού Κλειδιού σας. Αυτό σημαίνει ότι δεν απαιτείται κωδικός όμως οποιοσδήποτε βρει το JSON σας έχει πρόσβαση στο πορτοφόλι και τα UBQ σας χωρίς κωδικό. ',
   x_PrintShort: 'Εκτύπωση ',
   x_Print: 'Εκτύπωση Χάρτινου Πορτοφολιού ',
   x_PrintDesc: 'Συμβουλή: Κλικάρετε "Εκτύπωση και Αποθήκευση ως PDF" ακόμη κι αν δεν έχετε εκτυπωτή! ',
@@ -8370,8 +8370,8 @@ el.data = {
   /* Header */
   MEW_Warning_1: 'Πάντα να ελέγχετε την διεύθυνση URL προτού μπείτε στο πορτοφόλι σας ή δημιουργήσετε καινούριο πορτοφόλι. Προσοχή στις σελίδες ηλεκτρονικού ψαρέματος! ',
   CX_Warning_1: 'Σιγουρευτείτε ότι έχετε **εξωτερικά αντίγραφα ασφαλείας** όλων των πορτοφολιών που αποθηκεύετε εδώ. Μπορούν να συμβούν διάφορα που θα προκαλούσαν απώλεια των δεδομένων σας σε αυτήν την επέκταση Chrome, συμπεριλαμβανομένης απεγκατάστασης και επανεγκατάστασης της επέκτασης. Αυτή η επέκταση είναι ένας τρόπος εύκολης πρόσβασης στα πορτοφόλια σας και **όχι** ένας τρόπος να δημηιουργήσετε αντίγραφα ασφαλείας τους. ',
-  MEW_Tagline: 'Ασφαλές Πορτοφόλι Ether Ανοιχτού Κώδικα JavaScript από την πλευρά του Πελάτη ',
-  CX_Tagline: 'Επέκταση Chrome για Ασφαλές Πορτοφόλι Ether Ανοιχτού Κώδικα JavaScript από την πλευρά του Πελάτη ',
+  MEW_Tagline: 'Ασφαλές Πορτοφόλι UBQ Ανοιχτού Κώδικα JavaScript από την πλευρά του Πελάτη ',
+  CX_Tagline: 'Επέκταση Chrome για Ασφαλές Πορτοφόλι UBQ Ανοιχτού Κώδικα JavaScript από την πλευρά του Πελάτη ',
 
   /* Footer */
   FOOTER_1: 'Ένα εργαλείο ανοιχτού κώδικα, javascript, από πλευράς πελάτη για την δημιουργία Πορτοφολιών Ethereum & αποστολή συναλλαγών. ',
@@ -8411,7 +8411,7 @@ el.data = {
   ADD_Label_2: 'Δημιουργία Ψευδωνύμου: ',
   ADD_Label_3: 'Το πορτοφόλι σας είναι κρυπτογραφημένο. Παρακαλώ εισάγετε τον κωδικό ',
   ADD_Label_4: 'Προσθήκη Λογαριασμού προς Παρακολούθηση ',
-  ADD_Warning_1: 'Μπορείτε να προσθέσετε έναν λογαριασμό προς "παρακολούθηση" στην καρτέλα πορτοφολιών χωρίς να ανεβάσετε ιδιωτικό κλειδί. Αυτό ** δεν ** σημαίνει ότι έχετε πρόσβαση στο πορτοφόλι, ούτε ότι μπορείτε να μεταφέρετε Ether από αυτό. ',
+  ADD_Warning_1: 'Μπορείτε να προσθέσετε έναν λογαριασμό προς "παρακολούθηση" στην καρτέλα πορτοφολιών χωρίς να ανεβάσετε ιδιωτικό κλειδί. Αυτό ** δεν ** σημαίνει ότι έχετε πρόσβαση στο πορτοφόλι, ούτε ότι μπορείτε να μεταφέρετε UBQ από αυτό. ',
   ADD_Label_5: 'Εισάγετε την Διεύθυνση ',
   ADD_Label_6: 'Ξεκλειδώστε το Πορτοφόλι σας ',
   ADD_Label_6_short: 'Ξεκλείδωμα ',
@@ -8431,7 +8431,7 @@ el.data = {
   BULK_Label_2: 'Δημιουργία Πορτοφολιών ',
   BULK_SuccessMsg: 'Επιτυχία! Τα πορτοφόλια σας δημιουργήθηκαν. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Προς Διεύθυνση ',
   SEND_amount: 'Ποσό για αποστολή ',
   SEND_amount_short: 'Ποσό ',
@@ -8593,15 +8593,15 @@ el.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) Είμαι νέος χρήστης. Τι κάνω? ',
-  HELP_0_Desc_1: 'Το MyEtherWallet σας δίνει την δυνατότητα να δημιουργήσετε νέα πορτοφόλια ώστε να μπορείτε να αποθηκεύσετε το Ether σας μόνοι σας, και όχι σε κάποιο ανταλλακτήριο (exchange provider). Αυτή η διαδικασία συμβαίνει εξ\'ολοκλήρου στον υπολογιστή σας, και όχι στους servers μας. Γι\'αυτό, όταν δημιουργείτε ένα νέο πορτοφόλι, **εσείς είστε υπεύθυνοι να κρατήσετε αντίγραφα ασφαλείας**. ',
+  HELP_0_Desc_1: 'Το MyEtherWallet σας δίνει την δυνατότητα να δημιουργήσετε νέα πορτοφόλια ώστε να μπορείτε να αποθηκεύσετε το UBQ σας μόνοι σας, και όχι σε κάποιο ανταλλακτήριο (exchange provider). Αυτή η διαδικασία συμβαίνει εξ\'ολοκλήρου στον υπολογιστή σας, και όχι στους servers μας. Γι\'αυτό, όταν δημιουργείτε ένα νέο πορτοφόλι, **εσείς είστε υπεύθυνοι να κρατήσετε αντίγραφα ασφαλείας**. ',
   HELP_0_Desc_2: 'Δημιουργήστε ένα νέο πορτοφόλι. ',
   HELP_0_Desc_3: 'Κρατήστε αντίγραφο ασφαλείας ποτοφολιού. ',
   HELP_0_Desc_4: 'Επιβεβαιώστε ότι έχετε πρόσβαση στο νέο αυτό πορτοφόλι και ότι αποθηκεύσατε σωστά όλες τις απαραίτητες πληροφορίες. ',
-  HELP_0_Desc_5: 'Μεταφέρετε Ether στο νέο αυτό πορτοφόλι. ',
+  HELP_0_Desc_5: 'Μεταφέρετε UBQ στο νέο αυτό πορτοφόλι. ',
 
   HELP_1_Title: '1) Πως φτιάχνω ένα νέο πορτοφόλι? ',
   HELP_1_Desc_1: 'Πηγαίνετε στην σελίδα "Δημιουργία Πορτοφολιού". ',
@@ -8613,7 +8613,7 @@ el.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -8629,7 +8629,7 @@ el.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -8638,9 +8638,9 @@ el.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
-  HELP_4_Desc_2: 'Navigate to the "Αποστολή Ether και Tokens" page. ',
+  HELP_4_Desc_2: 'Navigate to the "Αποστολή UBQ και Tokens" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_4_Desc_4: 'If the wallet is encrypted, a text box will automatically appear. Enter the password. ',
   HELP_4_Desc_5: 'Click the "Unlock Wallet" button. ',
@@ -8652,8 +8652,8 @@ el.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Αποστολή Ether και Tokens" page. ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Αποστολή UBQ και Tokens" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
   HELP_4CX_Desc_4: 'Click the "QuickSend" button. ',
@@ -8664,7 +8664,7 @@ el.data = {
   HELP_4CX_Desc_9: 'Verify the address and the amount you are sending is correct. ',
   HELP_4CX_Desc_10: 'Enter the password for that wallet. ',
   HELP_4CX_Desc_11: 'Click "Send Transaction." ',
-  HELP_4CX_Desc_12: 'Using "Αποστολή Ether και Tokens" Page ',
+  HELP_4CX_Desc_12: 'Using "Αποστολή UBQ και Tokens" Page ',
 
   HELP_5_Title: '5) How do I run MyEtherWallet.com offline/locally? ',
   HELP_5_Desc_1: 'You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page. ',
@@ -8683,7 +8683,7 @@ el.data = {
 
   HELP_7_Title: '7) How do I send Tokens & add custom tokens? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) is a great way to explore tokens and find the decimals of a token. ',
-  HELP_7_Desc_1: 'Navigate to the "Αποστολή Ether και Tokens" page. ',
+  HELP_7_Desc_1: 'Navigate to the "Αποστολή UBQ και Tokens" page. ',
   HELP_7_Desc_2: 'Unlock your wallet. ',
   HELP_7_Desc_3: 'Enter the address you would like to send to in the "To Address:" field. ',
   HELP_7_Desc_4: 'Enter the amount you would like to send. ',
@@ -8701,7 +8701,7 @@ el.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -8710,7 +8710,7 @@ el.data = {
   HELP_8CX_Desc_2: 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
   HELP_8CX_Desc_3: 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
-  HELP_9_Title: '9) Is the "Αποστολή Ether και Tokens" page offline? ',
+  HELP_9_Title: '9) Is the "Αποστολή UBQ και Tokens" page offline? ',
   HELP_9_Desc_1: 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
 
   HELP_10_Title: '10) How do I make an offline transaction? ',
@@ -8758,13 +8758,13 @@ el.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -8833,7 +8833,7 @@ en.data = {
   NAV_Multisig: 'Multisig ',
   NAV_MyWallets: 'My Wallets ',
   NAV_Offline: 'Send Offline ',
-  NAV_SendEther: 'Send Ether & Tokens ',
+  NAV_SendEther: 'Send UBQ & Tokens ',
   NAV_SendTokens: 'Send Tokens ',
   NAV_Swap: 'Swap ',
   NAV_ViewWallet: 'View Wallet Info ',
@@ -8846,7 +8846,7 @@ en.data = {
   x_CSV: 'CSV file (unencrypted) ',
   x_Download: 'Download ',
   x_Json: 'JSON File (unencrypted) ',
-  x_JsonDesc: 'This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & Ether without the password. ',
+  x_JsonDesc: 'This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & UBQ without the password. ',
   x_Keystore: 'Keystore File (UTC / JSON · Recommended · Encrypted) ',
   x_Keystore2: 'Keystore File (UTC / JSON) ',
   x_KeystoreDesc: 'This Keystore file matches the format used by Fusion so you can easily import it in the future. It is the recommended file to download and back up. ',
@@ -8928,7 +8928,7 @@ en.data = {
   ADD_Label_2: 'Create a Nickname ',
   ADD_Label_3: 'Your wallet is encrypted. Please enter the password. ',
   ADD_Label_4: 'Add an Account to Watch ',
-  ADD_Warning_1: 'You can add any account to "watch" on the wallets tab without uploading a private key. This does ** not ** mean you have access to this wallet, nor can you transfer Ether from it. ',
+  ADD_Warning_1: 'You can add any account to "watch" on the wallets tab without uploading a private key. This does ** not ** mean you have access to this wallet, nor can you transfer UBQ from it. ',
   ADD_Label_5: 'Enter the Address ',
   ADD_Label_6: 'Unlock your Wallet ',
   ADD_Label_6_short: 'Unlock ',
@@ -8965,7 +8965,7 @@ en.data = {
   BULK_Label_2: 'Generate Wallets ',
   BULK_SuccessMsg: 'Success! Your wallets have been generated. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'To Address ',
   SEND_amount: 'Amount to Send ',
   SEND_amount_short: 'Amount ',
@@ -9169,15 +9169,15 @@ en.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -9189,7 +9189,7 @@ en.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -9205,7 +9205,7 @@ en.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -9214,9 +9214,9 @@ en.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
-  HELP_4_Desc_2: 'Navigate to the "Send Ether & Tokens" page. ',
+  HELP_4_Desc_2: 'Navigate to the "Send UBQ & Tokens" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_4_Desc_4: 'If the wallet is encrypted, a text box will automatically appear. Enter the password. ',
   HELP_4_Desc_5: 'Click the "Unlock Wallet" button. ',
@@ -9228,8 +9228,8 @@ en.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send Ether & Tokens" page. ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send UBQ & Tokens" page. ',
   HELP_4CX_Desc_2: 'QuickSend ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
   HELP_4CX_Desc_4: 'Click the "QuickSend" button. ',
@@ -9240,7 +9240,7 @@ en.data = {
   HELP_4CX_Desc_9: 'Verify the address and the amount you are sending is correct. ',
   HELP_4CX_Desc_10: 'Enter the password for that wallet. ',
   HELP_4CX_Desc_11: 'Click "Send Transaction." ',
-  HELP_4CX_Desc_12: 'Using "Send Ether & Tokens" Page ',
+  HELP_4CX_Desc_12: 'Using "Send UBQ & Tokens" Page ',
 
   HELP_5_Title: '5) How do I run MyEtherWallet.com offline/locally? ',
   HELP_5_Desc_1: 'You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page. ',
@@ -9259,7 +9259,7 @@ en.data = {
 
   HELP_7_Title: '7) How do I send tokens & add custom tokens? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) is a great way to explore tokens and find the decimals of a token. ',
-  HELP_7_Desc_1: 'Navigate to the "Send Ether & Tokens" page. ',
+  HELP_7_Desc_1: 'Navigate to the "Send UBQ & Tokens" page. ',
   HELP_7_Desc_2: 'Unlock your wallet. ',
   HELP_7_Desc_3: 'Enter the address you would like to send to in the "To Address:" field. ',
   HELP_7_Desc_4: 'Enter the amount you would like to send. ',
@@ -9277,7 +9277,7 @@ en.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -9286,7 +9286,7 @@ en.data = {
   HELP_8CX_Desc_2: 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
   HELP_8CX_Desc_3: 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
-  HELP_9_Title: '9) Is the "Send Ether & Tokens" page offline? ',
+  HELP_9_Title: '9) Is the "Send UBQ & Tokens" page offline? ',
   HELP_9_Desc_1: 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
 
   HELP_10_Title: '10) How do I make an offline transaction? ',
@@ -9334,13 +9334,13 @@ en.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -9529,8 +9529,8 @@ es.data = {
   /* Header */
   MEW_Warning_1: 'Comprueba siempre la URL antes de acceder a tu cartera o crear una cartera nueva. ¡Ten cuidado con los sitios falsos (phishing)! ',
   CX_Warning_1: 'Asegúrate de tener **copias de seguridad externas** de cualquier cartera que almacenes aquí. Pueden ocurrir muchas cosas que te hagan perder los datos de esta extensión de Chrome; esto incluye desinstalar y volver a instalar la extensión. Esta extensión es un modo de acceder fácilmente a tus carteras, **no** una manera de respaldarlas. ',
-  MEW_Tagline: 'Cartera Ether JavaScript de código abierto ejecutado en el cliente ',
-  CX_Tagline: 'Cartera Ether JavaScript de código abierto ejecutado en el cliente extensión Chrome ',
+  MEW_Tagline: 'Cartera UBQ JavaScript de código abierto ejecutado en el cliente ',
+  CX_Tagline: 'Cartera UBQ JavaScript de código abierto ejecutado en el cliente extensión Chrome ',
 
   /* Footer */
   FOOTER_1: 'Una herramienta de código abierto JavaScript que se ejecuta en el lado del cliente, para generar carteras y enviar transacciones Ethereum. ',
@@ -9592,7 +9592,7 @@ es.data = {
   BULK_Label_2: 'Generar carteras ',
   BULK_SuccessMsg: '¡Enhorabuena! Se han generado tus carteras. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Dirección de destino ',
   SEND_amount: 'Cantidad a enviar ',
   SEND_amount_short: 'Cantidad ',
@@ -9760,16 +9760,16 @@ es.data = {
   HELP_Warning: 'Si creaste una cartera -o- descargaste el repositorio antes del **31 de diciembre de 2015**, por favor comprueba tus carteras y descarga una nueva versión del repositorio. Haz clic para más información. ',
   HELP_Desc: '¿Echas algo en falta? ¿Tienes alguna otra pregunta? [Contacta con nosotros](mailto:myetherwallet@gmail.com) y no solamente contestaremos tu pregunta, sino que mejoraremos esta página para que sea más útil en el futuro. ',
   HELP_Remind_Title: 'Algunos recordatorios ',
-  HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com y MyEtherWallet CX, así como algunas de las librerías JavaScript que utilizamos están en desarrollo activo.** Aunque hemos testeado ampliamente y decenas de miles de carteras han sido creadas exitosamente por personas en todo el planeta, siempre existe la remota posibilidad de que ocurra algo inesperado que haga que se pierdan tus ETH. Por favor no inviertas más de lo que estés dispuesto a perder y, por favor, sé cuidadoso. Si algo ocurriera, lo lamentamos, pero **no somos responsables del Ether perdido**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com y MyEtherWallet CX no son "carteras web". No estás creando una cuenta ni nos estás entregando tus Ether para que los guardemos. Toda tu información nunca abandona tu equipo o tu navegador. Te facilitamos que puedas crear, guardar y acceder a tu información e interactuar con la blockchain. ',
+  HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com y MyEtherWallet CX, así como algunas de las librerías JavaScript que utilizamos están en desarrollo activo.** Aunque hemos testeado ampliamente y decenas de miles de carteras han sido creadas exitosamente por personas en todo el planeta, siempre existe la remota posibilidad de que ocurra algo inesperado que haga que se pierdan tus ETH. Por favor no inviertas más de lo que estés dispuesto a perder y, por favor, sé cuidadoso. Si algo ocurriera, lo lamentamos, pero **no somos responsables del UBQ perdido**. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com y MyEtherWallet CX no son "carteras web". No estás creando una cuenta ni nos estás entregando tus UBQ para que los guardemos. Toda tu información nunca abandona tu equipo o tu navegador. Te facilitamos que puedas crear, guardar y acceder a tu información e interactuar con la blockchain. ',
   HELP_Remind_Desc_3: 'Si no guardas tu clave privada y contraseña, no hay modo alguno de recuperar el acceso a tu cartera o a los fondos que ésta contiene. ¡Haz copias de seguridad en múltiples ubicaciones físicas, no solamente en tu equipo! ',
 
   HELP_0_Title: '0) Soy nuevo. ¿Qué hago? ',
-  HELP_0_Desc_1: 'MyEtherWallet te permite generar nuevas carteras para poder almacenar tu Ether por tu cuenta en lugar de en una casa de cambio. Este proceso tiene lugar por completo en tu equipo, no en nuestros servidores. Por lo tanto, cuando generes una nueva cartera, **eres responsable de hacer una copia de seguridad**. ',
+  HELP_0_Desc_1: 'MyEtherWallet te permite generar nuevas carteras para poder almacenar tu UBQ por tu cuenta en lugar de en una casa de cambio. Este proceso tiene lugar por completo en tu equipo, no en nuestros servidores. Por lo tanto, cuando generes una nueva cartera, **eres responsable de hacer una copia de seguridad**. ',
   HELP_0_Desc_2: 'Crear una nueva cartera. ',
   HELP_0_Desc_3: 'Hacer una copia de seguridad de la cartera. ',
   HELP_0_Desc_4: 'Comprobar que tienes acceso a esta nueva cartera y has guardado correctamente toda la información necesaria. ',
-  HELP_0_Desc_5: 'Transferir Ether a la nueva cartera. ',
+  HELP_0_Desc_5: 'Transferir UBQ a la nueva cartera. ',
 
   HELP_1_Title: '1) ¿Cómo creo una nueva cartera? ',
   HELP_1_Desc_1: 'Ir a la página "Generar cartera". ',
@@ -9808,7 +9808,7 @@ es.data = {
 
   HELP_4_Title: '4) ¿Cómo envío ether de una cartera a otra? ',
   HELP_4_Desc_1: 'Si planeas mover una gran cantidad de ether, deberías probar primero a enviar una pequeña cantidad a tu cartera para asegurarte de que todo funciona según lo esperado. ',
-  HELP_4_Desc_2: 'Ve a la página "Enviar Ether y Tokens". ',
+  HELP_4_Desc_2: 'Ve a la página "Enviar UBQ y Tokens". ',
   HELP_4_Desc_3: 'Selecciona tu archivo de cartera -o- tu clave privada y desbloquea tu cartera. ',
   HELP_4_Desc_4: 'Si la cartera está cifrada aparecerá automáticamente una caja de texto. Introduce la contraseña. ',
   HELP_4_Desc_5: 'Haz clic en el botón "Desbloquear cartera". ',
@@ -9821,7 +9821,7 @@ es.data = {
   HELP_4_Desc_13: 'Se enviará la transacción y se mostrará el ID de transacción. Puedes hacer clic en el ID de transacción para verla en la cadena de bloques. ',
 
   HELP_4CX_Title: '4) ¿Cómo envío ether utilizando MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'Antes de nada, necesitas añadir una cartera. Una vez hecho, tienes dos opciones: la función "Enviar" del icono de la extensión de Chrome o la página "Enviar Ether y Tokens". ',
+  HELP_4CX_Desc_1: 'Antes de nada, necesitas añadir una cartera. Una vez hecho, tienes dos opciones: la función "Enviar" del icono de la extensión de Chrome o la página "Enviar UBQ y Tokens". ',
   HELP_4CX_Desc_2: 'Envío: ',
   HELP_4CX_Desc_3: 'Haz clic en el icono de la extensión de Chrome. ',
   HELP_4CX_Desc_4: 'Haz clic en el botón Click the "Enviar" button. ',
@@ -9832,7 +9832,7 @@ es.data = {
   HELP_4CX_Desc_9: 'Comprueba que la dirección y la cantidad que estás enviando son correctos. ',
   HELP_4CX_Desc_10: 'Introduce la contraseña para la cartera. ',
   HELP_4CX_Desc_11: 'Haz clic en "Enviar transacción". ',
-  HELP_4CX_Desc_12: 'Utilizando la página "Enviar Ether y Tokens" ',
+  HELP_4CX_Desc_12: 'Utilizando la página "Enviar UBQ y Tokens" ',
 
   HELP_5_Title: '5) ¿Cómo ejecuto MyEtherWallet.com sin conexión/localmente? ',
   HELP_5_Desc_1: 'Puedes ejecutar MyEtherWallet.com en tu equipo en lugar de desde los servidores de GitHub. Puedes generar una cartera totalmente sin conexión y enviar transacciones desde la página "Transacción sin conexión". ',
@@ -9892,7 +9892,7 @@ es.data = {
   HELP_10_Desc_8: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_10_Desc_9: 'Press the "GENERATE SIGNED TRANSACTION" button. ',
   HELP_10_Desc_10: 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
-  HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click "Enviar Ether y Tokens". This will broadcast your transaction. ',
+  HELP_10_Desc_11: 'On your online computer, paste the signed transaction into the text field in step #3 and click "Enviar UBQ y Tokens". This will broadcast your transaction. ',
 
   HELP_12_Title: '12) How do I import a wallet created with MyEtherWallet into gubiq / Ubiq Wallet / Fusion? ',
   HELP_12_Desc_1: 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
@@ -9926,13 +9926,13 @@ es.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your account and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -10137,7 +10137,7 @@ fi.data = {
   /* Header */
   MEW_Warning_1: 'Tarkista URL aina ennen kuin avaat lompakkosi tai luot uuden lompakon. Varo tietojen-kalastelu sivustoja! ',
   CX_Warning_1: 'Varmista että sinulla on **ulkoiset varmuuskopiot** kaikista lompakoista joita säilytät täällä. Monia asioita voi tapahtua joiden seurauksena voit menettää tietoja tässä Chrome Laajennuksessa, mukaan lukien laajennuksen asennuksen poistaminen tai uudelleenasennus. Tämä laajennus on keino jolla saat helpon pääsyn lompakkoosi, **ei** keino varmuuskopioida niitä. ',
-  MEW_Tagline: 'Avoimen Lähdekoodin JavaScript Ether Lompakko ',
+  MEW_Tagline: 'Avoimen Lähdekoodin JavaScript UBQ Lompakko ',
   CX_Tagline: 'Avoimen Lähdekoodin JavaScript Chrome Laajennus ',
 
   /* Footer */
@@ -10200,7 +10200,7 @@ fi.data = {
   BULK_Label_2: 'Luo Lompakot ',
   BULK_SuccessMsg: 'Onnistui! Sinun lompakkosi on luotu. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Osoitteeseen ',
   SEND_amount: 'Summa Joka Lähetetään ',
   SEND_amount_short: 'Summa ',
@@ -10369,15 +10369,15 @@ fi.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -10389,7 +10389,7 @@ fi.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -10405,7 +10405,7 @@ fi.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -10414,7 +10414,7 @@ fi.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
   HELP_4_Desc_2: 'Navigate to the "Lähetä Etheriä ja Tokeneita" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -10428,7 +10428,7 @@ fi.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
   HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Lähetä Etheriä ja Tokeneita" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
@@ -10477,7 +10477,7 @@ fi.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -10534,13 +10534,13 @@ fi.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -10653,7 +10653,7 @@ fr.data = {
   NAV_Multisig: 'Multisig ',
   NAV_MyWallets: 'Mes portefeuilles ',
   NAV_Offline: 'Envoyer hors-ligne ',
-  NAV_SendEther: 'Envoyer des Ether et des Tokens ',
+  NAV_SendEther: 'Envoyer des UBQ et des Tokens ',
   NAV_SendTokens: 'Envoyer des tokens ',
   NAV_SignMsg: 'Signer un message ',
   NAV_ViewWallet: 'Visualiser un portefeuille ',
@@ -10666,7 +10666,7 @@ fr.data = {
   x_CSV: 'Fichier CSV (non-chiffré) ',
   x_Download: 'Télécharger ',
   x_Json: 'Fichier JSON (non-chiffré) ',
-  x_JsonDesc: 'C\'est la version non-chiffrée au format JSON de votre clé privée. Cela signifie que vous n\'avez pas besoin de votre mot de passe pour l\'utiliser mais que toute personne qui trouve ce JSON peut accéder à votre portefeuille et vos Ether sans mot de passe. ',
+  x_JsonDesc: 'C\'est la version non-chiffrée au format JSON de votre clé privée. Cela signifie que vous n\'avez pas besoin de votre mot de passe pour l\'utiliser mais que toute personne qui trouve ce JSON peut accéder à votre portefeuille et vos UBQ sans mot de passe. ',
   x_Keystore: 'Fichier Keystore (UTC / JSON · Recommandé · Chiffré) ',
   x_Keystore2: 'Fichier Keystore (UTC / JSON) ',
   x_KeystoreDesc: 'Ce fichier Keystore utilise le même format que celui que Fusion, vous pouvez donc facilement l\'importer plus tard dans ces logiciels. C\'est le fichier que nous vous recommandons de télécharger et sauvegarder. ',
@@ -10750,7 +10750,7 @@ fr.data = {
   BULK_Label_2: 'Générer les portefeuilles ',
   BULK_SuccessMsg: 'Succès ! Vos portefeuilles ont été générés. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Adresse de destination ',
   SEND_amount: 'Montant à envoyer ',
   SEND_amount_short: 'Montant ',
@@ -10958,11 +10958,11 @@ fr.data = {
   HELP_Desc: 'Il manque quelque chose ? Vous avez d\'autres questions ? [Contactez-nous](mailto:myetherwallet@gmail.com), et non seulement nous allons vous répondre mais aussi mettre à jour cette page afin qu\'elle soit plus utile à tout le monde à l\'avenir ! ',
   HELP_Remind_Title: 'Quelques rappels : ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, et certaines des bibliothèques Javascript sous-jacentes que nous employons sont en cours de développement.** Bien que nous les ayons testés intensivement et que des dizaines de milliez de portefeuilles aient été créés avec succès dans le monde entier, il existe toujours une faible possibilité qu\'un incident se produise conduisant à la perte de vos ETH. N\'investissez pas plus que ce que vous êtes prêt à perdre et soyez prudent. En cas d\'accident, nous en serons désolés mais **nous ne sommes pas responsables d\'une éventuelle perte de cet Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX ne sont pas des "portefeuilles web". Vous ne créez pas un compte, vous ne nous donnez pas votre Ether en dépôt. Aucune donnée ne sort de votre ordinateur ou votre navigateur. Nous vous facilitons la création, la sauvegarde et l\'accès à vos informations ainsi que l\'interaction avec la blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX ne sont pas des "portefeuilles web". Vous ne créez pas un compte, vous ne nous donnez pas votre UBQ en dépôt. Aucune donnée ne sort de votre ordinateur ou votre navigateur. Nous vous facilitons la création, la sauvegarde et l\'accès à vos informations ainsi que l\'interaction avec la blockchain. ',
   HELP_Remind_Desc_3: 'Si vous ne sauvegardez pas votre clef privée et votre mot de passe, il n\'existe aucun moyen de regagner l\'accès à votre portefeuille et aux fonds qu\'il détient. Sauvegardez-les en plusieurs endroits et non uniquement sur votre ordinateur ! ',
 
   HELP_0_Title: '0) Je suis nouveau. Que puis-je faire ? ',
-  HELP_0_Desc_1: 'MyEtherWallet vous donne la possibilité de générer de nouveaux portefeuilles pour stocker votre Ether par vous-même et pas sur un *exchange.* Ce processus ne s\'exécute que sur votre ordinateur, pas sur nos serveurs. Quand vous générez un nouveau portefeuille, **il est donc de votre responsabilité de le sauvegarder de manière sécurisée.** ',
+  HELP_0_Desc_1: 'MyEtherWallet vous donne la possibilité de générer de nouveaux portefeuilles pour stocker votre UBQ par vous-même et pas sur un *exchange.* Ce processus ne s\'exécute que sur votre ordinateur, pas sur nos serveurs. Quand vous générez un nouveau portefeuille, **il est donc de votre responsabilité de le sauvegarder de manière sécurisée.** ',
   HELP_0_Desc_2: 'Créez un nouveau portefeuille. ',
   HELP_0_Desc_3: 'Sauvegardez le portefeuille. ',
   HELP_0_Desc_4: 'Vérifiez que vous avez accès à ce nouveau portefeuille et que vous avez correctement sauvé toutes les informations nécessaires. ',
@@ -10978,7 +10978,7 @@ fr.data = {
   HELP_2a_Title: '2a) Comment puis-je sauvegarder mon portefeuille ? ',
   HELP_2a_Desc_1: 'Vous devez toujours sauvegarder votre portefeuille en plusieurs endroits physiques, comme sur une clef USB ou une feuille de papier. ',
   HELP_2a_Desc_2: 'Sauvegardez l\'adresse. Vous pouvez la garder pour vous-même ou la partager avec d\'autres personnes qui, de cette manière, peuvent vous envoyer de l\'Ether. ',
-  HELP_2a_Desc_3: 'Sauvegardez votre clef privée en plusieurs exemplaires. Ne la partagez avec personne. Votre clef privée est nécessaire pour accéder à votre Ether pour l\'envoyer ! Il existe 3 types de clef privée : ',
+  HELP_2a_Desc_3: 'Sauvegardez votre clef privée en plusieurs exemplaires. Ne la partagez avec personne. Votre clef privée est nécessaire pour accéder à votre UBQ pour l\'envoyer ! Il existe 3 types de clef privée : ',
   HELP_2a_Desc_4: 'Placez votre adresse, les exemplaires de la clef privée et la version PDF de votre portefeuille papier dans un dossier. Sauvegardez-le sur votre ordinateur et une clef USB. ',
   HELP_2a_Desc_5: 'Imprimez votre portefeuille si vous avez une imprimante. Sinon, écrivez votre clef privée et votre adresse usr une feuille de papier. Rangez-la dans un endroit sûr, à part de votre ordinateur et de la clef USB. ',
   HELP_2a_Desc_6: 'Gardez à l\'esprit qu\'il faut vous préserver de la perte de la clef et du mot de passe en cas de perte de votre disque dur, de votre clef oui de la feuille de papier. Vous devez également vous prémunir contre les catastrophes impactant toute une zone géographique (comme un incendie ou une inondation). ',
@@ -11001,11 +11001,11 @@ fr.data = {
   HELP_3_Desc_5: 'Si le portefeuille est chiffré, une zone texte apparaîtra automatiquement. Entrez le mot de passe. ',
   HELP_3_Desc_6: 'Cliquez sur le bouton "Déverrouiller votre portefeuille". ',
   HELP_3_Desc_7: 'Les informations sur votre portefeuille doivent apparaître. Trouvez l\'adresse de votre compte près d\'une icône circulaire et colorée. Celle-ci représente visuellement votre adresse. Assurez-vous que cette adresse est celle que vous avez sauvegardée dans votre document texte et qu\'elle se trouve sur votre portefeuille papier. ',
-  HELP_3_Desc_8: 'Si vous désirez détenir une grande quantité d\'Ether, nous recommandons de commencer par envoyer une petite somme depuis le nouveau portefeuille avant d\'y déposer une somme importante. Envoyez 0,001 Ether vers le nouveau portefeuille, accédez-y puis envoyez ces 0,001 Ether vers une autre adresse, et vérifiez que tout a fonctionné sans encombre. ',
+  HELP_3_Desc_8: 'Si vous désirez détenir une grande quantité d\'Ether, nous recommandons de commencer par envoyer une petite somme depuis le nouveau portefeuille avant d\'y déposer une somme importante. Envoyez 0,001 UBQ vers le nouveau portefeuille, accédez-y puis envoyez ces 0,001 UBQ vers une autre adresse, et vérifiez que tout a fonctionné sans encombre. ',
 
   HELP_4_Title: '4) Comment puis-je envoyer de l\'Ether d\'un portefeuille vers un autre ? ',
   HELP_4_Desc_1: 'Si vous désirez transférer une grande quantité d\'Ether, vous devez d\'abord essayer d\'en envoyer d\'abord un petit montant vers votre portefeuille pour vous assurer que tout fonctionne comme prévu. ',
-  HELP_4_Desc_2: 'Naviguez vers la page "Envoyer des Ether et des Tokens". ',
+  HELP_4_Desc_2: 'Naviguez vers la page "Envoyer des UBQ et des Tokens". ',
   HELP_4_Desc_3: 'Sélectionnez le fichier de votre portefeuille -ou- votre clef privée et déverrouillez votre portefeuille. ',
   HELP_4_Desc_4: 'Si le portefeuille est chiffré, une zone texte apparaîtra automatiquement. Entrez le mot de passe. ',
   HELP_4_Desc_5: 'Cliquez sur le bouton "Déverrouiller votre portefeuille". ',
@@ -11018,7 +11018,7 @@ fr.data = {
   HELP_4_Desc_13: 'La transaction sera soumise. Son identifiant sera affiché. Vous pouvez cliquer sur l\'identifiant pour la voir sur la blockchain. ',
 
   HELP_4CX_Title: '4) Comment puis-je envoyer de l\'Ether avec MyEtherWallet CX ? ',
-  HELP_4CX_Desc_1: 'D\'abord, vous devez ajouter un portefeuille. Ceci fait, deux possibilités s\'offrent à vous : la fonctionnalité "Envoi rapide" de l\'icône de l\'extension Chrome ou la page "Envoyer des Ether et des Tokens". ',
+  HELP_4CX_Desc_1: 'D\'abord, vous devez ajouter un portefeuille. Ceci fait, deux possibilités s\'offrent à vous : la fonctionnalité "Envoi rapide" de l\'icône de l\'extension Chrome ou la page "Envoyer des UBQ et des Tokens". ',
   HELP_4CX_Desc_2: 'Envoi rapide : ',
   HELP_4CX_Desc_3: 'Cliquez sur l\'icône de l\'extension Chrome. ',
   HELP_4CX_Desc_4: 'Cliquez sur le bouton "Envoi rapide". ',
@@ -11029,7 +11029,7 @@ fr.data = {
   HELP_4CX_Desc_9: 'Vérifiez que l\'adresse et le montant envoyé sont corrects. ',
   HELP_4CX_Desc_10: 'Entrez le mot de passe de ce portefeuille. ',
   HELP_4CX_Desc_11: 'Cliquez sur "Envoyez la transaction." ',
-  HELP_4CX_Desc_12: 'Avec la page "Envoyer des Ether et des Tokens" ',
+  HELP_4CX_Desc_12: 'Avec la page "Envoyer des UBQ et des Tokens" ',
 
   HELP_5_Title: '5) Comment puis-je lancer MyEtherWallet.com hors ligne/localement ? ',
   HELP_5_Desc_1: 'Vous pouvez lancer MyEtherWallet.com sur votre ordinateur au lieu de passer par les serveurs GitHub. Vous pouvez générer un portefeuille en restant totalement hors ligne et envoyer des transactions depuis la page "Transaction hors ligne". ',
@@ -11066,7 +11066,7 @@ fr.data = {
 
   HELP_8_Title: '8) Que se passe-t-il si votre site tombe ? ',
   HELP_8_Desc_1: 'MyEtherWallet n\'est pas un portefeuille sur le web. Vous n\'avez pas de login et rien n\'est jamais stocké sur nos serveurs. Ce n\'est qu\'une interface qui vous permet d\'interagir avec la blockchain. ',
-  HELP_8_Desc_2: 'Si MyEtherWallet.com tombe, vous devrez trouver un autre moyen (comme gubiq ou Ubiq Wallet / Fusion) pour faire la même chose. Mais vous n\'aurez pas à "récupérer" votre Ether depuis MyEtherWallet parce qu\'il ne se trouve pas dans MyEtherWallet. Il est chez vous, dans le portefeuille que vous avez généré par notre site. ',
+  HELP_8_Desc_2: 'Si MyEtherWallet.com tombe, vous devrez trouver un autre moyen (comme gubiq ou Ubiq Wallet / Fusion) pour faire la même chose. Mais vous n\'aurez pas à "récupérer" votre UBQ depuis MyEtherWallet parce qu\'il ne se trouve pas dans MyEtherWallet. Il est chez vous, dans le portefeuille que vous avez généré par notre site. ',
   HELP_8_Desc_3: 'Vous pouvez maintenant importer facilement votre clef privée non chiffrée et vos fichiers (chiffrés) au format Gubiq/Fusion, directement dans gubiq / Ubiq Wallet / Fusion. Voir question #12 ci-dessous. ',
   HELP_8_Desc_4: 'De plus, la probabilité que nous laissions tomber MyEtherWallet approche zéro. Il ne nous coûte presque rien de le maintenir comme nous n\'y stockons aucune information. Si le domaine venait à être perdu, le logiciel sera toujours disponible publiquement sur [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Vous pourrez y télécharger le ZIP et le faire tourner localement. ',
 
@@ -11075,7 +11075,7 @@ fr.data = {
   HELP_8CX_Desc_2: 'Cela dit, il est **très important** que vous sauvegardiez toutes les données de tous les portefeuilles générés par MyEtherWallet CX. De cette manière, si quoi que ce soit arrivait à MyEtherWallet CX ou à votre ordinateur, vous conserveriez toutes les informations nécessaires pour accéder à votre Ether. Voir #2a pour la sauvegarde de vos portefeuilles. ',
   HELP_8CX_Desc_3: 'Si, pour une raison quelconque, MyEtherWallet CX disparaissait du Chrome Store, vous pourrez en trouver le source sur Github et le charger manuellement. Voir #5 ci-dessus. ',
 
-  HELP_9_Title: '9) La page "Envoyer des Ether et des Tokens" est-elle hors ligne ? ',
+  HELP_9_Title: '9) La page "Envoyer des UBQ et des Tokens" est-elle hors ligne ? ',
   HELP_9_Desc_1: 'Non. Elle a besoin de l\'internet pour obtenir le prix actuel du gaz, le nonce de votre compte et pour émettre la transaction (c\'est-à-dire "envoyer"). Cependant, elle n\'envoie que la transaction signée. Votre clef privée reste en sécurité chez vous. Nous fournissons maintenant aussi une page "Transaction hors ligne" pour vous permettre de conserver en permanence vos clefs privées sur une machine hors ligne. ',
 
   HELP_10_Title: '10) Comment puis-je faire une transaction hors ligne ? ',
@@ -11123,7 +11123,7 @@ fr.data = {
   HELP_12_Desc_28: 'La prochaine fois que vous ouvrirez l\'application Ubiq Wallet, votre compte sera listé sous "Accounts". ',
 
   HELP_13_Title: '13) Que signifie « Fonds insuffisants. Le compte d\'où vous essayez d\'envoyer une transaction ne possède pas assez de fonds. Requis : XXXXXXXXXXXXXXXXXXX, reçu : XXXXXXXXXXXXXXXXXXX. » ? ',
-  HELP_13_Desc_1: 'Cela signifie que vous n\'avez pas assez d\'Ether sur votre compte pour couvrir les coûts en gaz. Chaque transaction (y compris pour les tokens et les contrats) demandent du gaz, et ce gaz est payé en Ether. Le nombre affiché est le montant requis pour couvrir le coût de la transaction en Wei. Prenez ce nombre, divisez-le par `1000000000000000000` et soustrayez la somme en Ether que vous essayiez d\'envoyer (si vous tentiez d\'envoyer de l\'Ether). Cela vous donnera le montant en Ether dont vous avez besoin pour que le compte effectue la transaction. ',
+  HELP_13_Desc_1: 'Cela signifie que vous n\'avez pas assez d\'Ether sur votre compte pour couvrir les coûts en gaz. Chaque transaction (y compris pour les tokens et les contrats) demandent du gaz, et ce gaz est payé en Ether. Le nombre affiché est le montant requis pour couvrir le coût de la transaction en Wei. Prenez ce nombre, divisez-le par `1000000000000000000` et soustrayez la somme en UBQ que vous essayiez d\'envoyer (si vous tentiez d\'envoyer de l\'Ether). Cela vous donnera le montant en UBQ dont vous avez besoin pour que le compte effectue la transaction. ',
 
   HELP_14_Title: '14) Certains sites randomisent (initialisent) la génération de clef privée par les mouvements de la sours. Ce n\'est pas le cas de MyEtherWallet.com. La génération de nombres aléatoires de MyEtherWallet est-elle sûre ? ',
   HELP_14_Desc_1: 'Bien que l\'interception des mouvement de la souris soit jugée attractive par beaucoup, et que nous en comprenions les raisons, la réalité est que window.crypto assure plus d\'entropie que les mouvements de votre souris. L\'utilisation de ces mouvements est sûre mais nous (ainsi que de nombreux projets crypto) avons de bonnes raisons de croire en window.crypto. De plus, MyEtherWallet.com peut être utilisé sur des périphériques tactiles. Voici une [conversation entre un redditor rageur et Vitalik Buterin sur les mouvements de souris et window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) et voici [les spécifications w3 de window.crypto](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
@@ -11148,7 +11148,7 @@ fr.data = {
   HELP_21_Title: '21) N\'importe qui ne peut-il pas prendre une clef privée au hasard, chercher un solde et l\'envoyer à sa propre adresse ? ',
   HELP_21_Desc_1: 'Version courte : oui, mais trouver un compte avec un solde prendrait plus longtemps que la durée de l\'univers... donc... non. ',
   HELP_21_Desc_2: 'Version longue : Ethereum est basé sur la [cryptographie à clef publique](https://en.wikipedia.org/wiki/Public-key_cryptography), plus précisément la [cryptographie des courbes elliptiques (ECC)](https://eprint.iacr.org/2013/734.pdf) qui est très couramment employée, pas uniquement dans Ethereum. La plupart des serveurs sont protégés par les ECC. Bitcoin les emploie ainsi que SSH, TLS et bien d\'autres protocoles. Dans le cas spécifique d\'Ethereum, les clefs font 256 bits et sont plus fortes que celles en 128 et 192 bits, encore très employées et toujours considérées comme sûres par les experts. ',
-  HELP_21_Desc_3: 'Vous avez une clef privée et une clef publique. La clef privée peut servir à dériver la clef publique mais l\'inverse est impossible. Le fait que l\'internet et le monde entier utilise ce système cryptographique signifie que, s\'il existait un moyen de dériver la clef privée de la clef publique, le risque que courrait votre Ether serait le moindre des problèmes de tout le monde. ',
+  HELP_21_Desc_3: 'Vous avez une clef privée et une clef publique. La clef privée peut servir à dériver la clef publique mais l\'inverse est impossible. Le fait que l\'internet et le monde entier utilise ce système cryptographique signifie que, s\'il existait un moyen de dériver la clef privée de la clef publique, le risque que courrait votre UBQ serait le moindre des problèmes de tout le monde. ',
   HELP_21_Desc_4: 'Cela dit, OUI : si quelqu\'un possède votre clef privée, il peut envoyer de l\'Ether depuis votre compte, de même que si une personne a le mot de passe de votre email, elle peut lire des mails ou en envoyer, ou si c\'est le mot de passe de votre compte en banque, elle peut faire des virements. Vous pouvez télécharger la versoin KEystore de votre clef privée qui est la clef privée chiffrée avec un mot de passe. Cela ressemble à avoir un mot de passe protégé par un autre mot de passe. ',
   HELP_21_Desc_5: 'Et OUI, en théorie, on peut taper une chaîne de 64 caractères hexadécimaux jusqu\'à en trouver un qui correspond. Il est d\'ailleurs possible d\'écrire un programme qui vérifie très rapidement des clefs privée aléatoires. C\'est ce que l\'on appelle utiliser la "brute force" ou miner des clefs privées. Beaucoup de monde y a pensé très fort et très longtemps. Quelques serveurs haut de gamme peuvent vérifier plus de 1 million de clefs par seconde. Pourtant, même ce chiffre ne donnerait pas accès à un compte suffisamment approvisionné pour en valoir la chandelle ; il est bien plus probable que vous, vos enfant et vos petits-enfants mourront avant d\'obtenir une correspondance. ',
   HELP_21_Desc_6: 'Si vous connaissez un peu Bitcoin, [ceci remettra les choses en perspective :](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *Pour illustrer l\'improbabilité de tout ceci : supposons quqe chaque satoshi de chaque bitcoin qui sera jamais produit soit affecté à sa propre clef privée distincte.  La probabilité que, parmi ces clefs, s\'en trouvent deux qui correspondent à la même adresse serait d\'environ 1 sur 100 quintillons. ',
@@ -11293,8 +11293,8 @@ hu.data = {
   /* Header */
   MEW_Warning_1: 'Mindig ellenőrizd az URL-t mielőtt megpróbálod elérni a tárcádat vagy új tárcát hozol létre. Óvakodj az adathalász oldalalaktól! ',
   CX_Warning_1: 'Győződj meg róla, hogy van **külső adatmentésed** minden tárcáról, amit itt tárolsz. Több dolog is történhet, ami adatvesztést eredményezhet a Chrome Bővítményben, többek között a Bővítmény törlése vagy újratelepítése. A bővítmény egyszerű módja annak, hogy elérd a tárcáidat, de **nem** annak, hogy elmentsd azokat. ',
-  MEW_Tagline: 'Nyílt forrású JavaScript-alapú, Kliens-oldali Ether Tárca ',
-  CX_Tagline: 'Nyílt forrású JavaScript-alapú, Kliens-oldali Ether Tárca Chrome Bővítmény ',
+  MEW_Tagline: 'Nyílt forrású JavaScript-alapú, Kliens-oldali UBQ Tárca ',
+  CX_Tagline: 'Nyílt forrású JavaScript-alapú, Kliens-oldali UBQ Tárca Chrome Bővítmény ',
 
   /* Footer */
   FOOTER_1: 'Egy nyílt forrású, javascript-alapú, kliens-oldali eszköz Ethereum Tárcák létrehozására és tranzakicók végrehajtására. ',
@@ -11358,7 +11358,7 @@ hu.data = {
   BULK_Label_2: 'Tárcák generálása ',
   BULK_SuccessMsg: 'Sikerült! A tárcáid legenerálódtak. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Erre a címre ',
   SEND_amount: 'Küldendő összeg ',
   SEND_amount_short: 'Összeg ',
@@ -11659,7 +11659,7 @@ hu.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -11716,13 +11716,13 @@ hu.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -11850,7 +11850,7 @@ id.data = {
   NAV_Multisig: 'Multisig ',
   NAV_MyWallets: 'Dompet Saya ',
   NAV_Offline: 'Kirim Offline ',
-  NAV_SendEther: 'Kirim Ether dan Tokens ',
+  NAV_SendEther: 'Kirim UBQ dan Tokens ',
   NAV_SendTokens: 'Kirim Token ',
   NAV_SignMsg: 'Penandaan Pesan ',
   NAV_ViewWallet: 'Lihat Info Dompet ',
@@ -11863,7 +11863,7 @@ id.data = {
   x_CSV: 'File CSV (tidak ter-enkripsi) ',
   x_Download: 'Unduh ',
   x_Json: 'File JSON (tidak ter-enkripsi) ',
-  x_JsonDesc: 'Ini adalah "Private Key" Anda dalam format JSON yang tidak ter-enkripsi. Tidak diperlukan password dan siapapun yang memiliki JSON Anda dapat mengakses dompet dan Ether Anda tanpa password. ',
+  x_JsonDesc: 'Ini adalah "Private Key" Anda dalam format JSON yang tidak ter-enkripsi. Tidak diperlukan password dan siapapun yang memiliki JSON Anda dapat mengakses dompet dan UBQ Anda tanpa password. ',
   x_Keystore: 'File Keystore (UTC / JSON · Format yang direkomendasikan · Ter-enkripsi) ',
   x_Keystore2: 'File Keystore (UTC / JSON) ',
   x_KeystoreDesc: 'File Keystore ini sesuai dengan format yang dipakai Fusion sehingga memudahkan untuk diimpor di kemudian hari. File ini yang disarankan untuk di unduh dan di backup. ',
@@ -11927,7 +11927,7 @@ id.data = {
   ADD_Label_2: 'Buat Alias: ',
   ADD_Label_3: 'File Dompet anda ter-enkripsi. Masukkan password ',
   ADD_Label_4: 'Tambah akun untuk dilihat ',
-  ADD_Warning_1: 'Akun untuk "dilihat" dapat ditambahkan tanpa menggunakan private key. Namun berarti tidak ada akses ke dompet tersebut dan transfer Ether tidak bisa dilakukan. ',
+  ADD_Warning_1: 'Akun untuk "dilihat" dapat ditambahkan tanpa menggunakan private key. Namun berarti tidak ada akses ke dompet tersebut dan transfer UBQ tidak bisa dilakukan. ',
   ADD_Label_5: 'Masukkan alamat ',
   ADD_Label_6: 'Unlock dompet ',
   ADD_Label_6_short: 'Unlock ',
@@ -11962,7 +11962,7 @@ id.data = {
   BULK_Label_2: 'Buat Dompet ',
   BULK_SuccessMsg: 'Sukses! Dompet sudah berhasil dibuat. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Alamat tujuan ',
   SEND_amount: 'Jumlah untuk dikirim ',
   SEND_amount_short: 'Jumlah ',
@@ -11978,7 +11978,7 @@ id.data = {
   SENDModal_Content_1: 'Anda akan mengirim ',
   SENDModal_Content_2: 'ke alamat ',
   SENDModal_Content_3: 'Apakah ini benar? ',
-  SENDModal_Content_4: 'CATATAN: Jika terjadi Error, kemungkinan Anda harus menambah Ether ke akun Anda untuk menutup biaya gas dan pengiriman. Gas dibayar dalam Ether. ',
+  SENDModal_Content_4: 'CATATAN: Jika terjadi Error, kemungkinan Anda harus menambah UBQ ke akun Anda untuk menutup biaya gas dan pengiriman. Gas dibayar dalam Ether. ',
   SENDModal_No: 'Batalkan! ',
   SENDModal_Yes: 'Ya! Laksanakan Transaksi-nya. ',
 
@@ -12143,15 +12143,15 @@ id.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -12163,7 +12163,7 @@ id.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -12179,7 +12179,7 @@ id.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -12188,9 +12188,9 @@ id.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
-  HELP_4_Desc_2: 'Navigate to the "Kirim Ether dan Tokens" page. ',
+  HELP_4_Desc_2: 'Navigate to the "Kirim UBQ dan Tokens" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_4_Desc_4: 'If the wallet is encrypted, a text box will automatically appear. Enter the password. ',
   HELP_4_Desc_5: 'Click the "Unlock Wallet" button. ',
@@ -12202,8 +12202,8 @@ id.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Kirim Ether dan Tokens" page. ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Kirim UBQ dan Tokens" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
   HELP_4CX_Desc_4: 'Click the "QuickSend" button. ',
@@ -12214,7 +12214,7 @@ id.data = {
   HELP_4CX_Desc_9: 'Verify the address and the amount you are sending is correct. ',
   HELP_4CX_Desc_10: 'Enter the password for that wallet. ',
   HELP_4CX_Desc_11: 'Click "Send Transaction." ',
-  HELP_4CX_Desc_12: 'Using "Kirim Ether dan Tokens" Page ',
+  HELP_4CX_Desc_12: 'Using "Kirim UBQ dan Tokens" Page ',
 
   HELP_5_Title: '5) How do I run MyEtherWallet.com offline/locally? ',
   HELP_5_Desc_1: 'You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page. ',
@@ -12251,7 +12251,7 @@ id.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -12260,7 +12260,7 @@ id.data = {
   HELP_8CX_Desc_2: 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
   HELP_8CX_Desc_3: 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
-  HELP_9_Title: '9) Is the "Kirim Ether dan Tokens" page offline? ',
+  HELP_9_Title: '9) Is the "Kirim UBQ dan Tokens" page offline? ',
   HELP_9_Desc_1: 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
 
   HELP_10_Title: '10) How do I make an offline transaction? ',
@@ -12308,13 +12308,13 @@ id.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -12505,7 +12505,7 @@ it.data = {
   ADD_Label_2: 'Crea un nome: ',
   ADD_Label_3: 'Il portafoglio è crittografato. Inserire la password ',
   ADD_Label_4: 'Aggiungi un conto da osservare ',
-  ADD_Warning_1: 'Puoi aggiungere qualunque conto da "osservare" nella scheda dei portafogli senza caricare una chiave privata. Ciò ** non ** significa che avrai accesso a quel portafoglio, né che potrai trasferire gli Ether lì contenuti. ',
+  ADD_Warning_1: 'Puoi aggiungere qualunque conto da "osservare" nella scheda dei portafogli senza caricare una chiave privata. Ciò ** non ** significa che avrai accesso a quel portafoglio, né che potrai trasferire gli UBQ lì contenuti. ',
   ADD_Label_5: 'Inserisci l\'indirizzo ',
   ADD_Label_6: 'Sblocca portafoglio ',
   ADD_Label_6_short: 'Sblocca ',
@@ -12525,7 +12525,7 @@ it.data = {
   BULK_Label_2: 'Genera portafogli ',
   BULK_SuccessMsg: 'Perfetto! I tuoi portafogli sono stati generati. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Indirizzo destinatario ',
   SEND_amount: 'Importo da inviare ',
   SEND_amount_short: 'Importo ',
@@ -13013,8 +13013,8 @@ ja.data = {
   /* Header */
   MEW_Warning_1: 'ウォレットを操作したり新しいウォレットを作成する前に、必ずURLを確認してください。詐欺サイトに御注意ください！ ',
   CX_Warning_1: '必ずここに保管するすべてのウォレットの「外部バックアップ」を作成してください。このChrome Extensionでは、再導入などで、データが保存されずの消失することが頻繁に起こります。このエクステンションは容易な操作を提供するのみで、「バックアップ」は行いません。 ',
-  MEW_Tagline: 'オープンソース JavaScript クライアントサイド Ether ウォレット ',
-  CX_Tagline: 'オープンソース JavaScript クライアントサイド Ether ウォレット Chrome Extension ',
+  MEW_Tagline: 'オープンソース JavaScript クライアントサイド UBQ ウォレット ',
+  CX_Tagline: 'オープンソース JavaScript クライアントサイド UBQ ウォレット Chrome Extension ',
 
   /* Footer */
   FOOTER_1: 'イサリアムウォレットの作成とトランザクション実行のためのオープンソース、javascript、 クライアントサイドツール。 ',
@@ -13098,7 +13098,7 @@ ja.data = {
   BULK_Label_2: '複数ウォレットを作成する ',
   BULK_SuccessMsg: '成功！ウォレットが作成されました。 ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: '宛先アドレス： ',
   SEND_amount: '送出数量： ',
   SEND_amount_short: '数量 ',
@@ -13323,15 +13323,15 @@ ja.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -13343,7 +13343,7 @@ ja.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -13359,7 +13359,7 @@ ja.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -13368,7 +13368,7 @@ ja.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
   HELP_4_Desc_2: 'Navigate to the "Ether送出 トークン送出" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -13382,7 +13382,7 @@ ja.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
   HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Ether送出 トークン送出" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
@@ -13431,7 +13431,7 @@ ja.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -13488,13 +13488,13 @@ ja.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -13606,7 +13606,7 @@ nl.data = {
   NAV_Multisig: 'Multisig ',
   NAV_MyWallets: 'Mijn Wallets ',
   NAV_Offline: 'Verzend Offline ',
-  NAV_SendEther: 'Verzend Ether en Tokens ',
+  NAV_SendEther: 'Verzend UBQ en Tokens ',
   NAV_SendTokens: 'Verzend Tokens ',
   NAV_SignMsg: 'Onderteken bericht ',
   NAV_Swap: 'Omwisselen ',
@@ -13620,7 +13620,7 @@ nl.data = {
   x_CSV: 'CSV bestand (onverlseuteld) ',
   x_Download: 'Download ',
   x_Json: 'JSON Bestand (onversleuteld) ',
-  x_JsonDesc: 'Dit is het onversleutelde, JSON formaat van je prive sleutel. Dit betekend dat je het wachtwoord niet nodig hebt, maar ook dat een ieder die je JSON bestand vind toegang heeft tot je wallet & Ether zonder wachtwoord. ',
+  x_JsonDesc: 'Dit is het onversleutelde, JSON formaat van je prive sleutel. Dit betekend dat je het wachtwoord niet nodig hebt, maar ook dat een ieder die je JSON bestand vind toegang heeft tot je wallet & UBQ zonder wachtwoord. ',
   x_Keystore: 'Keystore Bestand (UTC / JSON · Aangeraden · versleuteld) ',
   x_Keystore2: 'Keystore Bestand (UTC / JSON) ',
   x_KeystoreDesc: 'Dit Keystore bestand voldoet aan het formaat zoals gebruikt door Fusion waardoor je het gemakkelijk kunt importeren in de toekomst. Dit is de aanbevolen methode voor download en back up. ',
@@ -13683,7 +13683,7 @@ nl.data = {
   ADD_Label_2: 'Verzin een Nickname: ',
   ADD_Label_3: 'Je wallet is versleuteld. Geef je wachtwoord ',
   ADD_Label_4: 'Voeg een te bekijken account toe ',
-  ADD_Warning_1: 'Je kunt elk account toevoegen als "bekijken" in het wallets tabblad zonder de prive sleutel te uploaden. Dit betekend ** niet ** dat je toegang hebt tot deze wallet, noch dat je er Ether vanuit kunt versturen. ',
+  ADD_Warning_1: 'Je kunt elk account toevoegen als "bekijken" in het wallets tabblad zonder de prive sleutel te uploaden. Dit betekend ** niet ** dat je toegang hebt tot deze wallet, noch dat je er UBQ vanuit kunt versturen. ',
   ADD_Label_5: 'Voor het Adres in ',
   ADD_Label_6: 'Ontsleutel je wallet ',
   ADD_Label_6_short: 'Ontsleutel ',
@@ -13703,7 +13703,7 @@ nl.data = {
   BULK_Label_2: 'Genereer Wallets ',
   BULK_SuccessMsg: 'Gelukt! Je wallets zijn gegenereerd. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Aan Adres ',
   SEND_amount: 'Te verzenden bedrag ',
   SEND_amount_short: 'Bedrag ',
@@ -13915,15 +13915,15 @@ nl.data = {
   HELP_Desc: 'Zie je dat er iets mist? Of heb je een andere vraag? [Neem contact met ons op](mailto:myetherwallet@gmail.com), en we zullen niet alleen je vraag beantwoorden, maar ook deze help pagina bijwerken zodat deze nog nuttiger wordt voor toekomstige gebruikers! ',
   HELP_Remind_Title: 'Enkele herinneringen ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, en enkele onderliggende Javascript libraries waar we gebruik van maken zijn onderheving aan active ontwikkeling.** Hoewel we grondig testen & er inmiddels tienduizenden wallets succesvol zijn aangemaakt door mensen over de hele wereld, blijft er altijd een geringe kans dat iets er onverwachts optreedt waardoor je je ether kunt verliezen. Investeer alsjeblieft niet meer dan dat je bereid bent om te verliezen, en wees voorzichtig. Zou er onverhoopt toch iets gebeuren vinden we dat zeer spijtig, echter **zullen wij nooit verantwoordelijk zijn voor de verloren Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX zijn geen "web wallets". Je maakt bij ons geen account aan noch geef je ooit je Ether aan ons in bezit. Alle gegevens verlaten nooit je computer/je browser. We helpen je alleen gemakkelijk toegang te verkrijgen tot de blockchain zodat je er informatie in kunt opslaan en kunt uitlezen. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX zijn geen "web wallets". Je maakt bij ons geen account aan noch geef je ooit je UBQ aan ons in bezit. Alle gegevens verlaten nooit je computer/je browser. We helpen je alleen gemakkelijk toegang te verkrijgen tot de blockchain zodat je er informatie in kunt opslaan en kunt uitlezen. ',
   HELP_Remind_Desc_3: 'Als je je prive sleutel en wachtwoord niet opslaat, is er geen enkele manier om toegang tot je wallet te verkrijgen of het saldo dat het bevat. Maak back-up`s en bewaar deze op meerdere fysieke lokaties en dus niet alleen op je eigen computer! ',
 
   HELP_0_Title: '0) Ik ben nieuw. Waar begin ik? ',
-  HELP_0_Desc_1: 'MyEtherWallet geeft je de mogelijkheid om nieuwe wallets te genereren zodat je daarin je Ether kunt bewaren in plaat van op een exchange. Dit process vind volledig lokaal plaats, op je eigen computer en niet op onze servers. Daarom **ben je volledig zelf verantwoordelijk voor het veilig opslaan** van je via deze website aangemaakte wallets. ',
+  HELP_0_Desc_1: 'MyEtherWallet geeft je de mogelijkheid om nieuwe wallets te genereren zodat je daarin je UBQ kunt bewaren in plaat van op een exchange. Dit process vind volledig lokaal plaats, op je eigen computer en niet op onze servers. Daarom **ben je volledig zelf verantwoordelijk voor het veilig opslaan** van je via deze website aangemaakte wallets. ',
   HELP_0_Desc_2: 'Creer een nieuwe wallet. ',
   HELP_0_Desc_3: 'Maak een wallet back-up. ',
   HELP_0_Desc_4: 'Verrifieer dat je toegang hebt tot dit nieuwe wallet en dat je alle noodzakelijke informatie correct hebt opgeslagen. ',
-  HELP_0_Desc_5: 'Verzend Ether naar dit nieuwe wallet. ',
+  HELP_0_Desc_5: 'Verzend UBQ naar dit nieuwe wallet. ',
 
   HELP_1_Title: '1) Hoe creer ik een nieuw wallet? ',
   HELP_1_Desc_1: 'Ga naar de "Genereer Wallet" pagina. ',
@@ -13951,7 +13951,7 @@ nl.data = {
   HELP_2b_Desc_8: 'Ga naar de "Bekijk Wallet Info" pagina en voer je prive sleutel / wachtwoord in om zeker te stellen dat ze correct zijn en dat je toegang hebt tot je wallet. Controleer dat het adres wat je opgeschreven hebt gelijk is. ',
 
   HELP_3_Title: '3) Hoe verifieer ik dat ik toegang hebt tot mijn nieuwe wallets? ',
-  HELP_3_Desc_1: 'Zorg **voordat je enige Ether naar je wallet verstuurd** dan je controleerd dat je er toegang toe hebt. ',
+  HELP_3_Desc_1: 'Zorg **voordat je enige UBQ naar je wallet verstuurd** dan je controleerd dat je er toegang toe hebt. ',
   HELP_3_Desc_2: 'Navigeer naar de "Bekijk Wallet Info" pagina. ',
   HELP_3_Desc_3: 'Navigeer naar de MyEtherWallet.com "Bekijk Wallet Info" pagina. ',
   HELP_3_Desc_4: 'Selecteer je wallet bestand -of- je prive sleutel en open je wallet. ',
@@ -13960,9 +13960,9 @@ nl.data = {
   HELP_3_Desc_7: 'Informatie over je wallet zal verschijnen. Zoek je account adres, naast een kleurrijk, cirkelvormig icoon. Dit icoon is een visuele voorstelling van je address. Zorg ervoor dat je zeker weet dat dit adres het adres is wat je opgeslagen hebt in je tekst document en op je papieren wallet. ',
   HELP_3_Desc_8: 'Als je van plan bent om er een grote hoeveelheid ether op na te houden, raden we je aan om eerst een kleine hoeveelheid ether naar je nieuwe wallet te versturen voordat je er een grotere hoeveelheid ether naar stuurt. Stuur bijvoorbeeld 0.001 ether naar je nieuwe wallet, verkrijg vervolgens toegang tot dit wallet, stuur die zelfde 0.001 ether naar een ander adres, en controleer dat alles soepel verloopt. ',
 
-  HELP_4_Title: '4) Hoe stuur ik Ether van het ene wallet naar het ander? ',
+  HELP_4_Title: '4) Hoe stuur ik UBQ van het ene wallet naar het ander? ',
   HELP_4_Desc_1: 'Als je van plan ben om een grote hoeveelheid ether te versturen/ontvangen, raden we je aan om eerst te testen met een klein bedrag om er zeker van te zijn dat alles gaat zoals je verwacht. ',
-  HELP_4_Desc_2: 'Navigeer naar de "Verzend Ether en Tokens" pagina. ',
+  HELP_4_Desc_2: 'Navigeer naar de "Verzend UBQ en Tokens" pagina. ',
   HELP_4_Desc_3: 'Selecteer je wallet bestand -of- je prive sleutel en ontgrendel je wallet. ',
   HELP_4_Desc_4: 'Als je wallet gecodeerd (encrypted) is, zal er automatisch een extra invoer veld verschijnen. Voer je wachtwoord in. ',
   HELP_4_Desc_5: 'Klik op de "Ontsleutel Wallet" knop. ',
@@ -13974,8 +13974,8 @@ nl.data = {
   HELP_4_Desc_12: 'Een pop-up zal verschijnen. Controleer dat het bedrag en het adres waarnaar je gaat verzenden correct zijn. Klik vervolgens op de "Ja, ik weet het zeker! Maak de transactie." knop. ',
   HELP_4_Desc_13: 'De transactie zal worden verstuurt. Het TX ID zal worden weergegeven. Je kunt op dit TX ID klikken om het in de blockchain te bekijken. ',
 
-  HELP_4CX_Title: '4) Hoe verzend ik Ether met MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'Ten eerste heb je een wallet nodig. Zodra je die hebt, heb je 2 opties: De "VerzendSnel" functionalitiet vanuit het Chrome Extensie icoon of de "Verzend Ether en Tokens" pagina. ',
+  HELP_4CX_Title: '4) Hoe verzend ik UBQ met MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'Ten eerste heb je een wallet nodig. Zodra je die hebt, heb je 2 opties: De "VerzendSnel" functionalitiet vanuit het Chrome Extensie icoon of de "Verzend UBQ en Tokens" pagina. ',
   HELP_4CX_Desc_2: 'VerzendSnel: ',
   HELP_4CX_Desc_3: 'Klik op het Chrome Extensie icoon. ',
   HELP_4CX_Desc_4: 'Klik op de "VerzendSnel" knop. ',
@@ -13986,7 +13986,7 @@ nl.data = {
   HELP_4CX_Desc_9: 'Controleer dat het bedrag en het adres waarnaar je gaat verzenden correct zijn. ',
   HELP_4CX_Desc_10: 'Voer het wachtwoord van je wallet in. ',
   HELP_4CX_Desc_11: 'Klik "Verzend Transactie." ',
-  HELP_4CX_Desc_12: 'Maak gebruik van de "Verzend Ether en Tokens" Pagina ',
+  HELP_4CX_Desc_12: 'Maak gebruik van de "Verzend UBQ en Tokens" Pagina ',
 
   HELP_5_Title: '5) Hoe voer ik MyEtherWallet.com offline/lokaal uit? ',
   HELP_5_Desc_1: 'Je kunt MyEtherWallet.com uitvoeren op je eigen computer in plaats van op de GitHub servers. Je kunt een wallet volledig offline genereren en transacties versturen met behulp van de "Offline Transactie" pagina. ',
@@ -14023,16 +14023,16 @@ nl.data = {
 
   HELP_8_Title: '8) Wat gebeurd er als deze website stopt? ',
   HELP_8_Desc_1: 'MyEtherWallet is geen web wallet. Je hoeft niet in te loggen en er zal nooit iets van je op onze servers worden bewaard. Onze website is enkel een interface om toegang te verkrijgen tot de blockchain. ',
-  HELP_8_Desc_2: 'Als MyEtherWallet.com er mee stopt, zul je een andere manier moeten zien te vinden (zoals gubiq of Ubiq Wallet / Fusion) om te doen wat wij doen. Maar wat je niet zult hoeven te doen is je Ether uit MyEtherWallet halen omdat het niet in MyEtherWallet zit. Je Ether zit in in welk wallet dan ook je op onze site hebt gegenereerd. ',
+  HELP_8_Desc_2: 'Als MyEtherWallet.com er mee stopt, zul je een andere manier moeten zien te vinden (zoals gubiq of Ubiq Wallet / Fusion) om te doen wat wij doen. Maar wat je niet zult hoeven te doen is je UBQ uit MyEtherWallet halen omdat het niet in MyEtherWallet zit. Je UBQ zit in in welk wallet dan ook je op onze site hebt gegenereerd. ',
   HELP_8_Desc_3: 'Je kunt je  onversleutelde (unencrypted) prive sleutel en je Gubiq/Fusion Formaat (encrypted) bestanden heel gemakkelijk en direct in gubiq / Ubiq Wallet / Fusion importeren. Zie onderstaande vraag #12. ',
   HELP_8_Desc_4: 'Daarnaast is de kans dat wij MyEtherWallet offline halen is miniem tot onmogelijk. Het kost ons vrijwel niets om de site in stand te houden omdat we geen informatie opslaan. Als we toch het domijn offline halen, is het ook altijd nog publiekelijk beschikbaar op [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Je kunt daar de ZIP downloaden en het lokaal draaien. ',
 
   HELP_8CX_Title: '8) Wat gebeurd er als MyEtherWallet CX verdwijnt? ',
   HELP_8CX_Desc_1: 'Ten eerste is alle je data op jouw computer opgeslagen, niet op onze servers. We snappen dat het verwarrend kan zijn, maar als je naar de Chrome Extensie kijkt, kijk je NIET naar dingen die ergens op onze servers staan opgeslagen - alles is bewaard op je eigen computer. ',
-  HELP_8CX_Desc_2: 'Dat gezegd hebbende, is het dan ook **erg belangrijk** dat je een back-up maakt van je wallets die met MyEtherWallet CX zijn gegenereerd. Als er iets met MyEtherWallet CX of jouw computer gebeurd blijft op die manier je wallet bewaard, en heb alle noodzakelijke informatie bij de hand om toegang tot je Ether te verkrijgen. Zie vraag #2a om te leren hoe een back-up van je wallet kunt maken. ',
+  HELP_8CX_Desc_2: 'Dat gezegd hebbende, is het dan ook **erg belangrijk** dat je een back-up maakt van je wallets die met MyEtherWallet CX zijn gegenereerd. Als er iets met MyEtherWallet CX of jouw computer gebeurd blijft op die manier je wallet bewaard, en heb alle noodzakelijke informatie bij de hand om toegang tot je UBQ te verkrijgen. Zie vraag #2a om te leren hoe een back-up van je wallet kunt maken. ',
   HELP_8CX_Desc_3: 'Als om wat voor reden dan ook MyEtherWallet CX verdwijnt van de Chrome Store, kunt je het altijd nog handmatig laden met de broncode van Github. Zie #5 hierboven. ',
 
-  HELP_9_Title: '9) Is de "Verzend Ether en Tokens" pagina offline? ',
+  HELP_9_Title: '9) Is de "Verzend UBQ en Tokens" pagina offline? ',
   HELP_9_Desc_1: 'Nee. De pagina heeft een internet verbinding nodig voor het bepalen van de actuele gas prijs, nonce van je account, en het versturen (broadcasten) van de transactie. Echter, het enige wat verstuurd wordt is je ondertekende transactie. Je prive sleutel blijft veilig bij je. We hebben nu ook een "Offline Transactie" pagina zodat je ervoor kunt zorgen dat je prive sleutels ten alle tijden op een offline/airgapped computer blijven. ',
 
   HELP_10_Title: '10) Hoe voer ik een offline transactie uit? ',
@@ -14080,13 +14080,13 @@ nl.data = {
   HELP_12_Desc_28: 'De volgende keer dat je de Ubiq Wallet applicatie opent, zal je account worden vermeld onder "Accounts". ',
 
   HELP_13_Title: '13) Wat betekend "Ontoereikend saldo. Het account waarvan je de transactie verstuurd bevat niet voldoende saldo. Vereist XXXXXXXXXXXXXXXXXXX en heeft: XXXXXXXXXXXXXXXX."? ',
-  HELP_13_Desc_1: 'Dit betekend dat je account onvoldoende Ether bevat om de kosten voor het vereiste gas te dekken. Elke transactie (inclusief token en contract transacties) vereisen gas en dit gas wordt betaald in Ether. Het weergegeven nummer is de hoeveelheid die voor de transactie vereist in Wei. Neem dit nummer, deel het door `1000000000000000000`, en trek daarvan de hoeveelheid Ether die je probeerde te verzenden af (als je probeerde Ether te versturen). Dit geeft je de hoeveelheid Ether die je dient te versturen naar het account om de transactie te maken. ',
+  HELP_13_Desc_1: 'Dit betekend dat je account onvoldoende UBQ bevat om de kosten voor het vereiste gas te dekken. Elke transactie (inclusief token en contract transacties) vereisen gas en dit gas wordt betaald in Ether. Het weergegeven nummer is de hoeveelheid die voor de transactie vereist in Wei. Neem dit nummer, deel het door `1000000000000000000`, en trek daarvan de hoeveelheid UBQ die je probeerde te verzenden af (als je probeerde UBQ te versturen). Dit geeft je de hoeveelheid UBQ die je dient te versturen naar het account om de transactie te maken. ',
 
   HELP_14_Title: '14) Sommige sites zorgen voor een willekeurigheid (seed) bij het genereren van de prive sleutel via muis bewegingen. MyEtherWallet.com doet dit niet. Is de wikkeleurigheid (random number generation) van MyEtherWallet wel veilig? ',
   HELP_14_Desc_1: 'Hoewel het bewegen van de muis een slimme truck is en we begrijpen waarom mensen dit een goed idee vinden, is de werkelijkheid dat "window.crypto" een grotere willekeurigheid (hogere entropie) zeker stelt dan je muisbewegingen. De muisbewegingen zijn niet onveilig, echter wij (en enorm veel andere crypto experimenten) geloven in "window.crypto". Bovendien kan MyEtherWallet.com gebruikt worden op touchscreen apparaten. Hier vind je een [conversatie tussen een boze redditor en Vitalik Buterin over de muisbewegingen v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Hoe komt het dat het wallet wat ik zojuist heb aangemaakt niet in de blockchain explorer terug te vinden is? (bijvoorbeeld: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Adresen zullen enkel in een blockchain explorer worden weergegeven zodra er activiteit op een account heeft plaats gevonden. Bijvoorbeeld, zodra je er wat Ether naar toe verzonden hebt. ',
+  HELP_15_Desc_1: 'Adresen zullen enkel in een blockchain explorer worden weergegeven zodra er activiteit op een account heeft plaats gevonden. Bijvoorbeeld, zodra je er wat UBQ naar toe verzonden hebt. ',
 
   HELP_16_Title: '16) Hoe check ik het saldo van mijn account? ',
   HELP_16_Desc_1: 'Je kunt hiervoor een blockchain explorer gebruiken zoals bijvoorbeeld [etherscan.io](http://etherscan.io/). Plak daar je adres in de zoekbalk en je adres en transactie geschiedenis zullen worden getoond. Bekijk bijvoobeeld hoe ons [donatie account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8)  eruit ziet op etherscan.io ',
@@ -14200,7 +14200,7 @@ no.data = {
   NAV_Multisig: 'Multisig ',
   NAV_MyWallets: 'Mine lommebøker ',
   NAV_Offline: 'Send Offline ',
-  NAV_SendEther: 'Send Ether & Tokens ',
+  NAV_SendEther: 'Send UBQ & Tokens ',
   NAV_SendTokens: 'Send Tokens ',
   NAV_SignMsg: 'Signér Melding ',
   NAV_ViewWallet: 'Vis lommebok-info ',
@@ -14309,7 +14309,7 @@ no.data = {
   BULK_Label_2: 'Opprett lommebøker ',
   BULK_SuccessMsg: 'Suksess! Lommebøkene dine har blitt opprettet. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Til-adresse ',
   SEND_amount: 'Beløp som skal sendes ',
   SEND_amount_short: 'Beløp ',
@@ -14519,7 +14519,7 @@ no.data = {
   HELP_0_Desc_5: 'Overfør ether til den nye lommeboken. ',
 
   HELP_1_Title: '1) Hvordan oppretter jeg en ny lommebok? ',
-  HELP_1_Desc_1: 'Gå til "Send Ether & Tokens"-siden. ',
+  HELP_1_Desc_1: 'Gå til "Send UBQ & Tokens"-siden. ',
   HELP_1_Desc_2: 'Gå til "Legg til lommebok"-siden & velg "Opprett ny lommebok" ',
   HELP_1_Desc_3: 'Oppgi et sterkt passord. Hvis du ikke tror du klarer å huske det, skriv det opp på et sikkert sted. Du kommer til å trenge dette passordet for å sende transaksjoner. ',
   HELP_1_Desc_4: 'Klikk "OPPRETT". ',
@@ -14555,7 +14555,7 @@ no.data = {
 
   HELP_4_Title: '4) Hvordan sender jeg ether fra en lommebok til en annen? ',
   HELP_4_Desc_1: 'Hvis du planlegger å flytte et stort ether-beløp, bør du testsende et lite beløp først for å forsikre deg om at alt går som planlagt. ',
-  HELP_4_Desc_2: 'Naviger til "Send Ether & Tokens"-siden. ',
+  HELP_4_Desc_2: 'Naviger til "Send UBQ & Tokens"-siden. ',
   HELP_4_Desc_3: 'Velg lommebok-filen din, eller din private nøkkel, og lås opp lommeboken din. ',
   HELP_4_Desc_4: 'Hvis lommeboken er kryptert, vil det automatisk dukke opp en tekstboks hvor du må oppgi passordet ditt. ',
   HELP_4_Desc_5: 'Klikk på "Lås opp lommebok"-knappen. ',
@@ -14568,7 +14568,7 @@ no.data = {
   HELP_4_Desc_13: 'Transaksjonen vil bli sendt inn. Transaksjons-ID-en (TX-ID) vil vises. Du kan klikke på TX ID for å se den på blokkjeden. ',
 
   HELP_4CX_Title: '4) Hvordan sender jeg ether med MyEtherWallet CX (Chrome-utvidelsen)? ',
-  HELP_4CX_Desc_1: 'Først må du legge til en lommebok. Når du har gjort det, har du 2 muligheter: den kjappe "Send"-funksjonaliteten fra Chrome-utvidelsesikonet eller "Send Ether & Tokens"-siden. ',
+  HELP_4CX_Desc_1: 'Først må du legge til en lommebok. Når du har gjort det, har du 2 muligheter: den kjappe "Send"-funksjonaliteten fra Chrome-utvidelsesikonet eller "Send UBQ & Tokens"-siden. ',
   HELP_4CX_Desc_2: 'Send: ',
   HELP_4CX_Desc_3: 'Klikk Chrome-utvidelsesikonet. ',
   HELP_4CX_Desc_4: 'Klikk "Send"-knappen. ',
@@ -14579,7 +14579,7 @@ no.data = {
   HELP_4CX_Desc_9: 'Verifiser at adressen og beløpet er korrekt. ',
   HELP_4CX_Desc_10: 'Oppgi passordet for lommeboken. ',
   HELP_4CX_Desc_11: 'Klikk "Send transaksjon." ',
-  HELP_4CX_Desc_12: 'Bruk "Send Ether & Tokens"-siden ',
+  HELP_4CX_Desc_12: 'Bruk "Send UBQ & Tokens"-siden ',
 
   HELP_5_Title: '5) Hvordan kan jeg bruke MyEtherWallet.com offline/lokalt? ',
   HELP_5_Desc_1: 'Du kan bruke MyEtherWallet.com på datamaskinen din i stedet for fra GitHub-serverne. Du kan opprette en lommebok fullstendig frakoblet fra internett, og sende transaksjoner fra "Send offline"-siden. ',
@@ -14598,7 +14598,7 @@ no.data = {
 
   HELP_7_Title: '7) Hvordan sender jeg token & legger til flere typer token? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) er en flott måte å utforske token på, og for å finne informasjon om antall desimaler for en token. ',
-  HELP_7_Desc_1: 'Naviger til "Send Ether & Tokens"-siden. ',
+  HELP_7_Desc_1: 'Naviger til "Send UBQ & Tokens"-siden. ',
   HELP_7_Desc_2: 'Lås opp lommeboken din. ',
   HELP_7_Desc_3: 'Oppgi adressen som du vil sende til i "Til adresse:"-feltet. ',
   HELP_7_Desc_4: 'Oppgi beløpet som du vil sende. ',
@@ -14625,7 +14625,7 @@ no.data = {
   HELP_8CX_Desc_2: 'Når det er sagt, så er det **svært viktig** at du sikkerhetskopierer all din informasjon for alle lommebøkene som du har opprettet med MyEtherWallet CX. På den måten vil du fortsatt ha all nødvendig informasjon for å få tilgang til eteren din selv om noe skulle hende med MyEtherWallet CX eller datamaskinen din. Se spørsmål #2a ang. hvordan du sikkerhetskopierer lommebøkene dine. ',
   HELP_8CX_Desc_3: 'Hvis MyEtherWallet CX av en eller annen grunn skulle forsvinne fra Chrome Store, så kan du finne kildekoden på Github og laste den inn manuelt. Se #5 ovenfor. ',
 
-  HELP_9_Title: '9) Er "Send Ether & Tokens"-siden offline? ',
+  HELP_9_Title: '9) Er "Send UBQ & Tokens"-siden offline? ',
   HELP_9_Desc_1: 'Nei. Den trenger internett for å kunne skaffe den aktuelle gas-prisen, "nonce" for kontoen din, og for å kunne kringkaste transaksjonen (aka "send"). Imidlertid sender den kun den signerte transaksjonen. Din private nøkkel forblir i sikkerhet hos deg. Vi tilbyr nå også en "Offline transaction"-side slik at du kan forsikre deg om at dine private nøkler til enhver tid kun befinner seg på en offline/frakoblet datamaskin. ',
 
   HELP_10_Title: '10) Hvordan lager jeg en frakoblet/offline transaksjon? ',
@@ -14639,7 +14639,7 @@ no.data = {
   HELP_10_Desc_8: 'Velg lommebokfilen din, eller din private nøkkel, og lås opp lommeboken din. ',
   HELP_10_Desc_9: 'Trykk på "GENERER SIGNERT TRANSAKSJON"-knappen. ',
   HELP_10_Desc_10: 'Datafeltet under denne knappen vil fylles med din signerte transaksjon. Kopier denne og flytt den tilbake til din tilkoblede datamaskin. ',
-  HELP_10_Desc_11: 'Lim inn den signerte transaksjonen i tekstfeltet i steg #3 på den tilkoblede maskinen og klikk "Send Ether & Tokens". Dette vil kringkaste transaksjonen din. ',
+  HELP_10_Desc_11: 'Lim inn den signerte transaksjonen i tekstfeltet i steg #3 på den tilkoblede maskinen og klikk "Send UBQ & Tokens". Dette vil kringkaste transaksjonen din. ',
 
   HELP_12_Title: '12) Hvordan kan jeg importere en lommebok opprettet med MyEtherWallet til gubiq / Ubiq Wallet / Fusion? ',
   HELP_12_Desc_1: 'Ved å bruke en Gubiq/Fusion JSON-fil fra MyEtherWallet v2+.... ',
@@ -14673,13 +14673,13 @@ no.data = {
   HELP_12_Desc_28: 'Neste gangen du åpner "Ubiq Wallet"-programmet, vil kontoen din være listet under "Accounts". ',
 
   HELP_13_Title: '13) Hva betyr "Utilstrekkelige midler. Kontoen du prøver å sende transaksjon fra har ikke nok midler. Påkrevd XXXXXXXXXXXXXXXXXXX og fått: XXXXXXXXXXXXXXXX." ? ',
-  HELP_13_Desc_1: 'Dette betyr at du ikke har nok Ether på kontoen din til å dekke gas-kostnaden. Hver transaksjon (inkludert token- og kontrakt-transaksjoner) krever gas, og gas betales med Ether. Tallet som vises er beløpet som kreves for å dekke transaksjonskostnaden i Wei (1 ETH = 10^18 Wei). Ta dette tallet, del det på `1000000000000000000`, og trekk fra Ether-beløpet som du prøvde å sende (hvis du prøvde å sende Ether). Dette vil gi deg Ether-beløpet som du mangler på (trenger å sende til) denne kontoen for å gjennomføre transaksjonen. ',
+  HELP_13_Desc_1: 'Dette betyr at du ikke har nok UBQ på kontoen din til å dekke gas-kostnaden. Hver transaksjon (inkludert token- og kontrakt-transaksjoner) krever gas, og gas betales med Ether. Tallet som vises er beløpet som kreves for å dekke transaksjonskostnaden i Wei (1 ETH = 10^18 Wei). Ta dette tallet, del det på `1000000000000000000`, og trekk fra Ether-beløpet som du prøvde å sende (hvis du prøvde å sende Ether). Dette vil gi deg Ether-beløpet som du mangler på (trenger å sende til) denne kontoen for å gjennomføre transaksjonen. ',
 
   HELP_14_Title: '14) Noen nettsider randomiserer genereringen av den private nøkkelen via musebevegelser. MyEtherWallet.com gjør ikke dette. Er metoden som MyEtherWallet bruker til å generere tilfeldige tall sikker? ',
   HELP_14_Desc_1: 'Selv om musebevegelses-metoden er smart og vi skjønner hvorfor folk liker den, så er realiteten at window.crypto sikrer mer entropi (tilfeldighet) enn musebevegelser. Musebevegelses-metoden er ikke usikker, men det er bare det at vi (og mange andre kryptoeksperter) har tro på window.crypto. I tillegg kan MyEtherWallet.com også benyttes på fingerstyrte enheter. Her er en [konversasjon mellom en sint redditor og Vitalik Buterin angående musebevegelser versus window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) og her er [window.crypto w3 spesifikasjonen](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Hvorfor har ikke kontoen jeg nettopp opprettet dukket opp i blokkjede-utforskeren? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Kontoer vil kun dukke opp i en blokkjede-utforsker når kontoen har hatt aktivitet&mdash;for eksempel, når du har overført Ether til den. ',
+  HELP_15_Desc_1: 'Kontoer vil kun dukke opp i en blokkjede-utforsker når kontoen har hatt aktivitet&mdash;for eksempel, når du har overført UBQ til den. ',
 
   HELP_16_Title: '16) Hvordan kan jeg sjekke saldoen på kontoen min? ',
   HELP_16_Desc_1: 'Du kan bruke en blokkjede-utforsker som [etherscan.io](http://etherscan.io/). Lim inn adressen i søkefeltet og den vil finne fram adressen og transaksjonshistorikken. For eksempel, her ser du hvordan vår [donasjonskonto](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) ser ut på etherscan.io ',
@@ -14695,10 +14695,10 @@ no.data = {
   HELP_20_Title: '20) Hvor er pre-sale lommebok-filen? ',
   HELP_20_Desc_1: 'Der du lagret den. ;) Den ble også sendt deg på e-post, så sjekk der. Se etter fila som heter `"ethereum_wallet_backup.json"` og velg den fila. Denne fila vil være kryptert med et passord som du opprettet under "pre-sale"-kjøpet. ',
 
-  HELP_21_Title: '21) Kan ikke hvem som helst legge inn tilfeldige private nøkler, sjekke saldoen, og sende Ether til sin egen adresse? ',
-  HELP_21_Desc_1: 'Kortversjonen: ja, men å finne en konto som inneholder Ether ville tatt lengre tid enn universets levealder...så...nei. ',
+  HELP_21_Title: '21) Kan ikke hvem som helst legge inn tilfeldige private nøkler, sjekke saldoen, og sende UBQ til sin egen adresse? ',
+  HELP_21_Desc_1: 'Kortversjonen: ja, men å finne en konto som inneholder UBQ ville tatt lengre tid enn universets levealder...så...nei. ',
   HELP_21_Desc_2: 'Lang ELI5-versjon: Ethereum er basert på [Offentlig nøkkel-kryptografi](https://en.wikipedia.org/wiki/Public-key_cryptography), og mer spesifikt [Elliptic curve cryptography](https://eprint.iacr.org/2013/734.pdf), som er svært utbredt, ikke bare i Ethereum. De fleste servere er beskyttet via ECC. Bitcoin bruker den samme, likeså SSH og TLS og mange flere. Ethereum-nøklene er 256-bit nøkler, som er sterkere enn 128-bit og 192-bit, som også er mye brukt og fortsatt betraktes som sikre av ekspertene. ',
-  HELP_21_Desc_3: 'I denne har du en privat nøkkel og en offentlig nøkkel. Den private nøkkelen kan utlede den offentlige nøkkelen, men den offentlige nøkkelen kan ikke brukes for å finne den private nøkkelen. Det faktum at internett og verdens hemmeligheter bruker denne kryptografien betyr at hvis det blir funnet en måte å gå fra offentlige til private nøkler på, så vil dine tapte Ether være det minste av alles problemer. ',
+  HELP_21_Desc_3: 'I denne har du en privat nøkkel og en offentlig nøkkel. Den private nøkkelen kan utlede den offentlige nøkkelen, men den offentlige nøkkelen kan ikke brukes for å finne den private nøkkelen. Det faktum at internett og verdens hemmeligheter bruker denne kryptografien betyr at hvis det blir funnet en måte å gå fra offentlige til private nøkler på, så vil dine tapte UBQ være det minste av alles problemer. ',
   HELP_21_Desc_4: 'Når det er sagt, JA, hvis noen andre har din private nøkkel, så kan de såvisst sende ether fra din konto. Akkurat som hvis noen har passordet til e-posten din, så kan de lese og sende din e-post, eller passordet til bankkontoen din, så kan de overføre penger. Du kunne laste ned keystore-versjonen av den private nøkkelen din, som er den private nøkkelen som er kryptert med et passord. Dette blir som å ha et passord som er beskyttet av et annet passord. ',
   HELP_21_Desc_5: 'og JA, i teorien kunne du bare taste inn en streng med 64 hexadesimaltegn helt dil du fant en som passet. Faktisk kunne smarte folk skrive et program som svært hurtig kunne sjekke tilfeldige private nøkler. Dette kalles "brute-forcing" eller "mining" private nøkler. Folk har tenkt lenge og hardt på dette. Med noen få svært gode servere, kunne de kanskje klare å sjekke >1M nøkler/sekund. Likevel, selv når så mange sjekkes per sekund, ville det ikke gi tilgang midler som ville gjøre det i nærheten av å være lønnsomt å kjøre disse serverne.  - Det er mer sannsynlig at du, eller dine oldebarn, vil dø før du får en match. ',
   HELP_21_Desc_6: 'Hvis du vet noe om Bitcoin, [dette vil sette det i perspektiv:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *For å illustrere hvor usannsynlig det er: anta at alle satoshi av alle bitcoin som noensinne blir generert ble sendt til hver sin egen unike private nøkkel. Sannsynligheten for at det blant disse nøklene kunne være to som ville korrespondere med samme adresse er ca 1 til 10^20. ',
@@ -14716,7 +14716,7 @@ no.data = {
   HELP_Sec_Title: 'Sikring ',
   HELP_Sec_Desc_1: 'Hvis en av dine første spørsmål er "Hvorfor skulle jeg stole på disse folkene?", så er det en god ting. Forhåpentligvis vil følgende bidra til å lette på frykten din. ',
   HELP_Sec_Desc_2: 'Vi har vært oppe-og-gå siden august 2015. Hvis du søker etter ["myetherwallet" på reddit](https://www.reddit.com/search?q=myetherwallet), så kan du se mange folk som bruker oss med stor suksess. ',
-  HELP_Sec_Desc_3: 'Vi kommer ikke til å ta pengene dine eller stjele dine private nøkler. Det er ingen ondsinnet kode på denne siden. Faktisk er "Send Ether & Tokens"-siden fullstendig klient-drevet. Det betyr at all koden blir kjørt på ** din datamaskin ** og det blir aldri lagret eller overført noe sted. ',
+  HELP_Sec_Desc_3: 'Vi kommer ikke til å ta pengene dine eller stjele dine private nøkler. Det er ingen ondsinnet kode på denne siden. Faktisk er "Send UBQ & Tokens"-siden fullstendig klient-drevet. Det betyr at all koden blir kjørt på ** din datamaskin ** og det blir aldri lagret eller overført noe sted. ',
   HELP_Sec_Desc_4: 'Sjekk nettsideadressen (URL) -- Denne siden blir drevet gjennom GitHub og du kan se kildekoden her: [https://github.com/kvhnuke/etherwallet/tree/gh-pages](https://github.com/kvhnuke/etherwallet/tree/gh-pages) til domenet: [https://www.myetherwallet.com](https://www.myetherwallet.com). ',
   HELP_Sec_Desc_5: 'For å generere lommebøker, kan du laste ned [kildekoden](https://github.com/kvhnuke/etherwallet/releases/latest). Se #5 ovenfor. ',
   HELP_Sec_Desc_6: 'Kjør en test og sjekk hvilken nettverksaktivitet som skjer. Den enkleste måten som du kan gjøre dette på er å høyreklikke på siden og klikke "inspiser element". Gå til "Nettverk"-flippen. Generer en test-lommebok. Du vil se at det ikke er noen nettverksaktivitet. Du vil se at noe som ser ut som data:image/gif og data:image/png skjer. Disse er QR-kodene som blir generert...på din datamaskin...av din datamaskin. Ingen bytes ble overført. ',
@@ -14793,7 +14793,7 @@ pl.data = {
   NAV_Multisig: 'Multi-podpis ',
   NAV_MyWallets: 'Moje Portfele ',
   NAV_Offline: 'Wyślij Offline ',
-  NAV_SendEther: 'Wyślij Ether i Tokeny ',
+  NAV_SendEther: 'Wyślij UBQ i Tokeny ',
   NAV_SendTokens: 'Wyślij Tokeny ',
   NAV_SignMsg: 'Podpisz Wiadomość ',
   NAV_ViewWallet: 'Wyświetl informacje o portfelu ',
@@ -14889,7 +14889,7 @@ pl.data = {
   BULK_Label_2: 'Generuj Portfele ',
   BULK_SuccessMsg: 'Sukces! Twoje portfele zostały wygenerowane. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Do Adresu ',
   SEND_amount: 'Kwota do Wysłania ',
   SEND_amount_short: 'Kwota ',
@@ -15144,7 +15144,7 @@ pl.data = {
   HELP_3_Desc_7: 'Informacje o Twoim portfelu powinny się wyświetlić. Odszukaj adres Twojego portfela obok okrągłej kolorowej ikonki. Ta ikona to wizualna reprezentacja adresu Twojego portfela. Upewnij się, że adres odpowiada adresowi zapisanemu w dokumencie tekstowym i na portfelu papierowym. ',
   HELP_3_Desc_8: 'Jeśli planujesz trzymać w portfelu jakieś większe sumy, zalecamy w pierwszej kolejności wykonanie kilku testowych transakcji o mniejszej wartości. Prześlij do Twojego nowego portfela 0.001 ether, wejdź do portfela, prześlij te 0.001 ether na inny adres i upewnij się, że wszystko przebiegło jak należy. ',
 
-  HELP_4_Title: '4) Jak wysłać Ether z jednego portfela na inny? ',
+  HELP_4_Title: '4) Jak wysłać UBQ z jednego portfela na inny? ',
   HELP_4_Desc_1: 'Jeżeli planujesz przesłać większą sumę środków, najpierw powinieneś wysłać mniejszą kwotę, aby upewnić się, że wszystko przebiegło zgodnie z planem. ',
   HELP_4_Desc_2: 'Przejdź na zakładkę "Wyślij Ether". ',
   HELP_4_Desc_3: 'Wybierz Twój plik portfela -lub- wpisz klucz prywatny i odblokuj portfel. ',
@@ -15158,7 +15158,7 @@ pl.data = {
   HELP_4_Desc_12: 'Pojawi się okienko z potwierdzeniem. Zweryfikuj czy kwota i adres, na który wysyłasz są prawidłowe. Następnie kliknij "Tak, jestem pewien! Zatwierdź Transakcję.". ',
   HELP_4_Desc_13: 'Transakcja zostanie wysłana i zostanie wyświetlony TX ID. Możesz kliknąć TX ID, aby zobaczyć tą transakcję w eksploratorze bloków. ',
 
-  HELP_4CX_Title: '4)Jak wysłać Ether używając MyEtherWallet CX? ',
+  HELP_4CX_Title: '4)Jak wysłać UBQ używając MyEtherWallet CX? ',
   HELP_4CX_Desc_1: 'Najpierw musisz dodać portfel. Po dodaniu portfela masz 2 możliwości do wyboru: funkcja "Wyślij" z ikony Rozszerzenia Chrome lub zakładka "Wyślij Ether" ze strony "Moje Portfele". ',
   HELP_4CX_Desc_2: 'Wyślij: ',
   HELP_4CX_Desc_3: 'Kliknij ikonę Rozszerzenia Chrome. ',
@@ -15189,7 +15189,7 @@ pl.data = {
 
   HELP_7_Title: '7) Jak się wysyła Tokeny i jak tworzyć własne Tokeny? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) jest świetnym miejscem na przeglądanie tokenów oraz sprawdzenia ich ilości miejsc po przecinku. ',
-  HELP_7_Desc_1: 'Przejdź na zakładkę "Wyślij Ether i Tokeny". ',
+  HELP_7_Desc_1: 'Przejdź na zakładkę "Wyślij UBQ i Tokeny". ',
   HELP_7_Desc_2: 'Odblokuj portfel. ',
   HELP_7_Desc_3: 'Wpisz adres, na który chcesz je przesłać w pole "Do Adresu:". ',
   HELP_7_Desc_4: 'Wpisz wartość jaką chcesz wysłać. ',
@@ -15264,7 +15264,7 @@ pl.data = {
   HELP_12_Desc_28: 'Po ponownym uruchomieniu aplikacji Ubiq Wallet Twój portfel pojawi się na zakładce "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'Oznacza to, że nie posiadasz wystarczającej ilości Ether na koncie, aby pokryć koszty paliwa. Każda transakcja (przesyłanie tokenów lub interakcja z kontraktem) wymaga paliwa, które jest opłacane w Ether\'ach. Wyświetlona wartość jest ilością potrzebną na pokrycie kosztów transakcji w Wei\'ach. Podziel tą liczbę przez `1000000000000000000` i odejmij wartość Ether, którą chciałeś wysłać (jeśli wysyłałeś Ether). Otrzymasz wartość, jaką musisz przesłać na swoje konto, aby wykonać transakcję.',
+  HELP_13_Desc_1: 'Oznacza to, że nie posiadasz wystarczającej ilości UBQ na koncie, aby pokryć koszty paliwa. Każda transakcja (przesyłanie tokenów lub interakcja z kontraktem) wymaga paliwa, które jest opłacane w Ether\'ach. Wyświetlona wartość jest ilością potrzebną na pokrycie kosztów transakcji w Wei\'ach. Podziel tą liczbę przez `1000000000000000000` i odejmij wartość Ether, którą chciałeś wysłać (jeśli wysyłałeś Ether). Otrzymasz wartość, jaką musisz przesłać na swoje konto, aby wykonać transakcję.',
 
   HELP_14_Title: '14) Niektóre strony wykorzystują ruchy myszką przy generowaniu klucza prywatnego. MyEtherWallet tego nie robi. Czy generator liczb losowych w MyEtherWallet jest bezpieczny? ',
   HELP_14_Desc_1: 'Chociaż generowanie liczb losowych przy udziale ruchów myszki jest sprytnie pomyślane i rozumiemy dlaczego ludzie to lubią, to jednak rzeczywistość jest taka, że window.crypto zapewnia większą entropię niż ruchy myszką. Generowanie z ruchów myszki nie jest niebezpieczne, ale my (oraz znaczna liczba innych ekspertów kryptografii) wierzymy w window.crypto. W dodatku MyEtherWallet może być używane na urządzeniach dotykowych. Tutaj można przeczytać [rozmowę rozeźlonego reddit\'ora i Vitalik\'a Buterin\'a odnośnie ruchów myszki kontra window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) a tutaj jest [specyfikacja window.crypto w3](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
@@ -15460,7 +15460,7 @@ pt.data = {
   NAV_Multisig: 'Multisig ',
   NAV_MyWallets: 'Minhas Carteiras ',
   NAV_Offline: 'Enviar Offline ',
-  NAV_SendEther: 'Enviar Ether & Tokens ',
+  NAV_SendEther: 'Enviar UBQ & Tokens ',
   NAV_SendTokens: 'Enviar Tokens ',
   NAV_ViewWallet: 'Ver Informação da Carteira ',
   NAV_YourWallets: 'Suas Carteiras ',
@@ -15491,8 +15491,8 @@ pt.data = {
   /* Header */
   MEW_Warning_1: 'Sempre verifique a URL antes de acessar sua carteira ou criar uma nova carteira. Cuidado com os sites de phishing! ',
   CX_Warning_1: 'Certifique-se de que você tem ** backups externos ** de quaisquer carteiras armazenadas aqui. Muitas coisas podem acontecer que faria com que você perdesse os dados nesta extensão Chrome, incluindo desinstalar e reinstalar a extensão. Esta extensão é uma maneira de acessar facilmente as suas carteiras, ** não ** uma forma de apoiá-los. ',
-  MEW_Tagline: 'Fonte aberta JavaScript para o client-side da Carteira Ether ',
-  CX_Tagline: 'Fonte Aberta JavaScript para o client-side da Carteira Ether para extensão do Chrome ',
+  MEW_Tagline: 'Fonte aberta JavaScript para o client-side da Carteira UBQ ',
+  CX_Tagline: 'Fonte Aberta JavaScript para o client-side da Carteira UBQ para extensão do Chrome ',
 
   /* Footer */
   FOOTER_1: 'Uma fonte aberta, javascript, ferramenta do client-side para gerar Carteiras Ethereum & envio de transações. ',
@@ -15535,7 +15535,7 @@ pt.data = {
   ADD_Label_2: 'Crie um Apelido: ',
   ADD_Label_3: 'Sua carteira é criptografada. Por favor, insira a senha ',
   ADD_Label_4: 'Adicionar uma conta para ver ',
-  ADD_Warning_1: 'Você pode adicionar qualquer conta para "ver" na tab de carteiras sem fazer o upload da chave privada. Isso significa que você ** não **  tem acesso a essa carteira, nem pode transferir Ether a partir dela. ',
+  ADD_Warning_1: 'Você pode adicionar qualquer conta para "ver" na tab de carteiras sem fazer o upload da chave privada. Isso significa que você ** não **  tem acesso a essa carteira, nem pode transferir UBQ a partir dela. ',
   ADD_Label_5: 'Insira o Endereço ',
   ADD_Label_6: 'Desbloqueie sua Carteira ',
   ADD_Label_6_short: 'Desbloqueie ',
@@ -15555,7 +15555,7 @@ pt.data = {
   BULK_Label_2: 'Gerar Carteiras ',
   BULK_SuccessMsg: 'Sucesso! Suas carteiras foram geradas. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Para o Endereço ',
   SEND_amount: 'Valor a enviar ',
   SEND_amount_short: 'Valor ',
@@ -15693,15 +15693,15 @@ pt.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -15713,7 +15713,7 @@ pt.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -15729,7 +15729,7 @@ pt.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -15738,9 +15738,9 @@ pt.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
-  HELP_4_Desc_2: 'Navigate to the "Enviar Ether & Tokens" page. ',
+  HELP_4_Desc_2: 'Navigate to the "Enviar UBQ & Tokens" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_4_Desc_4: 'If the wallet is encrypted, a text box will automatically appear. Enter the password. ',
   HELP_4_Desc_5: 'Click the "Unlock Wallet" button. ',
@@ -15752,8 +15752,8 @@ pt.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Enviar Ether & Tokens" page. ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Enviar UBQ & Tokens" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
   HELP_4CX_Desc_4: 'Click the "QuickSend" button. ',
@@ -15764,7 +15764,7 @@ pt.data = {
   HELP_4CX_Desc_9: 'Verify the address and the amount you are sending is correct. ',
   HELP_4CX_Desc_10: 'Enter the password for that wallet. ',
   HELP_4CX_Desc_11: 'Click "Send Transaction." ',
-  HELP_4CX_Desc_12: 'Using "Enviar Ether & Tokens" Page ',
+  HELP_4CX_Desc_12: 'Using "Enviar UBQ & Tokens" Page ',
 
   HELP_5_Title: '5) How do I run MyEtherWallet.com offline/locally? ',
   HELP_5_Desc_1: 'You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page. ',
@@ -15783,7 +15783,7 @@ pt.data = {
 
   HELP_7_Title: '7) How do I send Tokens & add custom tokens? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) is a great way to explore tokens and find the decimals of a token. ',
-  HELP_7_Desc_1: 'Navigate to the "Enviar Ether & Tokens" page. ',
+  HELP_7_Desc_1: 'Navigate to the "Enviar UBQ & Tokens" page. ',
   HELP_7_Desc_2: 'Unlock your wallet. ',
   HELP_7_Desc_3: 'Enter the address you would like to send to in the "To Address:" field. ',
   HELP_7_Desc_4: 'Enter the amount you would like to send. ',
@@ -15801,7 +15801,7 @@ pt.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -15810,7 +15810,7 @@ pt.data = {
   HELP_8CX_Desc_2: 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
   HELP_8CX_Desc_3: 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
-  HELP_9_Title: '9) Is the "Enviar Ether & Tokens" page offline? ',
+  HELP_9_Title: '9) Is the "Enviar UBQ & Tokens" page offline? ',
   HELP_9_Desc_1: 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
 
   HELP_10_Title: '10) How do I make an offline transaction? ',
@@ -15858,13 +15858,13 @@ pt.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -16117,7 +16117,7 @@ ru.data = {
   BULK_Label_2: 'Создать кошельки ',
   BULK_SuccessMsg: 'Поздравляем! Ваши кошельки успешно созданы. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Адрес получателя ',
   SEND_amount: 'Сумма перевода ',
   SEND_amount_short: 'Сумма ',
@@ -16286,15 +16286,15 @@ ru.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -16306,7 +16306,7 @@ ru.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -16322,7 +16322,7 @@ ru.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -16331,7 +16331,7 @@ ru.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
   HELP_4_Desc_2: 'Navigate to the "Перевести эфир (ether) и токены" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -16345,7 +16345,7 @@ ru.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
   HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Перевести эфир (ether) и токены" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
@@ -16394,7 +16394,7 @@ ru.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -16451,13 +16451,13 @@ ru.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -16662,11 +16662,11 @@ tr.data = {
   /* Header */
   MEW_Warning_1: 'Cüzdani acmadan veya yeni bir cüzdan olusturmadan önce her zaman URL\'yi gözden geçirin. Phishing sitelerinden dikkat! ',
   CX_Warning_1: 'Burda kaydetdigin tüm cüzdanlari **yedeklediginden** emin ol. Make sure you have **external backups** of any wallets you store here. Many things could happen that would cause you to lose the data in this Chrome Extension, including uninstalling and reinstalling the extension. This extension is a way to easily access your wallets, **not** a way to back them up. ',
-  MEW_Tagline: 'Acik kaynak JavaScript Client-Side Ether cüzdani ',
-  CX_Tagline: 'Acik kaynak JavaScript Client-Side Ether cüzdani Chrome Extension ',
+  MEW_Tagline: 'Acik kaynak JavaScript Client-Side UBQ cüzdani ',
+  CX_Tagline: 'Acik kaynak JavaScript Client-Side UBQ cüzdani Chrome Extension ',
 
   /* Footer */
-  FOOTER_1: 'Acik kaynak, javascript Client-Side Ethererum cüzdani ve Ether islemleri ',
+  FOOTER_1: 'Acik kaynak, javascript Client-Side Ethererum cüzdani ve UBQ islemleri ',
   FOOTER_1b: 'tarafından yaratıldı ',
   FOOTER_2: 'Bağışlar büyük takdirle kabuledilir: ',
   FOOTER_3: 'Client-side cüzdan olusturma ',
@@ -16705,7 +16705,7 @@ tr.data = {
   ADD_Label_2: 'Bir nickname oluştur ',
   ADD_Label_3: 'Cüzdan şifrelidir. Parolayi yaz:  ',
   ADD_Label_4: 'Izlenecek hesap adresi ekle ',
-  ADD_Warning_1: 'Özel anahtar yazmadan cüzdan sekmesinde "izlemek" için herhangi bir hesap ekleyebilirsin. Bu demek ** degilki ** cüzdani acabilirsin, veya ondan Ether aktarabilirsin. ',
+  ADD_Warning_1: 'Özel anahtar yazmadan cüzdan sekmesinde "izlemek" için herhangi bir hesap ekleyebilirsin. Bu demek ** degilki ** cüzdani acabilirsin, veya ondan UBQ aktarabilirsin. ',
   ADD_Label_5: 'Adresi ekle ',
   ADD_Label_6: 'Cüzdani ac ',
   ADD_Label_6_short: 'Ac ',
@@ -16725,7 +16725,7 @@ tr.data = {
   BULK_Label_2: 'Cüzdanlari olustur ',
   BULK_SuccessMsg: 'Başarı! Cüzdanlarin olusturuldu. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Bu Adrese gönder ',
   SEND_amount: 'Gönderilecek miktar ',
   SEND_amount_short: 'Miktar ',
@@ -16879,15 +16879,15 @@ tr.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -16899,7 +16899,7 @@ tr.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -16915,7 +16915,7 @@ tr.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -16924,7 +16924,7 @@ tr.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositting a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
   HELP_4_Desc_2: 'Navigate to the "Ether ve Tokens göndermek" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -16938,7 +16938,7 @@ tr.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
   HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send Ether" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
@@ -16987,7 +16987,7 @@ tr.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -17044,13 +17044,13 @@ tr.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your account and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -17232,7 +17232,7 @@ vi.data = {
   NAV_AddWallet: 'Thêm Ví ',
   NAV_GenerateWallet: 'Tạo Ví ',
   NAV_BulkGenerate: 'Tạo Nhiều Ví ',
-  NAV_SendEther: 'Gửi Ether và Tokens ',
+  NAV_SendEther: 'Gửi UBQ và Tokens ',
   NAV_SendTokens: 'Gửi Token ',
   NAV_Offline: 'Giao Dịch Offline ',
   NAV_DeployContract: 'Phát Triển Hợp Đồng ',
@@ -17334,7 +17334,7 @@ vi.data = {
   BULK_Label_2: 'Tạo Ví ',
   BULK_SuccessMsg: 'Ví của bạn đã được tạo thành công. ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: 'Địa Chỉ Đến ',
   SEND_amount: 'Số Lượng Cần Gửi ',
   SEND_amount_short: 'Số Lượng ',
@@ -17530,16 +17530,16 @@ vi.data = {
   HELP_Warning: 'Nếu bạn đã khởi tạo Ví -hoặc- đã tải về máy tập tin có chứa dữ liệu ví trước **Ngày 31 Tháng 12 năm 2015**, xin vui lòng kiễm tra lại dữ liệu Ví; dễ tải về phiên bản mới của tập tin Ví. Chi tiết xem tại. ',
   HELP_Desc: 'Nếu bạn thấy có gì sai sót và có những câu hỏi nào khác cần được giải đáp. [Xin Liên Lạc Với Chúng Tôi](mailto:myetherwallet@gmail.com), và chúng tôi sẽ giải đáp những thắc mắc từ bạn, ngoài ra chúng tôi sẽ cập nhật lại trang web nhằm đem lại nhiều tiện lợi nhất có thể cho người sử dụng trong tương lai! ',
   HELP_Remind_Title: 'Một số lưu ý! ',
-  HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, và các nền tảng khác từ Javascript libraries mà chúng tôi sử dụng đang được phát triển một cách tích cực.** Mặc dù toàn bộ đã được chúng tôi kiễm tra rất kỹ lưỡng và hàng chục nghìn địa chỉ Ví đã được tạo thành công từ người sử dụng trên toàn cầu, nhưng vẫn có những vấn đề có thể xảy ra làm cho ETH của bạn bị mất đi. Xin vui lòng không nên đầu tư với số tiền nhiều hơn khả năng mà bạn đã cho rằng nó sẽ mất và hãy luôn cẩn thận. Trong trường hợp rủi ro xảy ra, chung tôi rất chân thành xin lỗi. Tuy nhiên **Chúng tôi sẽ không chịu bất cứ một trách nhiệm nào đối với số lượng Ether mà bạn đã bị mất!**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX không phải "Ví Web". Vì vậy bạn không tạo tài khoản sau đó gửi số Ether của bạn cho chúng tôi dễ giữ hộ. Toàn bộ Dữ liệu sẽ không bao giờ bị rò rỉ ra khỏi máy tính/trình duyệt của bạn. Chúng tôi xây dựng nó nhằm giúp người sử dụng có thể đễ dàng tạo mới, lưu trữ và truy cập thông tin Ví của bạn và tương tác với Blockchain. ',
+  HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, và các nền tảng khác từ Javascript libraries mà chúng tôi sử dụng đang được phát triển một cách tích cực.** Mặc dù toàn bộ đã được chúng tôi kiễm tra rất kỹ lưỡng và hàng chục nghìn địa chỉ Ví đã được tạo thành công từ người sử dụng trên toàn cầu, nhưng vẫn có những vấn đề có thể xảy ra làm cho ETH của bạn bị mất đi. Xin vui lòng không nên đầu tư với số tiền nhiều hơn khả năng mà bạn đã cho rằng nó sẽ mất và hãy luôn cẩn thận. Trong trường hợp rủi ro xảy ra, chung tôi rất chân thành xin lỗi. Tuy nhiên **Chúng tôi sẽ không chịu bất cứ một trách nhiệm nào đối với số lượng UBQ mà bạn đã bị mất!**. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX không phải "Ví Web". Vì vậy bạn không tạo tài khoản sau đó gửi số UBQ của bạn cho chúng tôi dễ giữ hộ. Toàn bộ Dữ liệu sẽ không bao giờ bị rò rỉ ra khỏi máy tính/trình duyệt của bạn. Chúng tôi xây dựng nó nhằm giúp người sử dụng có thể đễ dàng tạo mới, lưu trữ và truy cập thông tin Ví của bạn và tương tác với Blockchain. ',
   HELP_Remind_Desc_3: 'Nếu bạn không lưu lại Private key và mật khẩu của bạn, thì sẽ không có bất cứ một cách nào có thể khôi phục lại Ví và tài sản hiện đang chứa trong Ví. Bạn nên sao lưu dữ liệu Ví tại nhiều nơi và những thiết bị lưu trữ khác nhau! ',
 
   HELP_0_Title: '0) Tôi mới sử dụng lần đầu tiên. Tôi phải làm gì? ',
-  HELP_0_Desc_1: 'MyEtherWallet giúp bạn có khả năng tạo Ví mới dùng dễ lưu trữ số lượng Ether của ban bởi chính mình, Ví được tạo ra không nằm trên bất cứ một sàn giao dịch nào. Quá trình tạo Ví điễn ra hoàn toàn trên máy tính cá nhân của bạn chứ không phải trên hệ thống máy chủ của chúng tôi. Do đó, khi bạn khởi tạo một Ví mới, **bạn chịu trách nhiệm hoàn toàn về vấn đề sao lưu dữ liệu đối với Ví được tạo**. ',
+  HELP_0_Desc_1: 'MyEtherWallet giúp bạn có khả năng tạo Ví mới dùng dễ lưu trữ số lượng UBQ của ban bởi chính mình, Ví được tạo ra không nằm trên bất cứ một sàn giao dịch nào. Quá trình tạo Ví điễn ra hoàn toàn trên máy tính cá nhân của bạn chứ không phải trên hệ thống máy chủ của chúng tôi. Do đó, khi bạn khởi tạo một Ví mới, **bạn chịu trách nhiệm hoàn toàn về vấn đề sao lưu dữ liệu đối với Ví được tạo**. ',
   HELP_0_Desc_2: 'Khởi Tạo Một Ví Mới. ',
   HELP_0_Desc_3: 'Sao Lưu Dữ Liệu Ví. ',
   HELP_0_Desc_4: 'Xác thực rằng  bạn có quyền truy cập vào ví mới này và hãy chắc chắn đã sao lưu tất cả các thông tin cần thiết. ',
-  HELP_0_Desc_5: 'Gửi Ether đến Ví mới này. ',
+  HELP_0_Desc_5: 'Gửi UBQ đến Ví mới này. ',
 
   HELP_1_Title: '1) Làm thế nào dễ khởi tạo một Ví mới? ',
   HELP_1_Desc_1: 'Đi đến trang "Tạo Ví". ',
@@ -17550,7 +17550,7 @@ vi.data = {
 
   HELP_2a_Title: '2a) Làm thế nào dễ sao lưu Ví? ',
   HELP_2a_Desc_1: 'Bạn nên sao lưu tập tin Ví của bạn bên ngoài máy tính và tại nhiều nơi khác nhau - như trên USB hoặc/và một tờ giấy. ',
-  HELP_2a_Desc_2: 'Lưu lại địa chỉ Ví. Bạn có thể giữ nó cho chính mình hoặc chia sẽ nó cho bất cứ ai. Người khác có thể gửi Ether cho bạn thông qua địa chỉ Ví của bạn. ',
+  HELP_2a_Desc_2: 'Lưu lại địa chỉ Ví. Bạn có thể giữ nó cho chính mình hoặc chia sẽ nó cho bất cứ ai. Người khác có thể gửi UBQ cho bạn thông qua địa chỉ Ví của bạn. ',
   HELP_2a_Desc_3: 'Private key. Không được chia sẽ Private key cho bất cứ ai. Private key rất cần thiết khi bạn muốn truy cập vào Ví và Gửi đi một lượng Ether! hiện tại có 3 phiên bản lưu trữ dành cho Private Key: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Bạn Có thể in Ví giấy nếu bạn sở hữu máy in. Ngoài ra, bạn có thể ghi lại Private key và địa chỉ Ví của bạn lên một tờ giấy. Hãy Cất giữ chúng tại một nơi an toàn, hãy ngắt kết nối hoàn toàn giữa máy tính và USB của bạn. ',
@@ -17567,7 +17567,7 @@ vi.data = {
   HELP_2b_Desc_8: 'đi đến trang "Xem thông tin Ví" và gõ vào Private key của bạn / mật khẩu nhằm đảm bảo rằng nó hoàn toàn chính xác và truy cập vào Ví. kiễm tra lại mật khẩu mà bạn ghi lại trên giấy có giống nhau hay chưa. ',
 
   HELP_3_Title: '3) Làm thế nào dễ xác minh và truy cập vào Ví mới được khởi tạo? ',
-  HELP_3_Desc_1: '**Trước khi bạn gửi số lượng Ether vô Ví mới của bạn**, bạn nên chắc chắn rằng bạn đã truy cập vào Ví thành công. ',
+  HELP_3_Desc_1: '**Trước khi bạn gửi số lượng UBQ vô Ví mới của bạn**, bạn nên chắc chắn rằng bạn đã truy cập vào Ví thành công. ',
   HELP_3_Desc_2: 'Đi đến trang "Xem Thông Tin Ví". ',
   HELP_3_Desc_3: 'Bạn hãy đi đến trang MyEtherWallet.com "Xem Thông Tin Ví". ',
   HELP_3_Desc_4: 'Chọn tập tin định dạng Ví của bạn -hoặc- sử dụng Private key của bạn dễ mở khoá Ví. ',
@@ -17576,33 +17576,33 @@ vi.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) Làm thế nào dễ gửi Ether từ Ví này sang Ví khác ? ',
+  HELP_4_Title: '4) Làm thế nào dễ gửi UBQ từ Ví này sang Ví khác ? ',
   HELP_4_Desc_1: 'Nếu như bạn dự định dễ chuyển một số lượng lớn Ether, bạn nên gửi đi một lượng nhỏ đến Ví của bạn dễ thử nghiệm, nhằm xác định chắc chắn tất cả chức năng đều hoạt động đúng như dự định. ',
-  HELP_4_Desc_2: 'Đi đến trang "Gửi Ether và Tokens". ',
+  HELP_4_Desc_2: 'Đi đến trang "Gửi UBQ và Tokens". ',
   HELP_4_Desc_3: 'Chọn tập tin Ví -hoặc- Private key của bạn dễ mở khoá cho Ví. ',
   HELP_4_Desc_4: 'Nếu Ví của bạn đang trong tình trạng mã hoá,ô điền thông tin sẽ tự động báo lại. Nhập mật khẩu. ',
   HELP_4_Desc_5: 'Chọn vào nút "Mở Khoá Ví". ',
   HELP_4_Desc_6: 'Điền địa chỉ mà bạn muốn gửi đến tại khung trống "Địa chỉ đến:". ',
-  HELP_4_Desc_7: 'Điền số lượng Ether mà bạn muốn gửi đi.Hoặc bạn có thể chọn vào phần "Gửi toàn bộ số dư" nếu bạn muốn chuyển đi toàn bộ số Ether mà bạn hiện có trong tài khoản. ',
+  HELP_4_Desc_7: 'Điền số lượng UBQ mà bạn muốn gửi đi.Hoặc bạn có thể chọn vào phần "Gửi toàn bộ số dư" nếu bạn muốn chuyển đi toàn bộ số UBQ mà bạn hiện có trong tài khoản. ',
   HELP_4_Desc_9: 'Chọn vào "Khởi tạo Giao dịch". ',
   HELP_4_Desc_10: 'Một cửa sổ thông báo sẽ hiện ra. Việc khởi tạo giao dịch này được thực hiện từ trình duyệt của bạn. ',
   HELP_4_Desc_11: 'Chọn vào nút màu xanh "Gửi giao dịch đi" phía dưới. ',
   HELP_4_Desc_12: 'Một cửa sổ yêu cầu sẽ xuất hiện. Xác nhận lại số lượng cần gửi và địa chỉ đến. Sau đó chọn vào ô "Có, tôi chắc chắn! Hãy thực hiện giao dịch.". ',
   HELP_4_Desc_13: 'Giao dịch của bạn sẽ được gửi đi. TX ID sẽ xuất hiện trên màn hình. Bạn có thể chọn vào TX ID dễ xem nó trên blockchain. ',
 
-  HELP_4CX_Title: '4) Làm thế nào dễ gửi đi Ether bằng cách sử dụng MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'Trước tiên, bạn cần phải thêm Ví của bạn vào. Sau khi thực hiện xong, Bạn sẽ có 2 lựa chọn: Chức năng "Gửi Nhanh" từ biểu tượng nằm trên thanh công cụ tiện ích của Google Chrome hoặc chọn vào "Gửi Ether và Tokens" dễ đi đến trang trình duyệt. ',
+  HELP_4CX_Title: '4) Làm thế nào dễ gửi đi UBQ bằng cách sử dụng MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'Trước tiên, bạn cần phải thêm Ví của bạn vào. Sau khi thực hiện xong, Bạn sẽ có 2 lựa chọn: Chức năng "Gửi Nhanh" từ biểu tượng nằm trên thanh công cụ tiện ích của Google Chrome hoặc chọn vào "Gửi UBQ và Tokens" dễ đi đến trang trình duyệt. ',
   HELP_4CX_Desc_2: 'Gửi Nhanh ',
   HELP_4CX_Desc_3: 'Chọn vào biểu tượng trên thanh tiẹn ích của Google Chrome. ',
   HELP_4CX_Desc_4: 'Chọn vào ô "Gửi Nhanh". ',
   HELP_4CX_Desc_5: 'Chọn vào Ví mà bạn muốn dùng dễ gửi. ',
   HELP_4CX_Desc_6: 'Điền địa chỉ mà bạn muốn gửi đến tại khung trống "Địa chỉ đến:". ',
-  HELP_4CX_Desc_7: 'Điền số lượng Ether mà bạn muốn gửi đi.Hoặc bạn có thể chọn vào phần "Gửi toàn bộ số dư" nếu bạn muốn chuyển đi toàn bộ số Ether mà bạn hiện có trong tài khoản. ',
+  HELP_4CX_Desc_7: 'Điền số lượng UBQ mà bạn muốn gửi đi.Hoặc bạn có thể chọn vào phần "Gửi toàn bộ số dư" nếu bạn muốn chuyển đi toàn bộ số UBQ mà bạn hiện có trong tài khoản. ',
   HELP_4CX_Desc_8: 'Chọn vào ô "Thực hiện Giao Dịch". ',
   HELP_4CX_Desc_9: 'Xác nhận lại số lượng cần gửi và địa chỉ đến. ',
   HELP_4CX_Desc_10: 'Điền vào mật khẩu của Ví bạn dùng dễ gửi. ',
   HELP_4CX_Desc_11: 'Chọn vào ô "Gửi giao dịch đi." ',
-  HELP_4CX_Desc_12: 'Sử dụng trang "Gửi Ether và Tokens" ',
+  HELP_4CX_Desc_12: 'Sử dụng trang "Gửi UBQ và Tokens" ',
 
   HELP_5_Title: '5) Làm thế nào dễ kích hoạt MyEtherWallet.com với tính năng offline? ',
   HELP_5_Desc_1: 'Bạn hãy kích hoạt MyEtherWallet.com trên máy tính của bạn thay thế cho việc chạy trên máy chủ của Github. Bạn có thể khởi tạo Ví mới hoàn toàn trong tình trạng offline và gửi giao dịch đi từ trang "Giao dịch Offline". ',
@@ -17621,7 +17621,7 @@ vi.data = {
 
   HELP_7_Title: '7) Làm thế nào dễ gửi token và thêm Token vào Ví? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) là cách tốt nhất dễ kiễm tra Token và số Token. ',
-  HELP_7_Desc_1: 'Đi đến trang "Gửi Ether và Tokens". ',
+  HELP_7_Desc_1: 'Đi đến trang "Gửi UBQ và Tokens". ',
   HELP_7_Desc_2: 'mở khoá Ví của bạn. ',
   HELP_7_Desc_3: 'Điền địa chỉ mà bạn cần gửi đến tại ô trống "Địa chỉ đến:" . ',
   HELP_7_Desc_4: 'Điền số lượng Token mà bạn muốn gửi. ',
@@ -17634,18 +17634,18 @@ vi.data = {
   HELP_7_Desc_11: 'Chọn "Khởi tạo giao dịch". ',
   HELP_7_Desc_12: 'Một thông báo sẽ xuất hiện và xác thực rằng đây là việc khởi tạo giao dịch từ trình duyệt của bạn. ',
   HELP_7_Desc_13: 'Chọn vào nút màu xanh phía dưới "Gửi giao dịch đi". ',
-  HELP_7_Desc_14: 'Sau đó một thông báo sẽ xuất hiện. Xác thực lại số lượng Ether và địa chỉ đến. sau đó nhấn vào nút  "Có, Tôi chắc chắn! Hãy thực hiện giao dịch.". ',
+  HELP_7_Desc_14: 'Sau đó một thông báo sẽ xuất hiện. Xác thực lại số lượng UBQ và địa chỉ đến. sau đó nhấn vào nút  "Có, Tôi chắc chắn! Hãy thực hiện giao dịch.". ',
   HELP_7_Desc_15: 'Giao dịch của bạn sẽ được Thực hiện. TXid sẽ hiển thị cho bạn. Bạn có thể chọn vào TXid và nhìn ấy giao dịch của bạn trên blockchain. ',
 
   HELP_8_Title: '8) Những gì sẽ xảy ra nếu trang của chúng tôi bị sập? ',
   HELP_8_Desc_1: 'MyEtherWallet không phải là Ví online. Bạn không cần phải đăng nhập và không có bất cứ gì được lưu lại trên máy chủ của chúng tôi. Đây chỉ đơn giản là một giao diện cho phép bạn tương tác với blockchain. ',
-  HELP_8_Desc_2: 'Nếu MyEtherWallet.com bị sập, bạn sẽ phải tìm một giải pháp khác (như là gubiq hoặc Ví Ethereum / Fusion) dễ tiếp tục thực hiện giao dịch. Nhưng bạn không cần thiết phải "Mang" Ether của bạn ra khỏi MyEtherWallet bởi vì số Ether đó không nằm trong MyEtherWallet. Bởi vì số Ether đó đang nằm trong Ví Ethereum được khởi tạo thông qua trang của chúng tôi. ',
+  HELP_8_Desc_2: 'Nếu MyEtherWallet.com bị sập, bạn sẽ phải tìm một giải pháp khác (như là gubiq hoặc Ví Ethereum / Fusion) dễ tiếp tục thực hiện giao dịch. Nhưng bạn không cần thiết phải "Mang" UBQ của bạn ra khỏi MyEtherWallet bởi vì số UBQ đó không nằm trong MyEtherWallet. Bởi vì số UBQ đó đang nằm trong Ví Ethereum được khởi tạo thông qua trang của chúng tôi. ',
   HELP_8_Desc_3: 'Bạn chỉ cần bỏ tập tin chứa định dạng mã hoá Private key của bạn vào và Gubiq/Fusion sẽ tự động giải mã tập tin (mã hoá) trực tiếp bên trong  gubiq / Ví Ethereum / Fusion một cách dễ dàng. Xem câu hỏi #12. ',
   HELP_8_Desc_4: 'Ngoài ra, Khả năng xảy ra vấn đề trang MyEtherWallet bị sập là rất khó. Cũng như việc chúng tôi không lưu trữ lại bất cứ dữ liệu gì vì vậy giá trị của nó sở hữu hoàn toàn bằng không. Nếu chúng tôi buộc phải  tháo tên miền này xuống, thì toàn bộ sẽ vẫn còn, tồn tại và công khai trên trang  [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). Bạn có thể tải tập tin nén của nó và chạy nó trực tiếp trên máy tính của bạn. ',
 
   HELP_8CX_Title: '8) Những gì sẽ xảy ra néu MyEtherWallet CX hoàn toàn biến mất? ',
   HELP_8CX_Desc_1: 'Trước tiên, Toàn bộ dữ liệu đã được lưu trên máy tính của bạn, Chứ không phải ở máy chủ của chúng tôi. Chúng tôi biết rằng bạn sẽ dễ nhầm lẫn, nhưng khi bạn nhìn vào kho tiện ích của Chrome, bạn sẽ không tìm thấy được những gì hiện đang được lưu trên máy chủ của chúng tôi - Bởi vì toàn bộ đều được lưu trên chính máy tính của bạn. ',
-  HELP_8CX_Desc_2: 'Điều đó cho thấy tầm **quan trọng** đối với việc sao lưu toàn bộ thông tin và dữ liệu Ví mới được khởi tạo từ bạn tại trang MyEtherWallet CX. Và việc sao lưu dữ liệu là cách dự phòng tốt khi những vấn đề xấu có thể xảy ra đối với MyEtherWallet CX hoặc máy tính của bạn, và nó giúp bạn có toàn bộ thông tin cần thiết dễ bạn có thể truy cập vào Ví và quản lý được số Ether của bạn. xem lại phần #2a dễ rõ hơn về cách sao lưu dữ liệu. ',
+  HELP_8CX_Desc_2: 'Điều đó cho thấy tầm **quan trọng** đối với việc sao lưu toàn bộ thông tin và dữ liệu Ví mới được khởi tạo từ bạn tại trang MyEtherWallet CX. Và việc sao lưu dữ liệu là cách dự phòng tốt khi những vấn đề xấu có thể xảy ra đối với MyEtherWallet CX hoặc máy tính của bạn, và nó giúp bạn có toàn bộ thông tin cần thiết dễ bạn có thể truy cập vào Ví và quản lý được số UBQ của bạn. xem lại phần #2a dễ rõ hơn về cách sao lưu dữ liệu. ',
   HELP_8CX_Desc_3: 'Nếu vì một lý do bất kì buộc MyEtherWallet CX không tồn tại trên kho tiện ích của Chrome, bạn có thể tìm thấy mã nguồn trên Github và tải về máy của bạn. Xem phần #5 ở trên. ',
 
   HELP_9_Title: '9) Có phải trang "Gửi Ether" là trang offline? ',
@@ -17696,13 +17696,13 @@ vi.data = {
   HELP_12_Desc_28: 'Trong lần sử dụng ứng dụng Ví Ethereum sau này, Tài khoản của bạn sẽ tự đọng liên kết và hiển thị dưới phần "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Một số trang khi khởi tạo Private key thông qua việc di chuyển con trỏ chuột máy tính trên màn hình. MyEtherWallet.com không làm theo cách này. Các ký tự Private key được tạo ra trên trang MyEtherWallet một cách an toàn nhất? ',
   HELP_14_Desc_1: 'Mặc dù chúng tôi hiểu với việc di chuyển chuột xung quanh màn hình như vậy sẽ khá thú vị, nhưng thực tế window.crypto sẽ đảm bảo việc tạo ra những "dữ liệu ngẫu nhiên" hơn đối với việc di chuyển chuột. Việc di chuyển chuột như vậy không phải là không an toàn, nhưng thông qua rất nhiều những thử nghiệm về mật mã khác thì chúng tôi hoàn toàn tin tưởng vào window.crypto. Ngoài ra, MyEtherWallet.com còn được sử dụng trên những thiết bị cảm ứng. Đây là [Cuộc tranh cải tức giận giữa một redditor và Vitalik Buterin Liên quan đến vấn đề Di chuyển con chuột với window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Vì sao tài khoản của tôi vừa tạo lại không tồn tại trên Blockchain Explorer? (bao gồm: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Tài khoản của bạn chỉ tồn tại duy nhất trên một Blockchain Explorer và tài khoản được kích hoạt khi bởi chính nó khi bạn dùng tài khoản đó và chuyển Ether vào tức khắc tài khoản sử dụng sẽ hiển thị trên hệ thống Blockchain Explorer thích hợp. ',
+  HELP_15_Desc_1: 'Tài khoản của bạn chỉ tồn tại duy nhất trên một Blockchain Explorer và tài khoản được kích hoạt khi bởi chính nó khi bạn dùng tài khoản đó và chuyển UBQ vào tức khắc tài khoản sử dụng sẽ hiển thị trên hệ thống Blockchain Explorer thích hợp. ',
 
   HELP_16_Title: '16) Làm thế nào dễ kiễm tra số dư hiện tại của tài khoản? ',
   HELP_16_Desc_1: 'Bạn có thể sử dụng Blockchain Explorer dễ kiễm tra, Ví dụ: [etherscan.io](http://etherscan.io/). Dán địa chỉ của bạn vào khung tìm kiếm và nó sẽ hiển thị tài khoản của bạn và toạn bộ lịch sữ giao dịch đã thực hiện đối với địa chỉ này. Ví Dụ: Đây là địa chỉ của chúng tôi [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) được trông thấy trên etherscan.io ',
@@ -17718,11 +17718,11 @@ vi.data = {
   HELP_20_Title: '20) Tập tin Pre-sale cho Ví của tôi nằm ở đâu? ',
   HELP_20_Desc_1: 'Cho dù bạn lưu trữ nó ở đâu. ;) nó cũng đều được gửi đến email của bạn, vì vậy hãy kiễm tra email. Kiếm tập tin mang tên `"ethereum_wallet_backup.json"` và sau đó chọn tập tin này. Tập tin Ví này thường đc mã hoá bởi một mật khẩu khi bạn khởi tạo nó trong lúc bạn thanh toán trong thời gian pre-sale. ',
 
-  HELP_21_Title: '21) có thể xảy ra trường hợp có một cá nhân nào đó sử dụng ngẫu nhiên một Private key dễ thấy được số dư tài khoản của một người khác và chuyển số Ether đó vào địa chỉ mà cá nhân dó sở hữu hay không? ',
-  HELP_21_Desc_1: 'Đối với phiên bản ngắn: Điều đó có thể xảy ra, nhưng việc chọn ngẫu nhiên dễ nhằm tìm kiếm một tài khoản chứa Ether là một việc làm mất rất nhiều thời gian và cũng có thể mất cả vài chục năm dễ đạt được mục đích đó. bởi vậy trường hợp này được coi là rất khó dễ xảy ra. ',
+  HELP_21_Title: '21) có thể xảy ra trường hợp có một cá nhân nào đó sử dụng ngẫu nhiên một Private key dễ thấy được số dư tài khoản của một người khác và chuyển số UBQ đó vào địa chỉ mà cá nhân dó sở hữu hay không? ',
+  HELP_21_Desc_1: 'Đối với phiên bản ngắn: Điều đó có thể xảy ra, nhưng việc chọn ngẫu nhiên dễ nhằm tìm kiếm một tài khoản chứa UBQ là một việc làm mất rất nhiều thời gian và cũng có thể mất cả vài chục năm dễ đạt được mục đích đó. bởi vậy trường hợp này được coi là rất khó dễ xảy ra. ',
   HELP_21_Desc_2: 'Phiên bản dài ELI5: Bởi vậy Ethereum được dựa trên [Public Key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography), Đặc biệt là [Mật mã đường cong Elliptic](https://eprint.iacr.org/2013/734.pdf) Được sử dụng rất rộng rãi, không chỉ duy nhất ở Ethereum. Hầu hết các Server được bảo vệ thông qua ECC. Bitcoin cũng tương tự, cũng giống như SSH và TLS và rất nhiều thứ khác. Mã khoá của Ethereum cụ thể bao gồm 256-bit ký tự, Đoạn mã đó dài và khó đoán hơn đoạn mã 128-bit và 192-bit, mặc dù 128-bit và 192-bit hiện cũng được dùng khá rộng rãi và vẫn được nhận định là rất bảo mật từ các chuyên gia. ',
-  HELP_21_Desc_3: 'Tại đây bạn đang sở hữu private key và public key. private key có thể dùng thay thế cho public key, nhưng public key không thể dùng nhằm thay thế và dùng dễ phục hồi lại private key. Thực tế trên internet và các dữ liệu cần được bảo mật của thế giới đang sử dụng loại mật mã học này, có nghĩa nếu một cách nào đó nhằm dùng public key dễ phục hồi lại private key, Thì lượng Ether mà bạn bị đánh cắp nó không phải là vấn đề lớn so với nhiều vấn đề mang tính quan trọng rất lớn của những tổ chức tài chính và chính phủ trên toàn cầu. ',
-  HELP_21_Desc_4: 'Hiện tại chỉ khẳng định rằng nếu ai đó sở hữu được Private key của bạn thì thực sự họ mới có khả năng chuyển số Ether trong tài khoản của bạn đi được. Giống như nếu ai đó có được mật khẩu email của bạn, họ có thể đọc và gửi email, hoặc mật khẩu tài khoản ngân hàng của bạn, họ mới có thể đánh cắp tiền của bạn đi được. Bạn có thể tải về định dạng Keystore bởi vì nó là định dạng đã mã hoá dữ liệu từ Private key của bạn cùng với mật khẩu giải mã khác. Trường hợp này giống như hiện tại bạn đang có một mật khẩu A nhưng được bảo vệ bởi một mật khẩu B khác và nó giúp tài khoản của bạn càng khó bị đánh mất hơn. ',
+  HELP_21_Desc_3: 'Tại đây bạn đang sở hữu private key và public key. private key có thể dùng thay thế cho public key, nhưng public key không thể dùng nhằm thay thế và dùng dễ phục hồi lại private key. Thực tế trên internet và các dữ liệu cần được bảo mật của thế giới đang sử dụng loại mật mã học này, có nghĩa nếu một cách nào đó nhằm dùng public key dễ phục hồi lại private key, Thì lượng UBQ mà bạn bị đánh cắp nó không phải là vấn đề lớn so với nhiều vấn đề mang tính quan trọng rất lớn của những tổ chức tài chính và chính phủ trên toàn cầu. ',
+  HELP_21_Desc_4: 'Hiện tại chỉ khẳng định rằng nếu ai đó sở hữu được Private key của bạn thì thực sự họ mới có khả năng chuyển số UBQ trong tài khoản của bạn đi được. Giống như nếu ai đó có được mật khẩu email của bạn, họ có thể đọc và gửi email, hoặc mật khẩu tài khoản ngân hàng của bạn, họ mới có thể đánh cắp tiền của bạn đi được. Bạn có thể tải về định dạng Keystore bởi vì nó là định dạng đã mã hoá dữ liệu từ Private key của bạn cùng với mật khẩu giải mã khác. Trường hợp này giống như hiện tại bạn đang có một mật khẩu A nhưng được bảo vệ bởi một mật khẩu B khác và nó giúp tài khoản của bạn càng khó bị đánh mất hơn. ',
   HELP_21_Desc_5: 'Vẫn có thẻ xảy ra, theo lý thuyết thì bạn sẽ sử dụng một chuỗi gồn 64 ký tự cho đến khi bạn nhận được một kết quả đúng. Thực tế, một cá nhân thông minh có thể lập trình lên một chương trình rà kết quả đúng với Private key của bạn một cách nhanh chóng. Trường hợp này giống như "brute-forcing" hoặc "mining" private keys. Nhưng viêc làm này vẫn mất rất nhièu thời gian và rất khó. Cùng với một hệ thống Server công nghệ cao, họ có khả năng dò ngẫu nhiên 1 triệu ký tự / giây. Tuy nhiên, Việc kiễm tra ngẩu nghiên này nhằm mang lại quyền đột nhập vào tài khoản của bạn sẽ phải mất một lượng chi phí rất cao đễ duy trì hệ thống Server của họ - và dễ rà soát cho đến khi hoàn toàn chính xác được Private key của bạn thì có lẽ cá nhân đó đã già vì phải mất cả gần trăm năm dễ cho ra kết quả chính xác. ',
   HELP_21_Desc_6: 'Nếu bạn hiểu toàn bộ về Bitcoin, [Điều này có thể xem qua tại:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *Nhằm làm rõ cho việc: Cho rằng mỗi satoshi của mỗi bitcoin từng được tạo ra đã gửi đến nó những private key được nó sở hữu mà không có trường hợp khác thay thế. Xác xuất dễ có một mã khoá bị trùng lặp tại hai địa chỉ khác nhau là một trong 100 quintillion, bởi vậy được coi là hoàn toàn không thể. ',
   HELP_21_Desc_7: '[Nếu bạn cần một phương pháp bảo mật cao hơn có thể tham khảo:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *Đối với đoạn mã của Private thì hầu như những công nghệ tiên tiến trên máy tính của bạn chỉ là vô nghĩa, vì khi người nào đó muốn dò ngẫu nhiên nó thì họ không cần thiết phải tấn công vào thiết bị của bạn. Nhưng đối với một mã khoá 265-bit sẽ bất khả thi đối với việc làm trên trừ khi máy tính của họ được xây dựng bởi một cái gì đó khác biệt và cực kì tiên tiến thì mới rà được và cho ra kết quả tốt nhất và trường hợp này sẽ cần rất rất nhiều thời gian và những công nghệ đó có lẽ còn phải mất rất nhiều thời gian trong tương lai dễ nghiên cứu . ',
@@ -17953,7 +17953,7 @@ zhcn.data = {
   BULK_Label_2: '生成钱包 ',
   BULK_SuccessMsg: '成功！你的钱包生成好了。 ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: '发送至地址： ',
   SEND_amount: '转账数额： ',
   SEND_amount_short: '数额 ',
@@ -18122,15 +18122,15 @@ zhcn.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -18142,7 +18142,7 @@ zhcn.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -18158,7 +18158,7 @@ zhcn.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -18167,7 +18167,7 @@ zhcn.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.01 ether to your new wallet, access that wallet, send that 0.01 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
   HELP_4_Desc_2: 'Navigate to the "发送以太币 / 发送代币" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -18181,7 +18181,7 @@ zhcn.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
   HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "发送以太币 / 发送代币" page. ',
   HELP_4CX_Desc_2: 'QuickSend: ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
@@ -18230,7 +18230,7 @@ zhcn.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -18287,13 +18287,13 @@ zhcn.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
@@ -18494,7 +18494,7 @@ zhtw.data = {
   BULK_Label_2: '產生多個錢包 ',
   BULK_SuccessMsg: '成功！ 你的所有錢包皆已被產生。 ',
 
-  /* Sending Ether and Tokens */
+  /* Sending UBQ and Tokens */
   SEND_addr: '給地址 ',
   SEND_amount: '要發送的數量 ',
   SEND_amount_short: '數量 ',
@@ -18698,15 +18698,15 @@ zhtw.data = {
   HELP_Desc: 'Do you see something missing? Have another question? [Get in touch with us](mailto:myetherwallet@gmail.com), and we will not only answer your question, we will update this page to be more useful to people in the future! ',
   HELP_Remind_Title: 'Some reminders ',
   HELP_Remind_Desc_1: '**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but **we are not responsible for the lost Ether**. ',
-  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
+  HELP_Remind_Desc_2: 'MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain. ',
   HELP_Remind_Desc_3: 'If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer! ',
 
   HELP_0_Title: '0) I\'m new. What do I do? ',
-  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
+  HELP_0_Desc_1: 'MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**. ',
   HELP_0_Desc_2: 'Create a new wallet. ',
   HELP_0_Desc_3: 'Back the wallet up. ',
   HELP_0_Desc_4: 'Verify you have access to this new wallet and have correctly saved all necessary information. ',
-  HELP_0_Desc_5: 'Transfer Ether to this new wallet. ',
+  HELP_0_Desc_5: 'Transfer UBQ to this new wallet. ',
 
   HELP_1_Title: '1) How do I create a new wallet? ',
   HELP_1_Desc_1: 'Go to the "Generate Wallet" page. ',
@@ -18718,7 +18718,7 @@ zhtw.data = {
   HELP_2a_Title: '2a) How do I save/backup my wallet? ',
   HELP_2a_Desc_1: 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
   HELP_2a_Desc_2: 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
-  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys ',
+  HELP_2a_Desc_3: 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys ',
   HELP_2a_Desc_4: 'Place your address, versions of the private key, and the PDF version of your paper wallet in a folder. Save this on your computer and a USB drive. ',
   HELP_2a_Desc_5: 'Print the wallet if you have a printer. Otherwise, write down your private key and address on a piece of paper. Store this as a secure location, separate from your computer and the USB drive. ',
   HELP_2a_Desc_6: 'Keep in mind, you must prevent loss of the keys and password due to loss or failure of you hard drive failure, or USB drive, or piece of paper. You also must keep in mind physical loss / damage of an entire area (think fire or flood). ',
@@ -18734,7 +18734,7 @@ zhtw.data = {
   HELP_2b_Desc_8: 'Go to the "View Wallet Info" page and type in your private key / password to ensure they are correct and access your wallet. Check that the address you wrote down is the same. ',
 
   HELP_3_Title: '3) How do I verify I have access to my new wallet? ',
-  HELP_3_Desc_1: '**Before you send any Ether to your new wallet**, you should ensure you have access to it. ',
+  HELP_3_Desc_1: '**Before you send any UBQ to your new wallet**, you should ensure you have access to it. ',
   HELP_3_Desc_2: 'Navigate to the "View Wallet Info" page. ',
   HELP_3_Desc_3: 'Navigate to the MyEtherWallet.com "View Wallet Info" page. ',
   HELP_3_Desc_4: 'Select your wallet file -or- your private key and unlock your wallet. ',
@@ -18743,9 +18743,9 @@ zhtw.data = {
   HELP_3_Desc_7: 'Your wallet information should show up. Find your account address, next to a colorful, circular icon. This icon visually represents your address. Be certain that the address is the address you have saved to your text document and is on your paper wallet. ',
   HELP_3_Desc_8: 'If you are planning on holding a large amount of ether, we recommend that send a small amount of ether from new wallet before depositing a large amount. Send 0.001 ether to your new wallet, access that wallet, send that 0.001 ether to another address, and ensure everything works smoothly. ',
 
-  HELP_4_Title: '4) How do I send Ether from one wallet to another? ',
+  HELP_4_Title: '4) How do I send UBQ from one wallet to another? ',
   HELP_4_Desc_1: 'If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned. ',
-  HELP_4_Desc_2: 'Navigate to the "Send Ether & Tokens" page. ',
+  HELP_4_Desc_2: 'Navigate to the "Send UBQ & Tokens" page. ',
   HELP_4_Desc_3: 'Select your wallet file -or- your private key and unlock your wallet. ',
   HELP_4_Desc_4: 'If the wallet is encrypted, a text box will automatically appear. Enter the password. ',
   HELP_4_Desc_5: 'Click the "Unlock Wallet" button. ',
@@ -18757,8 +18757,8 @@ zhtw.data = {
   HELP_4_Desc_12: 'A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. ',
   HELP_4_Desc_13: 'The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. ',
 
-  HELP_4CX_Title: '4) How do I send Ether using MyEtherWallet CX? ',
-  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send Ether & Tokens" page. ',
+  HELP_4CX_Title: '4) How do I send UBQ using MyEtherWallet CX? ',
+  HELP_4CX_Desc_1: 'First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send UBQ & Tokens" page. ',
   HELP_4CX_Desc_2: 'QuickSend ',
   HELP_4CX_Desc_3: 'Click the Chrome Extension Icon. ',
   HELP_4CX_Desc_4: 'Click the "QuickSend" button. ',
@@ -18769,7 +18769,7 @@ zhtw.data = {
   HELP_4CX_Desc_9: 'Verify the address and the amount you are sending is correct. ',
   HELP_4CX_Desc_10: 'Enter the password for that wallet. ',
   HELP_4CX_Desc_11: 'Click "Send Transaction." ',
-  HELP_4CX_Desc_12: 'Using "Send Ether & Tokens" Page ',
+  HELP_4CX_Desc_12: 'Using "Send UBQ & Tokens" Page ',
 
   HELP_5_Title: '5) How do I run MyEtherWallet.com offline/locally? ',
   HELP_5_Desc_1: 'You can run MyEtherWallet.com on your computer instead of from the GitHub servers. You can generate a wallet completely offline and send transactions from the "Offline Transaction" page. ',
@@ -18788,7 +18788,7 @@ zhtw.data = {
 
   HELP_7_Title: '7) How do I send tokens & add custom tokens? ',
   HELP_7_Desc_0: '[Ethplorer.io](https://ethplorer.io/) is a great way to explore tokens and find the decimals of a token. ',
-  HELP_7_Desc_1: 'Navigate to the "Send Ether & Tokens" page. ',
+  HELP_7_Desc_1: 'Navigate to the "Send UBQ & Tokens" page. ',
   HELP_7_Desc_2: 'Unlock your wallet. ',
   HELP_7_Desc_3: 'Enter the address you would like to send to in the "To Address:" field. ',
   HELP_7_Desc_4: 'Enter the amount you would like to send. ',
@@ -18806,7 +18806,7 @@ zhtw.data = {
 
   HELP_8_Title: '8) What happens if your site goes down? ',
   HELP_8_Desc_1: 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+  HELP_8_Desc_2: 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
   HELP_8_Desc_3: 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
   HELP_8_Desc_4: 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -18815,7 +18815,7 @@ zhtw.data = {
   HELP_8CX_Desc_2: 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
   HELP_8CX_Desc_3: 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
-  HELP_9_Title: '9) Is the "Send Ether & Tokens" page offline? ',
+  HELP_9_Title: '9) Is the "Send UBQ & Tokens" page offline? ',
   HELP_9_Desc_1: 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
 
   HELP_10_Title: '10) How do I make an offline transaction? ',
@@ -18863,13 +18863,13 @@ zhtw.data = {
   HELP_12_Desc_28: 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
   HELP_13_Title: '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-  HELP_13_Desc_1: 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+  HELP_13_Desc_1: 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
   HELP_14_Title: '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
   HELP_14_Desc_1: 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
   HELP_15_Title: '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+  HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
   HELP_16_Desc_1: 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',

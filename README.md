@@ -12,11 +12,11 @@
 
 ### MyEtherWallet
 
-MyEtherWallet is an open source, javascript, client-side tool for generating Ether wallets. It was created and is maintained by [kvhnuke](https://github.com/kvhnuke) and [tayvano](https://github.com/tayvano) aka [insomniasexx](https://www.reddit.com/user/insomniasexx).
+MyEtherWallet is an open source, javascript, client-side tool for generating UBQ wallets. It was created and is maintained by [kvhnuke](https://github.com/kvhnuke) and [tayvano](https://github.com/tayvano) aka [insomniasexx](https://www.reddit.com/user/insomniasexx).
 
 - Generate Wallets completely client side.
 - Unlock variety of key types: raw private key, encrypted private key, keystore file, mnemonics, Ledger Nano S hardware wallet.
-- Easily send Ether and *any* ERC-20 Standard Token. Many tokens included as default: DGD, GNT, ICN, MKR, PLU, REP, SNGLS, and more.
+- Easily send UBQ and *any* ERC-20 Standard Token. Many tokens included as default: DGD, GNT, ICN, MKR, PLU, REP, SNGLS, and more.
 - Send "Only ETH" or "Only ETC" to ensure you are not victim of replay attacks.
 - Generate and send offline transactions, ensuring your private keys never touch an internet-connected device.
 - Securely access your ETH & Tokens on your [Ledger Nano S](http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-myetherwallet-with-your-nano-s) via the MyEtherWallet interface (Chrome & Opera natively, Firefox w/ [add-on](https://addons.mozilla.org/en-US/firefox/addon/u2f-support-add-on/))
@@ -34,7 +34,7 @@ MyEtherWallet is an open source, javascript, client-side tool for generating Eth
 **Goals**
 
  - **Empower the people**: Give people the ability to interact with the Ethereum blockchain without having to run a full node.
- - **Make it easy & free**: Everyone should be able to create a wallet AND and send Ether & Tokens.
+ - **Make it easy & free**: Everyone should be able to create a wallet AND and send UBQ & Tokens.
  - **People are the Priority**: You are the most important. Always. If monetization leads to a worse user experience, we don't do it. (ie: ads)
  - **A learning experience, too**: We want to educate about safely storing private keys and what public/private keys are. We don't want to hide behind usernames, passwords, or mnenmonics. That can come later.
  - **If it can be hacked, it will be hacked**: Never save, store, or transmit any private key anywhere at any time.

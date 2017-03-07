@@ -85,7 +85,7 @@
       <!-- Add an Account to Watch -->
       <div ng-show="walletType=='watchonlyaccount'">
         <h4 translate="ADD_Label_4"> Add an Account to Watch: </h4>
-        <p class="text-danger" translate="ADD_Warning_1">You can add any account to "watch" on the wallets tab without uploading a private key. This does ** not ** mean you have access to this wallet, nor can you transfer Ether from it. </p>
+        <p class="text-danger" translate="ADD_Warning_1">You can add any account to "watch" on the wallets tab without uploading a private key. This does ** not ** mean you have access to this wallet, nor can you transfer UBQ from it. </p>
         <div class="form-group">
           <label translate="ADD_Label_2"> Create a Nickname: </label>
           <input class="form-control" type="text" placeholder="{{ 'MYWAL_Nick' | translate }}" ng-model="addAccount.nickName" ng-change="watchOnlyChange()"/>

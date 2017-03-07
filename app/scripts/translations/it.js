@@ -142,7 +142,7 @@ ADD_Radio_5_PathCustom      : '(altro) ',
 ADD_Label_2                 : 'Crea un nome: ',
 ADD_Label_3                 : 'Il portafoglio è crittografato. Inserire la password ',
 ADD_Label_4                 : 'Aggiungi un conto da osservare ',
-ADD_Warning_1               : 'Puoi aggiungere qualunque conto da "osservare" nella scheda dei portafogli senza caricare una chiave privata. Ciò ** non ** significa che avrai accesso a quel portafoglio, né che potrai trasferire gli Ether lì contenuti. ',
+ADD_Warning_1               : 'Puoi aggiungere qualunque conto da "osservare" nella scheda dei portafogli senza caricare una chiave privata. Ciò ** non ** significa che avrai accesso a quel portafoglio, né che potrai trasferire gli UBQ lì contenuti. ',
 ADD_Label_5                 : 'Inserisci l\'indirizzo ',
 ADD_Label_6                 : 'Sblocca portafoglio ',
 ADD_Label_6_short           : 'Sblocca ',
@@ -162,7 +162,7 @@ BULK_Label_1                : 'Numero di portafogli da generare ',
 BULK_Label_2                : 'Genera portafogli ',
 BULK_SuccessMsg             : 'Perfetto! I tuoi portafogli sono stati generati. ',
 
-/* Sending Ether and Tokens */
+/* Sending UBQ and Tokens */
 SEND_addr                   : 'Indirizzo destinatario ',
 SEND_amount                 : 'Importo da inviare ',
 SEND_amount_short           : 'Importo ',

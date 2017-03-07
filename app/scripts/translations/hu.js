@@ -116,8 +116,8 @@ x_Wallet                    : 'Tárca ',
 /* Header */
 MEW_Warning_1               : 'Mindig ellenőrizd az URL-t mielőtt megpróbálod elérni a tárcádat vagy új tárcát hozol létre. Óvakodj az adathalász oldalalaktól! ',
 CX_Warning_1                : 'Győződj meg róla, hogy van **külső adatmentésed** minden tárcáról, amit itt tárolsz. Több dolog is történhet, ami adatvesztést eredményezhet a Chrome Bővítményben, többek között a Bővítmény törlése vagy újratelepítése. A bővítmény egyszerű módja annak, hogy elérd a tárcáidat, de **nem** annak, hogy elmentsd azokat. ',
-MEW_Tagline                 : 'Nyílt forrású JavaScript-alapú, Kliens-oldali Ether Tárca ',
-CX_Tagline                  : 'Nyílt forrású JavaScript-alapú, Kliens-oldali Ether Tárca Chrome Bővítmény ',
+MEW_Tagline                 : 'Nyílt forrású JavaScript-alapú, Kliens-oldali UBQ Tárca ',
+CX_Tagline                  : 'Nyílt forrású JavaScript-alapú, Kliens-oldali UBQ Tárca Chrome Bővítmény ',
 
 /* Footer */
 FOOTER_1                    : 'Egy nyílt forrású, javascript-alapú, kliens-oldali eszköz Ethereum Tárcák létrehozására és tranzakicók végrehajtására. ',
@@ -181,7 +181,7 @@ BULK_Label_1                : 'Generálni kívánt tárcák száma ',
 BULK_Label_2                : 'Tárcák generálása ',
 BULK_SuccessMsg             : 'Sikerült! A tárcáid legenerálódtak. ',
 
-/* Sending Ether and Tokens */
+/* Sending UBQ and Tokens */
 SEND_addr                   : 'Erre a címre ',
 SEND_amount                 : 'Küldendő összeg ',
 SEND_amount_short           : 'Összeg ',
@@ -483,7 +483,7 @@ HELP_7_Desc_15              : 'The transaction will be submitted. The TX ID will
 
 HELP_8_Title                : '8) What happens if your site goes down? ',
 HELP_8_Desc_1               : 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-HELP_8_Desc_2               : 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+HELP_8_Desc_2               : 'If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
 HELP_8_Desc_3               : 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
 HELP_8_Desc_4               : 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
@@ -540,13 +540,13 @@ HELP_12_Desc_27             : 'After successful import, delete `nothing_special_
 HELP_12_Desc_28             : 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
 
 HELP_13_Title               : '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-HELP_13_Desc_1              : 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
+HELP_13_Desc_1              : 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
 
 HELP_14_Title               : '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
 HELP_14_Desc_1              : 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
 HELP_15_Title               : '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-HELP_15_Desc_1              : 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
+HELP_15_Desc_1              : 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
 HELP_16_Title               : '16) How do I check the balance of my account? ',
 HELP_16_Desc_1              : 'You can use a blockchain explorer like [ubiqscan.io](http://ubiqscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://ubiqscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on ubiqscan.io ',

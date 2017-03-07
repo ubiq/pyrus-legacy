@@ -65,7 +65,7 @@ NAV_InteractContract        : 'Pracuj z Kontraktem ',
 NAV_Multisig                : 'Multi-podpis ',
 NAV_MyWallets               : 'Moje Portfele ',
 NAV_Offline                 : 'Wyślij Offline ',
-NAV_SendEther               : 'Wyślij Ether i Tokeny ',
+NAV_SendEther               : 'Wyślij UBQ i Tokeny ',
 NAV_SendTokens              : 'Wyślij Tokeny ',
 NAV_SignMsg                 : 'Podpisz Wiadomość ',
 NAV_ViewWallet              : 'Wyświetl informacje o portfelu ',
@@ -161,7 +161,7 @@ BULK_Label_1                : 'Ilość Portfeli do Wygenerowania ',
 BULK_Label_2                : 'Generuj Portfele ',
 BULK_SuccessMsg             : 'Sukces! Twoje portfele zostały wygenerowane. ',
 
-/* Sending Ether and Tokens */
+/* Sending UBQ and Tokens */
 SEND_addr                   : 'Do Adresu ',
 SEND_amount                 : 'Kwota do Wysłania ',
 SEND_amount_short           : 'Kwota ',
@@ -417,7 +417,7 @@ HELP_3_Desc_6               : 'Kliknij przycisk "Odblokuj Portfel". ',
 HELP_3_Desc_7               : 'Informacje o Twoim portfelu powinny się wyświetlić. Odszukaj adres Twojego portfela obok okrągłej kolorowej ikonki. Ta ikona to wizualna reprezentacja adresu Twojego portfela. Upewnij się, że adres odpowiada adresowi zapisanemu w dokumencie tekstowym i na portfelu papierowym. ',
 HELP_3_Desc_8               : 'Jeśli planujesz trzymać w portfelu jakieś większe sumy, zalecamy w pierwszej kolejności wykonanie kilku testowych transakcji o mniejszej wartości. Prześlij do Twojego nowego portfela 0.001 ether, wejdź do portfela, prześlij te 0.001 ether na inny adres i upewnij się, że wszystko przebiegło jak należy. ',
 
-HELP_4_Title                : '4) Jak wysłać Ether z jednego portfela na inny? ',
+HELP_4_Title                : '4) Jak wysłać UBQ z jednego portfela na inny? ',
 HELP_4_Desc_1               : 'Jeżeli planujesz przesłać większą sumę środków, najpierw powinieneś wysłać mniejszą kwotę, aby upewnić się, że wszystko przebiegło zgodnie z planem. ',
 HELP_4_Desc_2               : 'Przejdź na zakładkę "Wyślij Ether". ',
 HELP_4_Desc_3               : 'Wybierz Twój plik portfela -lub- wpisz klucz prywatny i odblokuj portfel. ',
@@ -431,7 +431,7 @@ HELP_4_Desc_11              : 'Kliknij niebieski przycisk "Wyślij Transakcję" 
 HELP_4_Desc_12              : 'Pojawi się okienko z potwierdzeniem. Zweryfikuj czy kwota i adres, na który wysyłasz są prawidłowe. Następnie kliknij "Tak, jestem pewien! Zatwierdź Transakcję.". ',
 HELP_4_Desc_13              : 'Transakcja zostanie wysłana i zostanie wyświetlony TX ID. Możesz kliknąć TX ID, aby zobaczyć tą transakcję w eksploratorze bloków. ',
 
-HELP_4CX_Title              : '4)Jak wysłać Ether używając MyEtherWallet CX? ',
+HELP_4CX_Title              : '4)Jak wysłać UBQ używając MyEtherWallet CX? ',
 HELP_4CX_Desc_1             : 'Najpierw musisz dodać portfel. Po dodaniu portfela masz 2 możliwości do wyboru: funkcja "Wyślij" z ikony Rozszerzenia Chrome lub zakładka "Wyślij Ether" ze strony "Moje Portfele". ',
 HELP_4CX_Desc_2             : 'Wyślij: ',
 HELP_4CX_Desc_3             : 'Kliknij ikonę Rozszerzenia Chrome. ',
@@ -462,7 +462,7 @@ HELP_5CX_Desc_8             : 'Rozszerzenie powinno się pojawić na liście i w
 
 HELP_7_Title                : '7) Jak się wysyła Tokeny i jak tworzyć własne Tokeny? ',
 HELP_7_Desc_0               : '[Ethplorer.io](https://ethplorer.io/) jest świetnym miejscem na przeglądanie tokenów oraz sprawdzenia ich ilości miejsc po przecinku. ',
-HELP_7_Desc_1               : 'Przejdź na zakładkę "Wyślij Ether i Tokeny". ',
+HELP_7_Desc_1               : 'Przejdź na zakładkę "Wyślij UBQ i Tokeny". ',
 HELP_7_Desc_2               : 'Odblokuj portfel. ',
 HELP_7_Desc_3               : 'Wpisz adres, na który chcesz je przesłać w pole "Do Adresu:". ',
 HELP_7_Desc_4               : 'Wpisz wartość jaką chcesz wysłać. ',
@@ -537,7 +537,7 @@ HELP_12_Desc_27             : 'Po zaimportowaniu portfela, usuń `nic_specjalneg
 HELP_12_Desc_28             : 'Po ponownym uruchomieniu aplikacji Ubiq Wallet Twój portfel pojawi się na zakładce "Accounts". ',
 
 HELP_13_Title               : '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-HELP_13_Desc_1              : 'Oznacza to, że nie posiadasz wystarczającej ilości Ether na koncie, aby pokryć koszty paliwa. Każda transakcja (przesyłanie tokenów lub interakcja z kontraktem) wymaga paliwa, które jest opłacane w Ether\'ach. Wyświetlona wartość jest ilością potrzebną na pokrycie kosztów transakcji w Wei\'ach. Podziel tą liczbę przez `1000000000000000000` i odejmij wartość Ether, którą chciałeś wysłać (jeśli wysyłałeś Ether). Otrzymasz wartość, jaką musisz przesłać na swoje konto, aby wykonać transakcję.',
+HELP_13_Desc_1              : 'Oznacza to, że nie posiadasz wystarczającej ilości UBQ na koncie, aby pokryć koszty paliwa. Każda transakcja (przesyłanie tokenów lub interakcja z kontraktem) wymaga paliwa, które jest opłacane w Ether\'ach. Wyświetlona wartość jest ilością potrzebną na pokrycie kosztów transakcji w Wei\'ach. Podziel tą liczbę przez `1000000000000000000` i odejmij wartość Ether, którą chciałeś wysłać (jeśli wysyłałeś Ether). Otrzymasz wartość, jaką musisz przesłać na swoje konto, aby wykonać transakcję.',
 
 HELP_14_Title               : '14) Niektóre strony wykorzystują ruchy myszką przy generowaniu klucza prywatnego. MyEtherWallet tego nie robi. Czy generator liczb losowych w MyEtherWallet jest bezpieczny? ',
 HELP_14_Desc_1              : 'Chociaż generowanie liczb losowych przy udziale ruchów myszki jest sprytnie pomyślane i rozumiemy dlaczego ludzie to lubią, to jednak rzeczywistość jest taka, że window.crypto zapewnia większą entropię niż ruchy myszką. Generowanie z ruchów myszki nie jest niebezpieczne, ale my (oraz znaczna liczba innych ekspertów kryptografii) wierzymy w window.crypto. W dodatku MyEtherWallet może być używane na urządzeniach dotykowych. Tutaj można przeczytać [rozmowę rozeźlonego reddit\'ora i Vitalik\'a Buterin\'a odnośnie ruchów myszki kontra window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) a tutaj jest [specyfikacja window.crypto w3](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',

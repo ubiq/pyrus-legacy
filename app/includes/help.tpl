@@ -12,7 +12,7 @@
     <div ng-show="!hRemind">
       <ul>
         <li translate="HELP_Remind_Desc_1">**Ethereum, MyEtherWallet.com & MyEtherWallet CX, and some of the underlying Javascript libraries we use are under active development.** While we have thoroughly tested & tens of thousands of wallets have been successfully created by people all over the globe, there is always the remote possibility that something unexpected happens that causes your ETH to be lost. Please do not invest more than you are willing to lose, and please be careful. If something were to happen, we are sorry, but we are not responsible for the lost Ether.</li>
-        <li translate="HELP_Remind_Desc_2">MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your Ether to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain.</li>
+        <li translate="HELP_Remind_Desc_2">MyEtherWallet.com & MyEtherWallet CX are not "web wallets". You do not create an account or give us your UBQ to hold onto. All data never leaves your computer/your browser. We make it easy for you to create, save, and access your information and interact with the blockchain.</li>
         <li translate="HELP_Remind_Desc_3">If you do not save your private key & password, there is no way to recover access to your wallet or the funds it holds.  Back them up in multiple physical locations &ndash; not just on your computer!</li>
       </ul>
     </div>
@@ -26,12 +26,12 @@
       <h4 translate="HELP_0_Title"> 0. I'm new. What do I do? </h4>
     </div>
     <div ng-show="h0">
-      <p translate="HELP_0_Desc_1"> MyEtherWallet gives you the ability to generate new wallets so you can store your Ether yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**.</p>
+      <p translate="HELP_0_Desc_1"> MyEtherWallet gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**.</p>
       <ol>
         <li translate="HELP_0_Desc_2"> Create a new wallet. </li>
         <li translate="HELP_0_Desc_3"> Back the wallet up. </li>
         <li translate="HELP_0_Desc_4"> Verify you have access to this new wallet and have correctly saved all necessary information. </li>
-        <li translate="HELP_0_Desc_5"> Transfer Ether to this new wallet. </li>
+        <li translate="HELP_0_Desc_5"> Transfer UBQ to this new wallet. </li>
       </ol>
     </div>
   </article>
@@ -69,11 +69,11 @@
       <p translate="HELP_2a_Desc_1"> You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. </p>
       <ol>
         <li translate="HELP_2a_Desc_2"> Save the address. You can keep it to yourself or share it with others. That way, others can transfer ETH to you. </li>
-        <li translate="HELP_2a_Desc_3"> Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys: </li>
+        <li translate="HELP_2a_Desc_3"> Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: </li>
 
         <ul>
           <li><strong translate="x_Keystore">Keystore/JSON File (Recommended · Encrypted · Fusion/Gubiq Format):</strong> <span translate="x_KeystoreDesc">This Keystore / JSON file matches the format used by Fusion & Gubiq so you can easily import it in the future. It is the recommended file to download and back up.</span></li>
-          <li><strong translate="x_Json">JSON File (unencrypted):</strong> <span translate="x_JsonDesc">This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & Ether without the password.</span></li>
+          <li><strong translate="x_Json">JSON File (unencrypted):</strong> <span translate="x_JsonDesc">This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & UBQ without the password.</span></li>
           <li><strong translate="x_PrivKey">Private Key (unencrypted):</strong> <span translate="x_PrivKeyDesc">This is the unencrypted text version of your private key, meaning no password is necessary. If someone were to find your unencrypted private key, they could access your wallet without a password. For this reason, encrypted versions are typically recommended.</span></li>
         </ul>
 
@@ -116,7 +116,7 @@
       <h4 translate="HELP_3_Title"> 3. How do I verify I have access to my new wallet? </h4>
     </div>
     <div ng-show="h3">
-      <p translate="HELP_3_Desc_1">**Before you send any Ether to your new wallet**, you should ensure you have access to it.</p>
+      <p translate="HELP_3_Desc_1">**Before you send any UBQ to your new wallet**, you should ensure you have access to it.</p>
       <ol>
         @@if (site === 'mew' ) {
         <li translate="HELP_3_Desc_2"> Navigate to the "View Wallet Info" page. </li>
@@ -139,7 +139,7 @@
   <article class="collapse-container">
     <div ng-click="h4 = !h4">
       <a class="collapse-button" ><span ng-show="!h4">+</span><span ng-show="h4">-</span></a>
-      <h4 translate="HELP_4_Title"> 4. How do I send Ether from one wallet to another? </h4>
+      <h4 translate="HELP_4_Title"> 4. How do I send UBQ from one wallet to another? </h4>
     </div>
     <div ng-show="h4">
       <p translate="HELP_4_Desc_1">If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned.</p>
@@ -166,7 +166,7 @@
   <article class="collapse-container">
     <div ng-click="h4cx = !h4cx">
       <a class="collapse-button" ><span ng-show="!h4cx">+</span><span ng-show="h4cx">-</span></a>
-      <h4 translate="HELP_4CX_Title">4. How do I send Ether using MyEtherWallet CX? </h4>
+      <h4 translate="HELP_4CX_Title">4. How do I send UBQ using MyEtherWallet CX? </h4>
     </div>
     <div ng-show="h4cx">
       <p translate="HELP_4CX_Desc_1">First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send Ether" page.</p>
@@ -303,7 +303,7 @@
     </div>
     <div ng-show="h8">
       <p translate="HELP_8_Desc_1">MyEtherWallet is not a web wallet. You don't have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain.</p>
-      <p translate="HELP_8_Desc_2">If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn't have to "get" your Ether out of MyEtherWallet because it's not in MyEtherWallet. It's in whatever wallet your generated via our site.</p>
+      <p translate="HELP_8_Desc_2">If MyEtherWallet.com goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn't have to "get" your UBQ out of MyEtherWallet because it's not in MyEtherWallet. It's in whatever wallet your generated via our site.</p>
       <p translate="HELP_8_Desc_3"> You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #10 below. </p>
       <p translate="HELP_8_Desc_4">In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren't storing any information. If we do take the domain down, it still is, and always will be, publicly available at <a href="https://github.com/kvhnuke/etherwallet/tree/gh-pages" target="_blank">https://github.com/kvhnuke/etherwallet</a>. You can download the ZIP there and run it locally. </p>
     </div>
@@ -424,7 +424,7 @@
         <h4 translate="HELP_13_Title">13. What does "Gas Limit Too Low" Mean?</h4>
       </div>
       <div ng-show="h13">
-        <p translate="HELP_13_Desc_1"> Most likely, this means you are attempting to send Ether to a contract. Sending to a contract requires a bit more data and therefore a bit more gas. On the "Send Ether" page, click the "+ Advanced: Add More Gas or Data" button below the amount field. This will display two additional fields that you can use to increase the gas above the default 21000, or add data to your transaction. </p>
+        <p translate="HELP_13_Desc_1"> Most likely, this means you are attempting to send UBQ to a contract. Sending to a contract requires a bit more data and therefore a bit more gas. On the "Send Ether" page, click the "+ Advanced: Add More Gas or Data" button below the amount field. This will display two additional fields that you can use to increase the gas above the default 21000, or add data to your transaction. </p>
       </div>
   </article>
 
@@ -448,7 +448,7 @@
         <h4 translate="HELP_15_Title">15. Why hasn't the wallet I just created show up in the blockchain explorer? (ie: etherchain, etherscan) </h4>
       </div>
       <div ng-show="h15">
-        <p translate="HELP_15_Desc_1"> Addresses will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. </p>
+        <p translate="HELP_15_Desc_1"> Addresses will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. </p>
     </div>
   </article>
 

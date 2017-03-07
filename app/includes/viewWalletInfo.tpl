@@ -82,7 +82,7 @@
       <div ng-show="wallet.type=='default'">
         <div class="account-help-icon">
           <img src="images/icon-help.svg" class="help-icon" />
-          <p class="account-help-text" translate="x_JsonDesc">This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & Ether without the password.</p>
+          <p class="account-help-text" translate="x_JsonDesc">This is the unencrypted, JSON format of your private key. This means you do not need the password but anyone who finds your JSON can access your wallet & UBQ without the password.</p>
           <h5 translate="x_Json">JSON File (Unencrypted)</h5>
         </div>
         <a class="btn btn-info btn-block" href="{{blob}}" download="{{wallet.getChecksumAddressString()}}-unencrypted.json" translate="x_Download">DOWNLOAD</a>
