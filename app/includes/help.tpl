@@ -144,7 +144,7 @@
     <div ng-show="h4">
       <p translate="HELP_4_Desc_1">If you plan to move a large amount of ether, you should test sending a small amount to your wallet first to ensure everything goes as planned.</p>
       <ol>
-        <li translate="HELP_4_Desc_2"> Navigate to the "Send Ether" page. </li>
+        <li translate="HELP_4_Desc_2"> Navigate to the "Send UBQ" page. </li>
         <li translate="HELP_4_Desc_3"> Select your wallet file -or- your private key and unlock your wallet.</li>
         <li translate="HELP_4_Desc_4"> If the wallet is encrypted, a text box will automatically appear. Enter the password. </li>
         <li translate="HELP_4_Desc_5"> Click the "Unlock Wallet" button. </li>
@@ -169,7 +169,7 @@
       <h4 translate="HELP_4CX_Title">4. How do I send UBQ using Pyrus CX? </h4>
     </div>
     <div ng-show="h4cx">
-      <p translate="HELP_4CX_Desc_1">First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send Ether" page.</p>
+      <p translate="HELP_4CX_Desc_1">First, you need to add a wallet. Once you have done that, you have 2 options: the "QuickSend" functionality from the Chrome Extension icon or the "Send UBQ" page.</p>
       <p translate="HELP_4CX_Desc_2" class="strong"> QuickSend: </p>
       <ol>
         <li translate="HELP_4CX_Desc_3"> Click the Chrome Extension Icon. </li>
@@ -182,9 +182,9 @@
         <li translate="HELP_4CX_Desc_10"> Enter the password for that wallet. </li>
         <li translate="HELP_4CX_Desc_11"> Click "Send Transaction." </li>
       </ol>
-      <p class="strong" translate="HELP_4CX_Desc_12"> Using "Send Ether" Page: </p>
+      <p class="strong" translate="HELP_4CX_Desc_12"> Using "Send UBQ" Page: </p>
       <ol>
-        <li translate="HELP_4_Desc_2"> Navigate to the "Send Ether" page. </li>
+        <li translate="HELP_4_Desc_2"> Navigate to the "Send UBQ" page. </li>
         <li translate="HELP_4_Desc_3"> Select your wallet file -or- your private key and unlock your wallet.</li>
         <li translate="HELP_4_Desc_4"> If the wallet is encrypted, a text box will automatically appear. Enter the password. </li>
         <li translate="HELP_4_Desc_5"> Click the "Unlock Wallet" button. </li>
@@ -424,7 +424,7 @@
         <h4 translate="HELP_13_Title">13. What does "Gas Limit Too Low" Mean?</h4>
       </div>
       <div ng-show="h13">
-        <p translate="HELP_13_Desc_1"> Most likely, this means you are attempting to send UBQ to a contract. Sending to a contract requires a bit more data and therefore a bit more gas. On the "Send Ether" page, click the "+ Advanced: Add More Gas or Data" button below the amount field. This will display two additional fields that you can use to increase the gas above the default 21000, or add data to your transaction. </p>
+        <p translate="HELP_13_Desc_1"> Most likely, this means you are attempting to send UBQ to a contract. Sending to a contract requires a bit more data and therefore a bit more gas. On the "Send UBQ" page, click the "+ Advanced: Add More Gas or Data" button below the amount field. This will display two additional fields that you can use to increase the gas above the default 21000, or add data to your transaction. </p>
       </div>
   </article>
 
