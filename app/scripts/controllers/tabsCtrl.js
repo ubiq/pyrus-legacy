@@ -6,8 +6,8 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     $scope.customNodeModal = document.getElementById('customNodeModal') ? new Modal(document.getElementById('customNodeModal')) : null;
     $scope.Validator = Validator;
     $scope.nodeList = nodes.nodeList;
-    $scope.defaultNodeKey = 'eth_mew';
-    $scope.customNode = { options: 'eth', name: '', url: '', port: '', httpBasicAuth: null, eip155: false, chainId: '' };
+    $scope.defaultNodeKey = 'ubq_pyrus';
+    $scope.customNode = { options: 'ubq', name: '', url: '', port: '', httpBasicAuth: null, eip155: true, chainId: '' };
     $scope.customNodeCount = 0;
     $scope.nodeIsConnected = true;
     $scope.browserProtocol = window.location.protocol;
@@ -59,9 +59,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     }
     $scope.addCustomNodeToList = function(nodeInfo) {
         var tempObj = null;
-        if (nodeInfo.options == 'eth') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.eth_ethscan));
-        else if (nodeInfo.options == 'etc') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.etc_mew));
-        else if (nodeInfo.options == 'rop') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rop_mew));
+        if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.ubq_pyrus));
         else if (nodeInfo.options == 'cus') {
             tempObj = JSON.parse(JSON.stringify(nodes.customNodeObj));
             tempObj.eip155 = nodeInfo.eip155;

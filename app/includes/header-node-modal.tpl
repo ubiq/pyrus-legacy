@@ -56,9 +56,7 @@
           </div>
 
           <div class="clearfix col-xs-12 radio">
-            <label><input name="options" type="radio" ng-model="customNode.options" value="eth"> UBQ </label>
-            <label><input name="options" type="radio" ng-model="customNode.options" value="etc"> ETC </label>
-            <label><input name="options" type="radio" ng-model="customNode.options" value="rop"> Ropsten </label>
+            <label><input name="options" type="radio" ng-model="customNode.options" value="ubq"> UBQ </label>
             <label><input name="options" type="radio" ng-model="customNode.options" value="cus"> Custom </label>
             <label><input type="checkbox" ng-model="customNode.eip155" value="true"> Supports EIP-155 </label>
           </div>

@@ -2,9 +2,7 @@
 var nodes = function() {}
 nodes.customNode = require('./nodeHelpers/customNode');
 nodes.nodeTypes = {
-    ETH: "ETH",
-    ETC: "ETC",
-    Ropsten: "ROPSTEN ETH",
+    UBQ: "UBQ",
     Custom: "CUSTOM ETH"
 };
 nodes.customNodeObj = {
@@ -21,57 +19,18 @@ nodes.customNodeObj = {
     'lib': null
 };
 nodes.nodeList = {
-    'eth_mew': {
-        'name': 'ETH',
+    'ubq_pyrus': {
+        'name': 'UBQ',
         'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
         'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
-        'type': nodes.nodeTypes.ETH,
+        'type': nodes.nodeTypes.UBQ,
         'eip155': true,
-        'chainId': 1,
-        'tokenList': require('./tokens/ethTokens.json'),
-        'abiList': require('./abiDefinitions/ethAbi.json'),
+        'chainId': 88,
+        'tokenList': require('./tokens/ubqTokens.json'),
+        'abiList': require('./abiDefinitions/ubqAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
-        'lib': new nodes.customNode('https://api.myetherapi.com/eth', '')
-    },
-    'eth_ethscan': {
-        'name': 'ETH',
-        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
-        'type': nodes.nodeTypes.ETH,
-        'eip155': true,
-        'chainId': 1,
-        'tokenList': require('./tokens/ethTokens.json'),
-        'abiList': require('./abiDefinitions/ethAbi.json'),
-        'estimateGas': false,
-        'service': 'Etherscan.io',
-        'lib': require('./nodeHelpers/etherscan')
-    },
-    'rop_mew': {
-        'name': 'Ropsten',
-        'type': nodes.nodeTypes.Ropsten,
-        'blockExplorerTX': 'https://testnet.ubiqscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://testnet.ubiqscan.io/address/[[address]]',
-        'eip155': true,
-        'chainId': 3,
-        'tokenList': require('./tokens/ropstenTokens.json'),
-        'abiList': require('./abiDefinitions/ropstenAbi.json'),
-        'estimateGas': false,
-        'service': 'MyEtherWallet',
-        'lib': new nodes.customNode('https://api.myetherapi.com/rop', '')
-    },
-    'etc_epool': {
-        'name': 'ETC',
-        'blockExplorerTX': 'https://gastracker.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://gastracker.io/addr/[[address]]',
-        'type': nodes.nodeTypes.ETC,
-        'eip155': true,
-        'chainId': 61,
-        'tokenList': require('./tokens/etcTokens.json'),
-        'abiList': require('./abiDefinitions/etcAbi.json'),
-        'estimateGas': false,
-        'service': 'Epool.io',
-        'lib': new nodes.customNode('https://mewapi.epool.io', '')
+        'service': 'Ubiqscan.io',
+        'lib': new nodes.customNode('https://api.ubiqsmart.com/ubq', '')
     }
 };
 nodes.ethPrice = require('./nodeHelpers/ethPrice');
