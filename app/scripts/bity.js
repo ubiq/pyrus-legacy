@@ -2,7 +2,7 @@
 var bity = function() {}
 bity.SERVERURL = "https://bity.myetherapi.com";
 bity.decimals = 6;
-bity.ethExplorer = 'https://ubiqscan.io/tx/[[txHash]]';
+bity.ethExplorer = 'https://ubiqscan.io/en/tx/[[txHash]]';
 bity.btcExplorer = 'https://blockchain.info/tx/[[txHash]]';
 bity.validStatus = ["RCVE", "FILL", "CONF", "EXEC"];
 bity.invalidStatus = ["CANC"];

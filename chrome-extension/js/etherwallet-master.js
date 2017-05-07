@@ -23,7 +23,7 @@ module.exports = ajaxReq;
 var bity = function () {};
 bity.SERVERURL = "https://bity.myetherapi.com";
 bity.decimals = 6;
-bity.ethExplorer = 'https://ubiqscan.io/tx/[[txHash]]';
+bity.ethExplorer = 'https://ubiqscan.io/en/tx/[[txHash]]';
 bity.btcExplorer = 'https://blockchain.info/tx/[[txHash]]';
 bity.validStatus = ["RCVE", "FILL", "CONF", "EXEC"];
 bity.invalidStatus = ["CANC"];
@@ -612,7 +612,7 @@ var quickSendCtrl = function ($scope, $sce) {
 				if (!rawTx.isError) {
 					uiFuncs.sendTx(rawTx.signedTx, function (resp) {
 						if (!resp.isError) {
-							$scope.sendTxStatus = $sce.trustAsHtml(globalFuncs.getSuccessText(globalFuncs.successMsgs[2] + "<br />" + resp.data + "<br /><a href='http://ubiqscan.io/tx/" + resp.data + "' target='_blank'> UBQ TX via EtherScan.io </a>"));
+							$scope.sendTxStatus = $sce.trustAsHtml(globalFuncs.getSuccessText(globalFuncs.successMsgs[2] + "<br />" + resp.data + "<br /><a href='http://ubiqscan.io/en/tx/" + resp.data + "' target='_blank'> UBQ TX via EtherScan.io </a>"));
 							$scope.setBalance();
 						} else {
 							$scope.sendTxStatus = $sce.trustAsHtml(globalFuncs.getDangerText(resp.error));
@@ -1526,7 +1526,7 @@ var offlineTxCtrl = function ($scope, $sce, walletService) {
             if (data.error) {
                 $scope.notifier.danger(data.msg);
             } else {
-                $scope.notifier.success(globalFuncs.successMsgs[2] + "<a href='http://ubiqscan.io/tx/" + data.data + "' target='_blank'>" + data.data + "</a>");
+                $scope.notifier.success(globalFuncs.successMsgs[2] + "<a href='http://ubiqscan.io/en/tx/" + data.data + "' target='_blank'>" + data.data + "</a>");
             }
         });
     };
@@ -4751,8 +4751,8 @@ nodes.customNodeObj = {
 nodes.nodeList = {
     'ubq_pyrus': {
         'name': 'UBQ',
-        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
+        'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
         'eip155': true,
         'chainId': 88,
@@ -10269,7 +10269,7 @@ en.data = {
   HELP_15_Desc_1: 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
 
   HELP_16_Title: '16) How do I check the balance of my account? ',
-  HELP_16_Desc_1: 'You can use a blockchain explorer like [ubiqscan.io](http://ubiqscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://ubiqscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on ubiqscan.io ',
+  HELP_16_Desc_1: 'You can use a blockchain explorer like [ubiqscan.io](http://ubiqscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://ubiqscan.io/en/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on ubiqscan.io ',
 
   HELP_17_Title: '17) Why isn\'t my balance showing up when I unlock my wallet? ',
   HELP_17_Desc_1: ' This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like ubiqscan.io ',

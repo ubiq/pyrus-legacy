@@ -21,8 +21,8 @@ nodes.customNodeObj = {
 nodes.nodeList = {
     'ubq_pyrus': {
         'name': 'UBQ',
-        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
+        'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
         'eip155': true,
         'chainId': 88,
