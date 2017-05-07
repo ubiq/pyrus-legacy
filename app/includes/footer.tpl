@@ -29,7 +29,6 @@
           <li><a aria-label="my ether wallet github" href="https://github.com/ubiq/pyruswallet" target="_blank">Github: Pyrus</a></li>
           <li><a aria-label="twitter" href="https://twitter.com/ubiqsmart" target="_blank">Twitter</a></li>
         </ul>
-
       </div>
 
     </section></section>
@@ -43,6 +42,6 @@
 
 
 </footer>
-
+</main>
 </body>
 </html>

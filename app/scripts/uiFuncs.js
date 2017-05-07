@@ -56,7 +56,7 @@ uiFuncs.signTxTrezor = function(rawTx, txData, callback) {
     );
 }
 uiFuncs.signTxLedger = function(app, eTx, rawTx, txData, old, callback) {
-    eTx.raw[6] = Buffer.from([1]); //ETH chain id
+    eTx.raw[6] = Buffer.from([rawTx.chainId]);
     eTx.raw[7] = eTx.raw[8] = 0;
     var toHash = old ? eTx.raw.slice(0, 6) : eTx.raw;
     var txToSign = ethUtil.rlp.encode(toHash);
@@ -216,12 +216,18 @@ uiFuncs.notifier = {
         this.show = false;
         if (!this.scope.$$phase) this.scope.$apply()
     },
-    open: function() { this.show = true; },
+    open: function() {
+        this.show = true;
+        if (!this.scope.$$phase) this.scope.$apply();
+    },
     class: '',
     message: '',
     timer: null,
     sce: null,
     scope: null,
+    overrideMsg: function(msg){
+        return globalFuncs.getEthNodeMsg(msg);
+    },
     warning: function(msg) {
         this.setClassAndOpen("alert-warning", msg);
     },
@@ -230,6 +236,7 @@ uiFuncs.notifier = {
         this.setTimer();
     },
     danger: function(msg) {
+        msg = this.overrideMsg(msg);
         this.setClassAndOpen("alert-danger", msg);
     },
     success: function(msg) {

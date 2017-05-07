@@ -21,7 +21,7 @@
   <meta name="theme-color" content="#163151">
 
   <meta property="og:url"         content="https://pyrus.ubiqsmart.com" />
-  <meta property="og:title"       content="When Great Minds Don’t Think Alike" />
+  <meta property="og:title"       content="Pyrus" />
   <meta property="og:description" content="Pyrus: Open-Source & Client-Side Ubiq Wallet" />
   <meta property="og:image"       content="images/fb-myetherwallet.png" />
   <meta property="og:image"       content="images/fb-mewtwo.jpg" />
@@ -29,7 +29,7 @@
 
 <body>
 
-<header aria-label="header" ng-controller='tabsCtrl' >
+<header class="{{curNode.name}} {{curNode.service}}" aria-label="header" ng-controller='tabsCtrl' >
   @@if (site === 'cx' ) {
     <div class="small announcement annoucement-warning" target="_blank">
       <div class="container" translate="CX_Warning_1">Make sure you have <strong>external backups</strong> of any wallets you store here. Many things could happen that would cause you to lose the data in this Chrome Extension, including uninstalling the extension. This extension is a way to easily access your wallets, <strong>not</strong> a way to back them up.</div>
@@ -43,7 +43,7 @@
 
       <div class="tagline"><span style="max-width: 395px">Open-Source & Client-Side Ubiq Wallet</span>
 
-        &middot; v3.5.3 &nbsp;&nbsp;
+        &middot; v3.6.7 &nbsp;&nbsp;
 
         <span class="dropdown" ng-cloak>
           <a tabindex="0"  aria-haspopup="true" aria-expanded="false" aria-label="change language. current language {{curLang}}" class="dropdown-toggle" ng-click="dropdown = !dropdown">{{curLang}}<i class="caret"></i></a>
@@ -77,7 +77,8 @@
 
         &nbsp;&nbsp;
 
-        <span class="dropdown" ng-cloak>
+        <!-- Warning: The separators you see on the frontend are in styles/etherwallet-custom.less. If you add / change a node, you have to adjust these. Ping tayvano if you're not a CSS wizard -->
+        <span class="dropdown dropdown-node" ng-cloak>
           <a tabindex="0" aria-haspopup="true" aria-label="change node. current node {{curNode.name}} node by {{curNode.service}}" class="dropdown-toggle" ng-click="dropdownNode = !dropdownNode"> {{curNode.name}} <small>({{curNode.service}})</small><i class="caret"></i></a>
           <ul class="dropdown-menu" ng-show="dropdownNode">
             <li ng-repeat="(key, value) in nodeList"><a ng-class="{true:'active'}[curNode == key]" ng-click="changeNode(key)">
@@ -92,12 +93,6 @@
       </div>
     </section>
   </section>
-
-  <!-- TODO: turn this into notification -->
-  <div class="small announcement annoucement-warning" ng-show="!nodeIsConnected" ng-cloak>
-    <div class="container">Unable to connect to node. See the help page for troubleshooting suggestions.</div>
-  </div>
-  <!-- / TODO: turn this into notification -->
 
   <nav role="navigation" aria-label="main navigation" class="container nav-container overflowing" >
     <a aria-hidden="true" ng-show="showLeftArrow" class="nav-arrow-left" ng-click="scrollLeft(100);" ng-mouseover="scrollHoverIn(true,2);" ng-mouseleave="scrollHoverOut()">&#171;</a>

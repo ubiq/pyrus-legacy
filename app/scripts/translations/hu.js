@@ -4,75 +4,6 @@ var hu = function() {}
 hu.code = 'hu';
 hu.data = {
 
-/* Misc */
-x_ParityPhrase              : 'Parity Phrase ',
-
-/* Node Switcher */
-NODE_Title                  : 'Set Up Your Custom Node',
-NODE_Subtitle               : 'To connect to a local node...',
-NODE_Warning                : 'Your node must be HTTPS in order to connect to it via MyEtherWallet.com. You can [download the MyEtherWallet repo & run it locally](https://github.com/kvhnuke/etherwallet/releases/latest) to connect to any node. Or, get free SSL certificate via [LetsEncrypt](https://letsencrypt.org/)',
-NODE_Name                   : 'Node Name',
-NODE_Port                   : 'Node Port',
-NODE_CTA                    : 'Save & Use Custom Node',
-
-/* Contracts */
-x_Access                    : 'Access ',
-CONTRACT_Title              : 'Contract Address ',
-CONTRACT_Title_2            : 'Select Existing Contract ',
-CONTRACT_Json               : 'ABI / JSON Interface ',
-CONTRACT_Interact_Title     : 'Read / Write Contract ',
-CONTRACT_Interact_CTA       : 'Select a function ',
-CONTRACT_ByteCode           : 'Byte Code ',
-CONTRACT_Read               : 'READ ',
-CONTRACT_Write              : 'WRITE ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Current Rates ",
-SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X UBQ for X BTC"
-SWAP_init_CTA               : "Let's do this! ", // or "Continue"
-SWAP_information            : "Your Information ",
-SWAP_send_amt               : "Amount to send ",
-SWAP_rec_amt                : "Amount to receive ",
-SWAP_your_rate              : "Your rate ",
-SWAP_rec_add                : "Your Receiving Address ",
-SWAP_start_CTA              : "Start Swap ",
-SWAP_ref_num                : "Your reference number ",
-SWAP_time                   : "Time remaining to send ",
-SWAP_progress_1             : "Order Initiated ",
-SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // UBQ Received!
-SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Order Complete ",
-SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock your wallet to send UBQ or Tokens directly from this page. ",
-
-NAV_Swap                    : 'Swap ',
-NAV_SignMsg                 : 'Sign Message ',
-
-/* Sign Message */
-MSG_message                 : 'Message ',
-MSG_date                    : 'Date ',
-MSG_signature               : 'Signature ',
-MSG_verify                  : 'Verify Message ',
-MSG_info1                   : 'Include the current date so the signature cannot be reused on a different date. ',
-MSG_info2                   : 'Include your nickname and where you use the nickname so someone else cannot use it. ',
-MSG_info3                   : 'Include a specific reason for the message so it cannot be reused for a different purpose. ',
-
-/* Hardware Wallets */
-ADD_Ledger_4                : 'If no Browser Support is found in settings, verify that you have [Firmware >1.2](https://www.ledgerwallet.com/apps/manager) ',
-ADD_Ledger_0a               : 'Re-open MyEtherWallet on a secure (SSL) connection ',
-ADD_Ledger_0b               : 'Re-open MyEtherWallet using [Chrome](https://www.google.com/chrome/browser/desktop/) or [Opera](https://www.opera.com/) ',
-WARN_Send_Link              : 'You arrived via a link that has the address, value, gas, data fields, or transaction type (send mode) filled in for you. You can change any information before sending. Unlock your wallet to get started. ',
-x_Trezor                    : 'TREZOR ',
-ADD_Trezor_scan             : 'Connect to TREZOR ',
-ADD_Trezor_select           : 'This is a TREZOR seed ',
-
-
-
-
-
-
 /* Navigation*/
 NAV_YourWallets             : 'Tárcáid ',
 NAV_AddWallet               : 'Tárca hozzáadása ',
@@ -89,10 +20,13 @@ NAV_MyWallets               : 'Tárcáim ',
 NAV_ViewWallet              : 'Tárca adatainak megtekintése ',
 NAV_Help                    : 'Segítség ',
 NAV_Contact                 : 'Kapcsolat ',
+NAV_ENS                     : 'ENS',
+NAV_Swap                    : 'Swap ',
+NAV_SignMsg                 : 'Sign Message ',
 
 /* General */
-x_Address                   : 'A Te címed ',
 x_AddessDesc                : 'Úgy is ismerheted ezt, mint "Számlaszám" vagy "Publikus Kulcs". Ez az amit a partnereidnek küldesz, hogy tudjanak ETH-et küldeni neked. Az oldalsó ikon egyszerű módja a saját címed felismerésének. ',
+x_Address                   : 'A Te címed ',
 x_Cancel                    : 'Mégse ',
 x_CSV                       : 'CSV fájl (titkosítatlan) ',
 x_Download                  : 'Letöltés ',
@@ -100,8 +34,9 @@ x_Json                      : 'JSON Fájl (titkosítatlan) ',
 x_JsonDesc                  : 'Ez a titkosítotatlan, JSON formátumú változata a privát kulcsodnak. Ez azt jelenti, hogy nincs szükség jelszóra az eléréséhez, viszont ha bárki megtalálja a JSON fájlt, akkor hozzáférhet a tárcádhoz és az Etheredhez a jelszó ismerete nélkül. ',
 x_Keystore                  : 'Keystore Fájl (UTC / JSON · Ajánlott · Titkosított) ',
 x_Keystore2                 : 'Keystore Fájl (UTC / JSON) ',
-x_KeystoreDesc              : 'Ez a Keystore fájl ugyanolyan formátumú, amit a Fusion használ, tehát könnyedén importálhatod a későbbiekben. Leginkább ezt a fájlt ajánlott letölteni és elmenteni. ',
+x_KeystoreDesc              : 'Ez a Keystore fájl ugyanolyan formátumú, amit a Mist használ, tehát könnyedén importálhatod a későbbiekben. Leginkább ezt a fájlt ajánlott letölteni és elmenteni. ',
 x_Mnemonic                  : 'Mnemonikus frázis ',
+x_ParityPhrase              : 'Parity Phrase ',
 x_Password                  : 'Jelszó ',
 x_Print                     : 'PapírTárca Nyomtatása ',
 x_PrintDesc                 : 'Profi Tipp: Kattints a nyomtatásra és mentsd el PDF formátumban, még abban az esetben is, ha nincs nyomtatód! ',
@@ -112,12 +47,13 @@ x_PrivKeyDesc               : 'Ez a titkosítatlan szöveges változata a privá
 x_Save                      : 'Mentés ',
 x_TXT                       : 'TXT fájl (titkosítatlan) ',
 x_Wallet                    : 'Tárca ',
+x_Access                    : 'Access ',
 
 /* Header */
 MEW_Warning_1               : 'Mindig ellenőrizd az URL-t mielőtt megpróbálod elérni a tárcádat vagy új tárcát hozol létre. Óvakodj az adathalász oldalalaktól! ',
 CX_Warning_1                : 'Győződj meg róla, hogy van **külső adatmentésed** minden tárcáról, amit itt tárolsz. Több dolog is történhet, ami adatvesztést eredményezhet a Chrome Bővítményben, többek között a Bővítmény törlése vagy újratelepítése. A bővítmény egyszerű módja annak, hogy elérd a tárcáidat, de **nem** annak, hogy elmentsd azokat. ',
-MEW_Tagline                 : 'Nyílt forrású JavaScript-alapú, Kliens-oldali UBQ Tárca ',
-CX_Tagline                  : 'Nyílt forrású JavaScript-alapú, Kliens-oldali UBQ Tárca Chrome Bővítmény ',
+MEW_Tagline                 : 'Nyílt forrású JavaScript-alapú, Kliens-oldali Ether Tárca ',
+CX_Tagline                  : 'Nyílt forrású JavaScript-alapú, Kliens-oldali Ether Tárca Chrome Bővítmény ',
 
 /* Footer */
 FOOTER_1                    : 'Egy nyílt forrású, javascript-alapú, kliens-oldali eszköz Ethereum Tárcák létrehozására és tranzakicók végrehajtására. ',
@@ -153,11 +89,7 @@ ADD_Radio_3                 : 'Illeszd be vagy írd be a Privát Kulcsodat ',
 ADD_Radio_4                 : 'Tárca hozzáadása megfigyelésre ',
 ADD_Radio_5                 : 'Másold/írd be a mnemonikus frázist ',
 ADD_Radio_5_Path            : 'Select HD derivation path ',
-ADD_Radio_5_woTrezor        : '(Jaxx, Metamask, Exodus, imToken) ',
-ADD_Radio_5_withTrezor      : '(Jaxx, Metamask, Exodus, imToken, TREZOR) ',
-ADD_Radio_5_PathAlternative : '(Ledger) ',
-ADD_Radio_5_PathTrezor      : '(TREZOR) ',
-ADD_Radio_5_PathCustom      : '(Custom) ',
+ADD_Radio_5_PathCustom      : 'Custom',
 ADD_Label_2                 : 'Hozz létre egy Nicknevet: ',
 ADD_Label_3                 : 'A Tárcád titkosítva van. Írj be a jelszót ',
 ADD_Label_4                 : 'Számla hozzáadása megfigyelésre ',
@@ -174,14 +106,14 @@ GEN_Placeholder_1           : 'NE felejtsd el elmenteni! ',
 GEN_SuccessMsg              : 'Sikerült! A Tárcád legenerálódott. ',
 GEN_Label_2                 : 'Mentsd el a Keystore fájlt vagy a Privát Kulcsot. Ne felejtsd el a fenti jelszót! ',
 GEN_Label_3                 : 'Mentsd el a címed. ',
-GEN_Label_4                 : 'Nyomtasd ki a papír tárcádat vagy tárold a QR kód változatot. (választható) ',
+GEN_Label_4                 : 'Választható: Nyomtasd ki a papír tárcádat vagy tárold a QR kód változatot. ',
 
 /* Bulk Generate Wallets */
 BULK_Label_1                : 'Generálni kívánt tárcák száma ',
 BULK_Label_2                : 'Tárcák generálása ',
 BULK_SuccessMsg             : 'Sikerült! A tárcáid legenerálódtak. ',
 
-/* Sending UBQ and Tokens */
+/* Sending Ether and Tokens */
 SEND_addr                   : 'Erre a címre ',
 SEND_amount                 : 'Küldendő összeg ',
 SEND_amount_short           : 'Összeg ',
@@ -249,12 +181,6 @@ OFFLINE_Step2_Label_7       : 'Írd be / Válaszd ki a Privát Kulcsodat / JSON-
 OFFLINE_Step3_Title         : 'Lépés 3: Küld / Közzétesz (Online Számítógép) ',
 OFFLINE_Step3_Label_1       : 'Illeszd be ide az aláírt tranzakciót a második lépésből (Lépés 2) és nyomd meg a "TRANZAKCIÓ KÜLDÉSE" gombot. ',
 
-/* Deploy Contracts */
-DEP_generate                : 'Byte-kód Generálása ',
-DEP_generated               : 'Generált Byte-kód ',
-DEP_signtx                  : 'Aláírt Tranzakció ',
-DEP_interface               : 'Generált Felület ',
-
 /* My Wallet */
 MYWAL_Nick                  : 'Tárca Nickname ',
 MYWAL_Address               : 'Tárca Cím ',
@@ -270,10 +196,10 @@ MYWAL_Edit_2                : 'Tárca szerkesztése ',
 MYWAL_Name                  : 'Tárca Neve ',
 MYWAL_Content_1             : 'Figyelmeztetés! Arra készülsz, hogy eltávolítod a tárcádat ',
 MYWAL_Content_2             : 'Győződj meg róla, hogy **elmentetted a privát kulcsodat és/vagy Keystore fájlodat a jelszóval együtt,** mielőtt törlöd őket. ',
-MYWAL_Content_3             : 'Ha használni akarod ezt a tárcát a Pyrus CX-szel a jövőben, manuálisan újra hozzá kell majd adnod a privát kulcs/JSON-nal és jelszóval. ',
+MYWAL_Content_3             : 'Ha használni akarod ezt a tárcát a MyEtherWallet CX-szel a jövőben, manuálisan újra hozzá kell majd adnod a privát kulcs/JSON-nal és jelszóval. ',
 
 /* View Wallet Details */
-VIEWWALLET_Subtitle         : 'Ez lehetővé teszi számodra, hogy különböző változatú privát kulcsokat tölts le és újranyomtasd a papírtárcádat.  Ezt megteheted úgy, hogy [importálod a számládat a Gubiq/Fusion-be](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Ha ellenőrizni akarod a számládat, azt ajánljuk, hogy használj blokklánc explorert mint az [ubiqscan.io](http://ubiqscan.io/). ',
+VIEWWALLET_Subtitle         : 'Ez lehetővé teszi számodra, hogy különböző változatú privát kulcsokat tölts le és újranyomtasd a papírtárcádat.  Ezt megteheted úgy, hogy [importálod a számládat a Geth/Mist-be](http://ethereum.stackexchange.com/questions/465/how-to-import-a-plain-private-key-into-geth/). Ha ellenőrizni akarod a számládat, azt ajánljuk, hogy használj blokklánc explorert mint az [etherscan.io](http://etherscan.io/). ',
 VIEWWALLET_Subtitle_Short   : 'Ez lehetővé teszi számodra, hogy különböző változatú privát kulcsokat tölts le és újranyomtasd a papírtárcádat. ',
 VIEWWALLET_SuccessMsg       : 'Sikerült! Itt vannak a tárcád részletei. ',
 
@@ -283,16 +209,75 @@ MNEM_2                      : 'Egyetlen mnemonikus frázis egyszerre több tárc
 MNEM_more                   : 'További Címek ',
 MNEM_prev                   : 'Előző Címek ',
 
-/* Hardware wallets */
-x_Ledger                    : 'Ledger Nano S ',
-ADD_Ledger_1                : 'Csatlakoztasd a Ledger Nano S-et ',
-ADD_Ledger_2                : 'Nyisd meg az Ethereum applikációt (vagy egy kontraktus applikációt) ',
-ADD_Ledger_3                : 'Ellenőrizd, hogy a beállításokban engedélyezve van a Böngésző Támogatás (Browser Support) ',
-ADD_Ledger_scan             : 'Csatlakozás a Ledger Nano S-hez ',
-
 /* Chrome Extension */
 CX_error_1                  : 'Nincsen mentett Tárcád. Kattints ["Tárca Hozzáadása"](/cx-wallet.html#add-wallet) ahhoz, hogy hozzáadj egyet! ',
 CX_quicksend                : 'GyorsKüldés ', // if no appropriate translation, just use "Send"
+
+/* Node Switcher */
+NODE_Title                  : 'Set Up Your Custom Node',
+NODE_Subtitle               : 'To connect to a local node...',
+NODE_Warning                : 'Your node must be HTTPS in order to connect to it via MyEtherWallet.com. You can [download the MyEtherWallet repo & run it locally](https://github.com/kvhnuke/etherwallet/releases/latest) to connect to any node. Or, get free SSL certificate via [LetsEncrypt](https://letsencrypt.org/)',
+NODE_Name                   : 'Node Name',
+NODE_Port                   : 'Node Port',
+NODE_CTA                    : 'Save & Use Custom Node',
+
+/* Contracts */
+CONTRACT_Title              : 'Contract Address ',
+CONTRACT_Title_2            : 'Select Existing Contract ',
+CONTRACT_Json               : 'ABI / JSON Interface ',
+CONTRACT_Interact_Title     : 'Read / Write Contract ',
+CONTRACT_Interact_CTA       : 'Select a function ',
+CONTRACT_ByteCode           : 'Byte Code ',
+CONTRACT_Read               : 'READ ',
+CONTRACT_Write              : 'WRITE ',
+DEP_generate                : 'Byte-kód Generálása ',
+DEP_generated               : 'Generált Byte-kód ',
+DEP_signtx                  : 'Aláírt Tranzakció ',
+DEP_interface               : 'Generált Felület ',
+
+/* Swap / Exchange */
+SWAP_rates                  : "Current Rates ",
+SWAP_init_1                 : "I want to swap my ",
+SWAP_init_2                 : " for ", // "I want to swap my X ETH for X BTC"
+SWAP_init_CTA               : "Let's do this! ", // or "Continue"
+SWAP_information            : "Your Information ",
+SWAP_send_amt               : "Amount to send ",
+SWAP_rec_amt                : "Amount to receive ",
+SWAP_your_rate              : "Your rate ",
+SWAP_rec_add                : "Your Receiving Address ",
+SWAP_start_CTA              : "Start Swap ",
+SWAP_ref_num                : "Your reference number ",
+SWAP_time                   : "Time remaining to send ",
+SWAP_progress_1             : "Order Initiated ",
+SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
+SWAP_progress_3             : "Received! ", // ETH Received!
+SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
+SWAP_progress_5             : "Order Complete ",
+SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
+SWAP_unlock                 : "Unlock your wallet to send ETH or Tokens directly from this page. ",
+
+/* Sign Message */
+MSG_message                 : 'Message ',
+MSG_date                    : 'Date ',
+MSG_signature               : 'Signature ',
+MSG_verify                  : 'Verify Message ',
+MSG_info1                   : 'Include the current date so the signature cannot be reused on a different date. ',
+MSG_info2                   : 'Include your nickname and where you use the nickname so someone else cannot use it. ',
+MSG_info3                   : 'Include a specific reason for the message so it cannot be reused for a different purpose. ',
+
+/* Hardware wallets */
+x_Ledger                    : 'Ledger Nano S ',
+ADD_Ledger_scan             : 'Csatlakozás a Ledger Nano S-hez ',
+ADD_Ledger_1                : 'Csatlakoztasd a Ledger Nano S-et ',
+ADD_Ledger_2                : 'Nyisd meg az Ethereum applikációt (vagy egy kontraktus applikációt) ',
+ADD_Ledger_3                : 'Ellenőrizd, hogy a beállításokban engedélyezve van a Böngésző Támogatás (Browser Support) ',
+ADD_Ledger_4                : 'If no Browser Support is found in settings, verify that you have [Firmware >1.2](https://www.ledgerwallet.com/apps/manager) ',
+ADD_Ledger_0a               : 'Re-open MyEtherWallet on a secure (SSL) connection ',
+ADD_Ledger_0b               : 'Re-open MyEtherWallet using [Chrome](https://www.google.com/chrome/browser/desktop/) or [Opera](https://www.opera.com/) ',
+WARN_Send_Link              : 'You arrived via a link that has the address, value, gas, data fields, or transaction type (send mode) filled in for you. You can change any information before sending. Unlock your wallet to get started. ',
+x_Trezor                    : 'TREZOR ',
+ADD_Trezor_scan             : 'Connect to TREZOR ',
+ADD_Trezor_select           : 'This is a TREZOR seed ',
 
 /* Error Messages */
 ERROR_0                     : 'Kérlek írj be érvényes összeget! ',
@@ -318,19 +303,24 @@ ERROR_19                    : 'Érvénytelen szimbólum ',
 ERROR_20                    : 'Not a valid ERC-20 token ',
 ERROR_21                    : 'Could not estimate gas. There are not enough funds in the account, or the receiving contract address would throw an error. Feel free to manually set the gas and proceed. The error message upon sending may be more informative. ',
 ERROR_22                    : 'Please enter valid node name ',
-ERROR_23                    : 'Enter valid url, if you are on https your url must be https ',
+ERROR_23                    : 'Please enter valid URL. If you are connecting via HTTPS, your node must be over HTTPS ',
 ERROR_24                    : 'Please enter valid port ',
 ERROR_25                    : 'Please enter valid chain ID ',
 ERROR_26                    : 'Please enter valid ABI ',
-ERROR_27                    : 'Minimum amount 0.01 ',
-ERROR_28                    : '**Szükséged lesz a Keystore Fájlra és a jelszóra vagy a Privát Kulcsra**, ahhoz, hogy hozzáférj ehhez a tárcához a jövőben. Kérlek mentsd el és készíts külső biztonsági mentést is! Nincs lehetőség egy tárca visszaszerzésére, ha nem mented el. Olvasd el a [Segítség lapot](https://pyrus.ubiqsmart.com/#help) további instrukciókért. ',
+ERROR_27                    : 'Minimum amount: 0.01. Maximum Amount: ',
+ERROR_28                    : '**Szükséged lesz a Keystore Fájlra és a jelszóra vagy a Privát Kulcsra**, ahhoz, hogy hozzáférj ehhez a tárcához a jövőben. Kérlek mentsd el és készíts külső biztonsági mentést is! Nincs lehetőség egy tárca visszaszerzésére, ha nem mented el. Olvasd el a [Segítség lapot](https://www.myetherwallet.com/#help) további instrukciókért. ',
 ERROR_29                    : 'Please enter valid user and password ',
+ERROR_30                    : 'Please enter valid ENS name ',
+ERROR_31                    : 'Invalid secret phrase ',
+ERROR_32                    : 'Could not connect to the node. Please refresh the page, or see the help page for more troubleshooting suggestions. ',
 SUCCESS_1                   : 'Érvényes cím ',
 SUCCESS_2                   : 'Tárca sikeresen dekódolva ',
 SUCCESS_3                   : 'Tranzakció elküldve. TX ID ',
 SUCCESS_4                   : 'Tárcád sikeresen hozzáadva ',
-
-/* Gubiq Error Messages */
+SUCCESS_5                   : 'File Selected ',
+SUCCESS_6                   : 'You are successfully connected ',
+SUCCESS_7                   : 'Message Signature Verified',
+/* Geth Error Messages */
 GETH_InvalidSender          : 'Érvénytelen küldő ',
 GETH_Nonce                  : 'a Nonce túl alacsony ',
 GETH_Cheap                  : 'A Gas ára túl alacsony az elfogadáshoz ',
@@ -354,10 +344,10 @@ PARITY_InvalidGasLimit      : "Supplied gas is beyond limit.",
 /* Tranlsation Info */
 translate_version           : '0.4.3 ',
 Translator_Desc             : 'Köszönet a fordításért ',
-TranslatorName_1            : '[belpheg](https://pyrus.ubiqsmart.com/?gaslimit=21000&to=0xBF8C35176eAD29257834D5A1592ed50Adb0b6e4f&value=1.0#send-transaction) · ',
+TranslatorName_1            : '[belpheg](https://www.myetherwallet.com/?gaslimit=21000&to=0xBF8C35176eAD29257834D5A1592ed50Adb0b6e4f&value=1.0#send-transaction) · ',
 TranslatorAddr_1            : '0xBF8C35176eAD29257834D5A1592ed50Adb0b6e4f ',
 /* Translator 1             : email: zoltan.tapi@donamin.com */
-TranslatorName_2            : '[bluqesh](https://pyrus.ubiqsmart.com/?gaslimit=21000&to=0x4270A331d14CcdB6FB941f3f5De9Cf01607Bff9F&value=1.0#send-transaction) ',
+TranslatorName_2            : '[bluqesh](https://www.myetherwallet.com/?gaslimit=21000&to=0x4270A331d14CcdB6FB941f3f5De9Cf01607Bff9F&value=1.0#send-transaction) ',
 TranslatorAddr_2            : '0x4270A331d14CcdB6FB941f3f5De9Cf01607Bff9F ',
 /* Translator 2             : Insert Comments Here */
 TranslatorName_3            : '',
@@ -372,10 +362,10 @@ TranslatorAddr_5            : '',
 
 /* Help - Nothing after this point has to be translated. If you feel like being extra helpful, go for it. */
 HELP_Warning                : 'Ha **2015 december 31** előtt készítettél egy tárcát vagy töltötted le a repo-t, akkor ellenőrizd a tárcáidat és töltsd le a repo új verzióját. Kattints a részletekért. ',
-HELP_Desc                   : 'Valamit hiányolsz? Egyéb kérdésed lenne? [Írj nekünk](mailto:myetherwallet@gmail.com), és nem csak választ fogsz kapni, de még ezt az oldalt is frissítjük, hogy másoknak is hasznosabb legyen. ',
+HELP_Desc                   : 'Valamit hiányolsz? Egyéb kérdésed lenne? [Írj nekünk](mailto:support@myetherwallet.com), és nem csak választ fogsz kapni, de még ezt az oldalt is frissítjük, hogy másoknak is hasznosabb legyen. ',
 HELP_Remind_Title           : 'Néhány emlékeztető ',
-HELP_Remind_Desc_1          : 'Az **Ethereum, Pyrus és Pyrus CX, továbbá néhány, az oldal által használt JavaScript könyvtár aktív fejlesztés alatt állnak.** Az alapos tesztelés és a világszerte több tízezer sikeresen létrehozott tárca ellenére mindig fennáll az apró lehetőség arra, hogy valami váratlan esemény miatt elveszted az ETH-id. Ne fektess be annál többet, mint amit hajlandó lennél elveszítnei. Ha esetleg bármi ilyen történne, nagyon sajnáljuk, de **nem vagyunk a felősek az elvesztett Etherekért**. ',
-HELP_Remind_Desc_2          : 'A Pyrus és a Pyrus CX nem "web tárcák". Nem kell nálunk regisztrálnod, vagy ránk bízni az Ethereid megőrzésre. Semmilyen adat nem hagyja el a gépedet/böngésződet. Abban segítünk, hogy egyszerűen tudd az tárcáid látrehozni, lementeni és hozzájuk férni, és egyéb módon használni a blokkláncot. ',
+HELP_Remind_Desc_1          : 'Az **Ethereum, MyEtherWallet.com és MyEtherWallet CX, továbbá néhány, az oldal által használt JavaScript könyvtár aktív fejlesztés alatt állnak.** Az alapos tesztelés és a világszerte több tízezer sikeresen létrehozott tárca ellenére mindig fennáll az apró lehetőség arra, hogy valami váratlan esemény miatt elveszted az ETH-id. Ne fektess be annál többet, mint amit hajlandó lennél elveszítnei. Ha esetleg bármi ilyen történne, nagyon sajnáljuk, de **nem vagyunk a felősek az elvesztett Etherekért**. ',
+HELP_Remind_Desc_2          : 'A MyEtherWallet.com és a MyEtherWallet CX nem "web tárcák". Nem kell nálunk regisztrálnod, vagy ránk bízni az Ethereid megőrzésre. Semmilyen adat nem hagyja el a gépedet/böngésződet. Abban segítünk, hogy egyszerűen tudd az tárcáid látrehozni, lementeni és hozzájuk férni, és egyéb módon használni a blokkláncot. ',
 HELP_Remind_Desc_3          : 'Ha nem mented le a privát kulcsodat és a jelszót, akkor nincs lehetőség visszaszerezni a tárcádhoz a hozzáférést, sem a rajta levő összeget. Készíts róluk több példányban is biztonsági másolatot, és ne csak a gépeden legyenek! ',
 
 HELP_0_Title                : '0) Új vagyok. Mire tudom használni ezt az oldalt? ',
@@ -450,7 +440,7 @@ HELP_4CX_Desc_12            : 'A "Tranzakció küldése" oldalon ',
 
 HELP_5_Title                : '5) Hogyan lehet a MyEtherWallet-et offline/lokálisan használni? ',
 HELP_5_Desc_1               : 'Futtahatod a MyEtherWallet.com-ot a saját számítógépeden is, a GitHub szerverei nélkül. Így lehetőséged van teljesen offline generálni tárcákat, vagy Ethert küldeni az "Offline tranzakció" oldalról. ',
-HELP_5_Desc_7               : 'A Pyrus most teljesen a te számítógépedről fut. ',
+HELP_5_Desc_7               : 'A MyEtherWallet.com most teljesen a te számítógépedről fut. ',
 HELP_5_Desc_8               : 'Ha esetleg nem csináltál volna még ilyet: a teljes mappára szükséged van az oldal futtatásához, nem elég csak az "index.html" fájl. A mappában ne piszkálj / mozgass el semmit. Ha biztonsági másolatot szeretnél a MyEtherWallet repo-ról későbbre, akkor az eredeti zip fájl tárolását javasoljuk, így biztos lehetsz benne hogy a tartalma érintetlen marad. ',
 HELP_5_Desc_9               : 'Mivel folyamatosan frissítjük a MyEtherWallet.com-ot, ezért javasoljuk, hogy időközönként frissítsd a lementett repo-t is. ',
 
@@ -472,7 +462,7 @@ HELP_7_Desc_4               : 'Enter the amount you would like to send. ',
 HELP_7_Desc_5               : 'Select which token you would like to send. ',
 HELP_7_Desc_6               : 'If you do not see the token listed: ',
 HELP_7_Desc_7               : 'Click "Custom". ',
-HELP_7_Desc_8               : 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Fusion. ',
+HELP_7_Desc_8               : 'Enter the address, name, and decimals of the token. These are provided by the developers of the token and are also needed when you "Add a Watch Token" to Mist. ',
 HELP_7_Desc_9               : 'Click "Save". ',
 HELP_7_Desc_10              : 'You can now send that token as well as see it\'s balance in the sidebar. ',
 HELP_7_Desc_11              : 'Click "Generate Transaction". ',
@@ -483,14 +473,14 @@ HELP_7_Desc_15              : 'The transaction will be submitted. The TX ID will
 
 HELP_8_Title                : '8) What happens if your site goes down? ',
 HELP_8_Desc_1               : 'MyEtherWallet is not a web wallet. You don\'t have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain. ',
-HELP_8_Desc_2               : 'If Pyrus goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn\'t have to "get" your UBQ out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
-HELP_8_Desc_3               : 'You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #12 below. ',
+HELP_8_Desc_2               : 'If MyEtherWallet.com goes down, you would have to find another way (like geth or Ethereum Wallet / Mist) to do what we are doing. But you wouldn\'t have to "get" your Ether out of MyEtherWallet because it\'s not in MyEtherWallet. It\'s in whatever wallet your generated via our site. ',
+HELP_8_Desc_3               : 'You can import your unencrypted private key and your Geth/Mist Format (encrypted) files directly into geth / Ethereum Wallet / Mist very easily now. See question #12 below. ',
 HELP_8_Desc_4               : 'In addition, the likelihood of us taking MyEtherWallet down is slim to none. It costs us almost nothing to maintain as we aren\'t storing any information. If we do take the domain down, it still is, and always will be, publicly available at [https://github.com/kvhnuke/etherwallet](https://github.com/kvhnuke/etherwallet/tree/gh-pages). You can download the ZIP there and run it locally. ',
 
-HELP_8CX_Title              : '8) What happens if Pyrus CX disappears? ',
+HELP_8CX_Title              : '8) What happens if MyEtherWallet CX disappears? ',
 HELP_8CX_Desc_1             : 'First, all data is saved on your computer, not our servers. I know it can be confusing, but when you look at the Chrome Extension, you are NOT looking at stuff saved on our servers somewhere - it\'s all saved on your own computer. ',
-HELP_8CX_Desc_2             : 'That said, it is **very important** that you back up all your information for any new wallets generated with Pyrus CX. That way if anything happens to Pyrus CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
-HELP_8CX_Desc_3             : 'If for some reason Pyrus CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
+HELP_8CX_Desc_2             : 'That said, it is **very important** that you back up all your information for any new wallets generated with MyEtherWallet CX. That way if anything happens to MyEtherWallet CX or your computer, you still have all the information necessary to access your Ether. See the #2a for how to back up your wallets. ',
+HELP_8CX_Desc_3             : 'If for some reason MyEtherWallet CX disappears from the Chrome Store, you can find the source on Github and load it manually. See #5 above. ',
 
 HELP_9_Title                : '9) Is the "Ether & Tokenek küldése" page offline? ',
 HELP_9_Desc_1               : 'No. It needs the internet in order to get the current gas price, nonce of your account, and broadcast the transaction (aka "send"). However, it only sends the signed transaction. Your private key safely stays with you. We also now provide an "Offline Transaction" page so that you can ensure your private keys are on an offline/airgapped computer at all times. ',
@@ -508,14 +498,14 @@ HELP_10_Desc_9              : 'Press the "GENERATE SIGNED TRANSACTION" button. '
 HELP_10_Desc_10             : 'The data field below this button will populate with your signed transaction. Copy this and move it back to your online computer. ',
 HELP_10_Desc_11             : 'On your online computer, paste the signed transaction into the text field in step #3 and click send. This will broadcast your transaction. ',
 
-HELP_12_Title               : '12) How do I import a wallet created with MyEtherWallet into gubiq / Ubiq Wallet / Fusion? ',
-HELP_12_Desc_1              : 'Using an Gubiq/Fusion JSON file from MyEtherWallet v2+.... ',
+HELP_12_Title               : '12) How do I import a wallet created with MyEtherWallet into geth / Ethereum Wallet / Mist? ',
+HELP_12_Desc_1              : 'Using an Geth/Mist JSON file from MyEtherWallet v2+.... ',
 HELP_12_Desc_2              : 'Go to the "View Wallet Info" page. ',
 HELP_12_Desc_3              : 'Unlock your wallet using your **encrypted** private key or JSON file. ',
 HELP_12_Desc_4              : 'Go to the "My Wallets" page. ',
-HELP_12_Desc_5              : 'Select the wallet you want to import into Fusion, click the "View" icon, enter your password, and access your wallet. ',
-HELP_12_Desc_6              : 'Find the "Download JSON file - Gubiq/Fusion Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
-HELP_12_Desc_7              : 'Open the Ubiq Wallet application. ',
+HELP_12_Desc_5              : 'Select the wallet you want to import into Mist, click the "View" icon, enter your password, and access your wallet. ',
+HELP_12_Desc_6              : 'Find the "Download JSON file - Geth/Mist Format (encrypted)" section. Press the "Download" button below that. You now have your keystore file. ',
+HELP_12_Desc_7              : 'Open the Ethereum Wallet application. ',
 HELP_12_Desc_8              : 'In the menu bar, go "Accounts" -> "Backup" -> "Accounts" ',
 HELP_12_Desc_9              : 'This will open your keystore folder. Copy the file you just downloaded (`UTC--2016-04-14......../`) into that keystore folder. ',
 HELP_12_Desc_10             : 'Your account should show up immediately under "Accounts." ',
@@ -528,36 +518,36 @@ HELP_12_Desc_15b            : 'If you are on a PC: ',
 HELP_12_Desc_16             : 'Open Text Edit and paste this private key. ',
 HELP_12_Desc_17             : 'Go to the menu bar and click "Format" -> "Make Plain Text". ',
 HELP_12_Desc_18             : 'Save this file to your `desktop/` as `nothing_special_delete_me.txt`. Make sure it says "UTF-8" and "If no extension is provided use .txt" in the save dialog. ',
-HELP_12_Desc_19             : 'Open terminal and run the following command: `gubiq account import ~/Desktop/nothing_special_delete_me.txt` ',
-HELP_12_Desc_20             : 'This will prompt you to make a new password. This is the password you will use in gubiq / Ubiq Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
+HELP_12_Desc_19             : 'Open terminal and run the following command: `geth account import ~/Desktop/nothing_special_delete_me.txt` ',
+HELP_12_Desc_20             : 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
 HELP_12_Desc_21             : 'After successful import, delete `nothing_special_delete_me.txt` ',
-HELP_12_Desc_22             : 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
+HELP_12_Desc_22             : 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 HELP_12_Desc_23             : 'Open Notepad & paste the private key ',
 HELP_12_Desc_24             : 'Save the file as `nothing_special_delete_me.txt` at `C:` ',
-HELP_12_Desc_25             : 'Run the command, `gubiq account import C:\\nothing_special_delete_me.txt` ',
-HELP_12_Desc_26             : 'This will prompt you to make a new password. This is the password you will use in gubiq / Ubiq Wallet / Fusion whenever you send a transaction, so don\'t forget it. ',
+HELP_12_Desc_25             : 'Run the command, `geth account import C:\\nothing_special_delete_me.txt` ',
+HELP_12_Desc_26             : 'This will prompt you to make a new password. This is the password you will use in geth / Ethereum Wallet / Mist whenever you send a transaction, so don\'t forget it. ',
 HELP_12_Desc_27             : 'After successful import, delete `nothing_special_delete_me.txt` ',
-HELP_12_Desc_28             : 'The next time you open the Ubiq Wallet application, your account will be listed under "Accounts". ',
+HELP_12_Desc_28             : 'The next time you open the Ethereum Wallet application, your account will be listed under "Accounts". ',
 
 HELP_13_Title               : '13) What does "Insufficient funds. Account you try to send transaction from does not have enough funds. Required XXXXXXXXXXXXXXXXXXX and got: XXXXXXXXXXXXXXXX." Mean? ',
-HELP_13_Desc_1              : 'This means you do not have enough UBQ in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of UBQ you were trying to send (if you were attempting to send Ether). This will give you the amount of UBQ you need to send to that account to make the transaction. ',
+HELP_13_Desc_1              : 'This means you do not have enough Ether in your account to cover the cost of gas. Each transaction (including token and contract transactions) require gas and that gas is paid in Ether. The number displayed is the amount required to cover the cost of the transaction in Wei. Take that number, divide by `1000000000000000000`, and subtract the amount of Ether you were trying to send (if you were attempting to send Ether). This will give you the amount of Ether you need to send to that account to make the transaction. ',
 
-HELP_14_Title               : '14) Some sites randomize (seed) the private key generation via mouse movements. Pyrus doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
-HELP_14_Desc_1              : 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, Pyrus can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
+HELP_14_Title               : '14) Some sites randomize (seed) the private key generation via mouse movements. MyEtherWallet.com doesn\'t do this. Is the random number generation for MyEtherWallet safe? ',
+HELP_14_Desc_1              : 'While the mouse moving thing is clever and we understand why people like it, the reality is window.crypto ensures more entropy than your mouse movements. The mouse movements aren\'t unsafe, it\'s just that we (and tons of other crypto experiments) believe in window.crypto. In addition, MyEtherWallet.com can be used on touch devices. Here\'s a [conversation between an angry redditor and Vitalik Buterin regarding mouse movements v. window.crypto](https://www.reddit.com/r/ethereum/comments/2bilqg/note_there_is_a_paranoid_highsecurity_way_to/cj5sgrm) and here is the [the window.crypto w3 spec](https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#dfn-GlobalCrypto). ',
 
 HELP_15_Title               : '15) Why hasn\'t the account I just created show up in the blockchain explorer? (ie: etherchain, etherscan) ',
-HELP_15_Desc_1              : 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some UBQ to it. ',
+HELP_15_Desc_1              : 'Accounts will only show up in a blockchain explorer once the account has activity on it&mdash;for example, once you have transferred some Ether to it. ',
 
 HELP_16_Title               : '16) How do I check the balance of my account? ',
-HELP_16_Desc_1              : 'You can use a blockchain explorer like [ubiqscan.io](http://ubiqscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://ubiqscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on ubiqscan.io ',
+HELP_16_Desc_1              : 'You can use a blockchain explorer like [etherscan.io](http://etherscan.io/). Paste your address into the search bar and it will pull up your address and transaction history. For example, here\'s what our [donation account](http://etherscan.io/address/0x7cb57b5a97eabe94205c07890be4c1ad31e486a8) looks like on etherscan.io ',
 
 HELP_17_Title               : '17) Why isn\'t my balance showing up when I unlock my wallet? ',
-HELP_17_Desc_1              : 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like ubiqscan.io ',
+HELP_17_Desc_1              : 'This is most likely due to the fact that you are behind a firewall. The API that we use to get the balance and convert said balance is often blocked by firewalls for whatever reason. You will still be able to send transactions, you just need to use a different method to see said balance, like etherscan.io ',
 
-HELP_18_Title               : '18) Where is my gubiq wallet file? ',
+HELP_18_Title               : '18) Where is my geth wallet file? ',
 
-HELP_19_Title               : '19) Where is my Fusion wallet file? ',
-HELP_19_Desc_1              : 'Fusion files are typically found in the file locations above, but it\'s much easier to open Fusion, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
+HELP_19_Title               : '19) Where is my Mist wallet file? ',
+HELP_19_Desc_1              : 'Mist files are typically found in the file locations above, but it\'s much easier to open Mist, select "Accounts" in the top bar, select "Backup", and select "Accounts". This will open the folder where your files are stored. ',
 
 HELP_20_Title               : '20) Where is my pre-sale wallet file? ',
 HELP_20_Desc_1              : 'Wherever you saved it. ;) It also was emailed to you, so check there. Look for the file called `"ethereum_wallet_backup.json"` and select that file. This wallet file will be encrypted with a password that you created during the purchase of the pre-sale. ',
@@ -570,21 +560,21 @@ HELP_21_Desc_4              : 'Now, that said, YES if someone else has your priv
 HELP_21_Desc_5              : 'And YES, in theory you could just type in a string of 64 hexadecimal characters until you got one that matched. In fact, smart people could write a program to very quickly check random private keys. This is known as "brute-forcing" or "mining" private keys. People have thought about this long and hard. With a few very high end servers, they may be able to check 1M+ keys / second. However, even checking that many per second would not yield access to make the cost of running those servers even close to worthwhile - it is more likely you, and your great-grandchildren, will die before getting a match. ',
 HELP_21_Desc_6              : 'If you know anything about Bitcoin, [this will put it in perspective:](http://bitcoin.stackexchange.com/questions/32331/two-people-with-same-public-address-how-will-people-network-know-how-to-deliver) *To illustrate how unlikely this is: suppose every satoshi of every bitcoin ever to be generated was sent to its own unique private keys. The probability that among those keys there could be two that would correspond to the same address is roughly one in 100 quintillion. ',
 HELP_21_Desc_7              : '[If you want something a bit more technical:](http://security.stackexchange.com/questions/25375/why-not-use-larger-cipher-keys/25392#25392) *These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. ',
-HELP_21_Desc_8              : 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Fusion/Gubiq. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
+HELP_21_Desc_8              : 'Of course, this all assumes that keys are generated in a truly random way & with sufficient entropy. The keys generated here meet that criteria, as do Jaxx and Mist/geth. The Ethereum wallets are all pretty good. Keys generated by brainwallets do not, as a person\'s brain is not capable of creating a truly random seed. There have been a number of other issues regarding lack of entropy or seeds not being generated in a truly random way in Bitcoin-land, but that\'s a separate issue that can wait for another day. ',
 
-HELP_SecCX_Title            : 'Security - Pyrus CX ',
+HELP_SecCX_Title            : 'Security - MyEtherWallet CX ',
 HELP_SecCX_Desc_1           : 'Where is this extension saving my information? ',
 HELP_SecCX_Desc_2           : 'The information you store in this Chrome Extension is saved via [chrome.storage](http://chrome.storage/). - this is the same place your passwords are saved when you save your password in Chrome. ',
 HELP_SecCX_Desc_3           : 'What information is saved? ',
 HELP_SecCX_Desc_4           : 'The address, nickname, private key is stored in chrome.storage. The private key is encrypted using the password you set when you added the wallet. The nickname and wallet address is not encrypted. ',
 HELP_SecCX_Desc_5           : 'Why aren\'t the nickname and wallet address encrypted? ',
-HELP_SecCX_Desc_6           : 'If we were to encrypt these items, you would need to enter a password each time you wanted to view your account balance or view the nicknames. If this concerns you, we recommend you use Pyrus instead of this Chrome Extension. ',
+HELP_SecCX_Desc_6           : 'If we were to encrypt these items, you would need to enter a password each time you wanted to view your account balance or view the nicknames. If this concerns you, we recommend you use MyEtherWallet.com instead of this Chrome Extension. ',
 
 HELP_Sec_Title              : 'Security ',
 HELP_Sec_Desc_1             : 'If one of your first questions is "Why should I trust these people?", that is a good thing. Hopefully the following will help ease your fears. ',
 HELP_Sec_Desc_2             : 'We\'ve been up and running since August 2015. If you search for ["myetherwallet" on reddit](https://www.reddit.com/search?q=myetherwallet), you can see numerous people who use us with great success. ',
 HELP_Sec_Desc_3             : 'We aren\'t going to take your money or steal your private key(s). There is no malicious code on this site. In fact the "GENERATE WALLET" pages are completely client-side. That means that all the code is executed on ** your computer** and it is never saved and transmitted anywhere. ',
-HELP_Sec_Desc_4             : 'Check the URL -- This site is being served through GitHub and you can see the source code here: [https://github.com/kvhnuke/etherwallet/tree/gh-pages](https://github.com/kvhnuke/etherwallet/tree/gh-pages) to [https://pyrus.ubiqsmart.com](https://pyrus.ubiqsmart.com). ',
+HELP_Sec_Desc_4             : 'Check the URL -- This site is being served through GitHub and you can see the source code here: [https://github.com/kvhnuke/etherwallet/tree/gh-pages](https://github.com/kvhnuke/etherwallet/tree/gh-pages) to [https://www.myetherwallet.com](https://www.myetherwallet.com). ',
 HELP_Sec_Desc_5             : 'For generating wallets, you can download the [source code and run it locally](https://github.com/kvhnuke/etherwallet/releases/latest). See #5 above. ',
 HELP_Sec_Desc_6             : 'Generate a test wallet and check and see what network activity is happening. The easiest way for you to do this is to right click on the page and click "inspect element". Go to the "Network" tab. Generate a test wallet. You will see there is no network activity. You may see something happening that looks like data:image/gif and data:image/png. Those are the QR codes being generated...on your computer...by your computer. No bytes were transferred. ',
 HELP_Sec_Desc_8             : 'If you do not feel comfortable using this tool, then by all means, do not use it. We created this tool as a helpful way for people to generate wallets and make transactions without needing to dive into command line or run a full node. Again, feel free to reach out if you have concerns and we will respond as quickly as possible. Thanks! ',

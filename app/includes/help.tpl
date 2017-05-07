@@ -3,7 +3,6 @@
 
   <h1 translate="NAV_Help"> Help </h1>
 
-
   <article class="collapse-container">
     <div ng-click="hRemind = !hRemind">
       <a class="collapse-button"><span ng-show="hRemind">+</span><span ng-show="!hRemind">-</span></a>

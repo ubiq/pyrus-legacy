@@ -24,6 +24,12 @@
     "type":"default"
   },
   {
+    "address":"0xaef38fbfbf932d1aef3b808bc8fbd8cd8e1f8bc5",
+    "symbol":"CRB",
+    "decimal":8,
+    "type":"default"
+  },
+  {
     "address":"0xe4c94d45f7aef7018a5d66f44af780ec6023378e",
     "symbol":"CryptoCarbon",
     "decimal":6,
@@ -60,9 +66,27 @@
     "type":"default"
   },
   {
+    "address":"0xb802b24e0637c2b87d2e8b7784c055bbe921011a",
+    "symbol":"EMV",
+    "decimal":2,
+    "type":"default"
+  },
+  {
+    "address":"0x6810e776880c02933d47db1b9fc05908e5386b96",
+    "symbol":"GNO",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0xa74476443119A942dE498590Fe1f2454d7D4aC0d",
     "symbol":"GNT",
     "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0xf7B098298f7C69Fc14610bf71d5e02c60792894C",
+    "symbol":"GUP",
+    "decimal":3,
     "type":"default"
   },
   {
@@ -72,8 +96,26 @@
     "type":"default"
   },
   {
+    "address":"0x9734c136f5c63531b60d02548bca73a3d72e024d",
+    "symbol":"HMQ",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0x888666CA69E0f178DED6D75b5726Cee99A87D698",
     "symbol":"ICN",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0xfa05a73ffe78ef8f1a739473e462c54bae6567d9",
+    "symbol":"LUN",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0xe23cd160761f63fc3a1cf78aa034b6cdf97d3e0c",
+    "symbol":"MIT",
     "decimal":18,
     "type":"default"
   },
@@ -91,7 +133,7 @@
   },
   {
     "address":"0x45e42D659D9f9466cD5DF622506033145a9b89Bc",
-    "symbol":"Nexium",
+    "symbol":"NxC",
     "decimal":3,
     "type":"default"
   },
@@ -108,6 +150,24 @@
     "type":"default"
   },
   {
+    "address":"0x607F4C5BB672230e8672085532f7e901544a7375",
+    "symbol":"RLC",
+    "decimal":9,
+    "type":"default"
+  },
+  {
+    "address":"0x2e071d2966aa7d8decb1005885ba1977d6038a65",
+    "symbol":"ROL",
+    "decimal":16,
+    "type":"default"
+  },
+  {
+    "address":"0x4993CB95c7443bdC06155c5f5688Be9D8f6999a5",
+    "symbol":"ROUND",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009",
     "symbol":"SNGLS",
     "decimal":0,
@@ -120,9 +180,21 @@
    "type":"default"
   },
   {
+    "address":"0xe7775a6e9bcf904eb39da2b68c5efb4f9360e08c",
+    "symbol":"TaaS",
+    "decimal":6,
+    "type":"default"
+  },
+  {
     "address":"0x6531f133e6DeeBe7F2dcE5A0441aA7ef330B4e53",
     "symbol":"TIME",
     "decimal":8,
+    "type":"default"
+  },
+  {
+    "address":"0xcb94be6f13a1182e4a4b6140cb7bf2025d28e41b",
+    "symbol":"TRST",
+    "decimal":6,
     "type":"default"
   },
   {
@@ -134,6 +206,12 @@
   {
     "address":"0x5c543e7AE0A1104f78406C340E9C64FD9fCE5170",
     "symbol":"VSL",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0x667088b212ce3d06a1b553a7221E1fD19000d9aF",
+    "symbol":"WINGS",
     "decimal":18,
     "type":"default"
   },

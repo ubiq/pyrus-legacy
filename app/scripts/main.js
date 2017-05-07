@@ -24,6 +24,8 @@ ethUtil.WAValidator          = require('wallet-address-validator');
 window.ethUtil               = ethUtil;
 var format                   = require('string-format');
 window.format                = format;
+var browser                  = require('detect-browser');
+window.browser               = browser;
 var Wallet                   = require('./myetherwallet');
 window.Wallet                = Wallet;
 var Token                    = require('./tokenlib');
@@ -44,6 +46,8 @@ var Validator                = require('./validator');
 window.Validator             = Validator;
 var bity                     = require('./bity');
 window.bity                  = bity;
+var ens                      = require('./ens');
+window.ens                   = ens;
 var translate                = require('./translations/translate.js');
 if (IS_CX) {
   var cxFuncs                = require('./cxFuncs');
@@ -68,12 +72,14 @@ var sendTxCtrl               = require('./controllers/sendTxCtrl');
 var swapCtrl                 = require('./controllers/swapCtrl');
 var signMsgCtrl              = require('./controllers/signMsgCtrl');
 var contractsCtrl            = require('./controllers/contractsCtrl');
+var ensCtrl                  = require('./controllers/ensCtrl');
 var footerCtrl               = require('./controllers/footerCtrl');
-var offlineTxCtrl        = require('./controllers/offlineTxCtrl');
+var offlineTxCtrl            = require('./controllers/offlineTxCtrl');
 var walletBalanceCtrl        = require('./controllers/walletBalanceCtrl');
 var globalService            = require('./services/globalService');
 var walletService            = require('./services/walletService');
 var blockiesDrtv             = require('./directives/blockiesDrtv');
+var addressFieldDrtv         = require('./directives/addressFieldDrtv');
 var QRCodeDrtv               = require('./directives/QRCodeDrtv');
 var walletDecryptDrtv        = require('./directives/walletDecryptDrtv');
 var cxWalletDecryptDrtv      = require('./directives/cxWalletDecryptDrtv');
@@ -88,15 +94,19 @@ if (IS_CX) {
 }
 var app = angular.module('mewApp', ['pascalprecht.translate', 'ngSanitize','ngAnimate']);
 app.config(['$compileProvider', function($compileProvider) {
-  $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|https|):/);
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|https|mailto):/);
 }]);
 app.config(['$translateProvider', function($translateProvider) {
   $translateProvider.useMissingTranslationHandlerLog();
   new translate($translateProvider);
 }]);
+app.config(['$animateProvider', function($animateProvider) {
+    $animateProvider.classNameFilter(/^no-animate$/);
+}]);
 app.factory('globalService', ['$http', '$httpParamSerializerJQLike', globalService]);
 app.factory('walletService', walletService);
 app.directive('blockieAddress', blockiesDrtv);
+app.directive('addressField', ['$compile', addressFieldDrtv]);
 app.directive('qrCode', QRCodeDrtv);
 app.directive('onReadFile', fileReaderDrtv);
 app.directive('walletBalanceDrtv', balanceDrtv);
@@ -112,12 +122,13 @@ app.controller('sendTxCtrl', ['$scope', '$sce', 'walletService', sendTxCtrl]);
 app.controller('swapCtrl', ['$scope', '$sce', 'walletService', swapCtrl]);
 app.controller('signMsgCtrl', ['$scope', '$sce', 'walletService', signMsgCtrl]);
 app.controller('contractsCtrl', ['$scope', '$sce', 'walletService', contractsCtrl]);
+app.controller('ensCtrl', ['$scope', '$sce', 'walletService', ensCtrl]);
 app.controller('footerCtrl', ['$scope', 'globalService', footerCtrl]);
 app.controller('offlineTxCtrl', ['$scope', '$sce', 'walletService', offlineTxCtrl]);
 app.controller('walletBalanceCtrl', ['$scope', '$sce', walletBalanceCtrl]);
 if (IS_CX) {
   app.controller('addWalletCtrl', ['$scope', '$sce', addWalletCtrl]);
-  app.controller('myWalletsCtrl', ['$scope', '$sce', myWalletsCtrl]);
+  app.controller('myWalletsCtrl', ['$scope', '$sce','walletService', myWalletsCtrl]);
   app.controller('mainPopCtrl', ['$scope', '$sce', mainPopCtrl]);
   app.controller('quickSendCtrl', ['$scope', '$sce', quickSendCtrl]);
   app.controller('cxDecryptWalletCtrl', ['$scope', '$sce', 'walletService', cxDecryptWalletCtrl]);

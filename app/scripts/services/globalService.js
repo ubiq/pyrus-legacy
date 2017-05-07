@@ -55,18 +55,18 @@ var tabs = {
     mew: true,
     cx: true
   },
+  ens: {
+    id:7,
+    name: "NAV_ENS",
+    url: "ens",
+    mew: true,
+    cx: true
+  },
   viewWalletInfo: {
-    id: 7,
+    id: 8,
     name: "NAV_ViewWallet",
     url: "view-wallet-info",
     mew: true,
-    cx: false
-  },
-  signMsg: {
-    id: 8,
-    name: "NAV_SignMsg",
-    url: "sign-message",
-    mew: false,
     cx: false
   },
   help: {
@@ -76,8 +76,15 @@ var tabs = {
     mew: true,
     cx: true
   },
-  bulkGenerate: {
+  signMsg: {
     id: 10,
+    name: "NAV_SignMsg",
+    url: "sign-message",
+    mew: false,
+    cx: false
+  },
+  bulkGenerate: {
+    id: 11,
     name: "NAV_BulkGenerate",
     url: "bulk-generate",
     mew: false,

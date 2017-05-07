@@ -1,8 +1,26 @@
 'use strict';
 var validator = function() {}
 validator.isValidAddress = function(address) {
+    if (address && address == "0x0000000000000000000000000000000000000000") return false;
     if (address)
         return ethFuncs.validateEtherAddress(address);
+    return false;
+}
+validator.isValidENSorEtherAddress = function(address) {
+    return (validator.isValidAddress(address) || validator.isValidENSAddress(address));
+}
+validator.isValidENSName = function(str) {
+    try {
+        return (str.length > 6 && ens.normalise(str) != '');
+    } catch (e) {
+        return false;
+    }
+}
+validator.isValidENSAddress = function(address) {
+    address = ens.normalise(address);
+    var tld = address.substr(address.lastIndexOf('.') + 1);
+    var _ens = new ens();
+    if (_ens.curRegistry.tlds[tld]) return true;
     return false;
 }
 validator.isValidBTCAddress = function(address) {
