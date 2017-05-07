@@ -25,7 +25,7 @@ nodes.nodeList = {
         'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
         'eip155': true,
-        'chainId': 88,
+        'chainId': 8,
         'tokenList': require('./tokens/ubqTokens.json'),
         'abiList': require('./abiDefinitions/ubqAbi.json'),
         'estimateGas': true,
