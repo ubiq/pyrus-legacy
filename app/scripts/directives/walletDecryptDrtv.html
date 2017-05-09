@@ -19,14 +19,6 @@
       <input aria-flowto="aria4" aria-label="parity phrase" type="radio" ng-model="walletType" value="parityBWallet" />
       <span translate="x_ParityPhrase">Parity Phrase</span>
     </label>
-    <label class="radio" ng-hide="globalService.currentTab==globalService.tabs.signMsg.id">
-      <input aria-flowto="aria5" type="radio" aria-label="Ledger Nano S hardware wallet" ng-model="walletType" value="ledger" />
-      Ledger Nano S
-    </label>
-    <label class="radio" ng-hide="globalService.currentTab==globalService.tabs.signMsg.id">
-      <input aria-flowto="aria6" type="radio" aria-label="Trezor hardware wallet" ng-model="walletType" value="trezor" />
-      TREZOR
-    </label>
     <label class="radio" ng-hide="globalService.currentTab!==globalService.tabs.viewWalletInfo.id">
       <input aria-label="address" type="radio" ng-model="walletType" value="addressOnly" />
       View with Address Only
