@@ -1,6 +1,7 @@
 {
   "name": "Pyrus CX",
   "version": "3.7.3",
+  "version": "3.7.4",
   "manifest_version": 2,
   "description": "Pyrus Chrome Extension",
   "homepage_url": "https://pyrus.ubiqsmart.com/",
