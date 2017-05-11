@@ -72,7 +72,7 @@ var quickSendCtrl = function($scope, $sce) {
 				if (!rawTx.isError) {
 					uiFuncs.sendTx(rawTx.signedTx, function(resp) {
 						if (!resp.isError) {
-							$scope.sendTxStatus = $sce.trustAsHtml(globalFuncs.getSuccessText(globalFuncs.successMsgs[2] + "<br />" + resp.data + "<br /><a href='http://ubiqscan.io/en/tx/" + resp.data + "' target='_blank'> UBQ TX via EtherScan.io </a>"));
+							$scope.sendTxStatus = $sce.trustAsHtml(globalFuncs.getSuccessText(globalFuncs.successMsgs[2] + "<br />" + resp.data + "<br /><a href='http://ubiqscan.io/en/tx/" + resp.data + "' target='_blank'> UBQ TX via UbiqScan.io </a>"));
 							$scope.setBalance();
 						} else {
 							$scope.sendTxStatus = $sce.trustAsHtml(globalFuncs.getDangerText(resp.error));

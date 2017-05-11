@@ -84,8 +84,8 @@
     </section>
 
     <div class="alert alert-danger" ng-show="ajaxReq.type!=='ETH'">
-      <strong>Warning! You are not connected to an ETH node.</strong> <br />
-      Please use the node switcher in the upper-right corner to switch to an ETH node. We <strong>do not</strong> support swapping ETC or Testnet ETH.
+      <strong>Warning! You are not connected to an UBQ node.</strong> <br />
+      Please use the node switcher in the upper-right corner to switch to an UBQ node. We <strong>do not</strong> support swapping ETC or Testnet ETH.
     </div>
 
     <section class="clearfix" ng-show="wallet!=null" ng-controller='sendTxCtrl'>

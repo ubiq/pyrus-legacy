@@ -1,6 +1,7 @@
 'use strict';
 var ensCtrl = function($scope, $sce, walletService) {
     $scope.ajaxReq = ajaxReq;
+    $scope.hideEnsInfoPanel = false;
     walletService.wallet = null;
     $scope.ensConfirmModalModal = new Modal(document.getElementById('ensConfirmModal'));
     $scope.ensFinalizeModal = new Modal(document.getElementById('ensFinalizeConfirm'));
@@ -14,10 +15,12 @@ var ensCtrl = function($scope, $sce, walletService) {
         name: '',
         timeRemaining: null,
         timer: null,
-        bidValue: 0.1,
-        dValue: 0.1,
+        bidValue: 0.01,
+        dValue: 0.01,
         secret: hd.bip39.generateMnemonic().split(" ").splice(0, 3).join(" "),
-        nameReadOnly: false
+        nameReadOnly: false,
+        txSent: false,
+        revealObject: null
     };
     $scope.tx = {
         gasLimit: '500000',
@@ -34,6 +37,7 @@ var ensCtrl = function($scope, $sce, walletService) {
         if (walletService.wallet == null) return;
         $scope.wallet = walletService.wallet;
         $scope.wd = true;
+        $scope.objENS.nameReadOnly = true;
         $scope.wallet.setBalance();
         $scope.wallet.setTokens();
     });
@@ -61,20 +65,28 @@ var ensCtrl = function($scope, $sce, walletService) {
         seconds = seconds < 10 ? '0' + seconds : seconds;
         $scope.objENS.timeRemaining = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds ';
         updateScope();
-
+    }
+    $scope.nameOnChange = function() {
+        $scope.objENS.status = -1;
+        $scope.objENS.timeRemaining = null;
+        clearInterval($scope.objENS.timer);
     }
     $scope.checkName = function() {
         if ($scope.Validator.isValidENSName($scope.objENS.name)) {
+            $scope.objENS.name = ens.normalise($scope.objENS.name);
+            $scope.hideEnsInfoPanel = true;
             ENS.getAuctionEntries($scope.objENS.name, function(data) {
                 if (data.error) $scope.notifier.danger(data.msg);
                 else {
-                    $scope.objENS.nameReadOnly = true;
                     var entries = data.data;
                     for (var key in entries) $scope.objENS[key] = entries[key];
                     switch ($scope.objENS.status) {
                         case $scope.ensModes.owned:
                             ENS.getOwner($scope.objENS.name + '.eth', function(data) {
                                 $scope.objENS.owner = data.data;
+                            })
+                            ENS.getDeedOwner($scope.objENS.deed, function(data) {
+                                $scope.objENS.deedOwner = data.data;
                             })
                             break;
                         case $scope.ensModes.notAvailable:
@@ -91,6 +103,7 @@ var ensCtrl = function($scope, $sce, walletService) {
                         case $scope.ensModes.reveal:
                             $scope.objENS.bidValue = 0;
                             $scope.objENS.secret = '';
+                            $scope.objENS.highestBid = etherUnits.toEther($scope.objENS.highestBid.toString(), 'wei');
                             break;
                     }
                     updateScope();
@@ -98,8 +111,23 @@ var ensCtrl = function($scope, $sce, walletService) {
             })
         } else $scope.notifier.danger(globalFuncs.errorMsgs[30]);
     }
+    $scope.onLongStringChanged = function() {
+        try {
+            $scope.objENS.revealObject = null;
+            var tObj = JSON.parse($scope.longJsonString);
+            $scope.objENS.revealObject = tObj;
+            if (tObj.value) $scope.objENS.bidValue = Number(etherUnits.toEther(tObj.value, "wei"));
+            if (tObj.secret) $scope.objENS.secret = tObj.secret;
+            if (tObj.name && ens.normalise(tObj.name) != $scope.objENS.name) throw new Error(globalFuncs.errorMsgs[34]);
+            updateScope();
+        } catch (e) {
+            $scope.notifier.danger(e.message);
+        }
+    }
     $scope.openAndBidAuction = function() {
         var _objENS = $scope.objENS;
+        _objENS.registrationDate = new Date();
+        _objENS.registrationDate.setDate(_objENS.registrationDate.getDate() + 5);
         ajaxReq.getTransactionData($scope.wallet.getAddressString(), function(data) {
             if (data.error) $scope.notifier.danger(data.msg);
             data = data.data;
@@ -142,6 +170,10 @@ var ensCtrl = function($scope, $sce, walletService) {
         });
     }
     $scope.finalizeDomain = function() {
+          if ($scope.wallet.getAddressString() != $scope.objENS.deedOwner) {
+              $scope.notifier.danger(globalFuncs.errorMsgs[33]);
+              return;
+          } 
         var _objENS = $scope.objENS;
         ajaxReq.getTransactionData($scope.wallet.getAddressString(), function(data) {
             if (data.error) $scope.notifier.danger(data.msg);
@@ -162,10 +194,6 @@ var ensCtrl = function($scope, $sce, walletService) {
                 }
             });
         });
-    }
-    $scope.showRegistrationDate = function() {
-        if ($scope.objENS && $scope.objENS.registrationDate) return $scope.objENS.registrationDate > new Date();
-        else return false;
     }
     $scope.getRevealTime = function() {
         if ($scope.objENS && $scope.objENS.registrationDate) return new Date($scope.objENS.registrationDate - (48 * 60 * 60 * 1000));
@@ -223,6 +251,8 @@ var ensCtrl = function($scope, $sce, walletService) {
                 $scope.notifier.danger(resp.error);
             }
         });
+        $scope.objENS.txSent = true;
+        $scope.objENS.hideEnsInfoPanel = false;
     }
     $scope.generateTx = function() {
         try {
@@ -230,9 +260,11 @@ var ensCtrl = function($scope, $sce, walletService) {
             $scope.sentTxs = [];
             $scope.generatedTxs = [];
             if (!$scope.Validator.isValidENSName(_objENS.name)) throw globalFuncs.errorMsgs[30];
-            else if (!$scope.Validator.isPositiveNumber(_objENS.bidValue) || !_objENS.bidValue >= 0.1) throw globalFuncs.errorMsgs[0];
-            else if (!$scope.Validator.isPositiveNumber(_objENS.dValue) || !_objENS.dValue >= _objENS.bidValue) throw globalFuncs.errorMsgs[0];
+            else if (!$scope.Validator.isPositiveNumber(_objENS.bidValue) || _objENS.bidValue < 0.01) throw globalFuncs.errorMsgs[0];
+            else if (_objENS.status != $scope.ensModes.reveal && (!$scope.Validator.isPositiveNumber(_objENS.dValue) || _objENS.dValue < _objENS.bidValue)) throw globalFuncs.errorMsgs[0];
             else if (!$scope.Validator.isPasswordLenValid(_objENS.secret, 0)) throw globalFuncs.errorMsgs[31];
+            else if (_objENS.revealObject && _objENS.revealObject.name && ens.normalise(_objENS.revealObject.name) != _objENS.name) throw globalFuncs.errorMsgs[34];
+            else if ($scope.wallet.balance <= _objENS.dValue) throw globalFuncs.errorMsgs[0];
             else {
                 if ($scope.objENS.status == $scope.ensModes.open) $scope.openAndBidAuction();
                 else if ($scope.objENS.status == $scope.ensModes.auction) $scope.bidAuction();

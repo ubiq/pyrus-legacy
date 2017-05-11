@@ -18,8 +18,8 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     $scope.ajaxReq = ajaxReq;
     $scope.nodeType = $scope.ajaxReq.type
     $scope.nodeService = $scope.ajaxReq.service
-    $scope.$watch('ajaxReq.type', function() {  $scope.nodeType = $scope.ajaxReq.type  })
-    $scope.$watch('ajaxReq.service', function() {  $scope.nodeService = $scope.ajaxReq.service  })
+    $scope.$watch('ajaxReq.type', function() { $scope.nodeType = $scope.ajaxReq.type })
+    $scope.$watch('ajaxReq.service', function() { $scope.nodeService = $scope.ajaxReq.service })
     $scope.setArrowVisibility = function() {
         setTimeout(function() {
             if (document.querySelectorAll('.nav-inner')[0] && document.querySelectorAll('.nav-scroll')[0]) {
@@ -49,11 +49,11 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
         }));
         ajaxReq.getCurrentBlock(function(data) {
             if (data.error) {
-              $scope.nodeIsConnected = false;
-              $scope.notifier.danger(globalFuncs.errorMsgs[32]);
+                $scope.nodeIsConnected = false;
+                $scope.notifier.danger(globalFuncs.errorMsgs[32]);
             } else {
-              $scope.nodeIsConnected = true;
-              $scope.notifier.info(globalFuncs.successMsgs[5] + 'to the <strong>'+$scope.nodeType+' node</strong>, provided by '+$scope.nodeService+'.')
+                $scope.nodeIsConnected = true;
+                $scope.notifier.info(globalFuncs.successMsgs[5] + 'to the <strong>' + $scope.nodeType + ' node</strong>, provided by ' + $scope.nodeService + '.')
             }
         });
     }
@@ -169,7 +169,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
         for (var i = 0; i < globalFuncs.successMsgs.length; i++) $scope.setLanguageVal('SUCCESS_' + (i + 1), 'successMsgs', i);
     }
 
-    $scope.setGethErrMsgLanguage = function() {
+    $scope.setGubiqErrMsgLanguage = function() {
         globalFuncs.gethErrorMsgs = {};
         for (var s in globalFuncs.gethErrors) {
             var key = globalFuncs.gethErrors[s];
@@ -193,7 +193,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
         $translate.use(key);
         $scope.setErrorMsgLanguage();
         if (globalFuncs.getEthNodeName() == 'geth')
-            $scope.setGethErrMsgLanguage();
+            $scope.setGubiqErrMsgLanguage();
         else
             $scope.setParityErrMsgLanguage();
         $scope.curLang = value;

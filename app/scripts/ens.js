@@ -17,8 +17,8 @@ var ens = function() {
         case nodes.nodeTypes.ETH:
             _this.setCurrentRegistry(ens.registry.ETH);
             break;
-        case nodes.nodeTypes.ETC:
-            _this.setCurrentRegistry(ens.registry.ETC);
+        case nodes.nodeTypes.Rinkeby:
+            _this.setCurrentRegistry(ens.registry.Rinkeby);
             break;
         case nodes.nodeTypes.Ropsten:
             _this.setCurrentRegistry(ens.registry.ROPSTEN);
@@ -29,7 +29,7 @@ var ens = function() {
 }
 ens.registry = {
     ETH: require('./ensConfigs/ETHConfig.json'),
-    ETC: require('./ensConfigs/ETCConfig.json'),
+    Rinkeby: require('./ensConfigs/RinkebyConfig.json'),
     ROPSTEN: require('./ensConfigs/ROPConfig.json'),
     NULL: {}
 }
@@ -51,11 +51,8 @@ ens.modes = {
 ens.prototype.setCurrentRegistry = function(_registry) {
     this.curRegistry = _registry;
 }
-ens.prototype.getRegistryAddress = function(name) {
-    name = ens.normalise(name);
-    var tld = name.substr(name.lastIndexOf('.') + 1).toLowerCase();
-    if (this.curRegistry.tlds[tld]) return this.curRegistry.tlds[tld];
-    else return false;
+ens.prototype.getRegistryAddress = function() {
+    return this.curRegistry.registry;
 }
 
 function namehash(name) {
@@ -93,11 +90,14 @@ ens.prototype.getOwnerResolverAddress = function(funcABI, to, name, callback) {
         }
     });
 }
+ens.prototype.getDeedOwner = function(to, callback) {
+    this.getOwnerResolverAddress(this.deedABI.owner, to, '', callback);
+}
 ens.prototype.getOwner = function(name, callback) {
-    this.getOwnerResolverAddress(this.registryABI.owner, this.getRegistryAddress(name), name, callback);
+    this.getOwnerResolverAddress(this.registryABI.owner, this.getRegistryAddress(), name, callback);
 }
 ens.prototype.getResolver = function(name, callback) {
-    this.getOwnerResolverAddress(this.registryABI.resolver, this.getRegistryAddress(name), name, callback);
+    this.getOwnerResolverAddress(this.registryABI.resolver, this.getRegistryAddress(), name, callback);
 }
 ens.prototype.getAddress = function(name, callback) {
     var _this = this;
@@ -159,10 +159,13 @@ ens.prototype.getFinalizeAuctionData = function(name) {
     var funcABI = _this.auctionABI.finalizeAuction;
     return _this.getDataString(funcABI, [name]);
 }
+var isSecretHashed = function(secret) {
+    return secret.substring(0, 2) == '0x' && secret.length == 66 && Validator.isValidHex(secret);
+}
 ens.prototype.getRevealBidData = function(name, value, secret) {
     var _this = this;
     name = _this.getSHA3(ens.normalise(name));
-    secret = _this.getSHA3(secret);
+    secret = isSecretHashed(secret) ? secret : _this.getSHA3(secret);
     var funcABI = _this.auctionABI.unsealBid;
     return _this.getDataString(funcABI, [name, value, secret]);
 }

@@ -5,6 +5,7 @@ nodes.nodeTypes = {
     UBQ: "UBQ",
     Custom: "CUSTOM ETH"
 };
+nodes.ensNodeTypes = [];
 nodes.customNodeObj = {
     'name': 'CUS',
     'blockExplorerTX': '',

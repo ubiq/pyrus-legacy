@@ -1,8 +1,8 @@
 {
-    "name": "MyEtherWallet",
-    "version": "3.6.7",
-    "description": "An NPM dist of MyEtherWallet. For easier downloading & updating via CLI.",
-    "author": "MyEtherWallet",
+    "name": "Pyrus",
+    "version": "3.7.3",
+    "description": "An NPM dist of Pyrus. For easier downloading & updating via CLI.",
+    "author": "Pyrus",
     "license": "ISC",
     "devDependencies": {
         "open": "0.0.5"

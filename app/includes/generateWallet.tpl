@@ -35,7 +35,7 @@
     </div>
     <div class="col-xs-12 alert alert-danger">
       <span>
-      MyEtherWallet.com is not a web wallet & does not store or transmit this secret information at any time. <br />
+      Pyrus is not a web wallet & does not store or transmit this secret information at any time. <br />
       <strong>If you do not save your wallet file and password, we cannot recover them.</strong><br />
       Save your wallet file now & back it up in a second location (not on your computer).
       <br /><br />
