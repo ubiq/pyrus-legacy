@@ -44,7 +44,7 @@
 
 
       <div class="modal-footer">
-        <button class="btn btn-default" data-dismiss="modal" translate="SENDModal_No">
+        <button class="btn btn-primary" data-dismiss="modal" translate="SENDModal_No">
           No, get me out of here!
         </button>
         <button class="btn btn-primary" ng-click="sendTx()" translate="SENDModal_Yes">
