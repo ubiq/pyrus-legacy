@@ -14,8 +14,8 @@
         <span class="mono small">{{twallet.addr}}</span>
       </td>
       <td class="chrome-tokens">
-        <h3 class="text-success col-xs-12 point" ng-show="!showLongBal" ng-dblclick="showLongBal=!showLongBal" title="{{twallet.balance}} (Double-Click)" >{{twallet.balance|number}} ETH</h3>
-        <h3 class="text-success col-xs-12 point" ng-show="showLongBal" ng-dblclick="showLongBal=!showLongBal">{{twallet.balance }} ETH</h3>
+        <h3 class="text-success col-xs-12 point" ng-show="!showLongBal" ng-dblclick="showLongBal=!showLongBal" title="{{twallet.balance}} (Double-Click)" >{{twallet.balance|number}} UBQ</h3>
+        <h3 class="text-success col-xs-12 point" ng-show="showLongBal" ng-dblclick="showLongBal=!showLongBal">{{twallet.balance }} UBQ</h3>
         <div class="small col-xs-6 point" ng-repeat="token in twallet.tokens" ng-show="token.balance!=0 && token.balance!='loading'" ng-dblclick="showLongToken=!showLongToken" title="{{token.getBalance()}} (Double-Click)">
           <strong ng-show="!showLongToken">{{token.getBalance()|number}} </strong>
           <strong ng-show="showLongToken"> {{token.getBalance()}} </strong>
@@ -97,7 +97,7 @@
           </form>
         </div>
         <div class="modal-footer text-center">
-          <button type="button" class="btn btn-default" data-dismiss="modal" translate="x_Cancel">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" translate="x_Cancel">Cancel</button>
           <button type="button" ng-show="viewWallet.nick.length>0" class="btn btn-primary" ng-click="editSave()" translate="x_Save">Save</button>
         </div>
 
@@ -132,7 +132,7 @@
           </form>
         </div>
         <div class="modal-footer text-center">
-          <button type="button" class="btn btn-default" data-dismiss="modal" translate="x_Cancel">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" translate="x_Cancel">Cancel</button>
           <button type="button" class="btn btn-warning" ng-click="decryptWallet()" translate="NAV_ViewWallet"> View Wallet Info </button>
         </div>
       </div>
@@ -157,7 +157,7 @@
           <h4 translate="SENDModal_Content_3">Are you sure you want to do this?</h4>
         </div>
         <div class="modal-footer text-center">
-          <button type="button" class="btn btn-default" data-dismiss="modal" translate="SENDModal_No">No, get me out of here!</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" translate="SENDModal_No">No, get me out of here!</button>
           <button type="button" class="btn btn-danger" ng-click="deleteWallet()" translate="MYWAL_Remove">Remove</button>
         </div>
       </div>

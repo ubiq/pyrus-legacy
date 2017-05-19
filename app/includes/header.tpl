@@ -38,10 +38,10 @@
   <section class="bg-gradient header-branding">
     <section class="container">
 
-      @@if (site === 'mew' ) { <a class="brand" href="https://pyrus.ubiqsmart.com/" aria-label="Go to homepage"> <img src="images/logo-myetherwallet.svg"   height="64px" width="245px" alt="Pyrus" /></a> }
-      @@if (site === 'cx'  ) { <a class="brand" href="/cx-wallet.html" aria-label="Go to homepage">                <img src="images/logo-myetherwalletcx.svg" height="64px" width="245px" alt="Pyrus" /></a> }
+      @@if (site === 'mew' ) { <a class="brand" href="https://pyrus.ubiqsmart.com/" aria-label="Go to homepage"> <img src="images/logo-pyrus.svg"   height="16px" width="160px" alt="Pyrus" /></a> }
+      @@if (site === 'cx'  ) { <a class="brand" href="/cx-wallet.html" aria-label="Go to homepage">                <img src="images/logo-pyrus.svg" height="64px" width="245px" alt="Pyrus" /></a> }
 
-      <div class="tagline"><span style="max-width: 395px">Open-Source & Client-Side Ubiq Wallet</span>
+      <div class="tagline"><span style="max-width: 395px">Pyrus - Open-Source & Client-Side Ubiq Wallet</span>
 
         &middot; v3.7.4 &nbsp;&nbsp;
 
@@ -72,6 +72,43 @@
       </div>
     </section>
   </section>
+
+  <!-- <section class="bg-gradient header-branding">
+    <section class="container">
+
+      @@if (site === 'mew' ) { <a class="brand" href="https://pyrus.ubiqsmart.com/" aria-label="Go to homepage"> <img src="images/logo-pyrus-2.svg"   height="16px" width="160px" alt="Pyrus" /></a> }
+      @@if (site === 'cx'  ) { <a class="brand" href="/cx-wallet.html" aria-label="Go to homepage">                <img src="images/logo-pyrus.svg" height="64px" width="245px" alt="Pyrus" /></a> }
+
+      <div class="tagline"><span style="max-width: 395px">Pyrus - Open-Source & Client-Side Ubiq Wallet</span>
+
+        &middot; v3.7.4 &nbsp;&nbsp;
+
+        <span class="dropdown" ng-cloak>
+          <a tabindex="0"  aria-haspopup="true" aria-expanded="false" aria-label="change language. current language {{curLang}}" class="dropdown-toggle" ng-click="dropdown = !dropdown">{{curLang}}<i class="caret"></i></a>
+          <ul class="dropdown-menu" ng-show="dropdown">
+            <li><a ng-class="{true:'active'}[curLang=='English']"      ng-click="changeLanguage('en','English'     )"> English         </a></li>
+            <li role="separator" class="divider"></li>
+            <li><a data-toggle="modal" data-target="#disclaimerModal" translate="FOOTER_4"> Disclaimer </a></li>
+          </ul>
+        </span>
+
+        &nbsp;&nbsp;
+
+        <span class="dropdown dropdown-node" ng-cloak>
+          <a tabindex="0" aria-haspopup="true" aria-label="change node. current node {{curNode.name}} node by {{curNode.service}}" class="dropdown-toggle" ng-click="dropdownNode = !dropdownNode"> {{curNode.name}} <small>({{curNode.service}})</small><i class="caret"></i></a>
+          <ul class="dropdown-menu" ng-show="dropdownNode">
+            <li ng-repeat="(key, value) in nodeList"><a ng-class="{true:'active'}[curNode == key]" ng-click="changeNode(key)">
+              {{value.name}}
+              <small> ({{value.service}}) </small>
+              <img ng-show="value.service=='Custom'" img src="images/icon-remove.svg" class="node-remove" title="Remove Custom Node" ng-click="removeNodeFromLocal(value.name)"/>
+            </a></li>
+            <li><a ng-click="customNodeModal.open(); dropdownNode = !dropdownNode;"> Add Custom Node </a></li>
+          </ul>
+        </span>
+
+      </div>
+    </section>
+  </section> -->
 
   <nav role="navigation" aria-label="main navigation" class="container nav-container overflowing" >
     <a aria-hidden="true" ng-show="showLeftArrow" class="nav-arrow-left" ng-click="scrollLeft(100);" ng-mouseover="scrollHoverIn(true,2);" ng-mouseleave="scrollHoverOut()">&#171;</a>

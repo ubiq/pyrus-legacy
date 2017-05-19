@@ -9,7 +9,7 @@ textarea {
 
 // footer
 footer {
-  background-color: @ether-navy;
+  background-color: @ubiq-green-dark;
   color: white;
   margin-top: 100px;
   padding-top: @space-xs;
@@ -23,11 +23,12 @@ footer {
     margin: @space-xs 0 @space-sm;
   }
   a {
-    color: #4ac8ed;
+    color: @link-color;
     &:hover,
     &:focus {
-      color: darken(#4ac8ed, 5%);
+      color: darken(@link-color, 5%);
     }
+    
   }
   .modal,
   .modal p {
@@ -621,4 +622,3 @@ header.Custom  {
     border: 3px solid @brand-cust;
   }
 }
-
