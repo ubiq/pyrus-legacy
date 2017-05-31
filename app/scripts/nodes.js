@@ -31,7 +31,7 @@ nodes.nodeList = {
         'abiList': require('./abiDefinitions/ubqAbi.json'),
         'estimateGas': true,
         'service': 'Ubiqscan.io',
-        'lib': new nodes.customNode('https://api.ubiqscan.io', '')
+        'lib': new nodes.customNode('https://rpc1.ubiqscan.io', '')
     }
 };
 nodes.ethPrice = require('./nodeHelpers/ethPrice');
