@@ -3,8 +3,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 812 168.8" style="enable-background:new 0 0 812 168.8;" xml:space="preserve">
 <style type="text/css">
+@font-face {
+                src: url('../fonts/Lato-Light.woff');
+                font-family: 'lato-light';
+}
+
 	.st0{fill:#333333;}
-	.st1{font-family:'Lato-Light';}
 	.st2{font-size:131.0862px;}
 	.st3{fill:#00EA90;}
 	.st4{fill:#494949;}
@@ -17,16 +21,16 @@
 	.st11{display:inline;}
 </style>
 <g id="Layer_1_1_">
-	<text transform="matrix(1 0 0 1 166.4282 127.9533)" class="st0 st1 st2">P</text>
+	<text transform="matrix(1 0 0 1 166.4282 127.9533)" font-family="lato-light" class="st0 st2">P</text>
 	<g>
-		<text transform="matrix(1 0 0 1 608.3751 127.9533)" class="st3 st1 st2">U</text>
+		<text transform="matrix(1 0 0 1 608.3751 127.9533)" font-family="lato-light" class="st3 st2">U</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 451.0725 127.9533)" class="st3 st1 st2">R</text>
+		<text transform="matrix(1 0 0 1 451.0725 127.9533)" font-family="lato-light" class="st3 st2">R</text>
 	</g>
-	<text transform="matrix(1 0 0 1 301.2598 127.9533)" class="st0 st1 st2">Y</text>
+	<text transform="matrix(1 0 0 1 301.2598 127.9533)" font-family="lato-light" class="st0 st2">Y</text>
 	<g>
-		<text transform="matrix(1 0 0 1 746.9531 127.9533)" class="st3 st1 st2">S</text>
+		<text transform="matrix(1 0 0 1 746.9531 127.9533)" font-family="lato-light" class="st3 st2">S</text>
 	</g>
 	<g id="XMLID_9_">
 		<polygon class="st4" points="54.1,39.1 0,65.3 0,25.8 54.1,0 		"/>
