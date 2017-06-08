@@ -116,11 +116,6 @@ globalFuncs.stripTags = function(str) {
     }
     return str;
 }
-globalFuncs.checkAndRedirectHTTPS = function() {
-    var host = "pyrus.ubiqsmart.com";
-    var hostw = "https://pyrus.ubiqsmart.com";
-    if (host == window.location.host) window.location = hostw;
-}
 globalFuncs.isStrongPass = function(password) {
     return password.length > 8;
 }
