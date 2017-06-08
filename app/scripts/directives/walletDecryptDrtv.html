@@ -15,10 +15,6 @@
       <input aria-flowto="aria3" aria-label="mnemonic phrase" type="radio" ng-model="walletType" value="pastemnemonic" />
       <span translate="x_Mnemonic">Mnemonic Phrase</span>
     </label>
-    <label class="radio">
-      <input aria-flowto="aria4" aria-label="parity phrase" type="radio" ng-model="walletType" value="parityBWallet" />
-      <span translate="x_ParityPhrase">Parity Phrase</span>
-    </label>
     <label class="radio" ng-hide="globalService.currentTab!==globalService.tabs.viewWalletInfo.id">
       <input aria-label="address" type="radio" ng-model="walletType" value="addressOnly" />
       View with Address Only
@@ -105,22 +101,6 @@
     </div>
     <!-- /if selected type mnemonic-->
 
-    <!-- if selected parity phrase-->
-    <div id="selectedTypeMnemonic" ng-if="walletType=='parityBWallet'">
-      <h4 translate="ADD_Radio_5"> Paste / type your mnemonic: </h4>
-      <div class="form-group">
-        <textarea rows="4"
-                  class="form-control"
-                  ng-change="onParityPhraseChange()"
-                  ng-class="$parent.$parent.parityPhrase != '' ? 'is-valid' : 'is-invalid'"
-                  ng-keyup="$event.keyCode == 13 && decryptWallet()"
-                  ng-model="$parent.$parent.parityPhrase"
-                  placeholder="{{ 'x_ParityPhrase' | translate}}"
-        ></textarea>
-      </div>
-    </div>
-    <!-- /if selected parity phrase-->
-
     <!-- if selected type ledger-->
     <div id="selectedTypeLedger" ng-if="walletType=='ledger'">
       <ol>
@@ -205,7 +185,7 @@
   <!-- / Column 2 - Unlock That Key -->
 
   <!-- Column 3 - The Unlock Button -->
-  <section class="col-md-4 col-sm-6" ng-show="showFDecrypt||showPDecrypt||showMDecrypt||walletType=='ledger'||walletType=='trezor'||showAOnly||showParityDecrypt">
+  <section class="col-md-4 col-sm-6" ng-show="showFDecrypt||showPDecrypt||showMDecrypt||walletType=='ledger'||walletType=='trezor'||showAOnly">
     <h4 id="uploadbtntxt-wallet" ng-show="showFDecrypt||showPDecrypt||showMDecrypt" translate="ADD_Label_6">
       Access Your Wallet:
     </h4>
@@ -214,7 +194,7 @@
       tabindex="0"
       role="button"
       class="btn btn-primary btn-block"
-      ng-show="showFDecrypt||showPDecrypt||showMDecrypt||showParityDecrypt"
+      ng-show="showFDecrypt||showPDecrypt||showMDecrypt"
       ng-click="decryptWallet()"
       translate="ADD_Label_6_short">UNLOCK</a>
     </div>
