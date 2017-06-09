@@ -1468,7 +1468,7 @@
     <div class="input-group">
       <input class="form-control" type="text" placeholder="{{ 'SEND_amount_short' | translate }}" ng-model="tx.value"/>
       <div class="input-group-btn">
-        <a class="btn btn-default dropdown-toggle"
+        <a class="btn btn-primary dropdown-toggle"
            ng-click="dropdownAmount = !dropdownAmount"
            ng-class="dropdownEnabled ? '' : 'disabled'">
               {{unitReadable}}<i class="caret"></i>
@@ -1562,7 +1562,6 @@
     <div class="qr-code" qr-code="{{signedTx}}" watch-var="signedTx" width="100%" style="margin-top: -6.5rem"></div>
   </div>
 </article>
-
  
 
   
@@ -1679,7 +1678,7 @@
 <section class="col-sm-6 clearfix">
   <h4 translate="CONTRACT_Title_2"> Select Existing Contract </h4>
   <div class="dropdown">
-    <a class="btn btn-default dropdown-toggle" class="dropdown-toggle" ng-click="dropdownExistingContracts = !dropdownExistingContracts">
+    <a class="btn btn-primary dropdown-toggle" class="dropdown-toggle" ng-click="dropdownExistingContracts = !dropdownExistingContracts">
       {{selectedAbi.name}} <small class="mono">{{selectedAbi.address}}</small><i class="caret"></i>
     </a>
     <ul class="dropdown-menu dropdown-menu-left" ng-show="dropdownExistingContracts">
@@ -1712,7 +1711,7 @@
   <span class="form-group">
     <h4 translate="CONTRACT_Interact_Title">Read / Write Contract </h4>
     <div class="btn-group">
-      <a class="btn btn-default" ng-click="dropdownContracts = !dropdownContracts">
+      <a class="btn btn-primary" ng-click="dropdownContracts = !dropdownContracts">
       {{contract.selectedFunc==null ? "Select a function" : contract.selectedFunc.name}}<i class="caret"></i></a>
       <ul class="dropdown-menu" ng-show="dropdownContracts">
         <li ng-repeat="func in contract.functions track by $index"><a ng-click="selectFunc($index)">{{func.name}}</a></li>
@@ -1937,7 +1936,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-default" data-dismiss="modal" translate="SENDModal_No">
+        <button class="btn btn-primary" data-dismiss="modal" translate="SENDModal_No">
           No, get me out of here!
         </button>
         <button class="btn btn-primary" ng-click="sendTx()" translate="SENDModal_Yes">

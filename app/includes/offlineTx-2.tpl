@@ -30,7 +30,7 @@
     <div class="input-group">
       <input class="form-control" type="text" placeholder="{{ 'SEND_amount_short' | translate }}" ng-model="tx.value"/>
       <div class="input-group-btn">
-        <a class="btn btn-default dropdown-toggle"
+        <a class="btn btn-primary dropdown-toggle"
            ng-click="dropdownAmount = !dropdownAmount"
            ng-class="dropdownEnabled ? '' : 'disabled'">
               {{unitReadable}}<i class="caret"></i>
@@ -124,4 +124,3 @@
     <div class="qr-code" qr-code="{{signedTx}}" watch-var="signedTx" width="100%" style="margin-top: -6.5rem"></div>
   </div>
 </article>
-

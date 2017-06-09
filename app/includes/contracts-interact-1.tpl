@@ -9,7 +9,7 @@
 <section class="col-sm-6 clearfix">
   <h4 translate="CONTRACT_Title_2"> Select Existing Contract </h4>
   <div class="dropdown">
-    <a class="btn btn-default dropdown-toggle" class="dropdown-toggle" ng-click="dropdownExistingContracts = !dropdownExistingContracts">
+    <a class="btn btn-primary dropdown-toggle" class="dropdown-toggle" ng-click="dropdownExistingContracts = !dropdownExistingContracts">
       {{selectedAbi.name}} <small class="mono">{{selectedAbi.address}}</small><i class="caret"></i>
     </a>
     <ul class="dropdown-menu dropdown-menu-left" ng-show="dropdownExistingContracts">
