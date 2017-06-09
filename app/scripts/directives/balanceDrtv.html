@@ -23,9 +23,9 @@
         <td>{{token.getSymbol()}} </td>
       </tr>
     </table>
-    <a class="btn btn-default btn-sm" ng-click="tokenVisibility='shown'" ng-show="tokenVisibility=='hidden'">Show All Tokens</a>
-    <a class="btn btn-default btn-sm" ng-click="tokenVisibility='hidden'" ng-show="tokenVisibility=='shown'">Hide Tokens</a>
-    <a class="btn btn-default btn-sm" ng-click="customTokenField=!customTokenField"><span translate="SEND_custom"translate="SEND_custom">Add Custom Token</span></a>
+    <a class="btn btn-primary btn-sm" ng-click="tokenVisibility='shown'" ng-show="tokenVisibility=='hidden'">Show All Tokens</a>
+    <a class="btn btn-primary btn-sm" ng-click="tokenVisibility='hidden'" ng-show="tokenVisibility=='shown'">Hide Tokens</a>
+    <a class="btn btn-primary btn-sm" ng-click="customTokenField=!customTokenField"><span translate="SEND_custom"translate="SEND_custom">Add Custom Token</span></a>
     <div class="custom-token-fields" ng-show="customTokenField">
       <label translate="TOKEN_Addr">Address:</label>
       <input class="form-control input-sm" type="text" ng-model="localToken.contractAdd" ng-class="Validator.isValidAddress(localToken.contractAdd) ? 'is-valid' : 'is-invalid'" />
