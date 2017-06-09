@@ -666,18 +666,9 @@
         <li><strong>{{etherBalance}}</strong> UBQ </li>
       </ul>
 
-      <h5 translate="sidebar_Equiv"> Equivalent Values: </h5>
-      <ul class="account-info">
-        <li><strong>{{usdBalance}}</strong> USD</li>
-        <li><strong>{{eurBalance}}</strong> EUR</li>
-        <li><strong>{{btcBalance}}</strong> BTC</li>
-      </ul>
-
-      <a target="_blank" ng-click="globalService.currentTab=globalService.tabs.swap.id" class="btn btn-primary btn-sm">Swap via Bity</a>
-
       <h5 translate="sidebar_TransHistory"> Transaction History: </h5>
       <ul class="account-info">
-        <li><a href="https://ubiqscan.io/en/address/{{wallet.getAddressString()}}" target="_blank">https://ubiqscan.io/en/address/ {{wallet.getAddressString()}}</a></li>
+        <li><a href="https://ubiqscan.io/en/address/{{wallet.getAddressString()}}" target="_blank">https://ubiqscan.io/en/address/{{wallet.getAddressString()}}</a></li>
       </ul>
 
 
@@ -776,7 +767,6 @@
 
 
 </main>
-
 
 
     <main class="tab-pane active"

@@ -6,7 +6,7 @@ var cxWalletDecryptDrtv = function() {
       <div class="col-md-4 col-sm-6">\n \
         <h4 translate="decrypt_Select"> Select a Wallet: </h4>\n \
         <div class="radio" ng-repeat="twallet in allWallets  track by $index">\n \
-          <label><input type="radio" name="selectedWallet" ng-model="$parent.selectedWallet" value="{{twallet.addr}}"> {{twallet.nick}} <small>({{twallet.balance}} Ether)</small> </label>\n \
+          <label><input type="radio" name="selectedWallet" ng-model="$parent.selectedWallet" value="{{twallet.addr}}"> {{twallet.nick}} <small>({{twallet.balance}} UBQ)</small> </label>\n \
         </div>\n \
       </div>\n \
       <div class="col-md-4 col-sm-6" ng-show="selectedWallet!=\'\'">\n \
