@@ -32,6 +32,6 @@
 
 <header class="bg-gradient text-white">
 <section class="container text-center">
-  <a href="https://pyrus.ubiqsmart.com/"><img src="images/logo-myetherwallet.svg" height="50px" width="auto" alt="Ubiq Wallet" class="embedded-logo" /></a>
+  <a href="https://pyrus.ubiqsmart.com/"><img src="images/logo-pyrus.svg" height="50px" width="auto" alt="Ubiq Wallet" class="embedded-logo" /></a>
 </section>
 </header>
