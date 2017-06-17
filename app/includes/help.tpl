@@ -255,7 +255,7 @@
         <li> Verify the URL you entered is correct. </li>
         <li> Verify the port you entered is correct. </li>
         <li> Verify that if you are connecting to an http:// node you are running Pyrus locally (NOT over https://). </li>
-        <li> Verify gubiq is running with <code>gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code> or parity is running with <code>parity --rpccorsdomain "*" --keys-path "dont_put_secret_files_here_ever"</code> </li>
+        <li> Verify gubiq is running with <code>gubiq --rpc --rpccorsdomain "null" --keystore "dont_put_secret_files_here_ever"</code></li>
         <li> Verify your node is actually up and running. </li>
         <li> Try removing the node and adding it again. </li>
       </ul>
@@ -365,7 +365,7 @@
   <article class="collapse-container">
     <div ng-click="h12 = !h12">
       <a class="collapse-button" ><span ng-show="!h12">+</span><span ng-show="h12">-</span></a>
-      <h4 translate="HELP_12_Title">12. How do I import a wallet created with Pyrus into gubiq / Ubiq Wallet / Fusion?</h4>
+      <h4 translate="HELP_12_Title">12. How do I import a wallet created with Pyrus into gubiq / Fusion?</h4>
     </div>
     <div ng-show="h12">
       <p class="strong" translate="HELP_12_Desc_1"> Using an Gubiq/Fusion JSON file from Pyrus v2+....</p>
