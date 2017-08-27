@@ -7,7 +7,7 @@ var globalService = function($http, $httpParamSerializerJQLike) {
 var tabs = {
   generateWallet: {
     id: 0,
-    name: "NAV_GenerateWallet",
+    name: "NAV_GenerateWallet_alt",
     url: "generate-wallet",
     mew: true,
     cx: false
@@ -61,22 +61,15 @@ var tabs = {
     mew: true,
     cx: false
   },
-  help: {
-    id: 8,
-    name: "NAV_Help",
-    url: "help",
-    mew: true,
-    cx: true
-  },
   signMsg: {
-    id: 9,
+    id: 8,
     name: "NAV_SignMsg",
     url: "sign-message",
     mew: false,
     cx: false
   },
   bulkGenerate: {
-    id: 10,
+    id: 9,
     name: "NAV_BulkGenerate",
     url: "bulk-generate",
     mew: false,
@@ -92,5 +85,3 @@ return {
 };
 };
 module.exports = globalService;
-
-

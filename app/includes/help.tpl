@@ -3,6 +3,22 @@
 
   <h1 translate="NAV_Help"> Help </h1>
 
+  <h3><a href="https://myetherwallet.groovehq.com/help_center" target="_blank" rel="noopener">
+    This page is slowly being deprecated. Please check out our more up-to-date and searchable Help Center.
+  </a></h3>
+
+ <article class="collapse-container">
+    <div ng-click="hRecent = !hRecent">
+      <a class="collapse-button"><span ng-show="hRecent">+</span><span ng-show="!hRecent">-</span></a>
+      <h4> Recent </h4>
+    </div>
+    <div ng-show="!hRecent">
+      <ul>
+        <li><a href="https://www.reddit.com/r/ethereum/comments/47nkoi/psa_check_your_ethaddressorg_wallets_and_any/d0eo45o" target="_blank" rel="noopener"><span class="text-danger" translate="HELP_Warning">If you created a wallet or downloaded the repo before **Dec. 31st, 2015**, please check your wallets &amp; download a new version of the repo. Click for details.</span></a></li>
+      </ul>
+    </div>
+  </article>
+
   <article class="collapse-container">
     <div ng-click="hRemind = !hRemind">
       <a class="collapse-button"><span ng-show="hRemind">+</span><span ng-show="!hRemind">-</span></a>
@@ -22,7 +38,7 @@
   <article class="collapse-container">
     <div ng-click="h0 = !h0">
       <a class="collapse-button" ><span ng-show="!h0">+</span><span ng-show="h0">-</span></a>
-      <h4 translate="HELP_0_Title"> 0. I'm new. What do I do? </h4>
+      <h4 translate="HELP_0_Title"></h4>
     </div>
     <div ng-show="h0">
       <p translate="HELP_0_Desc_1"> Pyrus gives you the ability to generate new wallets so you can store your UBQ yourself, not on an exchange. This process happens entirely on your computer, not our servers. Therefore, when you generate a new wallet, **you are responsible for safely backing it up**.</p>
@@ -40,32 +56,31 @@
   <article class="collapse-container">
     <div ng-click="h1 = !h1">
       <a class="collapse-button" ><span ng-show="!h1">+</span><span ng-show="h1">-</span></a>
-      <h4 translate="HELP_1_Title"> 1. How do I create a new wallet? </h4>
+      <h4 translate="HELP_1_Title"></h4>
     </div>
     <div ng-show="h1">
       <ol>
         @@if (site === 'mew' ) {
-        <li translate="HELP_1_Desc_1"> Go to the "Generate Wallet" page. </li>
+        <li translate="HELP_1_Desc_1"></li>
         }
         @@if (site === 'cx' )  {
-        <li translate="HELP_1_Desc_2"> Go to the "Add Wallet" page & select "Generate New Wallet" </li>
+        <li translate="HELP_1_Desc_2"></li>
         }
-        <li translate="HELP_1_Desc_3"> Enter a strong password. If you think you may forget it, save it somewhere safe. You will need this password to send transactions. </li>
-        <li translate="HELP_1_Desc_4"> Click "GENERATE". </li>
-        <li translate="HELP_1_Desc_5"> Your wallet has now been generated. </li>
+        <li translate="HELP_1_Desc_3"></li>
+        <li translate="HELP_1_Desc_4"></li>
+        <li translate="HELP_1_Desc_5"></li>
       </ol>
     </div>
   </article>
 
 
-
   <article class="collapse-container">
     <div ng-click="h2a = !h2a">
       <a class="collapse-button" ><span ng-show="!h2a">+</span><span ng-show="h2a">-</span></a>
-      <h4 translate="HELP_2a_Title"> 2a. How do I save/backup my wallet? </h4>
+      <h4 translate="HELP_2a_Title"></h4>
     </div>
     <div ng-show="h2a">
-      <p translate="HELP_2a_Desc_1"> You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. </p>
+      <p translate="HELP_2a_Desc_1"></p>
       <ol>
         <li translate="HELP_2a_Desc_2"> Save the address. You can keep it to yourself or share it with others. That way, others can transfer ETH to you. </li>
         <li translate="HELP_2a_Desc_3"> Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your UBQ to send it! There are 3 types of private keys: </li>
@@ -153,7 +168,7 @@
         <li translate="HELP_4_Desc_10"> A couple more fields will appear. This is your browser generating the transaction. </li>
         <li translate="HELP_4_Desc_11"> Click the blue "Send Transaction" button below that. </li>
         <li translate="HELP_4_Desc_12"> A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. </li>
-        <li translate="HELP_4_Desc_13"> The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. </li>
+        <li translate="HELP_4_Desc_13"> The transaction will be submitted. The TX Hash will display. You can click that TX Hash to see it on the blockchain. </li>
       </ol>
     </div>
   </article>
@@ -193,7 +208,7 @@
         <li translate="HELP_4_Desc_10"> A couple more fields will appear. This is your browser generating the transaction. </li>
         <li translate="HELP_4_Desc_11"> Click the blue "Send Transaction" button below that. </li>
         <li translate="HELP_4_Desc_12"> A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. </li>
-        <li translate="HELP_4_Desc_13"> The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. </li>
+        <li translate="HELP_4_Desc_13"> The transaction will be submitted. The TX Hash will display. You can click that TX Hash to see it on the blockchain. </li>
       </ol>
     </div>
   </article>
@@ -286,7 +301,7 @@
         <li translate="HELP_7_Desc_12"> A couple more fields will appear. This is your browser generating the transaction. </li>
         <li translate="HELP_7_Desc_13"> Click the blue "Send Transaction" button below that. </li>
         <li translate="HELP_7_Desc_14"> A pop-up will appear. Verify that the amount and the address you are sending to are correct. Then click "Yes, I am sure! Make transaction." button. </li>
-        <li translate="HELP_7_Desc_15"> The transaction will be submitted. The TX ID will display. You can click that TX ID to see it on the blockchain. </li>
+        <li translate="HELP_7_Desc_15"> The transaction will be submitted. The TX Hash will display. You can click that TX Hash to see it on the blockchain. </li>
       </ol>
     </div>
   </article>
@@ -303,6 +318,7 @@
       <p translate="HELP_8_Desc_1">Pyrus is not a web wallet. You don't have a login and nothing ever gets saved to our servers. It is simply an interface that allows you interact with the blockchain.</p>
       <p translate="HELP_8_Desc_2">If Pyrus goes down, you would have to find another way (like gubiq or Ubiq Wallet / Fusion) to do what we are doing. But you wouldn't have to "get" your UBQ out of Pyrus because it's not in Pyrus. It's in whatever wallet your generated via our site.</p>
       <p translate="HELP_8_Desc_3"> You can import your unencrypted private key and your Gubiq/Fusion Format (encrypted) files directly into gubiq / Ubiq Wallet / Fusion very easily now. See question #10 below. </p>
+      <p translate="HELP_8_Desc_4">In addition, the likelihood of us taking Pyrus down is slim to none. It costs us almost nothing to maintain as we aren't storing any information. If we do take the domain down, it still is, and always will be, publicly available at <a href="https://github.com/ubiq/pyruswallet" target="_blank" rel="noopener">https://github.com/ubiq/pyruswallet</a>. You can download the ZIP there and run it locally. </p>
     </div>
   </article>
 }
@@ -529,7 +545,7 @@
     </div>
     <div ng-show="hSecCX">
       <h6 translate="HELP_SecCX_Desc_1"> Where is this extension saving my information?</h6>
-      <p translate="HELP_SecCX_Desc_2"> The information you store in this Chrome Extension is saved via <a href="http://chrome.storage/" target="_blank">chrome.storage</a>. - this is the same place your passwords are saved when you save your password in Chrome. </p>
+      <p translate="HELP_SecCX_Desc_2"> The information you store in this Chrome Extension is saved via <a href="http://chrome.storage/" target="_blank" rel="noopener">chrome.storage</a>. - this is the same place your passwords are saved when you save your password in Chrome. </p>
 
       <h6 translate="HELP_SecCX_Desc_3"> What information is saved? </h6>
       <p translate="HELP_SecCX_Desc_4"> The address, nickname, private key is stored in chrome.storage. The private key is encrypted using the password you set when you added the wallet. The nickname and wallet address is not encrypted. </p>
@@ -557,8 +573,6 @@
       </ul>
     </div>
   </article>
-
-
 
   <article class="collapse-container">
     <div ng-click="hFAQ = !hFAQ">

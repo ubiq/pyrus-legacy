@@ -2,13 +2,12 @@
 
   <br /><br />
 
-  <h1>
-    <strong>{{objENS.name}}.eth</strong> is not available. It's already owned by {{objENS.owner}} and the highest bidder is {{objENS.deedOwner}}.
-  </h1>
+  <h1><strong>{{objENS.name}}.eth</strong> is already owned:</h1>
 
-  <section class="col-sm-8 col-xs-12 col-sm-offset-2">
-    <h3> If you are the highest bidder, you must finalize the auction to claim the name. </h3>
-  </section>
+  <div class="form-group col-sm-10 col-sm-offset-1" ng-hide="wd">
+    @@if (site === 'mew' ) { @@include( './ens-resolve-information.tpl', { "site": "mew" } ) }
+    @@if (site === 'cx'  ) { @@include( './ens-resolve-information.tpl', { "site": "cx"  } ) }
+  </div>
 
 </article>
 

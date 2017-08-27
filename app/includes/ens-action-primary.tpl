@@ -2,23 +2,15 @@
 
   <article class="row">
 
-    <!-- Sidebar -->
-    <section class="col-sm-4">
-      <wallet-balance-drtv></wallet-balance-drtv>
-    </section>
-    <!-- / Sidebar -->
-
     <!-- Content -->
     <section class="col-sm-8">
-
+      <div class="block">
       <!-- Title -->
-      <div class="form-group">
-        <h2>
-          <span ng-show="objENS.status==ensModes.auction"> Place a Bid</span>
-          <span ng-show="objENS.status==ensModes.open">Start an Auction</span>
-          <span ng-show="objENS.status==ensModes.reveal">Reveal your Bid</span>
-        </h2>
-      </div>
+      <h2>
+        <span ng-show="objENS.status==ensModes.auction"> Place a Bid</span>
+        <span ng-show="objENS.status==ensModes.open">Start an Auction</span>
+        <span ng-show="objENS.status==ensModes.reveal">Reveal your Bid</span>
+      </h2>
       <!-- / Title -->
 
       <!-- Thing they copied -->
@@ -30,7 +22,7 @@
 
 
       <div class="form-group" ng-show="objENS.status==ensModes.reveal">
-        <label class="strong">-- or --</label>
+        <h5 class="text-center">-- 👆 enter automagically 👆 <strong>-- or --</strong> 👇 enter manually 👇 --</h5>
       </div>
 
 
@@ -43,24 +35,27 @@
       <!-- / Name -->
 
       <!-- Bid Amount -->
-      <h5>Bid Amount</h5>
+      <h5>Actual Bid Amount</h5>
       <p ng-show="objENS.status!=ensModes.reveal"><em><small>You must remember this to claim your name later.</small></em></p>
       <div class="input-group">
-        <input class="form-control" type="number" placeholder="1 {{ajaxReq.type}}" ng-model="objENS.bidValue" ng-class="Validator.isPositiveNumber(objENS.bidValue) && objENS.bidValue >= 0.01 && objENS.bidValue < wallet.balance ? 'is-valid' : 'is-invalid'"/>
+        <!-- validate wallet balance for everything but reveal -->
+        <input ng-show="objENS.status!=ensModes.reveal" class="form-control" type="number" placeholder="1 {{ajaxReq.type}}" ng-model="objENS.bidValue" ng-class="Validator.isPositiveNumber(objENS.bidValue) && objENS.bidValue >= 0.01 && objENS.bidValue < wallet.balance ? 'is-valid' : 'is-invalid'"/>
+        <!-- don't check wallet balance for reveal -->
+        <input ng-show="objENS.status==ensModes.reveal" class="form-control" type="number" placeholder="1 {{ajaxReq.type}}" ng-model="objENS.bidValue" ng-class="Validator.isPositiveNumber(objENS.bidValue) && objENS.bidValue >= 0.01 ? 'is-valid' : 'is-invalid'"/>
         <div class="input-group-btn"><a class="btn btn-default">{{ajaxReq.type}}</a></div>
       </div>
       <!-- / Bid Amount -->
 
-      <!-- Disguise Bid -->
+      <!-- Bid Mask -->
       <div ng-show="objENS.status!=ensModes.reveal">
-        <h5>"Disguise Bid" Amount</h5>
-        <p><em><small>You can send more actual bid to disguise it. This must be >= the Bid Amount</small></em></p>
+        <h5>Bid Mask</h5>
+        <p><em><small>This is the amount of ETH you send when placing your bid. It has no bearing on the *actual* amount you bid (above). It is simply to hide your real bid amount. It must be >= to your actual bid. </small></em></p>
         <div class="input-group">
           <input class="form-control" type="number" placeholder="2 {{ajaxReq.type}}" ng-model="objENS.dValue" ng-class="Validator.isPositiveNumber(objENS.dValue) && objENS.dValue >= objENS.bidValue && objENS.dValue < wallet.balance ? 'is-valid' : 'is-invalid'"/>
           <div class="input-group-btn"><a class="btn btn-default">{{ajaxReq.type}}</a></div>
         </div>
       </div>
-      <!-- / Disguise Bid  -->
+      <!-- / Bid Mask -->
 
       <!-- Your Secret -->
       <h5>Secret Phrase</h5>
@@ -72,7 +67,7 @@
 
       <!-- Button CTA -->
       <div class="form-group">
-        <a class="btn btn-primary btn-block" ng-click="generateTx()">
+        <a class="btn btn-primary btn-block" ng-click="generateTx()" ng-hide="objENS.txSent">
           <span ng-show="objENS.status==ensModes.auction"> Place your Bid</span>
           <span ng-show="objENS.status==ensModes.open">Start the Auction</span>
           <span ng-show="objENS.status==ensModes.reveal">Reveal your Bid</span>
@@ -83,7 +78,7 @@
       <!-- After Sent: Place Bid / Start Auction -->
       <div class="form-group well" ng-show="objENS.txSent && (objENS.status==ensModes.auction || objENS.status==ensModes.open)">
         <h4 class="text-danger">If you haven't done so already, please screenshot & save the below information.</h4>
-        <p>Please remember to come back to reveal your bid. If you fail to do so, you will not be refunded.</p>
+        <p>Please check your address on <a href="https://etherscan.io/">https://etherscan.io/</a> to ensure your BID TX is on the blockchain, without errors.</p>
         @@if (site === 'mew' ) { @@include( './ens-confirm-table.tpl', { "site": "mew" } ) }
         @@if (site === 'cx'  ) { @@include( './ens-confirm-table.tpl', { "site": "cx"  } ) }
       </div>
@@ -91,14 +86,21 @@
 
       <!-- After Sent: Reveal -->
       <div class="form-group" ng-show="objENS.txSent && objENS.status==ensModes.reveal">
-        <h4 class="text-success">You have successfully revealed your {{objENS.bidValue}} bid for {{objENS.name}}.eth.</h4>
-        <p>Please return on <strong>{{objENS.registrationDate.toLocaleString()}}</strong> to finalize the auction and see if you won!</p>
+        <h4 class="text-warning">Click your TX hash to see if you successfully revealed your {{objENS.bidValue}} bid for {{objENS.name}}.eth.</h4>
+        <p>Please return on <strong>{{objENS.registrationDate.toString()}}</strong> to finalize the auction and see if you won!</p>
       </div>
       <!-- / After Sent: Reveal -->
 
-
+    </div>
     </section>
     <!-- / Content -->
+
+    <!-- Sidebar -->
+    <section class="col-sm-4">
+      <wallet-balance-drtv></wallet-balance-drtv>
+    </section>
+    <!-- / Sidebar -->
+
 
   </article>
 

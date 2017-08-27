@@ -1,10 +1,8 @@
-<article class="row" ng-hide="hideEnsInfoPanel">
+<article class="block" ng-hide="hideEnsInfoPanel">
 
-  <br /><br />
+  <div class="cont-md">
 
-  <section class="col-sm-8 col-xs-12 col-sm-offset-2 well" >
-
-    <h5 class="text-center"> What is the process like? </h5>
+    <h4> What is the process like? </h4>
 
       <h6 ng-click="ensPrep = !ensPrep">
         <span ng-show="!ensPrep">+</span><span ng-show="ensPrep">-</span>
@@ -21,7 +19,7 @@
       </h6>
       <ul ng-show="ensAuct">
         <li> Bidding period lasts 3 days (72 hours). </li>
-        <li> You will enter the <u>name</u>, <u>Bid Amount</u>, <u>"Disguise Bid" Amount</u>, which is protected by a <u>Secret Phrase</u>.</li>
+        <li> You will enter the <u>name</u>, <u>Actual Bid Amount</u>, <u>Bid Mask</u>, which is protected by a <u>Secret Phrase</u>.</li>
         <li> This places your bid, but this information is kept secret until you reveal it.</li>
       </ul>
 
@@ -44,18 +42,21 @@
         <li> Once the auction has ended (after 5 days / 120 hours), the winner needs to finalize the auction in order to claim their new name.</li>
         <li> The winner will be refunded the difference between their bid and the next-highest bid. If you are the only bidder, you will refunded all but 0.01 ETH. </li>
       </ul>
-
       <h6 ng-click="ensMore = !ensMore">
         <span ng-show="!ensMore">+</span><span ng-show="ensMore">-</span>
         More Information
       </h6>
       <ul ng-show="ensMore">
-         <li>The auction for this registrar is a blind auction, and is described in <a href="https://github.com/ethereum/EIPs/issues/162" target="_blank">EIP162</a>. Basically, no one can see *anything* during the auction.</li>
-          <li><a href="http://docs.ens.domains/en/latest/userguide.html#registering-a-name-with-the-auction-registrar" target="_blank">ENS: Read the Docs</a></li>
-          <li><a href="https://medium.com/the-ethereum-name-service/announcing-the-ethereum-name-service-relaunch-date-4390af6dd9a2" target="_blank">Announcing the Ethereum Name Service Relaunch Date!</a></li>
+         <li>The auction for this registrar is a blind auction, and is described in <a href="https://github.com/ethereum/EIPs/issues/162" target="_blank" rel="noopener">EIP162</a>. Basically, no one can see *anything* during the auction.</li>
+          <li><a href="http://docs.ens.domains/en/latest/userguide.html#registering-a-name-with-the-auction-registrar" target="_blank" rel="noopener">ENS: Read the Docs</a></li>
+          <li><a href="https://medium.com/the-ethereum-name-service/announcing-the-ethereum-name-service-relaunch-date-4390af6dd9a2" target="_blank" rel="noopener">Announcing the Ethereum Name Service Relaunch Date!</a></li>
       </ul>
+      <hr />
+      <h6><a href="https://myetherwallet.groovehq.com/knowledge_base/categories/ens" target="_blank" rel="noopener">Help Center: ENS</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://myetherwallet.groovehq.com/knowledge_base/topics/debugging-a-bad-instruction-reveal" target="_blank" rel="noopener">Debugging a [BAD INSTRUCTION] Reveal</a></h6>
+      <p>Please try the above before relying on support for reveal issues as we are severely backlogged on support tickets. We're so sorry. :( </p>
 
-  </section>
+  </div>
 
 </article>
-

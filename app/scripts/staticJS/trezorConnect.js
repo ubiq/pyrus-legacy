@@ -3,6 +3,7 @@
  *
  * GPLv3
  */
+var VERSION = 2;
 
 if (!Array.isArray) {
     Array.isArray = function(arg) {
@@ -11,6 +12,15 @@ if (!Array.isArray) {
 }
 
 var HD_HARDENED = 0x80000000;
+
+// react sometimes adds some other parameters that should not be there
+function _fwStrFix(obj, fw) {
+    if (typeof fw === 'string') {
+        obj.requiredFirmware = fw;
+    }
+    return obj;
+}
+
 
 'use strict';
 
@@ -25,8 +35,8 @@ var ERR_CHROME_NOT_CONNECTED = 'Internal Chrome popup is not responding.';
 
 var DISABLE_LOGIN_BUTTONS = window.TREZOR_DISABLE_LOGIN_BUTTONS || false;
 var CHROME_URL = window.TREZOR_CHROME_URL || './chrome/wrapper.html';
-var POPUP_URL = window.TREZOR_POPUP_URL || 'https://connect.trezor.io/1/popup/popup.html';
-var POPUP_PATH = window.TREZOR_POPUP_PATH || 'https://connect.trezor.io/1/';
+var POPUP_URL = window.TREZOR_POPUP_URL || 'https://connect.trezor.io/' + VERSION + '/popup/popup.html';
+var POPUP_PATH = window.TREZOR_POPUP_PATH || 'https://connect.trezor.io/' + VERSION;
 var POPUP_ORIGIN = window.TREZOR_POPUP_ORIGIN || 'https://connect.trezor.io';
 
 var INSIGHT_URLS = window.TREZOR_INSIGHT_URLS || 
@@ -111,11 +121,10 @@ function TrezorConnect() {
         if (typeof path === 'string') {
             path = parseHDPath(path);
         }
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'xpubkey',
-            path: path,
-            requiredFirmware: requiredFirmware
-        }, callback);
+            path: path
+        }, requiredFirmware), callback);
     };
 
     this.getFreshAddress = function (callback, requiredFirmware) {
@@ -127,29 +136,49 @@ function TrezorConnect() {
             }
         }
 
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'accountinfo'
-        }, wrapperCallback);
+        }, requiredFirmware), wrapperCallback);
     }
 
     this.getAccountInfo = function (input, callback, requiredFirmware) {
         try {
             var description = parseAccountInfoInput(input);
-            manager.sendWithChannel({
+            manager.sendWithChannel(_fwStrFix({
                 type: 'accountinfo',
-                description: description,
-                requiredFirmware: requiredFirmware
-            }, callback);
+                description: description
+            }, requiredFirmware), callback);
+        } catch(e) {
+            callback({success: false, error: e});
+        }
+    }
+
+    this.getAllAccountsInfo = function(callback, requiredFirmware){
+        try {
+            manager.sendWithChannel(_fwStrFix({
+                type: 'allaccountsinfo',
+                description: 'all'
+            }, requiredFirmware), callback);
+        } catch(e) {
+            callback({success: false, error: e});
+        }
+    }
+
+    this.claimBitcoinCashAccountsInfo = function(callback, requiredFirmware){
+        try {
+            manager.sendWithChannel(_fwStrFix({
+                type: 'claimBitcoinCashAccountsInfo',
+                description: 'all'
+            }, requiredFirmware), callback);
         } catch(e) {
             callback({success: false, error: e});
         }
     }
 
     this.getBalance = function (callback, requiredFirmware) {
-        manager.sendWithChannel({
-            type: 'accountinfo',
-            requiredFirmware: requiredFirmware
-        }, callback)
+        manager.sendWithChannel(_fwStrFix({
+            type: 'accountinfo'
+        }, requiredFirmware), callback)
     }
 
     /**
@@ -171,13 +200,13 @@ function TrezorConnect() {
       *
       * @see https://github.com/trezor/trezor-common/blob/master/protob/types.proto
       */
-    this.signTx = function (inputs, outputs, callback, requiredFirmware) {
-        manager.sendWithChannel({
+    this.signTx = function (inputs, outputs, callback, requiredFirmware, coin) {
+        manager.sendWithChannel(_fwStrFix({
             type: 'signtx',
             inputs: inputs,
             outputs: outputs,
-            requiredFirmware: requiredFirmware
-        }, callback);
+            coin: coin
+        }, requiredFirmware), callback);
     };
 
     this.signEthereumTx = function (
@@ -198,7 +227,7 @@ function TrezorConnect() {
         if (typeof address_n === 'string') {
             address_n = parseHDPath(address_n);
         }
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'signethtx',
             address_n: address_n,
             nonce: nonce,
@@ -208,8 +237,7 @@ function TrezorConnect() {
             value: value,
             data: data,
             chain_id: chain_id,
-            requiredFirmware: requiredFirmware
-        }, callback);
+        }, requiredFirmware), callback);
     };
 
     /**
@@ -229,11 +257,10 @@ function TrezorConnect() {
       * @param {?(string|array<number>)} requiredFirmware
       */
     this.composeAndSignTx = function (recipients, callback, requiredFirmware) {
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'composetx',
-            recipients: recipients,
-            requiredFirmware: requiredFirmware
-        }, callback);
+            recipients: recipients
+        }, requiredFirmware), callback);
     };
 
     /**
@@ -270,13 +297,12 @@ function TrezorConnect() {
         if (!callback) {
             throw new TypeError('TrezorConnect: login callback not found');
         }
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'login',
             icon: hosticon,
             challenge_hidden: challenge_hidden,
-            challenge_visual: challenge_visual,
-            requiredFirmware: requiredFirmware
-        }, callback);
+            challenge_visual: challenge_visual
+        }, requiredFirmware), callback);
     };
 
     /**
@@ -313,13 +339,12 @@ function TrezorConnect() {
         if (!callback) {
             throw new TypeError('TrezorConnect: callback not found');
         }
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'signmsg',
             path: path,
             message: message,
             coin: {coin_name: opt_coin},
-            requiredFirmware: requiredFirmware
-        }, callback);
+        }, requiredFirmware), callback);
     };
 
     /**
@@ -347,14 +372,13 @@ function TrezorConnect() {
         if (!callback) {
             throw new TypeError('TrezorConnect: callback not found');
         }
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'verifymsg',
             address: address,
             signature: signature,
             message: message,
             coin: {coin_name: opt_coin},
-            requiredFirmware: requiredFirmware
-        }, callback);
+        }, requiredFirmware), callback);
     };
 
     /**
@@ -396,16 +420,15 @@ function TrezorConnect() {
         if (!callback) {
             throw new TypeError('TrezorConnect: callback not found');
         }
-        manager.sendWithChannel({
+        manager.sendWithChannel(_fwStrFix({
             type: 'cipherkeyvalue',
             path: path,
             key: key,
             value: value,
             encrypt: !!encrypt,
             ask_on_encrypt: !!ask_on_encrypt,
-            ask_on_decrypt: !!ask_on_decrypt,
-            requiredFirmware: requiredFirmware
-        }, callback);
+            ask_on_decrypt: !!ask_on_decrypt
+        }, requiredFirmware), callback);
     };
 
     this.pushTransaction = function (
@@ -448,6 +471,48 @@ function TrezorConnect() {
         }
 
         tryUrl(0);
+    }
+
+    /**
+      * Display address on device
+      *
+      * @param {array} address
+      * @param {string} coin 
+      * @param {boolean} segwit
+      * @param {?(string|array<number>)} requiredFirmware
+      *
+      */
+    this.getAddress = function (address, coin, segwit, callback, requiredFirmware) {
+
+        if (typeof address === 'string') {
+            address = parseHDPath(address);
+        }
+
+        manager.sendWithChannel(_fwStrFix({
+            type: 'getaddress',
+            address_n: address,
+            coin: coin,
+            segwit: segwit
+        }, requiredFirmware), callback);
+    }
+
+    /**
+      * Display ethereum address on device
+      *
+      * @param {array} address
+      * @param {?(string|array<number>)} requiredFirmware
+      *
+      */
+    this.ethereumGetAddress = function (address, callback, requiredFirmware) {
+
+        if (typeof address === 'string') {
+            address = parseHDPath(address);
+        }
+
+        manager.sendWithChannel(_fwStrFix({
+            type: 'ethgetaddress',
+            address_n: address,
+        }, requiredFirmware), callback);
     }
 
     var LOGIN_CSS =
@@ -844,9 +909,5 @@ function PopupManager() {
 }
 
 var connect = new TrezorConnect();
-
-if (!IS_CHROME_APP && !DISABLE_LOGIN_BUTTONS) {
-    connect.renderLoginButtons();
-}
 
 module.exports = {TrezorConnect: connect};

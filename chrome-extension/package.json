@@ -1,6 +1,6 @@
 {
     "name": "Pyrus",
-    "version": "3.7.4",
+    "version": "3.10.1.5",
     "description": "An NPM dist of Pyrus. For easier downloading & updating via CLI.",
     "author": "Pyrus",
     "license": "ISC",
