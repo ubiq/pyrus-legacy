@@ -13,12 +13,25 @@
 
 module.exports = [
 {
-
-  // Social (SCL)
-  to:         '0x582e3d8dcd41f586fbcc6559f16476d20b2a3b95',
+  // Substratum (SUB) Network ICO Sale
+  to:         '0xaf518d65f84e4695a4da0450ec02c1248f56b668',
   gasLimit:   200000,
   data:       '',
-  msg:        'Social (SCL) ICO/Crowdsale - ico.nexus.social'
+  msg:        'Substratum Network ICO Sale. Thank you for your support!'
+},
+{
+  // CryptoMart
+  to:         '0x96028Fc22499A7Bad7727baB017eC2352308C15a',
+  gasLimit:   200000,
+  data:       '',
+  msg:        'CryptoMart ICO | 25/082017-25/09/2017'
+},
+{
+  // YUPIE (YUPIE)
+  to:         '0x0F33bb20a282A7649C7B3AFf644F084a9348e933',
+  gasLimit:   400000,
+  data:       '',
+  msg:        'YUPIE (YUPIE) ICO'
 },
 {
   // Stox Token Sale
@@ -64,10 +77,10 @@ module.exports = [
 },
 {
   // LookRev
-  to:         '0x8fa1EaD5d8d774b27d288711abE4d4258224ae26',
+  to:         '0x21ae23b882a340a22282162086bc98d3e2b73018',
   gasLimit:   200000,
   data:       '',
-  msg:        'LookRev ICO address - lookrev.com'
+  msg:        'LookRev. ICO Starts August 30, 2017.'
 },
 {
   // OmiseGo
@@ -166,6 +179,13 @@ module.exports = [
   gasLimit:   200000,
   data:       '',
   msg:        'OHNI ICO. Restoration of our communities!'
+},
+{
+  // Avalon
+  to:         '0xeD247980396B10169BB1d36f6e278eD16700a60f',
+  gasLimit:   60000,
+  data:       '',
+  msg:        'Avalon ICO starts August 25, 2017 - avalon.nu'
 }
 ]
 

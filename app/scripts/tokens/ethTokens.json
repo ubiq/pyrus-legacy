@@ -36,7 +36,7 @@
     "type":"default"
   },
   {
-    "address":"0x23ae3c5b39b12f0693e05435eeaa1e51d8c61530",
+    "address":"0x23aE3C5B39B12f0693e05435EeaA1e51d8c61530",
     "symbol":"APT",
     "decimal":18,
     "type":"default"
@@ -44,6 +44,12 @@
   {
     "address":"0xAc709FcB44a43c35F0DA4e3163b117A17F3770f5",
     "symbol":"ARC",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0xBA5F11b16B155792Cf3B2E6880E8706859A8AEB6",
+    "symbol":"ARN",
     "decimal":18,
     "type":"default"
   },
@@ -72,7 +78,7 @@
     "type":"default"
   },
   {
-    "address":"0x725803315519de78d232265a8f1040f054e70b98",
+    "address":"0x725803315519de78D232265A8f1040f054e70B98",
     "symbol":"BET",
     "decimal":18,
     "type":"default"
@@ -114,8 +120,20 @@
    "type":"default"
   },
   {
+   "address":"0x177d39AC676ED1C67A2b268AD7F1E58826E5B0af",
+   "symbol":"CDT",
+   "decimal":18,
+   "type":"default"
+  },
+  {
    "address":"0x12FEF5e57bF45873Cd9B62E9DBd7BFb99e32D73e",
    "symbol":"CFI",
+   "decimal":18,
+   "type":"default"
+  },
+  {
+   "address":"0x7e667525521cF61352e2E01b50FaaaE7Df39749a",
+   "symbol":"CMC",
    "decimal":18,
    "type":"default"
   },
@@ -126,13 +144,13 @@
     "type":"default"
   },
   {
-    "address":"0x4e0603e2a27a30480e5e3a4fe548e29ef12f64be",
+    "address":"0x4E0603e2A27A30480E5e3a4Fe548e29EF12F64bE",
     "symbol":"CREDO",
     "decimal":18,
     "type":"default"
   },
   {
-    "address":"0xbf4cfd7d1edeeea5f6600827411b41a21eb08abd",
+    "address":"0xBf4cFD7d1eDeeEA5f6600827411B41A21eB08abd",
     "symbol":"CTL",
     "decimal":2,
     "type":"default"
@@ -144,7 +162,7 @@
     "type":"default"
   },
   {
-    "address":"0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+    "address":"0x41e5560054824eA6B0732E656E3Ad64E20e94E45",
     "symbol":"CVC",
     "decimal":8,
     "type":"default"
@@ -156,17 +174,23 @@
     "type":"default"
   },
   {
+    "address":"0x0cf0ee63788a0849fe5297f3407f701e122cc023",
+    "symbol":"DATA",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0xcC4eF9EEAF656aC1a2Ab886743E98e97E090ed38",
     "symbol":"DDF",
     "decimal":18,
     "type":"default"
   },
   {
-    "address":"0x3597bfd533a99c9aa083587b074434e61eb0a258",
+    "address":"0x3597bfD533a99c9aa083587B074434E61Eb0A258",
     "symbol":"DENT",
     "decimal":8,
     "type":"default"
-  },  
+  },
   {
     "address":"0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A",
     "symbol":"DGD",
@@ -192,19 +216,19 @@
     "type":"default"
   },
   {
-    "address":"0x621d78f2ef2fd937bfca696cabaf9a779f59b3ed",
+    "address":"0x621d78f2EF2fd937BFca696CabaF9A779F59B3Ed",
     "symbol":"DRP",
     "decimal":2,
     "type":"default"
   },
   {
-    "address":"0x0abdace70d3790235af448c88547603b945604ea",
+    "address":"0x0AbdAce70D3790235af448C88547603b945604ea",
     "symbol":"DNT",
     "decimal":18,
     "type":"default"
   },
   {
-    "address":"0xa578acc0cb7875781b7880903f4594d13cfa8b98",
+    "address":"0xa578aCc0cB7875781b7880903F4594D13cFa8B98",
     "symbol":"ECN",
     "decimal":2,
     "type":"default"
@@ -222,9 +246,15 @@
     "type":"default"
   },
   {
-    "address":"0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0",
+    "address":"0x86Fa049857E0209aa7D9e616F7eb3b3B78ECfdb0",
     "symbol":"EOS",
     "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0x1b9743f556d65e757c4c650b4555baf354cb8bd3",
+    "symbol":"ETBS",
+    "decimal":12,
     "type":"default"
   },
   {
@@ -246,7 +276,13 @@
     "type":"default"
   },
   {
-    "address":"0x24083bb30072643c3bb90b44b7285860a755e687",
+    "address":"0x7585F835ae2d522722d2684323a0ba83401f32f5",
+    "symbol":"GBT",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0x24083Bb30072643C3bB90B44B7285860a755e687",
     "symbol":"GELD",
     "decimal":18,
     "type":"default"
@@ -270,9 +306,15 @@
     "type":"default"
   },
   {
-    "address":"0x025abad9e518516fdaafbdcdb9701b37fb7ef0fa",
+    "address":"0x025abAD9e518516fdaAFBDcdB9701b37fb7eF0FA",
     "symbol":"GTKT",
     "decimal":0,
+    "type":"default"
+  },
+  {
+    "address":"0xba2184520A1cC49a6159c57e61E1844E085615B6",
+    "symbol":"HGT",
+    "decimal":8,
     "type":"default"
   },
   {
@@ -300,9 +342,21 @@
     "type":"default"
   },
   {
+    "address":"0x814cafd4782d2e728170fda68257983f03321c58",
+    "symbol":"IDEA",
+    "decimal":0,
+    "type":"default"
+  },
+  {
     "address":"0xED19698C0abdE8635413aE7AD7224DF6ee30bF22",
     "symbol":"IMT",
     "decimal":0,
+    "type":"default"
+  },
+    {
+    "address":"0xf8e386EDa857484f5a12e4B5DAa9984E06E73705",
+    "symbol":"IND",
+    "decimal":18,
     "type":"default"
   },
   {
@@ -318,15 +372,33 @@
     "type":"default"
   },
   {
-    "address":"0x8fa1EaD5d8d774b27d288711abE4d4258224ae26",
+    "address":"0x21aE23B882A340A22282162086bC98D3E2B73018",
     "symbol":"LOK",
     "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0xEF68e7C694F40c8202821eDF525dE3782458639f",
+    "symbol":"LRC",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0xFB12e3CcA983B9f59D90912Fd17F8D745A8B2953",
+    "symbol":"LUCK",
+    "decimal":0,
     "type":"default"
   },
   {
     "address":"0xfa05A73FfE78ef8f1a739473e462c54bae6567D9",
     "symbol":"LUN",
     "decimal":18,
+    "type":"default"
+  },
+   {
+    "address":"0x386467f1f3ddbe832448650418311a479eecfc57",
+    "symbol":"MBRS",
+    "decimal":0,
     "type":"default"
   },
   {
@@ -342,7 +414,7 @@
     "type":"default"
   },
   {
-    "address":"0x40395044ac3c0c57051906da938b54bd6557f212",
+    "address":"0x40395044Ac3c0C57051906dA938B54BD6557F212",
     "symbol":"MGO",
     "decimal":8,
     "type":"default"
@@ -450,6 +522,12 @@
     "type":"default"
   },
   {
+    "address":"0x4355fC160f74328f9b383dF2EC589bB3dFd82Ba0",
+    "symbol":"OPT",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0xB97048628DB6B661D4C2aA833e95Dbe1A905B280",
     "symbol":"PAY",
     "decimal":18,
@@ -482,6 +560,12 @@
   {
     "address":"0x163733bcc28dbf26B41a8CfA83e369b5B3af741b",
     "symbol":"PRS",
+    "decimal":18,
+    "type":"default"
+  },
+  {
+    "address":"0x66497a283e0a007ba3974e837784c6ae323447de",
+    "symbol":"PT",
     "decimal":18,
     "type":"default"
   },
@@ -546,7 +630,7 @@
     "type":"default"
   },
   {
-    "address":"0xd7631787b4dcc87b1254cfd1e5ce48e96823dee8",
+    "address":"0xd7631787B4dCc87b1254cfd1e5cE48e96823dEe8",
     "symbol":"SCL",
     "decimal":8,
     "type":"default"
@@ -624,6 +708,12 @@
    "type":"default"
   },
   {
+   "address":"0x12480E24eb5bec1a9D4369CaB6a80caD3c0A377A",
+   "symbol":"SUB",
+   "decimal":2,
+   "type":"default"
+  },
+  {
    "address":"0xB9e7F8568e08d5659f5D29C4997173d84CdF2607",
    "symbol":"SWT",
    "decimal":18,
@@ -666,6 +756,12 @@
     "type":"default"
   },
   {
+    "address":"0xEe22430595aE400a30FFBA37883363Fbf293e24e",
+    "symbol":"TME",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0xCb94be6f13A1182E4A4B6140cb7bf2025d28e41B",
     "symbol":"TRST",
     "decimal":6,
@@ -673,7 +769,7 @@
   },
   {
     "address":"0x89205A3A3b2A69De6Dbf7f01ED13B2108B2c43e7",
-    "symbol":"Unicorn 🦄 ",
+    "symbol":"Unicorn 🦄",
     "decimal":0,
     "type":"default"
   },
@@ -702,7 +798,13 @@
     "type":"default"
   },
   {
-    "address":"0x6a0a97e47d15aad1d132a1ac79a480e3f2079063",
+    "address": "0xD850942eF8811f2A866692A623011bDE52a462C1",
+    "symbol": "VEN",
+    "decimal": 18,
+    "type": "default"
+  },
+  {
+    "address":"0x6a0A97E47d15aAd1D132a1Ac79a480E3F2079063",
     "symbol":"WCT",
     "decimal":18,
     "type":"default"
@@ -729,6 +831,27 @@
     "address":"0xB24754bE79281553dc1adC160ddF5Cd9b74361a4",
     "symbol":"XRL",
     "decimal":9,
+    "type":"default"
+  }
+  ,
+  {
+    "address":"0xE41d2489571d322189246DaFA5ebDe1F4699F498",
+    "symbol":"ZRX",
+    "decimal":18,
+    "type":"default"
+  }
+  ,
+  {
+    "address":"0x0F33bb20a282A7649C7B3AFf644F084a9348e933",
+    "symbol":"YUPIE",
+    "decimal":18,
+    "type":"default"
+  }
+  ,
+  {
+    "address":"0xfca47962d45adfdfd1ab2d972315db4ce7ccf094",
+    "symbol":"IXT",
+    "decimal":8,
     "type":"default"
   }
 ]

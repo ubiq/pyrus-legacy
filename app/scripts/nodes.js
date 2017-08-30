@@ -5,12 +5,7 @@ nodes.infuraNode = require('./nodeHelpers/infura');
 nodes.metamaskNode = require('./nodeHelpers/metamask');
 nodes.nodeTypes = {
     UBQ: "UBQ",
-    ETH: "ETH",
-    ETC: "ETC",
-    Ropsten: "ROPSTEN ETH",
-    Kovan: "KOVAN ETH",
-    Rinkeby: "RINKEBY ETH",
-    Custom: "CUSTOM ETH"
+    Custom: "CUSTOM UBQ"
 };
 nodes.ensNodeTypes = [];
 nodes.customNodeObj = {
@@ -26,8 +21,8 @@ nodes.customNodeObj = {
     'lib': null
 };
 nodes.nodeList = {
-    'ubq': {
-        'name': 'UBQ',
+    'ubq_us': {
+        'name': 'UBQ (US)',
         'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
         'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
@@ -37,7 +32,20 @@ nodes.nodeList = {
         'abiList': require('./abiDefinitions/ubqAbi.json'),
         'estimateGas': true,
         'service': 'ubiqscan.io',
-        'lib': new nodes.customNode('https://rpc1.ubiqscan.io', '')
+        'lib': new nodes.customNode('https://pyrus1.ubiqscan.io', '')
+    },
+    'ubq_eu': {
+        'name': 'UBQ (EU)',
+        'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
+        'type': nodes.nodeTypes.UBQ,
+        'eip155': true,
+        'chainId': 8,
+        'tokenList': require('./tokens/ubqTokens.json'),
+        'abiList': require('./abiDefinitions/ubqAbi.json'),
+        'estimateGas': true,
+        'service': 'ubiqscan.io',
+        'lib': new nodes.customNode('https://pyrus2.ubiqscan.io', '')
     }
 };
 

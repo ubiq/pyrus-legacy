@@ -10,9 +10,9 @@
   <article class="block__wrap" style="max-width: 1780px; margin: auto;">
 
     <section class="footer--left">
-
-      <a href="/"><img src="images/logo-myetherwallet.svg" height="45px" width="auto" alt="Ubiq Wallet" class="footer--logo"/></a>
-
+      <div class="well well-sm well-notopmargin">
+        <a href="/"><img src="images/logo-myetherwallet.svg" height="45px" width="auto" alt="Ubiq Wallet" class="footer--logo"/></a>
+      </div>
       <p><span translate="FOOTER_1">Free, open-source, client-side interface for generating Ubiq wallets &amp; more. Interact with the Ubiq blockchain easily &amp; securely. Double-check the URL ( .com ) before unlocking your wallet.</span></p>
 
       <p><a aria-label="knowledge base" href="https://myetherwallet.groovehq.com/help_center" target="_blank" rel="noopener" role="link" tabindex="0">
@@ -32,7 +32,6 @@
     </section>
 
     <section class="footer--cent">
-
         <h5> <i aria-hidden="true">👫</i> You can support us by supporting our blockchain-family.</h5>
         <p>Consider using MEW affiliate links to...</p>
         <p><a href="https://www.ledgerwallet.com/r/fa4b?path=/products/" target="_blank" rel="noopener">Buy a Ledger Wallet</a></p>

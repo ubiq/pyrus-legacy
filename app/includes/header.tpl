@@ -58,7 +58,7 @@
       }
       <div class="tagline">
 
-        <span>3.10.1.5</span>
+        <span>3.10.2.6</span>
 
 
         <span class="dropdown dropdown-lang" ng-cloak>

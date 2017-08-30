@@ -965,7 +965,8 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
         trezorTestnetPath: "m/44'/1'/0'/0", // first address: m/44'/1'/0'/0/0
         trezorClassicPath: "m/44'/61'/0'/0", // first address: m/44'/61'/0'/0/0
         trezorPath: "m/44'/60'/0'/0", // first address: m/44'/60'/0'/0/0
-        hwExpansePath: "m/44'/40'/0'/0" // first address : m/44'/40'/0'/0/0
+        hwUbqPath: "m/44'/108'/0'/0", // first address: m/44'/40'/0'/0/0
+        hwExpansePath: "m/44'/40'/0'/0" // first address: m/44'/40'/0'/0/0
     };
     $scope.HDWallet.dPath = $scope.HDWallet.defaultDPath;
     $scope.mnemonicModel = new Modal(document.getElementById('mnemonicModel'));
@@ -985,11 +986,11 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
                 case nodes.nodeTypes.ETC:
                     $scope.HDWallet.dPath = $scope.HDWallet.ledgerClassicPath;
                     break;
-                case nodes.nodeTypes.MUS:
-                    $scope.HDWallet.dPath = $scope.HDWallet.ledgerMusicPath;
-                    break;
                 case nodes.nodeTypes.EXP:
                     $scope.HDWallet.dPath = $scope.HDWallet.hwExpansePath;
+                    break;
+                case nodes.nodeTypes.UBQ:
+                    $scope.HDWallet.dPath = $scope.HDWallet.hwUbqPath;
                     break;
                 default:
                     $scope.HDWallet.dPath = $scope.HDWallet.ledgerPath;
@@ -1002,20 +1003,50 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
                 case nodes.nodeTypes.ETC:
                     $scope.HDWallet.dPath = $scope.HDWallet.trezorClassicPath;
                     break;
-                case nodes.nodeTypes.MUS:
-                    $scope.HDWallet.dPath = $scope.HDWallet.trezorMusicPath;
-                    break;
                 case nodes.nodeTypes.Ropsten:
+                    $scope.HDWallet.dPath = $scope.HDWallet.trezorTestnetPath;
+                    break;
+                case nodes.nodeTypes.Rinkeby:
+                    $scope.HDWallet.dPath = $scope.HDWallet.trezorTestnetPath;
+                    break;
+                case nodes.nodeTypes.Kovan:
                     $scope.HDWallet.dPath = $scope.HDWallet.trezorTestnetPath;
                     break;
                 case nodes.nodeTypes.EXP:
                     $scope.HDWallet.dPath = $scope.HDWallet.hwExpansePath;
                     break;
+                case nodes.nodeTypes.UBQ:
+                    $scope.HDWallet.dPath = $scope.HDWallet.hwUbqPath;
+                    break;
                 default:
                     $scope.HDWallet.dPath = $scope.HDWallet.trezorPath;
             }
         } else {
-            $scope.HDWallet.dPath = $scope.HDWallet.defaultDPath;
+            switch ($scope.nodeType) {
+                case nodes.nodeTypes.ETH:
+                    $scope.HDWallet.dPath = $scope.HDWallet.defaultDPath;
+                    break;
+                case nodes.nodeTypes.ETC:
+                    $scope.HDWallet.dPath = $scope.HDWallet.trezorClassicPath;
+                    break;
+                case nodes.nodeTypes.Ropsten:
+                    $scope.HDWallet.dPath = $scope.HDWallet.trezorTestnetPath;
+                    break;
+                case nodes.nodeTypes.Rinkeby:
+                    $scope.HDWallet.dPath = $scope.HDWallet.trezorTestnetPath;
+                    break;
+                case nodes.nodeTypes.Kovan:
+                    $scope.HDWallet.dPath = $scope.HDWallet.trezorTestnetPath;
+                    break;
+                case nodes.nodeTypes.EXP:
+                    $scope.HDWallet.dPath = $scope.HDWallet.hwExpansePath;
+                    break;
+                case nodes.nodeTypes.UBQ:
+                    $scope.HDWallet.dPath = $scope.HDWallet.hwUbqPath;
+                    break;
+                default:
+                    $scope.HDWallet.dPath = $scope.HDWallet.defaultDPath;
+            }
         }
     };
     $scope.onHDDPathChange = function (password = $scope.mnemonicPassword) {
@@ -1027,6 +1058,8 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
             $scope.scanLedger();
         } else if ($scope.walletType == 'trezor') {
             $scope.scanTrezor();
+        } else if ($scope.walletType == 'digitalBitbox') {
+            $scope.scanDigitalBitbox();
         }
     };
     $scope.onCustomHDDPathChange = function () {
@@ -1080,10 +1113,12 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
         $scope.HDWallet.wallets = [];
         for (var i = start; i < start + limit; i++) {
             var derivedKey = $scope.HDWallet.hdk.derive("m/" + i);
-            if (ledger) {
-                $scope.HDWallet.wallets.push(new Wallet(undefined, derivedKey.publicKey, $scope.HDWallet.dPath + "/" + i, "ledger", $scope.ledger));
+            if ($scope.walletType == "ledger") {
+                $scope.HDWallet.wallets.push(new Wallet(undefined, derivedKey.publicKey, $scope.HDWallet.dPath + "/" + i, $scope.walletType, $scope.ledger));
+            } else if ($scope.walletType == "digitalBitbox") {
+                $scope.HDWallet.wallets.push(new Wallet(undefined, derivedKey.publicKey, $scope.HDWallet.dPath + "/" + i, $scope.walletType, $scope.digitalBitbox));
             } else {
-                $scope.HDWallet.wallets.push(new Wallet(undefined, derivedKey.publicKey, $scope.HDWallet.dPath + "/" + i, "trezor"));
+                $scope.HDWallet.wallets.push(new Wallet(undefined, derivedKey.publicKey, $scope.HDWallet.dPath + "/" + i, $scope.walletType));
             }
             $scope.HDWallet.wallets[$scope.HDWallet.wallets.length - 1].type = "addressOnly";
             $scope.HDWallet.wallets[$scope.HDWallet.wallets.length - 1].setBalance(false);
@@ -1092,9 +1127,8 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
         $scope.HDWallet.numWallets = start + limit;
     };
     $scope.AddRemoveHDAddresses = function (isAdd) {
-        if ($scope.walletType == "ledger" || $scope.walletType == "trezor") {
-            var ledger = $scope.walletType == "ledger";
-            if (isAdd) $scope.setHDAddressesHWWallet($scope.HDWallet.numWallets, $scope.HDWallet.walletsPerDialog, ledger);else $scope.setHDAddressesHWWallet($scope.HDWallet.numWallets - 2 * $scope.HDWallet.walletsPerDialog, $scope.HDWallet.walletsPerDialog, ledger);
+        if ($scope.walletType == "ledger" || $scope.walletType == "trezor" || $scope.walletType == "digitalBitbox") {
+            if (isAdd) $scope.setHDAddressesHWWallet($scope.HDWallet.numWallets, $scope.HDWallet.walletsPerDialog);else $scope.setHDAddressesHWWallet($scope.HDWallet.numWallets - 2 * $scope.HDWallet.walletsPerDialog, $scope.HDWallet.walletsPerDialog);
         } else {
             if (isAdd) $scope.setHDAddresses($scope.HDWallet.numWallets, $scope.HDWallet.walletsPerDialog);else $scope.setHDAddresses($scope.HDWallet.numWallets - 2 * $scope.HDWallet.walletsPerDialog, $scope.HDWallet.walletsPerDialog);
         }
@@ -1152,7 +1186,7 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
             walletService.wallet = $scope.wallet;
         }
     };
-    $scope.HWWalletCreate = function (publicKey, chainCode, ledger, path) {
+    $scope.HWWalletCreate = function (publicKey, chainCode, walletType, path) {
         $scope.mnemonicModel = new Modal(document.getElementById('mnemonicModel'));
         $scope.mnemonicModel.open();
         $scope.HDWallet.hdk = new hd.HDKey();
@@ -1160,13 +1194,12 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
         $scope.HDWallet.hdk.chainCode = new Buffer(chainCode, 'hex');
         $scope.HDWallet.numWallets = 0;
         $scope.HDWallet.dPath = path;
-        $scope.setHDAddressesHWWallet($scope.HDWallet.numWallets, $scope.HDWallet.walletsPerDialog, ledger);
+        $scope.setHDAddressesHWWallet($scope.HDWallet.numWallets, $scope.HDWallet.walletsPerDialog, walletType);
         walletService.wallet = null;
     };
     $scope.ledgerCallback = function (result, error) {
         if (typeof result != "undefined") {
-            $scope.ledgerError = false;
-            $scope.HWWalletCreate(result['publicKey'], result['chainCode'], true, $scope.getLedgerPath());
+            $scope.HWWalletCreate(result['publicKey'], result['chainCode'], "ledger", $scope.getLedgerPath());
         } else {
             $scope.ledgerError = true;
             $scope.ledgerErrorString = error;
@@ -1175,23 +1208,37 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
     };
     $scope.trezorCallback = function (response) {
         if (response.success) {
-            $scope.HWWalletCreate(response.publicKey, response.chainCode, false, $scope.getTrezorPath());
+            $scope.HWWalletCreate(response.publicKey, response.chainCode, "trezor", $scope.getTrezorPath());
         } else {
             $scope.trezorError = true;
             $scope.trezorErrorString = response.error;
             $scope.$apply();
         }
     };
+    $scope.digitalBitboxCallback = function (result, error) {
+        $scope.HDWallet.digitalBitboxSecret = '';
+        if (typeof result != "undefined") {
+            $scope.HWWalletCreate(result['publicKey'], result['chainCode'], "digitalBitbox", $scope.HDWallet.dPath);
+            $scope.notifier.close();
+        } else $scope.notifier.danger(error);
+    };
     $scope.scanLedger = function () {
+        $scope.ledgerError = false;
         $scope.ledger = new Ledger3("w0w");
         var app = new ledgerEth($scope.ledger);
         var path = $scope.getLedgerPath();
         app.getAddress(path, $scope.ledgerCallback, false, true);
     };
+    $scope.scanDigitalBitbox = function () {
+        $scope.digitalBitbox = new DigitalBitboxUsb();
+        var app = new DigitalBitboxEth($scope.digitalBitbox, $scope.HDWallet.digitalBitboxSecret);
+        var path = $scope.HDWallet.dPath;
+        app.getAddress(path, $scope.digitalBitboxCallback);
+    };
     $scope.scanTrezor = function () {
         // trezor is using the path without change level id
         var path = $scope.getTrezorPath();
-        TrezorConnect.getXPubKey(path, $scope.trezorCallback, '1.4.0');
+        TrezorConnect.getXPubKey(path, $scope.trezorCallback, '1.5.2');
     };
     $scope.getLedgerPath = function () {
         return $scope.HDWallet.dPath;
@@ -1224,7 +1271,7 @@ var decryptWalletCtrl = function ($scope, $sce, walletService) {
 module.exports = decryptWalletCtrl;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],12:[function(require,module,exports){
+},{"buffer":150}],12:[function(require,module,exports){
 'use strict';
 
 var ensCtrl = function ($scope, $sce, walletService) {
@@ -2265,6 +2312,22 @@ var signMsgCtrl = function ($scope, $sce, walletService) {
                 };
                 app.signPersonalMessage_async($scope.wallet.getPath(), msg, localCallback);
 
+                // Sign via trezor
+            } else if (typeof hwType != "undefined" && hwType == "trezor") {
+                TrezorConnect.ethereumSignMessage($scope.wallet.getPath(), thisMessage, function (response) {
+                    if (response.success) {
+                        $scope.signMsg.signedMsg = JSON.stringify({
+                            address: '0x' + response.address,
+                            msg: thisMessage,
+                            sig: '0x' + response.signature,
+                            version: '2'
+                        }, null, 2);
+                        $scope.notifier.success('Successfully Signed Message with ' + $scope.wallet.getAddressString());
+                    } else {
+                        $scope.notifier.danger(response.error);
+                    }
+                });
+
                 // Sign via PK
             } else {
                 var msg = ethUtil.hashPersonalMessage(ethUtil.toBuffer(thisMessage));
@@ -2289,6 +2352,29 @@ var signMsgCtrl = function ($scope, $sce, walletService) {
     };
 
     $scope.verifySignedMessage = function () {
+        var hwType = $scope.wallet.getHWType();
+        // Verify via trezor
+        if (typeof hwType != "undefined" && hwType == "trezor") {
+            var json = JSON.parse($scope.verifyMsg.signedMsg);
+            var address = ethFuncs.getNakedAddress(json.address);
+            var sig = ethFuncs.getNakedAddress(json.sig);
+            var message = json.msg;
+            TrezorConnect.ethereumVerifyMessage(address, sig, message, function (response) {
+                if (response.success) {
+                    $scope.notifier.success(globalFuncs.successMsgs[6]);
+                    $scope.verifiedMsg = {
+                        address: json.address,
+                        msg: json.msg,
+                        sig: json.sig,
+                        version: json.version
+                    };
+                } else {
+                    $scope.notifier.danger(response.error);
+                }
+            });
+            return;
+        }
+
         try {
 
             var json = JSON.parse($scope.verifyMsg.signedMsg);
@@ -2318,7 +2404,7 @@ var signMsgCtrl = function ($scope, $sce, walletService) {
 module.exports = signMsgCtrl;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],18:[function(require,module,exports){
+},{"buffer":150}],18:[function(require,module,exports){
 'use strict';
 
 var swapCtrl = function ($scope, $sce, walletService) {
@@ -2538,7 +2624,7 @@ var tabsCtrl = function ($scope, globalService, $translate, $sce) {
     $scope.customNodeModal = document.getElementById('customNodeModal') ? new Modal(document.getElementById('customNodeModal')) : null;
     $scope.Validator = Validator;
     $scope.nodeList = nodes.nodeList;
-    $scope.defaultNodeKey = 'ubq_pyrus';
+    $scope.defaultNodeKey = 'ubq_us';
     $scope.customNode = { options: 'ubq', name: '', url: '', port: '', httpBasicAuth: null, eip155: true, chainId: '8' };
     $scope.customNodeCount = 0;
     $scope.nodeIsConnected = true;
@@ -2577,7 +2663,7 @@ var tabsCtrl = function ($scope, globalService, $translate, $sce) {
             curVal: 21,
             value: globalFuncs.localStorage.getItem(gasPriceKey, null) ? parseInt(globalFuncs.localStorage.getItem(gasPriceKey)) : 21,
             max: 60,
-            min: 1
+            min: 20
         };
         ethFuncs.gasAdjustment = $scope.gas.value;
     };
@@ -2627,11 +2713,16 @@ var tabsCtrl = function ($scope, globalService, $translate, $sce) {
     $scope.addCustomNodeToList = function (nodeInfo) {
         var tempObj = null;
 
-        if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.ubq_pyrus));else if (nodeInfo.options == 'eth') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.eth_ethscan));else if (nodeInfo.options == 'etc') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.etc_epool));else if (nodeInfo.options == 'rop') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rop_mew));else if (nodeInfo.options == 'kov') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.kov_ethscan));else if (nodeInfo.options == 'rin') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rin_ethscan));else if (nodeInfo.options == 'cus') {
-            tempObj = JSON.parse(JSON.stringify(nodes.customNodeObj));
-            tempObj.eip155 = nodeInfo.eip155;
-            tempObj.chainId = parseInt(nodeInfo.chainId);
-        }
+        if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.ubq_us));else if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.eth_eu));
+        /*else if (nodeInfo.options == 'etc') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.etc_epool));
+        else if (nodeInfo.options == 'rop') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rop_mew));
+        else if (nodeInfo.options == 'kov') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.kov_ethscan));
+        else if (nodeInfo.options == 'rin') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rin_ethscan));*/
+        else if (nodeInfo.options == 'cus') {
+                tempObj = JSON.parse(JSON.stringify(nodes.customNodeObj));
+                tempObj.eip155 = nodeInfo.eip155;
+                tempObj.chainId = parseInt(nodeInfo.chainId);
+            }
         if (tempObj) {
             tempObj.name = nodeInfo.name + ':' + nodeInfo.options;
             tempObj.service = 'Custom';
@@ -3115,12 +3206,23 @@ module.exports = walletGenCtrl;
 
 
 module.exports = [{
-
-  // Social (SCL)
-  to: '0x582e3d8dcd41f586fbcc6559f16476d20b2a3b95',
+  // Substratum (SUB) Network ICO Sale
+  to: '0xaf518d65f84e4695a4da0450ec02c1248f56b668',
   gasLimit: 200000,
   data: '',
-  msg: 'Social (SCL) ICO/Crowdsale - ico.nexus.social'
+  msg: 'Substratum Network ICO Sale. Thank you for your support!'
+}, {
+  // CryptoMart
+  to: '0x96028Fc22499A7Bad7727baB017eC2352308C15a',
+  gasLimit: 200000,
+  data: '',
+  msg: 'CryptoMart ICO | 25/082017-25/09/2017'
+}, {
+  // YUPIE (YUPIE)
+  to: '0x0F33bb20a282A7649C7B3AFf644F084a9348e933',
+  gasLimit: 400000,
+  data: '',
+  msg: 'YUPIE (YUPIE) ICO'
 }, {
   // Stox Token Sale
   to: '0x40349A89114BB34d4E82e5Bf9AE6B2ac3c78b00a',
@@ -3159,10 +3261,10 @@ module.exports = [{
   msg: 'Adchain. Starts June 26, 2017.'
 }, {
   // LookRev
-  to: '0x8fa1EaD5d8d774b27d288711abE4d4258224ae26',
+  to: '0x21ae23b882a340a22282162086bc98d3e2b73018',
   gasLimit: 200000,
   data: '',
-  msg: 'LookRev ICO address - lookrev.com'
+  msg: 'LookRev. ICO Starts August 30, 2017.'
 }, {
   // OmiseGo
   to: '0x0000',
@@ -3247,6 +3349,12 @@ module.exports = [{
   gasLimit: 200000,
   data: '',
   msg: 'OHNI ICO. Restoration of our communities!'
+}, {
+  // Avalon
+  to: '0xeD247980396B10169BB1d36f6e278eD16700a60f',
+  gasLimit: 60000,
+  data: '',
+  msg: 'Avalon ICO starts August 25, 2017 - avalon.nu'
 }];
 
 },{}],26:[function(require,module,exports){
@@ -3427,7 +3535,7 @@ var addressFieldDrtv = function ($compile) {
 module.exports = addressFieldDrtv;
 
 },{}],29:[function(require,module,exports){
-module.exports = "<aside ng-controller=\"walletBalanceCtrl\">\n\n  <div class=\"block\">\n    <h5 translate=\"sidebar_AccountAddr\">Account Address</h5>\n    <ul class=\"account-info\">\n      <div class=\"addressIdenticon med float\" blockie-address=\"{{wallet.getAddressString()}}\" watch-var=\"wallet\"></div>\n      <span class=\"mono wrap\">{{wallet.getChecksumAddressString()}}</span>\n      <label class=\"ens-response\" ng-show=\"showEns()\">\n        ↳ <span class=\"mono ng-binding\"> {{ensAddress}} </span>\n      </label>\n    </ul>\n    <div ng-show=\"showDisplayOnTrezor()\">\n      <h5 translate=\"sidebar_DisplayOnTrezor\">Display address on TREZOR</h5>\n      <ul class=\"account-info\">\n        <li><a href=\"\" ng-click=\"displayOnTrezor()\" translate=\"sidebar_DisplayOnTrezor\">Display address on TREZOR</a></li>\n      </ul>\n    </div>\n    <div ng-show=\"showDisplayOnLedger()\">\n      <h5 translate=\"sidebar_DisplayOnLedger\">Display address on Ledger</h5>\n      <ul class=\"account-info\">\n        <li><a href=\"\" ng-click=\"displayOnLedger()\" translate=\"sidebar_DisplayOnLedger\">Display address on Ledger</a></li>\n      </ul>\n    </div>\n    <h5 translate=\"sidebar_AccountBal\">Account Balance</h5>\n    <ul class=\"account-info point\" ng-dblclick=\"showLongBal=!showLongBal\" title=\"{{wallet.balance}} (Double-Click)\">\n      <li>\n        <span class=\"mono wrap\" ng-show=\"!showLongBal\">{{wallet.balance | number}}</span>\n        <span class=\"mono wrap\" ng-show=\"showLongBal\">{{wallet.balance}}</span> {{ajaxReq.type}}\n      </li>\n    </ul>\n    <h5 translate=\"sidebar_TransHistory\"> Transaction History</h5>\n    <ul class=\"account-info\">\n      <li ng-show=\"ajaxReq.type != 'CUS'\">\n        <a href=\"{{ajaxReq.blockExplorerAddr.replace('[[address]]', wallet.getAddressString())}}\" target=\"_blank\" rel=\"noopener\">\n          {{ajaxReq.type}} ({{ajaxReq.blockExplorerTX.replace('/tx/[[txHash]]', '')}})\n        </a>\n      </li>\n      <li>\n        <a href=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\" target=\"_blank\" rel=\"noopener\">\n          Tokens (Ethplorer.io)\n        </a>\n      </li>\n    </ul>\n  </div>\n\n  <a href=\"https://myetherwallet.groovehq.com/knowledge_base/topics/protecting-yourself-and-your-funds\"\n     ng-show=\"slide==1 || ajaxReq.type!=='ETH'\"\n     class=\"block swap--hw\"\n     target=\"_blank\" rel=\"noopener\">\n    <div class=\"col-sm-7\">\n\n      <h5 class=\"swap__cta\" ng-show=\"wallet.balance<=1\">Learn more about protecting your funds.</h5>\n\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance<50 && wallet.balance>1\">Welcome back</h5>\n      <h5 class=\"swap__cta\" ng-show=\"wallet.balance<50 && wallet.balance>1\">Are you as secure as you can be?</h5>\n\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>=50\">Holy cow, look at you go!</p>\n      <h5 class=\"swap__cta\" ng-show=\"wallet.balance>=50\">Time to beef up your security?</h5>\n    </div>\n    <div class=\"col-sm-5\">\n      <img src=\"images/logo-ledger.svg\" width=\"80\" height=\"auto\" class=\"swap__logo\">\n      <br />\n      <img src=\"images/logo-trezor.svg\" width=\"80\" height=\"auto\" class=\"swap__logo\">\n    </div>\n  </a>\n\n  <a href=\"https://buy.coinbase.com?code=a6e1bd98-6464-5552-84dd-b27f0388ac7d&address={{wallet.getChecksumAddressString()}}&crypto_currency=ETH&currency=USD\"\n     ng-show=\"ajaxReq.type=='ETH' && slide==2\"\n     class=\"block swap--usd\"\n     target=\"_blank\" rel=\"noopener\">\n    <div class=\"col-sm-7\">\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance<=0\">Aw...you don't have any ETH</p>\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>0\">It's now easier to get more ETH</p>\n      <h5 class=\"swap__cta\">Buy ETH with USD</h5>\n    </div>\n    <div class=\"col-sm-5\">\n      <img src=\"images/logo-coinbase.svg\" width=\"64\" height=\"auto\" class=\"swap__logo\">\n      <p class=\"swap-flag--price\">1 ETH ≈ <br /> {{wallet.usdPrice}} USD</p>\n    </div>\n  </a>\n\n  <a ng-click=\"globalService.currentTab=globalService.tabs.swap.id\"\n     ng-show=\"ajaxReq.type=='ETH' && slide==3\"\n     class=\"block swap--btc\"\n     target=\"_blank\" rel=\"noopener\">\n    <div class=\"col-sm-7\">\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance<=0\">Aw...you don't have any ETH.</p>\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>0&&wallet.balance<50\">It's now easier to get more ETH</p>\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>50\">It's now easier to move between ETH &amp; BTC</p>\n      <h5 class=\"swap__cta\">Swap BTC <-> ETH</h5>\n    </div>\n    <div class=\"col-sm-5\">\n      <img src=\"images/logo-bity-white.svg\" width=\"60\" height=\"auto\" class=\"swap__logo\">\n      <p class=\"swap-flag--price\">1 ETH ≈ <br /> {{wallet.btcPrice}} BTC</p>\n    </div>\n  </a>\n\n  <div class=\"swap__nav\" ng-show=\"ajaxReq.type=='ETH'\">\n    <a ng-click=\"slide=1\"> &bull; </a>\n    <a ng-click=\"slide=2\"> &bull; </a>\n    <a ng-click=\"slide=3\"> &bull; </a>\n  </div>\n\n  <div class=\"block token-balances\">\n    <h5 translate=\"sidebar_TokenBal\">Token Balances:</h5>\n    <table class=\"account-info\">\n      <tr ng-repeat=\"token in wallet.tokenObjs track by $index\"\n          ng-show=\"token.balance!=0 && token.balance!='loading' || token.type!=='default' || tokenVisibility=='shown'\">\n        <td class=\"mono wrap point\">\n          <img src=\"images/icon-remove.svg\" class=\"token-remove\" title=\"Remove Token\" ng-click=\"removeTokenFromLocal(token.symbol)\" ng-show=\"token.type!=='default'\" />\n          {{token.getBalance() }}\n        </td>\n        <td>{{token.getSymbol()}}</td>\n      </tr>\n    </table>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"wallet.setTokens(); tokensLoaded=true\" ng-hide=\"tokensLoaded\">\n      Load Tokens Balances\n    </a>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"tokenVisibility='shown'\" ng-show=\"tokenVisibility=='hidden'\">\n      Show All Tokens\n    </a>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"tokenVisibility='hidden'\" ng-show=\"tokenVisibility=='shown'\">\n      Hide Tokens\n    </a>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"customTokenField=!customTokenField\">\n      <span translate=\"SEND_custom\">Add Custom Token</span>\n    </a>\n    <div class=\"custom-token-fields\" ng-show=\"customTokenField\">\n      <div class=\"row\">\n        <address-field\n          placeholder=\"mewsupport.eth\"\n          var-name=\"localToken.contractAdd\"\n          labelTranslated=\"TOKEN_Addr\">\n        </address-field>\n      </div>\n\n      <label translate=\"TOKEN_Symbol\"> Token Symbol: </label>\n      <input class=\"form-control input-sm\"\n             type=\"text\"\n             ng-model=\"localToken.symbol\"\n             ng-class=\"localToken.symbol!='' ? 'is-valid' : 'is-invalid'\" />\n      <label translate=\"TOKEN_Dec\"> Decimals: </label>\n      <input class=\"form-control input-sm\"\n             type=\"text\"\n             ng-model=\"localToken.decimals\"\n             ng-class=\"Validator.isPositiveNumber(localToken.decimals) ? 'is-valid' : 'is-invalid'\" />\n      <button class=\"btn btn-primary btn-xs\" ng-click=\"saveTokenToLocal()\" translate=\"x_Save\">Save</button>\n      <div ng-bind-html=\"validateLocalToken\"></div>\n    </div>\n  </div>\n\n  <div class=\"block\" ng-show=\"ajaxReq.type=='ETH'\">\n    <h5 translate=\"sidebar_Equiv\">Equivalent Values:</h5>\n    <div class=\"row\">\n      <ul class=\"account-info col-xs-6\">\n        <li>BTC: <span class=\"mono wrap\">{{wallet.btcBalance | number}}</span></li>\n        <li>USD: <span class=\"mono wrap\">{{wallet.usdBalance | currency:\"$\"}}</span></li>\n        <li>CHF: <span class=\"mono wrap\">{{wallet.chfBalance | currency:\" \"}}</span></li>\n      </ul>\n      <ul class=\"account-info col-xs-6\">\n        <li>REP: <span class=\"mono wrap\">{{wallet.repBalance | number}}</span></li>\n        <li>EUR: <span class=\"mono wrap\">{{wallet.eurBalance | currency:\"€\"}}</span></li>\n        <li>GBP: <span class=\"mono wrap\">{{wallet.gbpBalance | currency:\"£\"}}</span></li>\n      </ul>\n    </div>\n  </div>\n\n</aside>\n";
+module.exports = "<aside ng-controller=\"walletBalanceCtrl\">\n\n  <div class=\"block\">\n    <h5 translate=\"sidebar_AccountAddr\">Account Address</h5>\n    <ul class=\"account-info\">\n      <div class=\"addressIdenticon med float\" blockie-address=\"{{wallet.getAddressString()}}\" watch-var=\"wallet\"></div>\n      <span class=\"mono wrap\">{{wallet.getChecksumAddressString()}}</span>\n      <label class=\"ens-response\" ng-show=\"showEns()\">\n        ↳ <span class=\"mono ng-binding\"> {{ensAddress}} </span>\n      </label>\n    </ul>\n    <div ng-show=\"showDisplayOnTrezor()\">\n      <h5 translate=\"sidebar_DisplayOnTrezor\">Display address on TREZOR</h5>\n      <ul class=\"account-info\">\n        <li><a href=\"\" ng-click=\"displayOnTrezor()\" translate=\"sidebar_DisplayOnTrezor\">Display address on TREZOR</a></li>\n      </ul>\n    </div>\n    <div ng-show=\"showDisplayOnLedger()\">\n      <h5 translate=\"sidebar_DisplayOnLedger\">Display address on Ledger</h5>\n      <ul class=\"account-info\">\n        <li><a href=\"\" ng-click=\"displayOnLedger()\" translate=\"sidebar_DisplayOnLedger\">Display address on Ledger</a></li>\n      </ul>\n    </div>\n    <h5 translate=\"sidebar_AccountBal\">Account Balance</h5>\n    <ul class=\"account-info point\" ng-dblclick=\"showLongBal=!showLongBal\" title=\"{{wallet.balance}} (Double-Click)\">\n      <li>\n        <span class=\"mono wrap\" ng-show=\"!showLongBal\">{{wallet.balance | number}}</span>\n        <span class=\"mono wrap\" ng-show=\"showLongBal\">{{wallet.balance}}</span> {{ajaxReq.type}}\n      </li>\n    </ul>\n    <h5 translate=\"sidebar_TransHistory\"> Transaction History</h5>\n    <ul class=\"account-info\">\n      <li ng-show=\"ajaxReq.type != 'CUS'\">\n        <a href=\"{{ajaxReq.blockExplorerAddr.replace('[[address]]', wallet.getAddressString())}}\" target=\"_blank\" rel=\"noopener\">\n          {{ajaxReq.type}} ({{ajaxReq.blockExplorerTX.replace('/tx/[[txHash]]', '')}})\n        </a>\n      </li>\n      <!--<li>\n        <a href=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\" target=\"_blank\" rel=\"noopener\">\n          Tokens (Ethplorer.io)\n        </a>\n      </li>-->\n    </ul>\n  </div>\n\n  <a href=\"https://myetherwallet.groovehq.com/knowledge_base/topics/protecting-yourself-and-your-funds\"\n     ng-show=\"slide==1 || ajaxReq.type!=='ETH'\"\n     class=\"block swap--hw\"\n     target=\"_blank\" rel=\"noopener\">\n    <div class=\"col-sm-7\">\n\n      <h5 class=\"swap__cta\" ng-show=\"wallet.balance<=1\">Learn more about protecting your funds.</h5>\n\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance<50 && wallet.balance>1\">Welcome back</h5>\n      <h5 class=\"swap__cta\" ng-show=\"wallet.balance<50 && wallet.balance>1\">Are you as secure as you can be?</h5>\n\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>=50\">Holy cow, look at you go!</p>\n      <h5 class=\"swap__cta\" ng-show=\"wallet.balance>=50\">Time to beef up your security?</h5>\n    </div>\n    <div class=\"col-sm-5\">\n      <img src=\"images/logo-ledger.svg\" width=\"80\" height=\"auto\" class=\"swap__logo\">\n      <!--\n      <br />\n      <img src=\"images/logo-trezor.svg\" width=\"80\" height=\"auto\" class=\"swap__logo\">\n      -->\n    </div>\n  </a>\n\n  <a href=\"https://buy.coinbase.com?code=a6e1bd98-6464-5552-84dd-b27f0388ac7d&address={{wallet.getChecksumAddressString()}}&crypto_currency=ETH&currency=USD\"\n     ng-show=\"ajaxReq.type=='ETH' && slide==2\"\n     class=\"block swap--usd\"\n     target=\"_blank\" rel=\"noopener\">\n    <div class=\"col-sm-7\">\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance<=0\">Aw...you don't have any ETH</p>\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>0\">It's now easier to get more ETH</p>\n      <h5 class=\"swap__cta\">Buy ETH with USD</h5>\n    </div>\n    <div class=\"col-sm-5\">\n      <img src=\"images/logo-coinbase.svg\" width=\"64\" height=\"auto\" class=\"swap__logo\">\n      <p class=\"swap-flag--price\">1 ETH ≈ <br /> {{wallet.usdPrice}} USD</p>\n    </div>\n  </a>\n\n  <a ng-click=\"globalService.currentTab=globalService.tabs.swap.id\"\n     ng-show=\"ajaxReq.type=='ETH' && slide==3\"\n     class=\"block swap--btc\"\n     target=\"_blank\" rel=\"noopener\">\n    <div class=\"col-sm-7\">\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance<=0\">Aw...you don't have any ETH.</p>\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>0&&wallet.balance<50\">It's now easier to get more ETH</p>\n      <p class=\"swap__subhead\" ng-show=\"wallet.balance>50\">It's now easier to move between ETH &amp; BTC</p>\n      <h5 class=\"swap__cta\">Swap BTC <-> ETH</h5>\n    </div>\n    <div class=\"col-sm-5\">\n      <img src=\"images/logo-bity-white.svg\" width=\"60\" height=\"auto\" class=\"swap__logo\">\n      <p class=\"swap-flag--price\">1 ETH ≈ <br /> {{wallet.btcPrice}} BTC</p>\n    </div>\n  </a>\n\n  <div class=\"swap__nav\" ng-show=\"ajaxReq.type=='ETH'\">\n    <a ng-click=\"slide=1\"> &bull; </a>\n    <a ng-click=\"slide=2\"> &bull; </a>\n    <a ng-click=\"slide=3\"> &bull; </a>\n  </div>\n\n  <div class=\"block token-balances\">\n    <h5 translate=\"sidebar_TokenBal\">Token Balances:</h5>\n    <table class=\"account-info\">\n      <tr ng-repeat=\"token in wallet.tokenObjs track by $index\"\n          ng-show=\"token.balance!=0 && token.balance!='loading' || token.type!=='default' || tokenVisibility=='shown'\">\n        <td class=\"mono wrap point\">\n          <img src=\"images/icon-remove.svg\" class=\"token-remove\" title=\"Remove Token\" ng-click=\"removeTokenFromLocal(token.symbol)\" ng-show=\"token.type!=='default'\" />\n          {{token.getBalance() }}\n        </td>\n        <td>{{token.getSymbol()}}</td>\n      </tr>\n    </table>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"wallet.setTokens(); tokensLoaded=true\" ng-hide=\"tokensLoaded\">\n      Load Tokens Balances\n    </a>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"tokenVisibility='shown'\" ng-show=\"tokenVisibility=='hidden'\">\n      Show All Tokens\n    </a>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"tokenVisibility='hidden'\" ng-show=\"tokenVisibility=='shown'\">\n      Hide Tokens\n    </a>\n    <a class=\"btn btn-default btn-xs\" ng-click=\"customTokenField=!customTokenField\">\n      <span translate=\"SEND_custom\">Add Custom Token</span>\n    </a>\n    <div class=\"custom-token-fields\" ng-show=\"customTokenField\">\n      <div class=\"row\">\n        <address-field\n          placeholder=\"mewsupport.eth\"\n          var-name=\"localToken.contractAdd\"\n          labelTranslated=\"TOKEN_Addr\">\n        </address-field>\n      </div>\n\n      <label translate=\"TOKEN_Symbol\"> Token Symbol: </label>\n      <input class=\"form-control input-sm\"\n             type=\"text\"\n             ng-model=\"localToken.symbol\"\n             ng-class=\"localToken.symbol!='' ? 'is-valid' : 'is-invalid'\" />\n      <label translate=\"TOKEN_Dec\"> Decimals: </label>\n      <input class=\"form-control input-sm\"\n             type=\"text\"\n             ng-model=\"localToken.decimals\"\n             ng-class=\"Validator.isPositiveNumber(localToken.decimals) ? 'is-valid' : 'is-invalid'\" />\n      <button class=\"btn btn-primary btn-xs\" ng-click=\"saveTokenToLocal()\" translate=\"x_Save\">Save</button>\n      <div ng-bind-html=\"validateLocalToken\"></div>\n    </div>\n  </div>\n\n  <div class=\"block\" ng-show=\"ajaxReq.type=='ETH'\">\n    <h5 translate=\"sidebar_Equiv\">Equivalent Values:</h5>\n    <div class=\"row\">\n      <ul class=\"account-info col-xs-6\">\n        <li>BTC: <span class=\"mono wrap\">{{wallet.btcBalance | number}}</span></li>\n        <li>USD: <span class=\"mono wrap\">{{wallet.usdBalance | currency:\"$\"}}</span></li>\n        <li>CHF: <span class=\"mono wrap\">{{wallet.chfBalance | currency:\" \"}}</span></li>\n      </ul>\n      <ul class=\"account-info col-xs-6\">\n        <li>REP: <span class=\"mono wrap\">{{wallet.repBalance | number}}</span></li>\n        <li>EUR: <span class=\"mono wrap\">{{wallet.eurBalance | currency:\"€\"}}</span></li>\n        <li>GBP: <span class=\"mono wrap\">{{wallet.gbpBalance | currency:\"£\"}}</span></li>\n      </ul>\n    </div>\n  </div>\n\n</aside>\n";
 },{}],30:[function(require,module,exports){
 'use strict';
 
@@ -3508,7 +3616,7 @@ var fileReaderDrtv = function ($parse) {
 module.exports = fileReaderDrtv;
 
 },{}],34:[function(require,module,exports){
-module.exports = "<article class=\"block decrypt-drtv clearfix\" ng-controller='decryptWalletCtrl as $crtl'>\n\n  <!-- Column 1 - Select Type of Key -->\n  <section class=\"col-md-4 col-sm-6\">\n    <h4 translate=\"decrypt_Access\" style=\"margin-top:0;\"> Select the format of your private key: </h4>\n    <label class=\"radio\">\n      <input aria-flowto=\"aria1\" aria-label=\"Keystore JSON file\" type=\"radio\" ng-model=\"walletType\" value=\"fileupload\" />\n      <span translate=\"x_Keystore2\">Keystore / JSON File</span>\n    </label>\n\n    <label class=\"radio\">\n      <input aria-flowto=\"aria2\" type=\"radio\" aria-label=\"Ledger Wallet hardware wallet\" ng-model=\"walletType\" value=\"ledger\" />\n      <span>Ledger Wallet</span>\n    </label>\n\n    <label class=\"radio\">\n      <input aria-flowto=\"aria3\" type=\"radio\" aria-label=\"MetaMask / Mist\" ng-model=\"walletType\" value=\"metamask\" />\n      <span translate=\"x_MetaMask\">MetaMask / Mist</span>\n    </label>\n\n    <label class=\"radio\">\n      <input aria-flowto=\"aria4\" aria-label=\"mnemonic phrase\" type=\"radio\" ng-model=\"walletType\" value=\"pastemnemonic\" />\n      <span translate=\"x_Mnemonic\">Mnemonic Phrase</span>\n    </label>\n\n    <label class=\"radio\">\n      <input aria-flowto=\"aria5\" aria-label=\"private key\" type=\"radio\" ng-model=\"walletType\" value=\"pasteprivkey\" />\n      <span translate=\"x_PrivKey2\">Private Key</span>\n    </label>\n\n    <!--\n    <label class=\"radio\" ng-hide=\"globalService.currentTab==globalService.tabs.signMsg.id\">\n      <input aria-flowto=\"aria6\" type=\"radio\" aria-label=\"Trezor hardware wallet\" ng-model=\"walletType\" value=\"trezor\" />\n      TREZOR\n    </label>\n    -->\n\n    <label aria-flowto=\"aria7\" class=\"radio\" ng-hide=\"globalService.currentTab!==globalService.tabs.viewWalletInfo.id\">\n      <input aria-label=\"address\" type=\"radio\" ng-model=\"walletType\" value=\"addressOnly\" />\n      View with Address Only\n    </label>\n    <!--\n    <label class=\"radio\" style=\"display: none;\" id=\"showMeTheMoney\">\n      <input aria-flowto=\"aria8\" aria-label=\"parity phrase\" type=\"radio\" ng-model=\"walletType\" value=\"parityBWallet\" />\n      <span translate=\"x_ParityPhrase\">Parity Phrase</span>\n    </label>\n\n    <label aria-flowto=\"aria9\" class=\"radio\">\n      &nbsp;<span translate=\"x_ParityPhrase\">Parity Phrase</span>: <a href=\"https://myetherwallet.groovehq.com/knowledge_base/topics/parity-phrases-no-longer-supported\" target=\"_blank\" rel=\"noopener\">No longer supported</a>\n    </label>\n    -->\n  </section>\n  <!-- Column 1 - Select Type of Key -->\n\n  <!-- Column 2 - Unlock That Key -->\n  <section class=\"col-md-4 col-sm-6\">\n\n    <!-- if selected keystore -->\n    <div id=\"selectedUploadKey\" ng-if=\"walletType=='fileupload'\">\n      <h4 translate=\"ADD_Radio_2_alt\">Select your wallet file:</h4>\n      <div class=\"form-group\">\n        <input style=\"display:none;\" type=\"file\" on-read-file=\"showContent($fileContent)\" id=\"fselector\" />\n        <a class=\"btn-file marg-v-sm\"\n           ng-click=\"openFileDialog()\"\n           translate=\"ADD_Radio_2_short\"\n           id=\"aria1\"\n           tabindex=\"0\"\n           role=\"button\">SELECT WALLET FILE... </a>\n      </div>\n      <div class=\"form-group\" ng-if=\"requireFPass\">\n        <p translate=\"ADD_Label_3\"> Your file is encrypted. Please enter the password: </p>\n        <input class=\"form-control\"\n               ng-change=\"onFilePassChange()\"\n               ng-class=\"Validator.isPasswordLenValid($parent.$parent.filePassword,0) ? 'is-valid' : 'is-invalid'\"\n               ng-model=\"$parent.$parent.filePassword\"\n               placeholder=\"{{ 'x_Password' | translate }}\"\n               type=\"password\" />\n      </div>\n    </div>\n    <!-- /if selected keystore -->\n\n\n    <!-- if selected type ledger-->\n    <div id=\"selectedTypeLedger\" ng-if=\"walletType=='ledger'\">\n      <ol>\n        <li id=\"aria2\" tabinex=\"0\" translate=\"ADD_Ledger_0a\" class=\"text-danger\" ng-hide=\"isSSL\">\n          You must access MyEtherWallet via a secure(SSL / HTTPS) connection to connect to your Ledger device.\n        </li>\n        <li tabinex=\"0\">\n          <span translate=\"ADD_Ledger_1\">Connect your Ledger Wallet</span> &amp;\n          <span translate=\"ADD_Ledger_2\">Open the Ethereum application (or a contract application)</span>\n        </li>\n        <li tabinex=\"0\" translate=\"ADD_Ledger_3\">\n          Verify that Browser Support is enabled in Settings\n        </li>\n        <li tabinex=\"0\" translate=\"ADD_Ledger_4\">\n          If no Browser Support is found in settings, verify that you have Firmware >1.2\n        </li>\n      </ol>\n      <p role=\"alert\" ng-show=\"ledgerError\" class=\"text-center text-danger\"><strong>\n        {{ledgerErrorString}}\n      </strong></p>\n      <div class=\"text-center\">\n        <p>Guides:<br />\n          <a href=\"http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-myetherwallet-with-ledger\" target=\"_blank\" rel=\"noopener\">\n            How to use MyEtherWallet with your Nano S\n          </a><br />\n          <a href=\"https://ledger.groovehq.com/knowledge_base/topics/how-to-secure-your-eth-tokens-augur-rep-dot-dot-dot-with-your-nano-s\" target=\"_blank\" rel=\"noopener\">\n            How to secure your tokens with your Nano S\n          </a><br /><br />\n          <a tabindex=\"0\" role=\"button\" class=\"btn btn-default btn-xs\" href=\"https://www.ledgerwallet.com/r/fa4b?path=/products/\" target=\"_blank\" rel=\"noopener\">\n            Don't have a Ledger? Buy one today.\n          </a>\n        </p>\n      </div>\n    </div>\n    <!-- /if selected type ledger-->\n\n\n    <!-- if selected type MetaMask-->\n    <br />\n    <div id=\"selectedTypeMetamask\" ng-if=\"walletType=='metamask'\">\n      <p id=\"aria2\" tabinex=\"0\" translate=\"ADD_Ledger_0a\" class=\"text-danger\" ng-hide=\"isSSL\">\n          You must access MyEtherWallet via a secure(SSL / HTTPS) connection to connect.\n      </p>\n      <div class=\"form-group\">\n        <a id=\"aria3\"\n           class=\"btn btn-primary btn-block\"\n           ng-click=\"scanMetamask()\"\n           ng-show=\"walletType=='metamask'\"\n           tabindex=\"0\" role=\"button\"\n           translate=\"ADD_MetaMask\"\n        > Connect to MetaMask </a>\n      </div>\n      <div class=\"text-center\" style=\"margin-top: 1rem;\">\n        <a tabindex=\"0\"\n           role=\"button\"\n           class=\"btn btn-default btn-xs\"\n           href=\"https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en\"\n           target=\"_blank\"\n           rel=\"noopener\">\n              Download MetaMask\n        </a>\n      </div>\n    </div>\n    <!-- /if selected type MetaMask-->\n\n\n    <!-- if selected type mnemonic-->\n    <div id=\"selectedTypeMnemonic\" ng-if=\"walletType=='pastemnemonic'\">\n      <h4 translate=\"ADD_Radio_5\"> Paste / type your mnemonic: </h4>\n      <div class=\"form-group\">\n        <textarea id=\"aria4\"\n                  class=\"form-control\"\n                  ng-change=\"onMnemonicChange()\"\n                  ng-class=\"Validator.isValidMnemonic($parent.$parent.manualmnemonic) ? 'is-valid' : 'is-invalid'\"\n                  ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                  ng-model=\"$parent.$parent.manualmnemonic\"\n                  placeholder=\"{{ 'x_Mnemonic' | translate}}\"\n                  rows=\"4\"\n        ></textarea>\n      </div>\n      <div class=\"form-group\">\n        <p translate=\"ADD_Label_8\">Password (optional): </p>\n        <div>\n          <input class=\"form-control\"\n                 id=\"aria5\"\n                 ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                 ng-model=\"$parent.$parent.mnemonicPassword\"\n                 placeholder=\"{{ 'x_Password' | translate }}\"\n                 type=\"password\" / >\n        </div>\n      </div>\n    </div>\n\n    <!-- if selected type private key-->\n    <div id=\"selectedTypeKey\" ng-if=\"walletType=='pasteprivkey'\">\n      <h4 translate=\"ADD_Radio_3\"> Paste / type your private key: </h4>\n      <div class=\"form-group\">\n        <textarea id=\"aria6\"\n                  class=\"form-control\"\n                  ng-change=\"onPrivKeyChange()\"\n                  ng-class=\"Validator.isValidPrivKey($parent.$parent.manualprivkey.length) ? 'is-valid' : 'is-invalid'\"\n                  ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                  ng-model=\"$parent.$parent.manualprivkey\"\n                  placeholder=\"{{ 'x_PrivKey2' | translate }}\"\n                  rows=\"4\"\n        ></textarea>\n      </div>\n      <div class=\"form-group\" ng-if=\"requirePPass\">\n        <p translate=\"ADD_Label_3\"> Your file is encrypted. Please enter the password: </p>\n        <input class=\"form-control\"\n               ng-change=\"onPrivKeyPassChange()\"\n               ng-class=\"Validator.isPasswordLenValid($parent.$parent.privPassword,0) ? 'is-valid' : 'is-invalid'\"\n               ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n               ng-model=\"$parent.$parent.privPassword\"\n               placeholder=\"{{ 'x_Password' | translate }}\"\n               type=\"password\"\n        />\n      </div>\n    </div>\n    <!-- /if selected type private key-->\n\n\n    <!-- if selected type trezor-->\n    <br />\n    <!--\n    <div id=\"selectedTypeTrezor\" ng-if=\"walletType=='trezor'\">\n      <div class=\"form-group\">\n        <a id=\"aria7\"\n           class=\"btn btn-primary btn-block\"\n           ng-click=\"scanTrezor()\"\n           ng-show=\"walletType=='trezor'\"\n           tabindex=\"0\" role=\"button\"\n           translate=\"ADD_Trezor_scan\"\n        > SCAN </a>\n      </div>\n      <p role=\"alert\" ng-show=\"trezorError\" class=\"text-center text-danger\"><strong>\n        {{trezorErrorString}}\n      </strong></p>\n      <br /><br />\n      <div class=\"text-center\">\n        <p>Guide:<br />\n          <a href=\"https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08#.n5fddxmdg\" target=\"_blank\" rel=\"noopener\">\n            How to use TREZOR with MyEtherWallet\n          </a><br />\n          <a tabindex=\"0\" role=\"button\" class=\"btn btn-xs btn-default\" href=\"https://trezor.io/?a=myetherwallet.com\" target=\"_blank\" rel=\"noopener\">\n            Don't have a TREZOR? Order one now.\n          </a>\n        </p>\n      </div>\n    </div>\n    -->\n    <!-- /if selected type ledger-->\n\n\n    <!-- if selected addressOnly-->\n    <div id=\"selectedTypeKey\" ng-if=\"walletType=='addressOnly'\">\n      <h4 translate=\"x_Address\"> Your Address </h4>\n      <div class=\"form-group\">\n        <textarea rows=\"4\"\n                  id=\"aria8\"\n                  class=\"form-control\"\n                  ng-change=\"onAddressChange()\"\n                  ng-class=\"Validator.isValidAddress($parent.$parent.addressOnly) ? 'is-valid' : 'is-invalid'\"\n                  ng-model=\"$parent.$parent.addressOnly\"\n                  placeholder=\"{{ 'x_Address' | translate }}\"\n        ></textarea>\n      </div>\n    </div>\n    <!-- /if selected addressOnly-->\n\n\n    <!-- if selected parity phrase-->\n    <div id=\"selectedTypeMnemonic\" ng-if=\"walletType=='parityBWallet'\">\n      <h4 translate=\"ADD_Radio_5\"> Paste / type your mnemonic: </h4>\n      <div class=\"form-group\">\n        <textarea rows=\"4\"\n                  id=\"aria9\"\n                  class=\"form-control\"\n                  ng-change=\"onParityPhraseChange()\"\n                  ng-class=\"$parent.$parent.parityPhrase != '' ? 'is-valid' : 'is-invalid'\"\n                  ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                  ng-model=\"$parent.$parent.parityPhrase\"\n                  placeholder=\"{{ 'x_ParityPhrase' | translate}}\"\n        ></textarea>\n      </div>\n    </div>\n    <!-- /if selected parity phrase-->\n\n  </section>\n  <!-- / Column 2 - Unlock That Key -->\n\n  <!-- Column 3 - The Unlock Button -->\n  <section class=\"col-md-4 col-sm-6\" ng-show=\"showFDecrypt||showPDecrypt||showMDecrypt||walletType=='ledger'||walletType=='trezor'||showAOnly\">\n    <h4 id=\"uploadbtntxt-wallet\" ng-show=\"showFDecrypt||showPDecrypt||showMDecrypt\" translate=\"ADD_Label_6\">\n      Access Your Wallet:\n    </h4>\n    <div class=\"form-group\">\n      <a\n      tabindex=\"0\"\n      role=\"button\"\n      class=\"btn btn-primary btn-block\"\n      ng-show=\"showFDecrypt||showPDecrypt||showMDecrypt\"\n      ng-click=\"decryptWallet()\"\n      translate=\"ADD_Label_6_short\">UNLOCK</a>\n    </div>\n    <div class=\"form-group\">\n      <a class=\"btn btn-primary btn-block\"\n         ng-click=\"decryptAddressOnly()\"\n         ng-show=\"showAOnly\"\n         role=\"button\"\n         tabindex=\"0\"\n         translate=\"ADD_Label_6_short\"\n      > UNLOCK </a>\n    </div>\n    <div class=\"form-group\">\n      <a class=\"btn btn-primary btn-block\"\n         ng-click=\"scanLedger()\"\n         ng-show=\"walletType=='ledger'\"\n         role=\"button\"\n         tabindex=\"0\"\n         translate=\"ADD_Ledger_scan\"\n      > SCAN </a>\n    </div>\n  </section>\n\n  <!-- / Column 3 -The Unlock Button -->\n\n  <!-- MODAL -->\n  <article class=\"modal fade\" id=\"mnemonicModel\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Mnemonic Phrase Modal\">\n    <section class=\"modal-dialog\">\n      <section class=\"modal-content\">\n        <div class=\"modal-body\" role=\"document\">\n          <button aria-label=\"Close\" type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n\n          <!-- Select HD Path -->\n          <h4 id=\"modalTitle\" class=\"modal-title\" translate=\"ADD_Radio_5_Path\" style=\"margin-bottom: .25rem\">\n            Select HD derivation path:\n          </h4>\n          <div class=\"row\">\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: Jaxx, Metamask, Exodus, imToken - {{HDWallet.defaultDPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.defaultDPath}}\"/>\n                <span ng-bind=\"HDWallet.defaultDPath\"></span>\n                <p class=\"small\">Jaxx, Metamask, Exodus, imToken &amp; TREZOR (ETH)</p>\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: Ledger (ETH) {{HDWallet.ledgerPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.ledgerPath}}\"/>\n                <span ng-bind=\"HDWallet.ledgerPath\"></span>\n                <p class=\"small\">Ledger (ETH)</p>\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: Ledger (ETC) {{HDWallet.ledgerClassicPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.ledgerClassicPath}}\"/>\n                <span ng-bind=\"HDWallet.ledgerClassicPath\"></span>\n                <p class=\"small\">Ledger (ETC)</p>\n              </label>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n              <p class=\"small\"><strong>Your Custom Path</strong></p>\n                <input aria-describedby=\"Path: Enter your own - {{HDWallet.customDPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.customDPath}}\" />\n                <input aria-describedby=\"Path: Enter your own - {{HDWallet.customDPath}}\"\n                      type=\"text\" class=\"form-control input-sm\"\n                      ng-model=\"HDWallet.customDPath\"\n                      ng-change=\"onCustomHDDPathChange()\"\n                      style=\"float: right;margin: 0 0 .5rem;\" />\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: TREZOR (ETC) {{HDWallet.trezorClassicPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.trezorClassicPath}}\"/>\n                <span ng-bind=\"HDWallet.trezorClassicPath\"></span>\n                <p class=\"small\">TREZOR (ETC)</p>\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: TREZOR - TESTNET - {{HDWallet.trezorTestnetPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.trezorTestnetPath}}\"/>\n                <span ng-bind=\"HDWallet.trezorTestnetPath\"></span>\n                <p class=\"small\">TREZOR (TESTNET)</p>\n              </label>\n            </div>\n          </div>\n\n\n          <h4 id=\"modalTitle2\" class=\"modal-title\" translate=\"MNEM_1\" style=\"margin: .5rem 0\">\n            Please select the address you would like to interact with.\n          </h4>\n          <table class=\"small table table-striped table-mnemonic\">\n            <tr>\n              <th translate=\"x_Address\">Address</th>\n              <th translate=\"MYWAL_Bal\">Balance</th>\n              <th translate=\"sidebar_TokenBal\" class=\"text-center\" >Token<br>Balances</th>\n            </tr>\n            <tr ng-repeat=\"wallet in HDWallet.wallets track by $index\">\n              <td>\n                <label>\n                  <input aria-describedby=\"modalTitle2\"\n                       aria-label=\"Unlock wallet with {{wallet.getBalance()}} {{nodeType}}. Address: {{wallet.getChecksumAddressString()}}\"\n                       name=\"addressSelect\"\n                       ng-model=\"HDWallet.id\"\n                       type=\"radio\"\n                       value=\"{{$index}}\"\n                  /><span class=\"small\">\n                    {{wallet.getChecksumAddressString()}}\n                  </span>\n                </label>\n              </td>\n              <td>\n                <a href=\"{{ajaxReq.blockExplorerAddr.replace('[[address]]', wallet.getAddressString())}}\" target=\"_blank\" rel=\"noopener\">\n                  {{wallet.getBalance()}} {{nodeType}}\n                </a>\n              </td>\n              <td class=\"text-center\">\n                <a href=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\" target=\"_blank\" rel=\"noopener\" title=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\">\n                  <img src=\"images/icon-external-link.svg\" title=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\" ng-click=\"removeTokenFromLocal(token.symbol)\" ng-show=\"token.type!=='default'\" />\n                </a>\n              </td>\n            </tr>\n            <tr class=\"m-addresses\">\n              <td>\n                <a ng-click=\"AddRemoveHDAddresses(false)\"\n                   ng-show=\"HDWallet.numWallets > 5\"\n                   role=\"link\"\n                   tabindex=\"0\"\n                   translate=\"MNEM_prev\"\n                > Previous Addresses </a>\n              </td>\n              <td></td>\n              <td>\n                <a ng-click=\"AddRemoveHDAddresses(true)\"\n                   role=\"link\"\n                   tabindex=\"0\"\n                   translate=\"MNEM_more\"\n                > More Addresses </a>\n              </td>\n            </tr>\n          </table>\n          <div class=\"clearfix button-group\">\n            <button aria-label=\"Unlock this Wallet\"\n                    class=\"btn btn-primary pull-right\"\n                    style=\"margin: 0 .1rem\"\n                    ng-click=\"setHDWallet()\"\n                    role=\"button\"\n                    tabindex=\"0\"\n                    translate=\"ADD_Label_6\"\n            > Access Wallet </button>\n            <button aria-label=\"Cancel - Will close dialog\"\n                    class=\"btn btn-default pull-right\"\n                    style=\"margin: 0 .1rem\"\n                    data-dismiss=\"modal\"\n                    role=\"button\"\n                    tabindex=\"0\"\n                    translate=\"x_Cancel\"\n            > Cancel </button>\n          </div>\n        </div>\n      </section>\n    </section>\n  </article>\n\n  <!-- / MODAL -->\n</article>\n";
+module.exports = "<article class=\"block decrypt-drtv clearfix\" ng-controller='decryptWalletCtrl as $crtl'>\n\n  <!-- Column 1 - Select Type of Key -->\n  <section class=\"col-md-4 col-sm-6\">\n    <h4 translate=\"decrypt_Access\" style=\"margin-top:0;\"> Select the format of your private key: </h4>\n    <!--\n    <label class=\"radio\">\n      <input aria-flowto=\"aria3\" type=\"radio\" aria-label=\"MetaMask / Mist\" ng-model=\"walletType\" value=\"metamask\" />\n      <span translate=\"x_MetaMask\">MetaMask / Mist</span>\n    </label>\n    -->\n    <label class=\"radio\" ng-show=\"ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'||ajaxReq.type=='UBQ'\">\n      <input aria-flowto=\"aria2\" type=\"radio\" aria-label=\"Ledger Wallet hardware wallet\" ng-model=\"walletType\" value=\"ledger\"/>\n      <span>Ledger Wallet</span>\n    </label>\n    <!--\n    <label class=\"radio\" ng-show=\"ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'||ajaxReq.type=='UBQ'\">\n      <input aria-flowto=\"aria6\" type=\"radio\" aria-label=\"Trezor hardware wallet\" ng-model=\"walletType\" value=\"trezor\"/>\n      TREZOR\n    </label>\n\n    <label class=\"radio\" ng-show=\"ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'||ajaxReq.type=='UBQ'\">\n      <input aria-flowto=\"aria7\" type=\"radio\" aria-label=\"Digital Bitbox hardware wallet\" ng-model=\"walletType\" value=\"digitalBitbox\"/>\n      Digital Bitbox\n    </label>\n\n    <label class=\"radio\" style=\"display: none;\" id=\"showMeTheMoney\">\n      <input aria-flowto=\"aria8\" aria-label=\"parity phrase\" type=\"radio\" ng-model=\"walletType\" value=\"parityBWallet\" />\n      <span translate=\"x_ParityPhrase\">Parity Phrase</span>\n    </label>\n    -->\n    <label class=\"radio\">\n      <input aria-flowto=\"aria1\" aria-label=\"Keystore JSON file\" type=\"radio\" ng-model=\"walletType\" value=\"fileupload\" />\n      <span translate=\"x_Keystore2\">Keystore / JSON File</span>\n    </label>\n\n    <label class=\"radio\">\n      <input aria-flowto=\"aria4\" aria-label=\"mnemonic phrase\" type=\"radio\" ng-model=\"walletType\" value=\"pastemnemonic\" />\n      <span translate=\"x_Mnemonic\">Mnemonic Phrase</span>\n    </label>\n\n    <label class=\"radio\">\n      <input aria-flowto=\"aria5\" aria-label=\"private key\" type=\"radio\" ng-model=\"walletType\" value=\"pasteprivkey\" />\n      <span translate=\"x_PrivKey2\">Private Key</span>\n    </label>\n\n    <label aria-flowto=\"aria7\" class=\"radio\" ng-hide=\"globalService.currentTab!==globalService.tabs.viewWalletInfo.id\">\n      <input aria-flowto=\"aria8\" aria-label=\"address\" type=\"radio\" ng-model=\"walletType\" value=\"addressOnly\" />\n      View with Address Only\n    </label>\n\n  </section>\n  <!-- Column 1 - Select Type of Key -->\n\n  <!-- Column 2 - Unlock That Key -->\n  <section class=\"col-md-4 col-sm-6\">\n\n    <!-- if selected keystore -->\n    <div id=\"selectedUploadKey\" ng-if=\"walletType=='fileupload'\">\n      <h4 translate=\"ADD_Radio_2_alt\">Select your wallet file:</h4>\n      <div class=\"form-group\">\n        <input style=\"display:none;\" type=\"file\" on-read-file=\"showContent($fileContent)\" id=\"fselector\" />\n        <a class=\"btn-file marg-v-sm\"\n           ng-click=\"openFileDialog()\"\n           translate=\"ADD_Radio_2_short\"\n           id=\"aria1\"\n           tabindex=\"0\"\n           role=\"button\">SELECT WALLET FILE... </a>\n      </div>\n      <div class=\"form-group\" ng-if=\"requireFPass\">\n        <p translate=\"ADD_Label_3\"> Your file is encrypted. Please enter the password: </p>\n        <input class=\"form-control\"\n               ng-change=\"onFilePassChange()\"\n               ng-class=\"Validator.isPasswordLenValid($parent.$parent.filePassword,0) ? 'is-valid' : 'is-invalid'\"\n               ng-model=\"$parent.$parent.filePassword\"\n               placeholder=\"{{ 'x_Password' | translate }}\"\n               type=\"password\" />\n      </div>\n    </div>\n    <!-- /if selected keystore -->\n\n\n    <!-- if selected type ledger-->\n    <div id=\"selectedTypeLedger\" ng-if=\"walletType=='ledger'\">\n      <ol>\n        <li id=\"aria2\" tabinex=\"0\" translate=\"ADD_Ledger_0a\" class=\"text-danger\" ng-hide=\"isSSL\">\n          You must access MyEtherWallet via a secure(SSL / HTTPS) connection to connect to your Ledger device.\n        </li>\n        <li tabinex=\"0\">\n          <span translate=\"ADD_Ledger_1\">Connect your Ledger Wallet</span> &amp;\n          <span translate=\"ADD_Ledger_2\">Open the Ethereum application (or a contract application)</span>\n        </li>\n        <li tabinex=\"0\" translate=\"ADD_Ledger_3\">\n          Verify that Browser Support is enabled in Settings\n        </li>\n        <li tabinex=\"0\" translate=\"ADD_Ledger_4\">\n          If no Browser Support is found in settings, verify that you have Firmware >1.2\n        </li>\n      </ol>\n      <p role=\"alert\" ng-show=\"ledgerError\" class=\"text-center text-danger\"><strong>\n        {{ledgerErrorString}}\n      </strong></p>\n      <div class=\"text-center\">\n        <p>Guides:<br />\n          <a href=\"http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-myetherwallet-with-ledger\" target=\"_blank\" rel=\"noopener\">\n            How to use MyEtherWallet with your Nano S\n          </a><br />\n          <a href=\"https://ledger.groovehq.com/knowledge_base/topics/how-to-secure-your-eth-tokens-augur-rep-dot-dot-dot-with-your-nano-s\" target=\"_blank\" rel=\"noopener\">\n            How to secure your tokens with your Nano S\n          </a><br /><br />\n          <a tabindex=\"0\" role=\"button\" class=\"btn btn-default btn-xs\" href=\"https://www.ledgerwallet.com/r/fa4b?path=/products/\" target=\"_blank\" rel=\"noopener\">\n            Don't have a Ledger? Buy one today.\n          </a>\n        </p>\n      </div>\n    </div>\n    <!-- /if selected type ledger-->\n\n\n    <!-- if selected type MetaMask-->\n    <br />\n    <div id=\"selectedTypeMetamask\" ng-if=\"walletType=='metamask'\">\n      <p id=\"aria2\" tabinex=\"0\" translate=\"ADD_Ledger_0a\" class=\"text-danger\" ng-hide=\"isSSL\">\n          You must access MyEtherWallet via a secure(SSL / HTTPS) connection to connect.\n      </p>\n      <div class=\"form-group\">\n        <a id=\"aria3\"\n           class=\"btn btn-primary btn-block\"\n           ng-click=\"scanMetamask()\"\n           ng-show=\"walletType=='metamask'\"\n           tabindex=\"0\" role=\"button\"\n           translate=\"ADD_MetaMask\"\n        > Connect to MetaMask </a>\n      </div>\n      <div class=\"text-center\" style=\"margin-top: 1rem;\">\n        <a tabindex=\"0\"\n           role=\"button\"\n           class=\"btn btn-default btn-xs\"\n           href=\"https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en\"\n           target=\"_blank\"\n           rel=\"noopener\">\n              Download MetaMask\n        </a>\n      </div>\n    </div>\n    <!-- /if selected type MetaMask-->\n\n\n    <!-- if selected type mnemonic-->\n    <div id=\"selectedTypeMnemonic\" ng-if=\"walletType=='pastemnemonic'\">\n      <h4 translate=\"ADD_Radio_5\"> Paste / type your mnemonic: </h4>\n      <div class=\"form-group\">\n        <textarea id=\"aria4\"\n                  class=\"form-control\"\n                  ng-change=\"onMnemonicChange()\"\n                  ng-class=\"Validator.isValidMnemonic($parent.$parent.manualmnemonic) ? 'is-valid' : 'is-invalid'\"\n                  ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                  ng-model=\"$parent.$parent.manualmnemonic\"\n                  placeholder=\"{{ 'x_Mnemonic' | translate}}\"\n                  rows=\"4\"\n        ></textarea>\n      </div>\n      <div class=\"form-group\">\n        <p translate=\"ADD_Label_8\">Password (optional): </p>\n        <div>\n          <input class=\"form-control\"\n                 id=\"aria5\"\n                 ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                 ng-model=\"$parent.$parent.mnemonicPassword\"\n                 placeholder=\"{{ 'x_Password' | translate }}\"\n                 type=\"password\" / >\n        </div>\n      </div>\n    </div>\n\n    <!-- if selected type private key-->\n    <div id=\"selectedTypeKey\" ng-if=\"walletType=='pasteprivkey'\">\n      <h4 translate=\"ADD_Radio_3\"> Paste / type your private key: </h4>\n      <div class=\"form-group\">\n        <textarea id=\"aria6\"\n                  class=\"form-control\"\n                  ng-change=\"onPrivKeyChange()\"\n                  ng-class=\"Validator.isValidPrivKey($parent.$parent.manualprivkey.length) ? 'is-valid' : 'is-invalid'\"\n                  ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                  ng-model=\"$parent.$parent.manualprivkey\"\n                  placeholder=\"{{ 'x_PrivKey2' | translate }}\"\n                  rows=\"4\"\n        ></textarea>\n      </div>\n      <div class=\"form-group\" ng-if=\"requirePPass\">\n        <p translate=\"ADD_Label_3\"> Your file is encrypted. Please enter the password: </p>\n        <input class=\"form-control\"\n               ng-change=\"onPrivKeyPassChange()\"\n               ng-class=\"Validator.isPasswordLenValid($parent.$parent.privPassword,0) ? 'is-valid' : 'is-invalid'\"\n               ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n               ng-model=\"$parent.$parent.privPassword\"\n               placeholder=\"{{ 'x_Password' | translate }}\"\n               type=\"password\"\n        />\n      </div>\n    </div>\n    <!-- /if selected type private key-->\n\n\n    <!-- if selected type trezor-->\n    <br />\n    <!--\n    <div id=\"selectedTypeTrezor\" ng-if=\"walletType=='trezor'\">\n      <div class=\"form-group\">\n        <a id=\"aria7\"\n           class=\"btn btn-primary btn-block\"\n           ng-click=\"scanTrezor()\"\n           ng-show=\"walletType=='trezor'\"\n           tabindex=\"0\" role=\"button\"\n           translate=\"ADD_Trezor_scan\"\n        > SCAN </a>\n      </div>\n      <p role=\"alert\" ng-show=\"trezorError\" class=\"text-center text-danger\"><strong>\n        {{trezorErrorString}}\n      </strong></p>\n      <br /><br />\n      <div class=\"text-center\">\n        <p>Guide:<br />\n          <a href=\"https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08#.n5fddxmdg\" target=\"_blank\" rel=\"noopener\">\n            How to use TREZOR with MyEtherWallet\n          </a><br />\n          <a tabindex=\"0\" role=\"button\" class=\"btn btn-xs btn-default\" href=\"https://trezor.io/?a=myetherwallet.com\" target=\"_blank\" rel=\"noopener\">\n            Don't have a TREZOR? Order one now.\n          </a>\n        </p>\n      </div>\n    </div>\n    -->\n    <!-- /if selected type trezor-->\n\n    <!-- if selected type digitalBitbox-->\n    <div id=\"selectedTypeDigitalBitbox\" ng-if=\"walletType=='digitalBitbox'\">\n      <div class=\"form-group\">\n        <a tabindex=\"0\" role=\"button\" class=\"btn btn-primary btn-block\" ng-click=\"scanDigitalBitbox()\" translate=\"ADD_DigitalBitbox_scan\">\n          SCAN\n        </a>\n      </div>\n      <input class=\"form-control\" aria-label=\"Enter the Digital Bitbox password\" aria-describedby=\"selectedTypeDigitalBitbox\" type=\"password\" placeholder=\"Digital Bitbox password\" spellcheck=\"false\" value=\"\" ng-model=\"HDWallet.digitalBitboxSecret\" />\n      <ol>\n        <li id=\"aria7\" tabinex=\"0\" translate=\"ADD_DigitalBitbox_0a\" class=\"text-danger\" ng-hide=\"isSSL\">\n          Re-open MyEtherWallet on a secure (SSL) connection\n        </li>\n        <li tabinex=\"0\" translate=\"ADD_DigitalBitbox_0b\" class=\"text-danger\" ng-hide=\"isChrome\">\n          Re-open MyEtherWallet using Google Chrome or Opera\n        </li>\n      </ol>\n      <div class=\"text-center\">\n        <br /><br />\n        <p>Guides:<br />\n          <a href=\"https://digitalbitbox.com/ethereum\" target=\"_blank\">\n            How to use MyEtherWallet with your Digital Bitbox\n          </a><br />\n          <a tabindex=\"0\" role=\"button\" class=\"btn btn-xs btn-default btn-sm\" href=\"https://digitalbitbox.com/?ref=mew\" target=\"_blank\">\n            Don't have a Digital Bitbox? Buy one today.\n          </a>\n        </p>\n      </div>\n    </div>\n    <!-- /if selected type digitalbitbox-->\n\n\n\n    <!-- if selected addressOnly-->\n    <div id=\"selectedTypeKey\" ng-if=\"walletType=='addressOnly'\">\n      <h4 translate=\"x_Address\"> Your Address </h4>\n      <div class=\"form-group\">\n        <textarea rows=\"4\"\n                  id=\"aria8\"\n                  class=\"form-control\"\n                  ng-change=\"onAddressChange()\"\n                  ng-class=\"Validator.isValidAddress($parent.$parent.addressOnly) ? 'is-valid' : 'is-invalid'\"\n                  ng-model=\"$parent.$parent.addressOnly\"\n                  placeholder=\"{{ 'x_Address' | translate }}\"\n        ></textarea>\n      </div>\n    </div>\n    <!-- /if selected addressOnly-->\n\n\n    <!-- if selected parity phrase-->\n    <div id=\"selectedTypeMnemonic\" ng-if=\"walletType=='parityBWallet'\">\n      <h4 translate=\"ADD_Radio_5\"> Paste / type your mnemonic: </h4>\n      <div class=\"form-group\">\n        <textarea rows=\"4\"\n                  id=\"aria9\"\n                  class=\"form-control\"\n                  ng-change=\"onParityPhraseChange()\"\n                  ng-class=\"$parent.$parent.parityPhrase != '' ? 'is-valid' : 'is-invalid'\"\n                  ng-keyup=\"$event.keyCode == 13 && decryptWallet()\"\n                  ng-model=\"$parent.$parent.parityPhrase\"\n                  placeholder=\"{{ 'x_ParityPhrase' | translate}}\"\n        ></textarea>\n      </div>\n    </div>\n    <!-- /if selected parity phrase-->\n\n  </section>\n  <!-- / Column 2 - Unlock That Key -->\n\n  <!-- Column 3 - The Unlock Button -->\n  <section class=\"col-md-4 col-sm-6\" ng-show=\"showFDecrypt||showPDecrypt||showMDecrypt||walletType=='ledger'||walletType=='trezor'||walletType=='digitalBitbox'||showAOnly||showParityDecrypt\">\n    <h4 id=\"uploadbtntxt-wallet\" ng-show=\"showFDecrypt||showPDecrypt||showMDecrypt\" translate=\"ADD_Label_6\">\n      Access Your Wallet:\n    </h4>\n    <div class=\"form-group\">\n      <a\n      tabindex=\"0\"\n      role=\"button\"\n      class=\"btn btn-primary btn-block\"\n      ng-show=\"showFDecrypt||showPDecrypt||showMDecrypt\"\n      ng-click=\"decryptWallet()\"\n      translate=\"ADD_Label_6_short\">UNLOCK</a>\n    </div>\n    <div class=\"form-group\">\n      <a class=\"btn btn-primary btn-block\"\n         ng-click=\"decryptAddressOnly()\"\n         ng-show=\"showAOnly\"\n         role=\"button\"\n         tabindex=\"0\"\n         translate=\"ADD_Label_6_short\"\n      > UNLOCK </a>\n    </div>\n    <div class=\"form-group\">\n      <a class=\"btn btn-primary btn-block\"\n         ng-click=\"scanLedger()\"\n         ng-show=\"walletType=='ledger'\"\n         role=\"button\"\n         tabindex=\"0\"\n         translate=\"ADD_Ledger_scan\"\n      > SCAN </a>\n    </div>\n  </section>\n\n  <!-- / Column 3 -The Unlock Button -->\n\n  <!-- MODAL -->\n  <article class=\"modal fade\" id=\"mnemonicModel\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Mnemonic Phrase Modal\">\n    <section class=\"modal-dialog\">\n      <section class=\"modal-content\">\n        <div class=\"modal-body\" role=\"document\">\n          <button aria-label=\"Close\" type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n\n          <!-- Select HD Path -->\n          <h4 id=\"modalTitle\" class=\"modal-title\" translate=\"ADD_Radio_5_Path\" style=\"margin-bottom: .25rem\">\n            Select HD derivation path:\n          </h4>\n\n          <p class=\"alert alert-danger\" ng-hide=\"ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'\"> We do not know the correct path for this network. <a href=\"https://github.com/kvhnuke/etherwallet/issues\" target=\"_blank\" rel=\"noopener\">Please open a github issue</a> so we can discuss / be enlightened.</p>\n          <section class=\"row\">\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: Jaxx, Metamask, Exodus, imToken - {{HDWallet.defaultDPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.defaultDPath}}\"/>\n                <span ng-bind=\"HDWallet.defaultDPath\"></span>\n                <p class=\"small\">Jaxx, Metamask, Exodus, imToken, TREZOR (ETH) &amp; Digital Bitbox</p>\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: Ledger (ETH) {{HDWallet.ledgerPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.ledgerPath}}\"/>\n                <span ng-bind=\"HDWallet.ledgerPath\"></span>\n                <p class=\"small\">Ledger (ETH)</p>\n              </label>\n\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: Ledger (ETC) {{HDWallet.ledgerClassicPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.ledgerClassicPath}}\"/>\n                <span ng-bind=\"HDWallet.ledgerClassicPath\"></span>\n                <p class=\"small\">Ledger (ETC)</p>\n              </label>\n            </div>\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: TREZOR (ETC) {{HDWallet.trezorClassicPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.trezorClassicPath}}\"/>\n                <span ng-bind=\"HDWallet.trezorClassicPath\"></span>\n                <p class=\"small\">TREZOR (ETC)</p>\n              </label>\n            </div>\n\n          </section>\n\n          <section class=\"row\">\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n              <p class=\"small\"><strong>Your Custom Path</strong></p>\n                <input aria-describedby=\"Path: Enter your own - {{HDWallet.customDPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.customDPath}}\" />\n                <input aria-describedby=\"Path: Enter your own - {{HDWallet.customDPath}}\"\n                      type=\"text\" class=\"form-control input-sm\"\n                      ng-model=\"HDWallet.customDPath\"\n                      ng-change=\"onCustomHDDPathChange()\"\n                      style=\"float: right;margin: 0 0 .5rem;\" />\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: TREZOR - TESTNET - {{HDWallet.trezorTestnetPath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.trezorTestnetPath}}\"/>\n                <span ng-bind=\"HDWallet.trezorTestnetPath\"></span>\n                <p class=\"small\">Network: Testnets</p>\n              </label>\n            </div>\n\n            <div class=\"col-sm-4\">\n              <label class=\"radio small\">\n                <input aria-describedby=\"Path: TREZOR (ETC) {{HDWallet.hwExpansePath}}\"\n                       ng-change=\"onHDDPathChange()\"\n                       ng-model=\"HDWallet.dPath\"\n                       type=\"radio\"\n                      value=\"{{HDWallet.hwExpansePath}}\"/>\n                <span ng-bind=\"HDWallet.hwExpansePath\"></span>\n                <p class=\"small\">Network: Expanse</p>\n              </label>\n            </div>\n          </section>\n\n\n          <h4 id=\"modalTitle2\" class=\"modal-title\" translate=\"MNEM_1\" style=\"margin: .5rem 0\">\n            Please select the address you would like to interact with.\n          </h4>\n          <table class=\"small table table-striped table-mnemonic\">\n            <tr>\n              <th translate=\"x_Address\">Address</th>\n              <th translate=\"MYWAL_Bal\">Balance</th>\n              <th translate=\"sidebar_TokenBal\" class=\"text-center\" >Token<br>Balances</th>\n            </tr>\n            <tr ng-repeat=\"wallet in HDWallet.wallets track by $index\">\n              <td>\n                <label>\n                  <input aria-describedby=\"modalTitle2\"\n                       aria-label=\"Unlock wallet with {{wallet.getBalance()}} {{ajaxReq.type}}. Address: {{wallet.getChecksumAddressString()}}\"\n                       name=\"addressSelect\"\n                       ng-model=\"HDWallet.id\"\n                       type=\"radio\"\n                       value=\"{{$index}}\"\n                  /><span class=\"small\">\n                    {{wallet.getChecksumAddressString()}}\n                  </span>\n                </label>\n              </td>\n              <td>\n                <a href=\"{{ajaxReq.blockExplorerAddr.replace('[[address]]', wallet.getAddressString())}}\" target=\"_blank\" rel=\"noopener\">\n                  {{wallet.getBalance()}} {{ajaxReq.type}}\n                </a>\n              </td>\n              <td class=\"text-center\">\n                <a href=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\" target=\"_blank\" rel=\"noopener\" title=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\">\n                  <img src=\"images/icon-external-link.svg\" title=\"https://ethplorer.io/address/{{wallet.getAddressString()}}\" ng-click=\"removeTokenFromLocal(token.symbol)\" ng-show=\"token.type!=='default'\" />\n                </a>\n              </td>\n            </tr>\n            <tr class=\"m-addresses\">\n              <td>\n                <a ng-click=\"AddRemoveHDAddresses(false)\"\n                   ng-show=\"HDWallet.numWallets > 5\"\n                   role=\"link\"\n                   tabindex=\"0\"\n                   translate=\"MNEM_prev\"\n                > Previous Addresses </a>\n              </td>\n              <td></td>\n              <td>\n                <a ng-click=\"AddRemoveHDAddresses(true)\"\n                   role=\"link\"\n                   tabindex=\"0\"\n                   translate=\"MNEM_more\"\n                > More Addresses </a>\n              </td>\n            </tr>\n          </table>\n          <div class=\"clearfix button-group\">\n            <button aria-label=\"Unlock this Wallet\"\n                    class=\"btn btn-primary pull-right\"\n                    style=\"margin: 0 .1rem\"\n                    ng-click=\"setHDWallet()\"\n                    role=\"button\"\n                    tabindex=\"0\"\n                    translate=\"ADD_Label_6\"\n            > Access Wallet </button>\n            <button aria-label=\"Cancel - Will close dialog\"\n                    class=\"btn btn-default pull-right\"\n                    style=\"margin: 0 .1rem\"\n                    data-dismiss=\"modal\"\n                    role=\"button\"\n                    tabindex=\"0\"\n                    translate=\"x_Cancel\"\n            > Cancel </button>\n          </div>\n        </div>\n      </section>\n    </section>\n  </article>\n\n  <!-- / MODAL -->\n</article>\n";
 },{}],35:[function(require,module,exports){
 'use strict';
 
@@ -3761,7 +3869,7 @@ ens.prototype.getDataString = function (func, inputs) {
 module.exports = ens;
 
 }).call(this,require("buffer").Buffer)
-},{"./ensConfigs/ETHConfig.json":37,"./ensConfigs/ROPConfig.json":38,"./ensConfigs/RinkebyConfig.json":39,"./ensConfigs/auctionABI.json":40,"./ensConfigs/deedABI.json":41,"./ensConfigs/registryABI.json":42,"./ensConfigs/resolverABI.json":43,"buffer":148,"idna-uts46":209}],37:[function(require,module,exports){
+},{"./ensConfigs/ETHConfig.json":37,"./ensConfigs/ROPConfig.json":38,"./ensConfigs/RinkebyConfig.json":39,"./ensConfigs/auctionABI.json":40,"./ensConfigs/deedABI.json":41,"./ensConfigs/registryABI.json":42,"./ensConfigs/resolverABI.json":43,"buffer":150,"idna-uts46":211}],37:[function(require,module,exports){
 module.exports={
     "public": {
         "resolver": "0x5FfC014343cd971B7eb70732021E26C35B744cc4",
@@ -5168,10 +5276,14 @@ if (IS_CX) {
   var ledger3 = require('./staticJS/ledger3');
   var ledgerEth = require('./staticJS/ledger-eth');
   var trezorConnect = require('./staticJS/trezorConnect');
+  var digitalBitboxUsb = require('./staticJS/digitalBitboxUsb');
+  var digitalBitboxEth = require('./staticJS/digitalBitboxEth');
   window.u2f = u2f;
   window.Ledger3 = ledger3;
   window.ledgerEth = ledgerEth;
   window.TrezorConnect = trezorConnect.TrezorConnect;
+  window.DigitalBitboxUsb = digitalBitboxUsb;
+  window.DigitalBitboxEth = digitalBitboxEth;
 }
 var CustomGasMessages = require('./customGas.js');
 window.CustomGasMessages = CustomGasMessages;
@@ -5251,7 +5363,7 @@ if (IS_CX) {
   app.controller('cxDecryptWalletCtrl', ['$scope', '$sce', 'walletService', cxDecryptWalletCtrl]);
 }
 
-},{"./ajaxReq":2,"./bity":3,"./controllers/CX/addWalletCtrl":4,"./controllers/CX/cxDecryptWalletCtrl":5,"./controllers/CX/mainPopCtrl":6,"./controllers/CX/myWalletsCtrl":7,"./controllers/CX/quickSendCtrl":8,"./controllers/bulkGenCtrl":9,"./controllers/contractsCtrl":10,"./controllers/decryptWalletCtrl":11,"./controllers/ensCtrl":12,"./controllers/footerCtrl":13,"./controllers/helpersCtrl":14,"./controllers/offlineTxCtrl":15,"./controllers/sendTxCtrl":16,"./controllers/signMsgCtrl":17,"./controllers/swapCtrl":18,"./controllers/tabsCtrl":19,"./controllers/txStatusCtrl":20,"./controllers/viewCtrl":21,"./controllers/viewWalletCtrl":22,"./controllers/walletBalanceCtrl":23,"./controllers/walletGenCtrl":24,"./customGas.js":25,"./cxFuncs":26,"./directives/QRCodeDrtv":27,"./directives/addressFieldDrtv":28,"./directives/balanceDrtv":30,"./directives/blockiesDrtv":31,"./directives/cxWalletDecryptDrtv":32,"./directives/fileReaderDrtv":33,"./directives/walletDecryptDrtv":35,"./ens":36,"./ethFuncs":44,"./etherUnits":45,"./globalFuncs":46,"./localStoragePolyfill":47,"./myetherwallet":49,"./nodes":54,"./services/globalService":55,"./services/walletService":56,"./solidity/coder":60,"./solidity/utils":71,"./staticJS/customMarked":72,"./staticJS/ledger-eth":73,"./staticJS/ledger3":74,"./staticJS/trezorConnect":75,"./staticJS/u2f-api":76,"./tokenlib":77,"./translations/translate.js":80,"./uiFuncs":81,"./validator":82,"./web3Wallet":83,"angular":91,"angular-animate":85,"angular-sanitize":87,"angular-translate":89,"angular-translate-handler-log":88,"bignumber.js":108,"bip39":109,"crypto":158,"detect-browser":165,"ethereumjs-tx":188,"ethereumjs-util":189,"hdkey":206,"scryptsy":265,"string-format":281,"uuid":290,"wallet-address-validator":299}],49:[function(require,module,exports){
+},{"./ajaxReq":2,"./bity":3,"./controllers/CX/addWalletCtrl":4,"./controllers/CX/cxDecryptWalletCtrl":5,"./controllers/CX/mainPopCtrl":6,"./controllers/CX/myWalletsCtrl":7,"./controllers/CX/quickSendCtrl":8,"./controllers/bulkGenCtrl":9,"./controllers/contractsCtrl":10,"./controllers/decryptWalletCtrl":11,"./controllers/ensCtrl":12,"./controllers/footerCtrl":13,"./controllers/helpersCtrl":14,"./controllers/offlineTxCtrl":15,"./controllers/sendTxCtrl":16,"./controllers/signMsgCtrl":17,"./controllers/swapCtrl":18,"./controllers/tabsCtrl":19,"./controllers/txStatusCtrl":20,"./controllers/viewCtrl":21,"./controllers/viewWalletCtrl":22,"./controllers/walletBalanceCtrl":23,"./controllers/walletGenCtrl":24,"./customGas.js":25,"./cxFuncs":26,"./directives/QRCodeDrtv":27,"./directives/addressFieldDrtv":28,"./directives/balanceDrtv":30,"./directives/blockiesDrtv":31,"./directives/cxWalletDecryptDrtv":32,"./directives/fileReaderDrtv":33,"./directives/walletDecryptDrtv":35,"./ens":36,"./ethFuncs":44,"./etherUnits":45,"./globalFuncs":46,"./localStoragePolyfill":47,"./myetherwallet":49,"./nodes":54,"./services/globalService":55,"./services/walletService":56,"./solidity/coder":60,"./solidity/utils":71,"./staticJS/customMarked":72,"./staticJS/digitalBitboxEth":73,"./staticJS/digitalBitboxUsb":74,"./staticJS/ledger-eth":75,"./staticJS/ledger3":76,"./staticJS/trezorConnect":77,"./staticJS/u2f-api":78,"./tokenlib":79,"./translations/translate.js":82,"./uiFuncs":83,"./validator":84,"./web3Wallet":85,"angular":93,"angular-animate":87,"angular-sanitize":89,"angular-translate":91,"angular-translate-handler-log":90,"bignumber.js":110,"bip39":111,"crypto":160,"detect-browser":167,"ethereumjs-tx":190,"ethereumjs-util":191,"hdkey":208,"scryptsy":267,"string-format":283,"uuid":292,"wallet-address-validator":301}],49:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5595,7 +5707,7 @@ Wallet.getWalletFromPrivKeyFile = function (strjson, password) {
 module.exports = Wallet;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],50:[function(require,module,exports){
+},{"buffer":150}],50:[function(require,module,exports){
 'use strict';
 
 var customNode = function (srvrUrl, port, httpBasicAuthentication) {
@@ -5820,12 +5932,7 @@ nodes.infuraNode = require('./nodeHelpers/infura');
 nodes.metamaskNode = require('./nodeHelpers/metamask');
 nodes.nodeTypes = {
     UBQ: "UBQ",
-    ETH: "ETH",
-    ETC: "ETC",
-    Ropsten: "ROPSTEN ETH",
-    Kovan: "KOVAN ETH",
-    Rinkeby: "RINKEBY ETH",
-    Custom: "CUSTOM ETH"
+    Custom: "CUSTOM UBQ"
 };
 nodes.ensNodeTypes = [];
 nodes.customNodeObj = {
@@ -5841,8 +5948,8 @@ nodes.customNodeObj = {
     'lib': null
 };
 nodes.nodeList = {
-    'ubq': {
-        'name': 'UBQ',
+    'ubq_us': {
+        'name': 'UBQ (US)',
         'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
         'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
@@ -5852,14 +5959,27 @@ nodes.nodeList = {
         'abiList': require('./abiDefinitions/ubqAbi.json'),
         'estimateGas': true,
         'service': 'ubiqscan.io',
-        'lib': new nodes.customNode('https://rpc1.ubiqscan.io', '')
+        'lib': new nodes.customNode('https://pyrus1.ubiqscan.io', '')
+    },
+    'ubq_eu': {
+        'name': 'UBQ (EU)',
+        'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
+        'type': nodes.nodeTypes.UBQ,
+        'eip155': true,
+        'chainId': 8,
+        'tokenList': require('./tokens/ubqTokens.json'),
+        'abiList': require('./abiDefinitions/ubqAbi.json'),
+        'estimateGas': true,
+        'service': 'ubiqscan.io',
+        'lib': new nodes.customNode('https://pyrus2.ubiqscan.io', '')
     }
 };
 
 nodes.ethPrice = require('./nodeHelpers/ethPrice');
 module.exports = nodes;
 
-},{"./abiDefinitions/ubqAbi.json":1,"./nodeHelpers/customNode":50,"./nodeHelpers/ethPrice":51,"./nodeHelpers/infura":52,"./nodeHelpers/metamask":53,"./tokens/ubqTokens.json":78}],55:[function(require,module,exports){
+},{"./abiDefinitions/ubqAbi.json":1,"./nodeHelpers/customNode":50,"./nodeHelpers/ethPrice":51,"./nodeHelpers/infura":52,"./nodeHelpers/metamask":53,"./tokens/ubqTokens.json":80}],55:[function(require,module,exports){
 'use strict';
 
 var globalService = function ($http, $httpParamSerializerJQLike) {
@@ -6348,7 +6468,7 @@ module.exports = {
     defaultAccount: undefined
 };
 
-},{"bignumber.js":108}],62:[function(require,module,exports){
+},{"bignumber.js":110}],62:[function(require,module,exports){
 var f = require('./formatters');
 var SolidityType = require('./type');
 
@@ -6623,7 +6743,7 @@ module.exports = {
     formatOutputAddress: formatOutputAddress
 };
 
-},{"./config":61,"./param":65,"./utils":71,"bignumber.js":108}],64:[function(require,module,exports){
+},{"./config":61,"./param":65,"./utils":71,"bignumber.js":110}],64:[function(require,module,exports){
 var f = require('./formatters');
 var SolidityType = require('./type');
 
@@ -7769,7 +7889,7 @@ module.exports = {
     isJson: isJson
 };
 
-},{"bignumber.js":108,"ethereumjs-util":189,"utf8":285}],72:[function(require,module,exports){
+},{"bignumber.js":110,"ethereumjs-util":191,"utf8":287}],72:[function(require,module,exports){
 'use strict';
 
 var marked = require('marked');
@@ -7800,7 +7920,219 @@ marked.setOptions({
 });
 module.exports = marked;
 
-},{"marked":223}],73:[function(require,module,exports){
+},{"marked":225}],73:[function(require,module,exports){
+(function (Buffer){
+/**
+ *  (c) 2017 Douglas Bakkum, Shift Devices AG 
+ *  MIT license
+**/
+
+// Hijacks the U2F auth command to pass HWW API commands
+
+// TODO - Integrate the smart verification mobile app (send result['echo'] from sign response).
+//        Requires pairing, for example copy-pasting the pairing code from the desktop app (needs implementation).
+
+'use strict';
+
+var Crypto = require('crypto');
+var HDKey = require('hdkey');
+
+var DigitalBitboxEth = function (comm, sec) {
+    this.comm = comm;
+    DigitalBitboxEth.sec = sec || DigitalBitboxEth.sec;
+    this.key = Crypto.createHash('sha256').update(new Buffer(DigitalBitboxEth.sec, 'ascii')).digest();
+    this.key = Crypto.createHash('sha256').update(this.key).digest();
+    clearTimeout(DigitalBitboxEth.to);
+    DigitalBitboxEth.to = setTimeout(function () {
+        DigitalBitboxEth.sec = '';
+    }, 60000);
+};
+
+DigitalBitboxEth.sec = '';
+DigitalBitboxEth.to = null;
+
+DigitalBitboxEth.aes_cbc_b64_decrypt = function (ciphertext, key) {
+    var res;
+    try {
+        var ub64 = new Buffer(ciphertext, "base64").toString("binary");
+        var iv = new Buffer(ub64.slice(0, 16), "binary");
+        var enc = new Buffer(ub64.slice(16), "binary");
+        var decipher = Crypto.createDecipheriv("aes-256-cbc", key, iv);
+        var dec = decipher.update(enc) + decipher.final();
+        res = dec.toString("utf8");
+    } catch (err) {
+        res = ciphertext;
+    }
+    return res;
+};
+
+DigitalBitboxEth.aes_cbc_b64_encrypt = function (plaintext, key) {
+    try {
+        var iv = Crypto.pseudoRandomBytes(16);
+        var cipher = Crypto.createCipheriv("aes-256-cbc", key, iv);
+        var ciphertext = Buffer.concat([iv, cipher.update(plaintext), cipher.final()]);
+        return ciphertext.toString("base64");
+    } catch (err) {
+        return '';
+    }
+};
+
+DigitalBitboxEth.parseError = function (errObject) {
+    var errMsg = {
+        err101: 'The Digital Bitbox is not initialized. First use the <a href="https://digitalbitbox.com/start" target="_blank" rel="noopener">Digital Bitbox desktop app</a> to set up a wallet.', // No password set
+        err250: 'The Digital Bitbox is not initialized. First use the <a href="https://digitalbitbox.com/start" target="_blank" rel="noopener">Digital Bitbox desktop app</a> to set up a wallet.', // Wallet not seeded
+        err251: 'The Digital Bitbox is not initialized. First use the <a href="https://digitalbitbox.com/start" target="_blank" rel="noopener">Digital Bitbox desktop app</a> to set up a wallet.', // Wallet not seeded
+        err109: 'The Digital Bitbox received unexpected data. Was the correct password used? ' + errObject.message
+    };
+    var code = 'err' + errObject.code.toString();
+    var msg = errMsg[code] || errObject.message;
+    return msg;
+};
+
+DigitalBitboxEth.prototype.getAddress = function (path, callback) {
+    var self = this;
+    var cmd = '{"xpub":"' + path + '"}';
+    cmd = DigitalBitboxEth.aes_cbc_b64_encrypt(cmd, this.key);
+    var localCallback = function (response, error) {
+        if (typeof error != "undefined") {
+            callback(undefined, error);
+        } else {
+            try {
+                response = JSON.parse(response.toString('utf8'));
+                if ('error' in response) {
+                    callback(undefined, DigitalBitboxEth.parseError(response.error));
+                    return;
+                }
+                if ('ciphertext' in response) {
+                    response = JSON.parse(DigitalBitboxEth.aes_cbc_b64_decrypt(response.ciphertext, self.key));
+                    if ('error' in response) {
+                        callback(undefined, DigitalBitboxEth.parseError(response.error));
+                        return;
+                    }
+                    var hdkey = HDKey.fromExtendedKey(response.xpub);
+                    var result = {
+                        publicKey: hdkey.publicKey.toString('hex'),
+                        chainCode: hdkey.chainCode.toString('hex')
+                    };
+                    callback(result);
+                    return;
+                }
+            } catch (err) {
+                callback(undefined, 'Unexpected error: ' + err.message);
+            }
+        }
+    };
+    self.comm.exchange(cmd, localCallback);
+};
+
+DigitalBitboxEth.prototype.signTransaction = function (path, eTx, callback) {
+    var self = this;
+    var hashToSign = eTx.hash(false).toString('hex');
+    var cmd = '{"sign":{"data":[{"hash":"' + hashToSign + '","keypath":"' + path + '"}]}}';
+    cmd = DigitalBitboxEth.aes_cbc_b64_encrypt(cmd, self.key);
+
+    var localCallback = function (response, error) {
+        if (typeof error != "undefined") {
+            callback(undefined, error);
+        } else {
+            try {
+                response = JSON.parse(response.toString('utf8'));
+                if ('error' in response) {
+                    callback(undefined, DigitalBitboxEth.parseError(response.error));
+                    return;
+                }
+                if ('ciphertext' in response) {
+                    response = JSON.parse(DigitalBitboxEth.aes_cbc_b64_decrypt(response.ciphertext, self.key));
+                    if ('error' in response) {
+                        callback(undefined, DigitalBitboxEth.parseError(response.error));
+                        return;
+                    }
+                    if ('echo' in response) {
+                        // Echo from first sign command. (Smart verification not implemented.)
+                        // Send second sign command.
+                        var cmd = '{"sign":""}';
+                        cmd = DigitalBitboxEth.aes_cbc_b64_encrypt(cmd, self.key);
+                        self.comm.exchange(cmd, localCallback);
+                        return;
+                    }
+                    if ('sign' in response) {
+                        var vOffset = eTx._chainId ? eTx._chainId * 2 + 8 : 0;
+                        var v = new Buffer([parseInt(response.sign[0].recid, 16) + 27 + vOffset]);
+                        var result = {
+                            v: v.toString('hex'),
+                            r: response.sign[0].sig.slice(0, 64),
+                            s: response.sign[0].sig.slice(64, 128)
+                        };
+                        callback(result);
+                        return;
+                    }
+                }
+            } catch (err) {
+                callback(undefined, 'Unexpected error:' + err.message);
+            }
+        }
+    };
+    self.comm.exchange(cmd, localCallback);
+};
+
+module.exports = DigitalBitboxEth;
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":150,"crypto":160,"hdkey":208}],74:[function(require,module,exports){
+(function (Buffer){
+/**
+ *  (c) 2017 Douglas Bakkum, Shift Devices AG 
+ *  MIT license
+**/
+
+'use strict';
+
+var DigitalBitboxUsb = function (timeoutSeconds) {
+    this.timeoutSeconds = timeoutSeconds;
+};
+
+// Convert from normal to web-safe, strip trailing "="s
+DigitalBitboxUsb.webSafe64 = function (base64) {
+    return base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+};
+
+// Convert from web-safe to normal, add trailing "="s
+DigitalBitboxUsb.normal64 = function (base64) {
+    return base64.replace(/\-/g, '+').replace(/_/g, '/') + '=='.substring(0, 3 * base64.length % 4);
+};
+
+DigitalBitboxUsb.prototype.u2fCallback = function (response, callback) {
+    if ('signatureData' in response) {
+        var data = new Buffer(DigitalBitboxUsb.normal64(response.signatureData), 'base64');
+        if (data.length > 7) callback(data.slice(5));else return; // Empty frame received, wait for data
+    } else {
+        callback(undefined, response);
+    }
+};
+
+DigitalBitboxUsb.prototype.exchange = function (msg, callback) {
+    msg = Buffer.from(msg, 'ascii');
+    var kh_max_len = 128 - 2; // Subtract 2 bytes for `index` and `total` header
+    var challenge = new Buffer("dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb", 'hex');
+    var total = Math.ceil(msg.length / kh_max_len);
+    var self = this;
+    var localCallback = function (result) {
+        self.u2fCallback(result, callback);
+    };
+    for (var index = 0; index < total; index++) {
+        var kh = Buffer.concat([Buffer.from([total]), Buffer.from([index]), msg.slice(index * kh_max_len, (index + 1) * kh_max_len)]);
+        var key = {
+            version: 'U2F_V2',
+            keyHandle: DigitalBitboxUsb.webSafe64(kh.toString('base64'))
+        };
+        u2f.sign(location.origin, DigitalBitboxUsb.webSafe64(challenge.toString('base64')), [key], localCallback, this.timeoutSeconds);
+    }
+};
+
+module.exports = DigitalBitboxUsb;
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":150}],75:[function(require,module,exports){
 (function (Buffer){
 /********************************************************************************
 *   Ledger Communication toolkit
@@ -8015,7 +8347,7 @@ LedgerEth.prototype.signPersonalMessage_async = function (path, messageHex, call
 module.exports = LedgerEth;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],74:[function(require,module,exports){
+},{"buffer":150}],76:[function(require,module,exports){
 (function (Buffer){
 /********************************************************************************
 *   Ledger Communication toolkit
@@ -8086,13 +8418,13 @@ Ledger3.prototype.exchange = function (apduHex, callback) {
 module.exports = Ledger3;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],75:[function(require,module,exports){
+},{"buffer":150}],77:[function(require,module,exports){
 /**
  * (C) 2017 SatoshiLabs
  *
  * GPLv3
  */
-var VERSION = 2;
+var VERSION = 3;
 
 if (!Array.isArray) {
     Array.isArray = function (arg) {
@@ -8127,7 +8459,7 @@ var POPUP_URL = window.TREZOR_POPUP_URL || 'https://connect.trezor.io/' + VERSIO
 var POPUP_PATH = window.TREZOR_POPUP_PATH || 'https://connect.trezor.io/' + VERSION;
 var POPUP_ORIGIN = window.TREZOR_POPUP_ORIGIN || 'https://connect.trezor.io';
 
-var INSIGHT_URLS = window.TREZOR_INSIGHT_URLS || ['https://bitcore1.trezor.io/api/', 'https://bitcore3.trezor.io/api/'];
+var INSIGHT_URLS = window.TREZOR_INSIGHT_URLS || ['https://btc-bitcore1.trezor.io/api/', 'https://btc-bitcore3.trezor.io/api/'];
 
 var POPUP_INIT_TIMEOUT = 15000;
 
@@ -8185,6 +8517,42 @@ function TrezorConnect() {
       */
     this.closeAfterFailure = function (value) {
         manager.closeAfterFailure = value;
+    };
+
+    /**
+     * Set bitcore server
+     * @param {string|Array<string>} value
+     */
+    this.setBitcoreURLS = function (value) {
+        if (typeof value === 'string') {
+            manager.bitcoreURLS = [value];
+        } else if (value instanceof Array) {
+            manager.bitcoreURLS = value;
+        }
+    };
+
+    /**
+     * Set max. limit for account discovery
+     * @param {number} value
+     */
+    this.setAccountDiscoveryLimit = function (value) {
+        if (!isNaN(value)) manager.accountDiscoveryLimit = value;
+    };
+
+    /**
+     * Set max. gap for account discovery
+     * @param {number} value
+     */
+    this.setAccountDiscoveryGapLength = function (value) {
+        if (!isNaN(value)) manager.accountDiscoveryGapLength = value;
+    };
+
+    /**
+     * Set discovery BIP44 coin type
+     * @param {number} value
+     */
+    this.setAccountDiscoveryBip44CoinType = function (value) {
+        if (!isNaN(value)) manager.accountDiscoveryBip44CoinType = value;
     };
 
     /**
@@ -8254,17 +8622,6 @@ function TrezorConnect() {
         }
     };
 
-    this.claimBitcoinCashAccountsInfo = function (callback, requiredFirmware) {
-        try {
-            manager.sendWithChannel(_fwStrFix({
-                type: 'claimBitcoinCashAccountsInfo',
-                description: 'all'
-            }, requiredFirmware), callback);
-        } catch (e) {
-            callback({ success: false, error: e });
-        }
-    };
-
     this.getBalance = function (callback, requiredFirmware) {
         manager.sendWithChannel(_fwStrFix({
             type: 'accountinfo'
@@ -8299,6 +8656,12 @@ function TrezorConnect() {
         }, requiredFirmware), callback);
     };
 
+    // new implementation with ethereum at beginnig
+    this.ethereumSignTx = function () {
+        this.signEthereumTx.apply(this, arguments);
+    };
+
+    // old fallback
     this.signEthereumTx = function (address_n, nonce, gas_price, gas_limit, to, value, data, chain_id, callback, requiredFirmware) {
         if (requiredFirmware == null) {
             requiredFirmware = '1.4.0'; // first firmware that supports ethereum
@@ -8415,6 +8778,29 @@ function TrezorConnect() {
     };
 
     /**
+     * Sign an Ethereum message
+     *
+     * @param {string|array} path
+     * @param {string} message to sign (ascii)
+     * @param {string|function(SignMessageResult)} callback
+     * @param {?(string|array<number>)} requiredFirmware
+     *
+     */
+    this.ethereumSignMessage = function (path, message, callback, requiredFirmware) {
+        if (typeof path === 'string') {
+            path = parseHDPath(path);
+        }
+        if (!callback) {
+            throw new TypeError('TrezorConnect: callback not found');
+        }
+        manager.sendWithChannel(_fwStrFix({
+            type: 'signethmsg',
+            path: path,
+            message: message
+        }, requiredFirmware), callback);
+    };
+
+    /**
       * Verify message
       *
       * @param {string} address
@@ -8438,6 +8824,28 @@ function TrezorConnect() {
             signature: signature,
             message: message,
             coin: { coin_name: opt_coin }
+        }, requiredFirmware), callback);
+    };
+
+    /**
+     * Verify ethereum message
+     *
+     * @param {string} address
+     * @param {string} signature (base64)
+     * @param {string} message (string)
+     * @param {string|function()} callback
+     * @param {?(string|array<number>)} requiredFirmware
+     *
+     */
+    this.ethereumVerifyMessage = function (address, signature, message, callback, requiredFirmware) {
+        if (!callback) {
+            throw new TypeError('TrezorConnect: callback not found');
+        }
+        manager.sendWithChannel(_fwStrFix({
+            type: 'verifyethmsg',
+            address: address,
+            signature: signature,
+            message: message
         }, requiredFirmware), callback);
     };
 
@@ -8892,6 +9300,10 @@ function PopupManager() {
     };
 
     this.sendWithChannel = function (message, callback) {
+        message.bitcoreURLS = this.bitcoreURLS || null;
+        message.accountDiscoveryLimit = this.accountDiscoveryLimit || null;
+        message.accountDiscoveryGapLength = this.accountDiscoveryGapLength || null;
+        message.accountDiscoveryBip44CoinType = this.accountDiscoveryBip44CoinType || null;
 
         var respond = function (response) {
             var succ = response.success && this.closeAfterSuccess;
@@ -8928,7 +9340,7 @@ var connect = new TrezorConnect();
 
 module.exports = { TrezorConnect: connect };
 
-},{}],76:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 //Copyright 2014-2015 Google Inc. All rights reserved.
 
 //Use of this source code is governed by a BSD-style
@@ -9650,7 +10062,7 @@ u2f.getApiVersion = function (callback, opt_timeoutSeconds) {
 };
 module.exports = u2f;
 
-},{}],77:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 'use strict';
 
 var Token = function (contractAddress, userAddress, symbol, decimal, type) {
@@ -9732,7 +10144,7 @@ Token.prototype.getData = function (toAdd, value) {
 };
 module.exports = Token;
 
-},{}],78:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 module.exports=[
   {
     "address":"0xd245207cfbf6eb6f34970db2a807ab1d178fde6c",
@@ -9748,7 +10160,7 @@ module.exports=[
   }
 ]
 
-},{}],79:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 // English
 'use strict';
 
@@ -9912,6 +10324,10 @@ en.data = {
 
   x_Trezor: 'TREZOR ',
   ADD_Trezor_scan: 'Connect to TREZOR ',
+  x_DigitalBitbox: 'Digital Bitbox ',
+  ADD_DigitalBitbox_0a: 'Re-open MyEtherWallet on a secure (SSL) connection ',
+  ADD_DigitalBitbox_0b: 'Re-open MyEtherWallet using [Chrome](https://www.google.com/chrome/browser/desktop/) or [Opera](https://www.opera.com/) ',
+  ADD_DigitalBitbox_scan: 'Connect your Digital Bitbox ',
 
   /* Add Wallet */
   ADD_Label_1: 'What would you like to do? ',
@@ -10405,7 +10821,7 @@ en.data = {
 
 module.exports = en;
 
-},{}],80:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 'use strict';
 
 var en = require('./en');
@@ -10424,7 +10840,7 @@ translate.marked = function (data) {
 };
 module.exports = translate;
 
-},{"./en":79}],81:[function(require,module,exports){
+},{"./en":81}],83:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -10496,6 +10912,30 @@ uiFuncs.signTxLedger = function (app, eTx, rawTx, txData, old, callback) {
     };
     app.signTransaction(txData.path, txToSign.toString('hex'), localCallback);
 };
+uiFuncs.signTxDigitalBitbox = function (eTx, rawTx, txData, callback) {
+    var localCallback = function (result, error) {
+        if (typeof error != "undefined") {
+            error = error.errorCode ? u2f.getErrorByCode(error.errorCode) : error;
+            if (callback !== undefined) callback({
+                isError: true,
+                error: error
+            });
+            return;
+        }
+        uiFuncs.notifier.info("The transaction was signed but not sent. Click the blue 'Send Transaction' button to continue.");
+        rawTx.v = ethFuncs.sanitizeHex(result['v']);
+        rawTx.r = ethFuncs.sanitizeHex(result['r']);
+        rawTx.s = ethFuncs.sanitizeHex(result['s']);
+        var eTx_ = new ethUtil.Tx(rawTx);
+        rawTx.rawTx = JSON.stringify(rawTx);
+        rawTx.signedTx = ethFuncs.sanitizeHex(eTx_.serialize().toString('hex'));
+        rawTx.isError = false;
+        if (callback !== undefined) callback(rawTx);
+    };
+    uiFuncs.notifier.info("Touch the LED for 3 seconds to sign the transaction. Or tap the LED to cancel.");
+    var app = new DigitalBitboxEth(txData.hwTransport, '');
+    app.signTransaction(txData.path, eTx, localCallback);
+};
 uiFuncs.trezorUnlockCallback = function (txData, callback) {
     TrezorConnect.open(function (error) {
         if (error) {
@@ -10560,6 +11000,8 @@ uiFuncs.generateTx = function (txData, callback) {
                 rawTx.signedTx = JSON.stringify(txParams);
                 rawTx.isError = false;
                 callback(rawTx);
+            } else if (typeof txData.hwType != "undefined" && txData.hwType == "digitalBitbox") {
+                uiFuncs.signTxDigitalBitbox(eTx, rawTx, txData, callback);
             } else {
                 eTx.sign(new Buffer(txData.privKey, 'hex'));
                 rawTx.rawTx = JSON.stringify(rawTx);
@@ -10695,7 +11137,7 @@ uiFuncs.notifier = {
 module.exports = uiFuncs;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],82:[function(require,module,exports){
+},{"buffer":150}],84:[function(require,module,exports){
 'use strict';
 
 var validator = function () {};
@@ -10773,7 +11215,7 @@ validator.isValidURL = function (str) {
 };
 module.exports = validator;
 
-},{}],83:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 'use strict';
 
 var Wallet = require('./myetherwallet.js');
@@ -10829,7 +11271,7 @@ Web3Wallet.prototype.getV3Filename = function (timestamp) {
 
 module.exports = Web3Wallet;
 
-},{"./myetherwallet.js":49}],84:[function(require,module,exports){
+},{"./myetherwallet.js":49}],86:[function(require,module,exports){
 /**
  * @license AngularJS v1.6.6
  * (c) 2010-2017 Google, Inc. http://angularjs.org
@@ -14985,11 +15427,11 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 })(window, window.angular);
 
-},{}],85:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 require('./angular-animate');
 module.exports = 'ngAnimate';
 
-},{"./angular-animate":84}],86:[function(require,module,exports){
+},{"./angular-animate":86}],88:[function(require,module,exports){
 /**
  * @license AngularJS v1.6.6
  * (c) 2010-2017 Google, Inc. http://angularjs.org
@@ -15797,11 +16239,11 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 
 })(window, window.angular);
 
-},{}],87:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
 require('./angular-sanitize');
 module.exports = 'ngSanitize';
 
-},{"./angular-sanitize":86}],88:[function(require,module,exports){
+},{"./angular-sanitize":88}],90:[function(require,module,exports){
 /*!
  * angular-translate - v2.15.2 - 2017-06-22
  * 
@@ -15853,7 +16295,7 @@ return 'pascalprecht.translate';
 
 }));
 
-},{}],89:[function(require,module,exports){
+},{}],91:[function(require,module,exports){
 /*!
  * angular-translate - v2.15.2 - 2017-06-22
  * 
@@ -19565,7 +20007,7 @@ return 'pascalprecht.translate';
 
 }));
 
-},{}],90:[function(require,module,exports){
+},{}],92:[function(require,module,exports){
 /**
  * @license AngularJS v1.6.6
  * (c) 2010-2017 Google, Inc. http://angularjs.org
@@ -53455,11 +53897,11 @@ $provide.value("$locale", {
 })(window);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],91:[function(require,module,exports){
+},{}],93:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":90}],92:[function(require,module,exports){
+},{"./angular":92}],94:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -53470,7 +53912,7 @@ asn1.constants = require('./asn1/constants');
 asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
-},{"./asn1/api":93,"./asn1/base":95,"./asn1/constants":99,"./asn1/decoders":101,"./asn1/encoders":104,"bn.js":118}],93:[function(require,module,exports){
+},{"./asn1/api":95,"./asn1/base":97,"./asn1/constants":101,"./asn1/decoders":103,"./asn1/encoders":106,"bn.js":120}],95:[function(require,module,exports){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
 
@@ -53533,7 +53975,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":92,"inherits":212,"vm":295}],94:[function(require,module,exports){
+},{"../asn1":94,"inherits":214,"vm":297}],96:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -53651,7 +54093,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":95,"buffer":148,"inherits":212}],95:[function(require,module,exports){
+},{"../base":97,"buffer":150,"inherits":214}],97:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -53659,7 +54101,7 @@ base.DecoderBuffer = require('./buffer').DecoderBuffer;
 base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
-},{"./buffer":94,"./node":96,"./reporter":97}],96:[function(require,module,exports){
+},{"./buffer":96,"./node":98,"./reporter":99}],98:[function(require,module,exports){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
 var DecoderBuffer = require('../base').DecoderBuffer;
@@ -54295,7 +54737,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 
-},{"../base":95,"minimalistic-assert":227}],97:[function(require,module,exports){
+},{"../base":97,"minimalistic-assert":229}],99:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -54418,7 +54860,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":212}],98:[function(require,module,exports){
+},{"inherits":214}],100:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -54462,7 +54904,7 @@ exports.tag = {
 };
 exports.tagByName = constants._reverse(exports.tag);
 
-},{"../constants":99}],99:[function(require,module,exports){
+},{"../constants":101}],101:[function(require,module,exports){
 var constants = exports;
 
 // Helper
@@ -54483,7 +54925,7 @@ constants._reverse = function reverse(map) {
 
 constants.der = require('./der');
 
-},{"./der":98}],100:[function(require,module,exports){
+},{"./der":100}],102:[function(require,module,exports){
 var inherits = require('inherits');
 
 var asn1 = require('../../asn1');
@@ -54809,13 +55251,13 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":92,"inherits":212}],101:[function(require,module,exports){
+},{"../../asn1":94,"inherits":214}],103:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
 decoders.pem = require('./pem');
 
-},{"./der":100,"./pem":102}],102:[function(require,module,exports){
+},{"./der":102,"./pem":104}],104:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -54866,7 +55308,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
   return DERDecoder.prototype.decode.call(this, input, options);
 };
 
-},{"./der":100,"buffer":148,"inherits":212}],103:[function(require,module,exports){
+},{"./der":102,"buffer":150,"inherits":214}],105:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -55163,13 +55605,13 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":92,"buffer":148,"inherits":212}],104:[function(require,module,exports){
+},{"../../asn1":94,"buffer":150,"inherits":214}],106:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
 encoders.pem = require('./pem');
 
-},{"./der":103,"./pem":105}],105:[function(require,module,exports){
+},{"./der":105,"./pem":107}],107:[function(require,module,exports){
 var inherits = require('inherits');
 
 var DEREncoder = require('./der');
@@ -55192,7 +55634,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
   return out.join('\n');
 };
 
-},{"./der":103,"inherits":212}],106:[function(require,module,exports){
+},{"./der":105,"inherits":214}],108:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -55686,7 +56128,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"util/":289}],107:[function(require,module,exports){
+},{"util/":291}],109:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -55802,7 +56244,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],108:[function(require,module,exports){
+},{}],110:[function(require,module,exports){
 /*! bignumber.js v4.0.2 https://github.com/MikeMcl/bignumber.js/LICENCE */
 
 ;(function (globalObj) {
@@ -58538,7 +58980,7 @@ function fromByteArray (uint8) {
     }
 })(this);
 
-},{}],109:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var createHash = require('create-hash')
 var pbkdf2 = require('pbkdf2').pbkdf2Sync
@@ -58694,7 +59136,7 @@ module.exports = {
   }
 }
 
-},{"./wordlists/chinese_simplified.json":110,"./wordlists/chinese_traditional.json":111,"./wordlists/english.json":112,"./wordlists/french.json":113,"./wordlists/italian.json":114,"./wordlists/japanese.json":115,"./wordlists/spanish.json":116,"create-hash":153,"pbkdf2":234,"randombytes":248,"safe-buffer":264,"unorm":284}],110:[function(require,module,exports){
+},{"./wordlists/chinese_simplified.json":112,"./wordlists/chinese_traditional.json":113,"./wordlists/english.json":114,"./wordlists/french.json":115,"./wordlists/italian.json":116,"./wordlists/japanese.json":117,"./wordlists/spanish.json":118,"create-hash":155,"pbkdf2":236,"randombytes":250,"safe-buffer":266,"unorm":286}],112:[function(require,module,exports){
 module.exports=[
   "的",
   "一",
@@ -60746,7 +61188,7 @@ module.exports=[
   "歇"
 ]
 
-},{}],111:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 module.exports=[
   "的",
   "一",
@@ -62798,7 +63240,7 @@ module.exports=[
   "歇"
 ]
 
-},{}],112:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 module.exports=[
   "abandon",
   "ability",
@@ -64850,7 +65292,7 @@ module.exports=[
   "zoo"
 ]
 
-},{}],113:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 module.exports=[
   "abaisser",
   "abandon",
@@ -66902,7 +67344,7 @@ module.exports=[
   "zoologie"
 ]
 
-},{}],114:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 module.exports=[
   "abaco",
   "abbaglio",
@@ -68954,7 +69396,7 @@ module.exports=[
   "zuppa"
 ]
 
-},{}],115:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 module.exports=[
   "あいこくしん",
   "あいさつ",
@@ -71006,7 +71448,7 @@ module.exports=[
   "われる"
 ]
 
-},{}],116:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 module.exports=[
   "ábaco",
   "abdomen",
@@ -73058,7 +73500,7 @@ module.exports=[
   "zurdo"
 ]
 
-},{}],117:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 // Reference https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki
 // Format: 0x30 [total-length] 0x02 [R-length] [R] 0x02 [S-length] [S]
 // NOTE: SIGHASH byte ignored AND restricted, truncate before use
@@ -73173,7 +73615,7 @@ module.exports = {
   encode: encode
 }
 
-},{"safe-buffer":264}],118:[function(require,module,exports){
+},{"safe-buffer":266}],120:[function(require,module,exports){
 (function (module, exports) {
   'use strict';
 
@@ -76602,7 +77044,7 @@ module.exports = {
   };
 })(typeof module === 'undefined' || module, this);
 
-},{"buffer":120}],119:[function(require,module,exports){
+},{"buffer":122}],121:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -76669,9 +77111,9 @@ if (typeof self === 'object') {
   }
 }
 
-},{"crypto":120}],120:[function(require,module,exports){
+},{"crypto":122}],122:[function(require,module,exports){
 
-},{}],121:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -76852,7 +77294,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],122:[function(require,module,exports){
+},{"buffer":150}],124:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -76953,7 +77395,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":121,"./ghash":126,"buffer":148,"buffer-xor":147,"cipher-base":149,"inherits":212}],123:[function(require,module,exports){
+},{"./aes":123,"./ghash":128,"buffer":150,"buffer-xor":149,"cipher-base":151,"inherits":214}],125:[function(require,module,exports){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
 exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
@@ -76966,7 +77408,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"./decrypter":124,"./encrypter":125,"./modes":127}],124:[function(require,module,exports){
+},{"./decrypter":126,"./encrypter":127,"./modes":129}],126:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -77107,7 +77549,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":121,"./authCipher":122,"./modes":127,"./modes/cbc":128,"./modes/cfb":129,"./modes/cfb1":130,"./modes/cfb8":131,"./modes/ctr":132,"./modes/ecb":133,"./modes/ofb":134,"./streamCipher":135,"buffer":148,"cipher-base":149,"evp_bytestokey":192,"inherits":212}],125:[function(require,module,exports){
+},{"./aes":123,"./authCipher":124,"./modes":129,"./modes/cbc":130,"./modes/cfb":131,"./modes/cfb1":132,"./modes/cfb8":133,"./modes/ctr":134,"./modes/ecb":135,"./modes/ofb":136,"./streamCipher":137,"buffer":150,"cipher-base":151,"evp_bytestokey":194,"inherits":214}],127:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -77233,7 +77675,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":121,"./authCipher":122,"./modes":127,"./modes/cbc":128,"./modes/cfb":129,"./modes/cfb1":130,"./modes/cfb8":131,"./modes/ctr":132,"./modes/ecb":133,"./modes/ofb":134,"./streamCipher":135,"buffer":148,"cipher-base":149,"evp_bytestokey":192,"inherits":212}],126:[function(require,module,exports){
+},{"./aes":123,"./authCipher":124,"./modes":129,"./modes/cbc":130,"./modes/cfb":131,"./modes/cfb1":132,"./modes/cfb8":133,"./modes/ctr":134,"./modes/ecb":135,"./modes/ofb":136,"./streamCipher":137,"buffer":150,"cipher-base":151,"evp_bytestokey":194,"inherits":214}],128:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -77335,7 +77777,7 @@ function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],127:[function(require,module,exports){
+},{"buffer":150}],129:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -77508,7 +77950,7 @@ exports['aes-256-gcm'] = {
   type: 'auth'
 }
 
-},{}],128:[function(require,module,exports){
+},{}],130:[function(require,module,exports){
 var xor = require('buffer-xor')
 
 exports.encrypt = function (self, block) {
@@ -77527,7 +77969,7 @@ exports.decrypt = function (self, block) {
   return xor(out, pad)
 }
 
-},{"buffer-xor":147}],129:[function(require,module,exports){
+},{"buffer-xor":149}],131:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -77562,7 +78004,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"buffer-xor":147}],130:[function(require,module,exports){
+},{"buffer":150,"buffer-xor":149}],132:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -77600,7 +78042,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],131:[function(require,module,exports){
+},{"buffer":150}],133:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -77619,7 +78061,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],132:[function(require,module,exports){
+},{"buffer":150}],134:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -77654,7 +78096,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"buffer-xor":147}],133:[function(require,module,exports){
+},{"buffer":150,"buffer-xor":149}],135:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -77662,7 +78104,7 @@ exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block)
 }
 
-},{}],134:[function(require,module,exports){
+},{}],136:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -77682,7 +78124,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"buffer-xor":147}],135:[function(require,module,exports){
+},{"buffer":150,"buffer-xor":149}],137:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -77711,7 +78153,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":121,"buffer":148,"cipher-base":149,"inherits":212}],136:[function(require,module,exports){
+},{"./aes":123,"buffer":150,"cipher-base":151,"inherits":214}],138:[function(require,module,exports){
 var ebtk = require('evp_bytestokey')
 var aes = require('browserify-aes/browser')
 var DES = require('browserify-des')
@@ -77786,7 +78228,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"browserify-aes/browser":123,"browserify-aes/modes":127,"browserify-des":137,"browserify-des/modes":138,"evp_bytestokey":192}],137:[function(require,module,exports){
+},{"browserify-aes/browser":125,"browserify-aes/modes":129,"browserify-des":139,"browserify-des/modes":140,"evp_bytestokey":194}],139:[function(require,module,exports){
 (function (Buffer){
 var CipherBase = require('cipher-base')
 var des = require('des.js')
@@ -77833,7 +78275,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"cipher-base":149,"des.js":159,"inherits":212}],138:[function(require,module,exports){
+},{"buffer":150,"cipher-base":151,"des.js":161,"inherits":214}],140:[function(require,module,exports){
 exports['des-ecb'] = {
   key: 8,
   iv: 0
@@ -77859,7 +78301,7 @@ exports['des-ede'] = {
   iv: 0
 }
 
-},{}],139:[function(require,module,exports){
+},{}],141:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 var randomBytes = require('randombytes');
@@ -77903,10 +78345,10 @@ function getr(priv) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":118,"buffer":148,"randombytes":248}],140:[function(require,module,exports){
+},{"bn.js":120,"buffer":150,"randombytes":250}],142:[function(require,module,exports){
 module.exports = require('./browser/algorithms.json')
 
-},{"./browser/algorithms.json":141}],141:[function(require,module,exports){
+},{"./browser/algorithms.json":143}],143:[function(require,module,exports){
 module.exports={
   "sha224WithRSAEncryption": {
     "sign": "rsa",
@@ -78060,7 +78502,7 @@ module.exports={
   }
 }
 
-},{}],142:[function(require,module,exports){
+},{}],144:[function(require,module,exports){
 module.exports={
   "1.3.132.0.10": "secp256k1",
   "1.3.132.0.33": "p224",
@@ -78070,7 +78512,7 @@ module.exports={
   "1.3.132.0.35": "p521"
 }
 
-},{}],143:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 (function (Buffer){
 var createHash = require('create-hash')
 var stream = require('stream')
@@ -78165,7 +78607,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./algorithms.json":141,"./sign":144,"./verify":145,"buffer":148,"create-hash":153,"inherits":212,"stream":280}],144:[function(require,module,exports){
+},{"./algorithms.json":143,"./sign":146,"./verify":147,"buffer":150,"create-hash":155,"inherits":214,"stream":282}],146:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = require('create-hmac')
@@ -78314,7 +78756,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":142,"bn.js":118,"browserify-rsa":139,"buffer":148,"create-hmac":156,"elliptic":171,"parse-asn1":233}],145:[function(require,module,exports){
+},{"./curves.json":144,"bn.js":120,"browserify-rsa":141,"buffer":150,"create-hmac":158,"elliptic":173,"parse-asn1":235}],147:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var BN = require('bn.js')
@@ -78401,7 +78843,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":142,"bn.js":118,"buffer":148,"elliptic":171,"parse-asn1":233}],146:[function(require,module,exports){
+},{"./curves.json":144,"bn.js":120,"buffer":150,"elliptic":173,"parse-asn1":235}],148:[function(require,module,exports){
 // Base58 encoding/decoding
 // Originally written by Mike Hearn for BitcoinJ
 // Copyright (c) 2011 Google Inc
@@ -78488,7 +78930,7 @@ module.exports = {
   decode: decode
 }
 
-},{}],147:[function(require,module,exports){
+},{}],149:[function(require,module,exports){
 (function (Buffer){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -78502,7 +78944,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],148:[function(require,module,exports){
+},{"buffer":150}],150:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -80218,7 +80660,7 @@ function numberIsNaN (obj) {
   return obj !== obj // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":107,"ieee754":210}],149:[function(require,module,exports){
+},{"base64-js":109,"ieee754":212}],151:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
 var StringDecoder = require('string_decoder').StringDecoder
@@ -80319,7 +80761,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 
 module.exports = CipherBase
 
-},{"inherits":212,"safe-buffer":264,"stream":280,"string_decoder":282}],150:[function(require,module,exports){
+},{"inherits":214,"safe-buffer":266,"stream":282,"string_decoder":284}],152:[function(require,module,exports){
 (function (Buffer){
 var base58 = require('bs58')
 var createHash = require('create-hash')
@@ -80416,7 +80858,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bs58":146,"buffer":148,"create-hash":153}],151:[function(require,module,exports){
+},{"bs58":148,"buffer":150,"create-hash":155}],153:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -80527,7 +80969,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":213}],152:[function(require,module,exports){
+},{"../../is-buffer/index.js":215}],154:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -80653,7 +81095,7 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":118,"buffer":148,"elliptic":171}],153:[function(require,module,exports){
+},{"bn.js":120,"buffer":150,"elliptic":173}],155:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -80709,7 +81151,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":155,"buffer":148,"cipher-base":149,"inherits":212,"ripemd160":262,"sha.js":273}],154:[function(require,module,exports){
+},{"./md5":157,"buffer":150,"cipher-base":151,"inherits":214,"ripemd160":264,"sha.js":275}],156:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var intSize = 4
@@ -80743,7 +81185,7 @@ module.exports = function hash (buf, fn) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],155:[function(require,module,exports){
+},{"buffer":150}],157:[function(require,module,exports){
 'use strict'
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -80896,7 +81338,7 @@ module.exports = function md5 (buf) {
   return makeHash(buf, core_md5)
 }
 
-},{"./make-hash":154}],156:[function(require,module,exports){
+},{"./make-hash":156}],158:[function(require,module,exports){
 'use strict'
 var inherits = require('inherits')
 var Legacy = require('./legacy')
@@ -80960,7 +81402,7 @@ module.exports = function createHmac (alg, key) {
   return new Hmac(alg, key)
 }
 
-},{"./legacy":157,"cipher-base":149,"create-hash/md5":155,"inherits":212,"ripemd160":262,"safe-buffer":264,"sha.js":273}],157:[function(require,module,exports){
+},{"./legacy":159,"cipher-base":151,"create-hash/md5":157,"inherits":214,"ripemd160":264,"safe-buffer":266,"sha.js":275}],159:[function(require,module,exports){
 'use strict'
 var inherits = require('inherits')
 var Buffer = require('safe-buffer').Buffer
@@ -81008,7 +81450,7 @@ Hmac.prototype._final = function () {
 }
 module.exports = Hmac
 
-},{"cipher-base":149,"inherits":212,"safe-buffer":264}],158:[function(require,module,exports){
+},{"cipher-base":151,"inherits":214,"safe-buffer":266}],160:[function(require,module,exports){
 'use strict'
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
@@ -81102,7 +81544,7 @@ exports.constants = {
   'POINT_CONVERSION_HYBRID': 6
 }
 
-},{"browserify-cipher":136,"browserify-sign":143,"browserify-sign/algos":140,"create-ecdh":152,"create-hash":153,"create-hmac":156,"diffie-hellman":167,"pbkdf2":234,"public-encrypt":241,"randombytes":248}],159:[function(require,module,exports){
+},{"browserify-cipher":138,"browserify-sign":145,"browserify-sign/algos":142,"create-ecdh":154,"create-hash":155,"create-hmac":158,"diffie-hellman":169,"pbkdf2":236,"public-encrypt":243,"randombytes":250}],161:[function(require,module,exports){
 'use strict';
 
 exports.utils = require('./des/utils');
@@ -81111,7 +81553,7 @@ exports.DES = require('./des/des');
 exports.CBC = require('./des/cbc');
 exports.EDE = require('./des/ede');
 
-},{"./des/cbc":160,"./des/cipher":161,"./des/des":162,"./des/ede":163,"./des/utils":164}],160:[function(require,module,exports){
+},{"./des/cbc":162,"./des/cipher":163,"./des/des":164,"./des/ede":165,"./des/utils":166}],162:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -81178,7 +81620,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
   }
 };
 
-},{"inherits":212,"minimalistic-assert":227}],161:[function(require,module,exports){
+},{"inherits":214,"minimalistic-assert":229}],163:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -81321,7 +81763,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
   return this._unpad(out);
 };
 
-},{"minimalistic-assert":227}],162:[function(require,module,exports){
+},{"minimalistic-assert":229}],164:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -81466,7 +81908,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
   utils.rip(l, r, out, off);
 };
 
-},{"../des":159,"inherits":212,"minimalistic-assert":227}],163:[function(require,module,exports){
+},{"../des":161,"inherits":214,"minimalistic-assert":229}],165:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -81523,7 +81965,7 @@ EDE.prototype._update = function _update(inp, inOff, out, outOff) {
 EDE.prototype._pad = DES.prototype._pad;
 EDE.prototype._unpad = DES.prototype._unpad;
 
-},{"../des":159,"inherits":212,"minimalistic-assert":227}],164:[function(require,module,exports){
+},{"../des":161,"inherits":214,"minimalistic-assert":229}],166:[function(require,module,exports){
 'use strict';
 
 exports.readUInt32BE = function readUInt32BE(bytes, off) {
@@ -81781,7 +82223,7 @@ exports.padSplit = function padSplit(num, size, group) {
   return out.join(' ');
 };
 
-},{}],165:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 var detectBrowser = require('./lib/detectBrowser');
 
 var agent;
@@ -81792,7 +82234,7 @@ if (typeof navigator !== 'undefined' && navigator) {
 
 module.exports = detectBrowser(agent);
 
-},{"./lib/detectBrowser":166}],166:[function(require,module,exports){
+},{"./lib/detectBrowser":168}],168:[function(require,module,exports){
 module.exports = function detectBrowser(userAgentString) {
   if (!userAgentString) return null;
 
@@ -81833,7 +82275,7 @@ module.exports = function detectBrowser(userAgentString) {
   }).filter(Boolean).shift();
 };
 
-},{}],167:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
 (function (Buffer){
 var generatePrime = require('./lib/generatePrime')
 var primes = require('./lib/primes.json')
@@ -81879,7 +82321,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/dh":168,"./lib/generatePrime":169,"./lib/primes.json":170,"buffer":148}],168:[function(require,module,exports){
+},{"./lib/dh":170,"./lib/generatePrime":171,"./lib/primes.json":172,"buffer":150}],170:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -82047,7 +82489,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":169,"bn.js":118,"buffer":148,"miller-rabin":226,"randombytes":248}],169:[function(require,module,exports){
+},{"./generatePrime":171,"bn.js":120,"buffer":150,"miller-rabin":228,"randombytes":250}],171:[function(require,module,exports){
 var randomBytes = require('randombytes');
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -82154,7 +82596,7 @@ function findPrime(bits, gen) {
 
 }
 
-},{"bn.js":118,"miller-rabin":226,"randombytes":248}],170:[function(require,module,exports){
+},{"bn.js":120,"miller-rabin":228,"randombytes":250}],172:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -82189,7 +82631,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],171:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 'use strict';
 
 var elliptic = exports;
@@ -82204,7 +82646,7 @@ elliptic.curves = require('./elliptic/curves');
 elliptic.ec = require('./elliptic/ec');
 elliptic.eddsa = require('./elliptic/eddsa');
 
-},{"../package.json":186,"./elliptic/curve":174,"./elliptic/curves":177,"./elliptic/ec":178,"./elliptic/eddsa":181,"./elliptic/utils":185,"brorand":119}],172:[function(require,module,exports){
+},{"../package.json":188,"./elliptic/curve":176,"./elliptic/curves":179,"./elliptic/ec":180,"./elliptic/eddsa":183,"./elliptic/utils":187,"brorand":121}],174:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -82581,7 +83023,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":171,"bn.js":118}],173:[function(require,module,exports){
+},{"../../elliptic":173,"bn.js":120}],175:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -83016,7 +83458,7 @@ Point.prototype.eqXToP = function eqXToP(x) {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":171,"../curve":174,"bn.js":118,"inherits":212}],174:[function(require,module,exports){
+},{"../../elliptic":173,"../curve":176,"bn.js":120,"inherits":214}],176:[function(require,module,exports){
 'use strict';
 
 var curve = exports;
@@ -83026,7 +83468,7 @@ curve.short = require('./short');
 curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
-},{"./base":172,"./edwards":173,"./mont":175,"./short":176}],175:[function(require,module,exports){
+},{"./base":174,"./edwards":175,"./mont":177,"./short":178}],177:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -83208,7 +83650,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":171,"../curve":174,"bn.js":118,"inherits":212}],176:[function(require,module,exports){
+},{"../../elliptic":173,"../curve":176,"bn.js":120,"inherits":214}],178:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -84148,7 +84590,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":171,"../curve":174,"bn.js":118,"inherits":212}],177:[function(require,module,exports){
+},{"../../elliptic":173,"../curve":176,"bn.js":120,"inherits":214}],179:[function(require,module,exports){
 'use strict';
 
 var curves = exports;
@@ -84355,7 +84797,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":171,"./precomputed/secp256k1":184,"hash.js":194}],178:[function(require,module,exports){
+},{"../elliptic":173,"./precomputed/secp256k1":186,"hash.js":196}],180:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -84597,7 +85039,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
   throw new Error('Unable to find valid recovery factor');
 };
 
-},{"../../elliptic":171,"./key":179,"./signature":180,"bn.js":118,"hmac-drbg":207}],179:[function(require,module,exports){
+},{"../../elliptic":173,"./key":181,"./signature":182,"bn.js":120,"hmac-drbg":209}],181:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -84718,7 +85160,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"../../elliptic":171,"bn.js":118}],180:[function(require,module,exports){
+},{"../../elliptic":173,"bn.js":120}],182:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -84855,7 +85297,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":171,"bn.js":118}],181:[function(require,module,exports){
+},{"../../elliptic":173,"bn.js":120}],183:[function(require,module,exports){
 'use strict';
 
 var hash = require('hash.js');
@@ -84975,7 +85417,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
   return val instanceof this.pointClass;
 };
 
-},{"../../elliptic":171,"./key":182,"./signature":183,"hash.js":194}],182:[function(require,module,exports){
+},{"../../elliptic":173,"./key":184,"./signature":185,"hash.js":196}],184:[function(require,module,exports){
 'use strict';
 
 var elliptic = require('../../elliptic');
@@ -85073,7 +85515,7 @@ KeyPair.prototype.getPublic = function getPublic(enc) {
 
 module.exports = KeyPair;
 
-},{"../../elliptic":171}],183:[function(require,module,exports){
+},{"../../elliptic":173}],185:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -85141,7 +85583,7 @@ Signature.prototype.toHex = function toHex() {
 
 module.exports = Signature;
 
-},{"../../elliptic":171,"bn.js":118}],184:[function(require,module,exports){
+},{"../../elliptic":173,"bn.js":120}],186:[function(require,module,exports){
 module.exports = {
   doubles: {
     step: 4,
@@ -85923,7 +86365,7 @@ module.exports = {
   }
 };
 
-},{}],185:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 'use strict';
 
 var utils = exports;
@@ -86045,7 +86487,7 @@ function intFromLE(bytes) {
 utils.intFromLE = intFromLE;
 
 
-},{"bn.js":118,"minimalistic-assert":227,"minimalistic-crypto-utils":228}],186:[function(require,module,exports){
+},{"bn.js":120,"minimalistic-assert":229,"minimalistic-crypto-utils":230}],188:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -86170,7 +86612,7 @@ module.exports={
   "version": "6.4.0"
 }
 
-},{}],187:[function(require,module,exports){
+},{}],189:[function(require,module,exports){
 module.exports={
   "genesisGasLimit": {
     "v": 5000,
@@ -86407,7 +86849,7 @@ module.exports={
   }
 }
 
-},{}],188:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -86735,7 +87177,7 @@ var Transaction = function () {
 
 module.exports = Transaction;
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"ethereum-common/params.json":187,"ethereumjs-util":189}],189:[function(require,module,exports){
+},{"buffer":150,"ethereum-common/params.json":189,"ethereumjs-util":191}],191:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -87406,7 +87848,7 @@ exports.defineProperties = function (self, fields, data) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"assert":106,"bn.js":118,"buffer":148,"create-hash":153,"ethjs-util":190,"keccak":217,"rlp":263,"secp256k1":266}],190:[function(require,module,exports){
+},{"assert":108,"bn.js":120,"buffer":150,"create-hash":155,"ethjs-util":192,"keccak":219,"rlp":265,"secp256k1":268}],192:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -87629,7 +88071,7 @@ module.exports = {
   isHexString: isHexString
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"is-hex-prefixed":214,"strip-hex-prefix":283}],191:[function(require,module,exports){
+},{"buffer":150,"is-hex-prefixed":216,"strip-hex-prefix":285}],193:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -87933,7 +88375,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],192:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var MD5 = require('md5.js')
 
@@ -87979,7 +88421,7 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 
 module.exports = EVP_BytesToKey
 
-},{"md5.js":224,"safe-buffer":264}],193:[function(require,module,exports){
+},{"md5.js":226,"safe-buffer":266}],195:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var Transform = require('stream').Transform
@@ -88066,7 +88508,7 @@ HashBase.prototype._digest = function () {
 module.exports = HashBase
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"inherits":212,"stream":280}],194:[function(require,module,exports){
+},{"buffer":150,"inherits":214,"stream":282}],196:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -88083,7 +88525,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":195,"./hash/hmac":196,"./hash/ripemd":197,"./hash/sha":198,"./hash/utils":205}],195:[function(require,module,exports){
+},{"./hash/common":197,"./hash/hmac":198,"./hash/ripemd":199,"./hash/sha":200,"./hash/utils":207}],197:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -88177,7 +88619,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"./utils":205,"minimalistic-assert":227}],196:[function(require,module,exports){
+},{"./utils":207,"minimalistic-assert":229}],198:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -88226,7 +88668,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"./utils":205,"minimalistic-assert":227}],197:[function(require,module,exports){
+},{"./utils":207,"minimalistic-assert":229}],199:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -88374,7 +88816,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"./common":195,"./utils":205}],198:[function(require,module,exports){
+},{"./common":197,"./utils":207}],200:[function(require,module,exports){
 'use strict';
 
 exports.sha1 = require('./sha/1');
@@ -88383,7 +88825,7 @@ exports.sha256 = require('./sha/256');
 exports.sha384 = require('./sha/384');
 exports.sha512 = require('./sha/512');
 
-},{"./sha/1":199,"./sha/224":200,"./sha/256":201,"./sha/384":202,"./sha/512":203}],199:[function(require,module,exports){
+},{"./sha/1":201,"./sha/224":202,"./sha/256":203,"./sha/384":204,"./sha/512":205}],201:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -88459,7 +88901,7 @@ SHA1.prototype._digest = function digest(enc) {
     return utils.split32(this.h, 'big');
 };
 
-},{"../common":195,"../utils":205,"./common":204}],200:[function(require,module,exports){
+},{"../common":197,"../utils":207,"./common":206}],202:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -88491,7 +88933,7 @@ SHA224.prototype._digest = function digest(enc) {
 };
 
 
-},{"../utils":205,"./256":201}],201:[function(require,module,exports){
+},{"../utils":207,"./256":203}],203:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -88598,7 +89040,7 @@ SHA256.prototype._digest = function digest(enc) {
     return utils.split32(this.h, 'big');
 };
 
-},{"../common":195,"../utils":205,"./common":204,"minimalistic-assert":227}],202:[function(require,module,exports){
+},{"../common":197,"../utils":207,"./common":206,"minimalistic-assert":229}],204:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -88635,7 +89077,7 @@ SHA384.prototype._digest = function digest(enc) {
     return utils.split32(this.h.slice(0, 12), 'big');
 };
 
-},{"../utils":205,"./512":203}],203:[function(require,module,exports){
+},{"../utils":207,"./512":205}],205:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -88967,7 +89409,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../common":195,"../utils":205,"minimalistic-assert":227}],204:[function(require,module,exports){
+},{"../common":197,"../utils":207,"minimalistic-assert":229}],206:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -89018,7 +89460,7 @@ function g1_256(x) {
 }
 exports.g1_256 = g1_256;
 
-},{"../utils":205}],205:[function(require,module,exports){
+},{"../utils":207}],207:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -89273,7 +89715,7 @@ function shr64_lo(ah, al, num) {
 }
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":212,"minimalistic-assert":227}],206:[function(require,module,exports){
+},{"inherits":214,"minimalistic-assert":229}],208:[function(require,module,exports){
 (function (Buffer){
 var assert = require('assert')
 var crypto = require('crypto')
@@ -89504,7 +89946,7 @@ HDKey.HARDENED_OFFSET = HARDENED_OFFSET
 module.exports = HDKey
 
 }).call(this,require("buffer").Buffer)
-},{"assert":106,"buffer":148,"coinstring":150,"crypto":158,"secp256k1":266}],207:[function(require,module,exports){
+},{"assert":108,"buffer":150,"coinstring":152,"crypto":160,"secp256k1":268}],209:[function(require,module,exports){
 'use strict';
 
 var hash = require('hash.js');
@@ -89619,7 +90061,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"hash.js":194,"minimalistic-assert":227,"minimalistic-crypto-utils":228}],208:[function(require,module,exports){
+},{"hash.js":196,"minimalistic-assert":229,"minimalistic-crypto-utils":230}],210:[function(require,module,exports){
 /* This file is generated from the Unicode IDNA table, using
    the build-unicode-tables.py script. Please edit that
    script instead of this file. */
@@ -90378,7 +90820,7 @@ return {
 };
 }));
 
-},{}],209:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 /* istanbul ignore next */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -90498,7 +90940,7 @@ return {
 };
 }));
 
-},{"./idna-map":208,"punycode":247}],210:[function(require,module,exports){
+},{"./idna-map":210,"punycode":249}],212:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -90584,7 +91026,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],211:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -90595,7 +91037,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],212:[function(require,module,exports){
+},{}],214:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -90620,7 +91062,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],213:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -90643,7 +91085,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],214:[function(require,module,exports){
+},{}],216:[function(require,module,exports){
 /**
  * Returns a `Boolean` on whether or not the a `String` starts with '0x'
  * @param {String} str the string input value
@@ -90658,14 +91100,14 @@ module.exports = function isHexPrefixed(str) {
   return str.slice(0, 2) === '0x';
 }
 
-},{}],215:[function(require,module,exports){
+},{}],217:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],216:[function(require,module,exports){
+},{}],218:[function(require,module,exports){
 /*
  A JavaScript implementation of the SHA family of hashes, as
  defined in FIPS PUB 180-2 as well as the corresponding HMAC implementation
@@ -90703,11 +91145,11 @@ new g(1203062813,d[7])]:[new g(f[0],4089235720),new g(f[1],2227873595),new g(f[2
 z(G(B[t-2]),B[t-7],F(B[t-15]),B[t-16]),s=A(u,I(h),J(h,p,r),l[t],B[t]),y=v(H(b),K(b,e,f)),u=r,r=p,p=h,h=v(k,s),k=f,f=e,e=b,b=v(s,y);d[0]=v(b,d[0]);d[1]=v(e,d[1]);d[2]=v(f,d[2]);d[3]=v(k,d[3]);d[4]=v(h,d[4]);d[5]=v(p,d[5]);d[6]=v(r,d[6]);d[7]=v(u,d[7])}if("SHA-224"===c)a=[d[0],d[1],d[2],d[3],d[4],d[5],d[6]];else if("SHA-256"===c)a=d;else if("SHA-384"===c)a=[d[0].a,d[0].b,d[1].a,d[1].b,d[2].a,d[2].b,d[3].a,d[3].b,d[4].a,d[4].b,d[5].a,d[5].b];else if("SHA-512"===c)a=[d[0].a,d[0].b,d[1].a,d[1].b,d[2].a,
 d[2].b,d[3].a,d[3].b,d[4].a,d[4].b,d[5].a,d[5].b,d[6].a,d[6].b,d[7].a,d[7].b];else throw"Unexpected error in SHA-2 implementation";return a}"function"===typeof define&&define.amd?define(function(){return z}):"undefined"!==typeof exports?"undefined"!==typeof module&&module.exports?module.exports=exports=z:exports=z:U.jsSHA=z})(this);
 
-},{}],217:[function(require,module,exports){
+},{}],219:[function(require,module,exports){
 'use strict'
 module.exports = require('./lib/api')(require('./lib/keccak'))
 
-},{"./lib/api":218,"./lib/keccak":222}],218:[function(require,module,exports){
+},{"./lib/api":220,"./lib/keccak":224}],220:[function(require,module,exports){
 'use strict'
 var createKeccak = require('./keccak')
 var createShake = require('./shake')
@@ -90737,7 +91179,7 @@ module.exports = function (KeccakState) {
   }
 }
 
-},{"./keccak":219,"./shake":220}],219:[function(require,module,exports){
+},{"./keccak":221,"./shake":222}],221:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
@@ -90823,7 +91265,7 @@ module.exports = function (KeccakState) {
   return Keccak
 }
 
-},{"inherits":212,"safe-buffer":264,"stream":280}],220:[function(require,module,exports){
+},{"inherits":214,"safe-buffer":266,"stream":282}],222:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
@@ -90900,7 +91342,7 @@ module.exports = function (KeccakState) {
   return Shake
 }
 
-},{"inherits":212,"safe-buffer":264,"stream":280}],221:[function(require,module,exports){
+},{"inherits":214,"safe-buffer":266,"stream":282}],223:[function(require,module,exports){
 'use strict'
 var P1600_ROUND_CONSTANTS = [1, 0, 32898, 0, 32906, 2147483648, 2147516416, 2147483648, 32907, 0, 2147483649, 0, 2147516545, 2147483648, 32777, 2147483648, 138, 0, 136, 0, 2147516425, 0, 2147483658, 0, 2147516555, 0, 139, 2147483648, 32905, 2147483648, 32771, 2147483648, 32770, 2147483648, 128, 2147483648, 32778, 0, 2147483658, 2147483648, 2147516545, 2147483648, 32896, 2147483648, 2147483649, 0, 2147516424, 2147483648]
 
@@ -91089,7 +91531,7 @@ exports.p1600 = function (s) {
   }
 }
 
-},{}],222:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var keccakState = require('./keccak-state-unroll')
@@ -91161,7 +91603,7 @@ Keccak.prototype.copy = function (dest) {
 
 module.exports = Keccak
 
-},{"./keccak-state-unroll":221,"safe-buffer":264}],223:[function(require,module,exports){
+},{"./keccak-state-unroll":223,"safe-buffer":266}],225:[function(require,module,exports){
 (function (global){
 /**
  * marked - a markdown parser
@@ -92451,7 +92893,7 @@ if (typeof module !== 'undefined' && typeof exports === 'object') {
 }());
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],224:[function(require,module,exports){
+},{}],226:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -92600,7 +93042,7 @@ function fnI (a, b, c, d, m, k, s) {
 module.exports = MD5
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"hash-base":225,"inherits":212}],225:[function(require,module,exports){
+},{"buffer":150,"hash-base":227,"inherits":214}],227:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
@@ -92697,7 +93139,7 @@ HashBase.prototype._digest = function () {
 
 module.exports = HashBase
 
-},{"inherits":212,"safe-buffer":264,"stream":280}],226:[function(require,module,exports){
+},{"inherits":214,"safe-buffer":266,"stream":282}],228:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -92812,7 +93254,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":118,"brorand":119}],227:[function(require,module,exports){
+},{"bn.js":120,"brorand":121}],229:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -92825,7 +93267,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],228:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 'use strict';
 
 var utils = exports;
@@ -92885,7 +93327,7 @@ utils.encode = function encode(arr, enc) {
     return arr;
 };
 
-},{}],229:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -92899,7 +93341,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],230:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 'use strict'
@@ -93023,7 +93465,7 @@ exports.signature = asn1.define('signature', function () {
   )
 })
 
-},{"./certificate":231,"asn1.js":92}],231:[function(require,module,exports){
+},{"./certificate":233,"asn1.js":94}],233:[function(require,module,exports){
 // from https://github.com/Rantanen/node-dtls/blob/25a7dc861bda38cfeac93a723500eea4f0ac2e86/Certificate.js
 // thanks to @Rantanen
 
@@ -93113,7 +93555,7 @@ var X509Certificate = asn.define('X509Certificate', function () {
 
 module.exports = X509Certificate
 
-},{"asn1.js":92}],232:[function(require,module,exports){
+},{"asn1.js":94}],234:[function(require,module,exports){
 (function (Buffer){
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m
@@ -93147,7 +93589,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"browserify-aes":123,"buffer":148,"evp_bytestokey":192}],233:[function(require,module,exports){
+},{"browserify-aes":125,"buffer":150,"evp_bytestokey":194}],235:[function(require,module,exports){
 (function (Buffer){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -93257,13 +93699,13 @@ function decrypt (data, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":229,"./asn1":230,"./fixProc":232,"browserify-aes":123,"buffer":148,"pbkdf2":234}],234:[function(require,module,exports){
+},{"./aesid.json":231,"./asn1":232,"./fixProc":234,"browserify-aes":125,"buffer":150,"pbkdf2":236}],236:[function(require,module,exports){
 
 exports.pbkdf2 = require('./lib/async')
 
 exports.pbkdf2Sync = require('./lib/sync')
 
-},{"./lib/async":235,"./lib/sync":238}],235:[function(require,module,exports){
+},{"./lib/async":237,"./lib/sync":240}],237:[function(require,module,exports){
 (function (process,global){
 var checkParameters = require('./precondition')
 var defaultEncoding = require('./default-encoding')
@@ -93365,7 +93807,7 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./default-encoding":236,"./precondition":237,"./sync":238,"_process":240,"safe-buffer":264}],236:[function(require,module,exports){
+},{"./default-encoding":238,"./precondition":239,"./sync":240,"_process":242,"safe-buffer":266}],238:[function(require,module,exports){
 (function (process){
 var defaultEncoding
 /* istanbul ignore next */
@@ -93379,7 +93821,7 @@ if (process.browser) {
 module.exports = defaultEncoding
 
 }).call(this,require('_process'))
-},{"_process":240}],237:[function(require,module,exports){
+},{"_process":242}],239:[function(require,module,exports){
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
 module.exports = function (iterations, keylen) {
   if (typeof iterations !== 'number') {
@@ -93399,7 +93841,7 @@ module.exports = function (iterations, keylen) {
   }
 }
 
-},{}],238:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 var md5 = require('create-hash/md5')
 var rmd160 = require('ripemd160')
 var sha = require('sha.js')
@@ -93502,7 +93944,7 @@ function pbkdf2 (password, salt, iterations, keylen, digest) {
 
 module.exports = pbkdf2
 
-},{"./default-encoding":236,"./precondition":237,"create-hash/md5":155,"ripemd160":262,"safe-buffer":264,"sha.js":273}],239:[function(require,module,exports){
+},{"./default-encoding":238,"./precondition":239,"create-hash/md5":157,"ripemd160":264,"safe-buffer":266,"sha.js":275}],241:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -93549,7 +93991,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":240}],240:[function(require,module,exports){
+},{"_process":242}],242:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -93735,7 +94177,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],241:[function(require,module,exports){
+},{}],243:[function(require,module,exports){
 exports.publicEncrypt = require('./publicEncrypt');
 exports.privateDecrypt = require('./privateDecrypt');
 
@@ -93746,7 +94188,7 @@ exports.privateEncrypt = function privateEncrypt(key, buf) {
 exports.publicDecrypt = function publicDecrypt(key, buf) {
   return exports.privateDecrypt(key, buf, true);
 };
-},{"./privateDecrypt":243,"./publicEncrypt":244}],242:[function(require,module,exports){
+},{"./privateDecrypt":245,"./publicEncrypt":246}],244:[function(require,module,exports){
 (function (Buffer){
 var createHash = require('create-hash');
 module.exports = function (seed, len) {
@@ -93765,7 +94207,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"create-hash":153}],243:[function(require,module,exports){
+},{"buffer":150,"create-hash":155}],245:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -93876,7 +94318,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":242,"./withPublic":245,"./xor":246,"bn.js":118,"browserify-rsa":139,"buffer":148,"create-hash":153,"parse-asn1":233}],244:[function(require,module,exports){
+},{"./mgf":244,"./withPublic":247,"./xor":248,"bn.js":120,"browserify-rsa":141,"buffer":150,"create-hash":155,"parse-asn1":235}],246:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var randomBytes = require('randombytes');
@@ -93974,7 +94416,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":242,"./withPublic":245,"./xor":246,"bn.js":118,"browserify-rsa":139,"buffer":148,"create-hash":153,"parse-asn1":233,"randombytes":248}],245:[function(require,module,exports){
+},{"./mgf":244,"./withPublic":247,"./xor":248,"bn.js":120,"browserify-rsa":141,"buffer":150,"create-hash":155,"parse-asn1":235,"randombytes":250}],247:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 function withPublic(paddedMsg, key) {
@@ -93987,7 +94429,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,require("buffer").Buffer)
-},{"bn.js":118,"buffer":148}],246:[function(require,module,exports){
+},{"bn.js":120,"buffer":150}],248:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -93996,7 +94438,7 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],247:[function(require,module,exports){
+},{}],249:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -94533,7 +94975,7 @@ module.exports = function xor(a, b) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],248:[function(require,module,exports){
+},{}],250:[function(require,module,exports){
 (function (process,global){
 'use strict'
 
@@ -94575,10 +95017,10 @@ function randomBytes (size, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":240,"safe-buffer":264}],249:[function(require,module,exports){
+},{"_process":242,"safe-buffer":266}],251:[function(require,module,exports){
 module.exports = require('./lib/_stream_duplex.js');
 
-},{"./lib/_stream_duplex.js":250}],250:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":252}],252:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -94703,7 +95145,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":252,"./_stream_writable":254,"core-util-is":151,"inherits":212,"process-nextick-args":239}],251:[function(require,module,exports){
+},{"./_stream_readable":254,"./_stream_writable":256,"core-util-is":153,"inherits":214,"process-nextick-args":241}],253:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -94751,7 +95193,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":253,"core-util-is":151,"inherits":212}],252:[function(require,module,exports){
+},{"./_stream_transform":255,"core-util-is":153,"inherits":214}],254:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -95761,7 +96203,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./_stream_duplex":250,"./internal/streams/BufferList":255,"./internal/streams/destroy":256,"./internal/streams/stream":257,"_process":240,"core-util-is":151,"events":191,"inherits":212,"isarray":215,"process-nextick-args":239,"safe-buffer":264,"string_decoder/":282,"util":120}],253:[function(require,module,exports){
+},{"./_stream_duplex":252,"./internal/streams/BufferList":257,"./internal/streams/destroy":258,"./internal/streams/stream":259,"_process":242,"core-util-is":153,"events":193,"inherits":214,"isarray":217,"process-nextick-args":241,"safe-buffer":266,"string_decoder/":284,"util":122}],255:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -95976,7 +96418,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":250,"core-util-is":151,"inherits":212}],254:[function(require,module,exports){
+},{"./_stream_duplex":252,"core-util-is":153,"inherits":214}],256:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -96643,7 +97085,7 @@ Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./_stream_duplex":250,"./internal/streams/destroy":256,"./internal/streams/stream":257,"_process":240,"core-util-is":151,"inherits":212,"process-nextick-args":239,"safe-buffer":264,"util-deprecate":286}],255:[function(require,module,exports){
+},{"./_stream_duplex":252,"./internal/streams/destroy":258,"./internal/streams/stream":259,"_process":242,"core-util-is":153,"inherits":214,"process-nextick-args":241,"safe-buffer":266,"util-deprecate":288}],257:[function(require,module,exports){
 'use strict';
 
 /*<replacement>*/
@@ -96718,7 +97160,7 @@ module.exports = function () {
 
   return BufferList;
 }();
-},{"safe-buffer":264}],256:[function(require,module,exports){
+},{"safe-buffer":266}],258:[function(require,module,exports){
 'use strict';
 
 /*<replacement>*/
@@ -96791,13 +97233,13 @@ module.exports = {
   destroy: destroy,
   undestroy: undestroy
 };
-},{"process-nextick-args":239}],257:[function(require,module,exports){
+},{"process-nextick-args":241}],259:[function(require,module,exports){
 module.exports = require('events').EventEmitter;
 
-},{"events":191}],258:[function(require,module,exports){
+},{"events":193}],260:[function(require,module,exports){
 module.exports = require('./readable').PassThrough
 
-},{"./readable":259}],259:[function(require,module,exports){
+},{"./readable":261}],261:[function(require,module,exports){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -96806,13 +97248,13 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":250,"./lib/_stream_passthrough.js":251,"./lib/_stream_readable.js":252,"./lib/_stream_transform.js":253,"./lib/_stream_writable.js":254}],260:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":252,"./lib/_stream_passthrough.js":253,"./lib/_stream_readable.js":254,"./lib/_stream_transform.js":255,"./lib/_stream_writable.js":256}],262:[function(require,module,exports){
 module.exports = require('./readable').Transform
 
-},{"./readable":259}],261:[function(require,module,exports){
+},{"./readable":261}],263:[function(require,module,exports){
 module.exports = require('./lib/_stream_writable.js');
 
-},{"./lib/_stream_writable.js":254}],262:[function(require,module,exports){
+},{"./lib/_stream_writable.js":256}],264:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -97107,7 +97549,7 @@ function fn5 (a, b, c, d, e, m, k, s) {
 module.exports = RIPEMD160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"hash-base":193,"inherits":212}],263:[function(require,module,exports){
+},{"buffer":150,"hash-base":195,"inherits":214}],265:[function(require,module,exports){
 (function (Buffer){
 const assert = require('assert')
 /**
@@ -97340,7 +97782,7 @@ function toBuffer (v) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"assert":106,"buffer":148}],264:[function(require,module,exports){
+},{"assert":108,"buffer":150}],266:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -97404,7 +97846,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":148}],265:[function(require,module,exports){
+},{"buffer":150}],267:[function(require,module,exports){
 (function (Buffer){
 var crypto = require('crypto')
 /* eslint-disable camelcase */
@@ -97588,11 +98030,11 @@ function arraycopy (src, srcPos, dest, destPos, length) {
 module.exports = scrypt
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148,"crypto":158}],266:[function(require,module,exports){
+},{"buffer":150,"crypto":160}],268:[function(require,module,exports){
 'use strict'
 module.exports = require('./lib')(require('./lib/elliptic'))
 
-},{"./lib":270,"./lib/elliptic":269}],267:[function(require,module,exports){
+},{"./lib":272,"./lib/elliptic":271}],269:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var toString = Object.prototype.toString
@@ -97640,7 +98082,7 @@ exports.isNumberInInterval = function (number, x, y, message) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":213}],268:[function(require,module,exports){
+},{"../../is-buffer/index.js":215}],270:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var bip66 = require('bip66')
@@ -97840,7 +98282,7 @@ exports.signatureImportLax = function (sig) {
   return { r: r, s: s }
 }
 
-},{"bip66":117,"safe-buffer":264}],269:[function(require,module,exports){
+},{"bip66":119,"safe-buffer":266}],271:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var createHash = require('create-hash')
@@ -98090,7 +98532,7 @@ exports.ecdhUnsafe = function (publicKey, privateKey, compressed) {
   return Buffer.from(pair.pub.mul(scalar).encode(true, compressed))
 }
 
-},{"../messages.json":271,"bn.js":118,"create-hash":153,"elliptic":171,"safe-buffer":264}],270:[function(require,module,exports){
+},{"../messages.json":273,"bn.js":120,"create-hash":155,"elliptic":173,"safe-buffer":266}],272:[function(require,module,exports){
 'use strict'
 var assert = require('./assert')
 var der = require('./der')
@@ -98323,7 +98765,7 @@ module.exports = function (secp256k1) {
   }
 }
 
-},{"./assert":267,"./der":268,"./messages.json":271}],271:[function(require,module,exports){
+},{"./assert":269,"./der":270,"./messages.json":273}],273:[function(require,module,exports){
 module.exports={
   "COMPRESSED_TYPE_INVALID": "compressed should be a boolean",
   "EC_PRIVATE_KEY_TYPE_INVALID": "private key should be a Buffer",
@@ -98361,7 +98803,7 @@ module.exports={
   "TWEAK_LENGTH_INVALID": "tweak length is invalid"
 }
 
-},{}],272:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 (function (Buffer){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -98434,7 +98876,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":148}],273:[function(require,module,exports){
+},{"buffer":150}],275:[function(require,module,exports){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
 
@@ -98451,7 +98893,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha":274,"./sha1":275,"./sha224":276,"./sha256":277,"./sha384":278,"./sha512":279}],274:[function(require,module,exports){
+},{"./sha":276,"./sha1":277,"./sha224":278,"./sha256":279,"./sha384":280,"./sha512":281}],276:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -98548,7 +98990,7 @@ Sha.prototype._hash = function () {
 module.exports = Sha
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":272,"buffer":148,"inherits":212}],275:[function(require,module,exports){
+},{"./hash":274,"buffer":150,"inherits":214}],277:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -98650,7 +99092,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":272,"buffer":148,"inherits":212}],276:[function(require,module,exports){
+},{"./hash":274,"buffer":150,"inherits":214}],278:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -98706,7 +99148,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":272,"./sha256":277,"buffer":148,"inherits":212}],277:[function(require,module,exports){
+},{"./hash":274,"./sha256":279,"buffer":150,"inherits":214}],279:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -98844,7 +99286,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":272,"buffer":148,"inherits":212}],278:[function(require,module,exports){
+},{"./hash":274,"buffer":150,"inherits":214}],280:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -98904,7 +99346,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":272,"./sha512":279,"buffer":148,"inherits":212}],279:[function(require,module,exports){
+},{"./hash":274,"./sha512":281,"buffer":150,"inherits":214}],281:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -99167,7 +99609,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":272,"buffer":148,"inherits":212}],280:[function(require,module,exports){
+},{"./hash":274,"buffer":150,"inherits":214}],282:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -99296,7 +99738,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":191,"inherits":212,"readable-stream/duplex.js":249,"readable-stream/passthrough.js":258,"readable-stream/readable.js":259,"readable-stream/transform.js":260,"readable-stream/writable.js":261}],281:[function(require,module,exports){
+},{"events":193,"inherits":214,"readable-stream/duplex.js":251,"readable-stream/passthrough.js":260,"readable-stream/readable.js":261,"readable-stream/transform.js":262,"readable-stream/writable.js":263}],283:[function(require,module,exports){
 // Generated by CoffeeScript 1.8.0
 (function() {
   var ValueError, create, explicitToImplicit, format, implicitToExplicit, lookup, resolve,
@@ -99402,7 +99844,7 @@ Stream.prototype.pipe = function(dest, options) {
 
 }).call(this);
 
-},{}],282:[function(require,module,exports){
+},{}],284:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('safe-buffer').Buffer;
@@ -99675,7 +100117,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"safe-buffer":264}],283:[function(require,module,exports){
+},{"safe-buffer":266}],285:[function(require,module,exports){
 var isHexPrefixed = require('is-hex-prefixed');
 
 /**
@@ -99691,7 +100133,7 @@ module.exports = function stripHexPrefix(str) {
   return isHexPrefixed(str) ? str.slice(2) : str;
 }
 
-},{"is-hex-prefixed":214}],284:[function(require,module,exports){
+},{"is-hex-prefixed":216}],286:[function(require,module,exports){
 (function (root) {
    "use strict";
 
@@ -100135,7 +100577,7 @@ UChar.udata={
    }
 }(this));
 
-},{}],285:[function(require,module,exports){
+},{}],287:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/utf8js v2.1.2 by @mathias */
 ;(function(root) {
@@ -100383,7 +100825,7 @@ UChar.udata={
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],286:[function(require,module,exports){
+},{}],288:[function(require,module,exports){
 (function (global){
 
 /**
@@ -100454,16 +100896,16 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],287:[function(require,module,exports){
-arguments[4][212][0].apply(exports,arguments)
-},{"dup":212}],288:[function(require,module,exports){
+},{}],289:[function(require,module,exports){
+arguments[4][214][0].apply(exports,arguments)
+},{"dup":214}],290:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],289:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -101053,7 +101495,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":288,"_process":240,"inherits":287}],290:[function(require,module,exports){
+},{"./support/isBuffer":290,"_process":242,"inherits":289}],292:[function(require,module,exports){
 var v1 = require('./v1');
 var v4 = require('./v4');
 
@@ -101063,7 +101505,7 @@ uuid.v4 = v4;
 
 module.exports = uuid;
 
-},{"./v1":293,"./v4":294}],291:[function(require,module,exports){
+},{"./v1":295,"./v4":296}],293:[function(require,module,exports){
 /**
  * Convert array of 16 byte values to UUID string format of the form:
  * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -101088,7 +101530,7 @@ function bytesToUuid(buf, offset) {
 
 module.exports = bytesToUuid;
 
-},{}],292:[function(require,module,exports){
+},{}],294:[function(require,module,exports){
 (function (global){
 // Unique ID creation requires a high quality random # generator.  In the
 // browser this is a little complicated due to unknown quality of Math.random()
@@ -101125,7 +101567,7 @@ if (!rng) {
 module.exports = rng;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],293:[function(require,module,exports){
+},{}],295:[function(require,module,exports){
 var rng = require('./lib/rng');
 var bytesToUuid = require('./lib/bytesToUuid');
 
@@ -101227,7 +101669,7 @@ function v1(options, buf, offset) {
 
 module.exports = v1;
 
-},{"./lib/bytesToUuid":291,"./lib/rng":292}],294:[function(require,module,exports){
+},{"./lib/bytesToUuid":293,"./lib/rng":294}],296:[function(require,module,exports){
 var rng = require('./lib/rng');
 var bytesToUuid = require('./lib/bytesToUuid');
 
@@ -101258,7 +101700,7 @@ function v4(options, buf, offset) {
 
 module.exports = v4;
 
-},{"./lib/bytesToUuid":291,"./lib/rng":292}],295:[function(require,module,exports){
+},{"./lib/bytesToUuid":293,"./lib/rng":294}],297:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -101398,7 +101840,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":211}],296:[function(require,module,exports){
+},{"indexof":213}],298:[function(require,module,exports){
 // Base58 encoding/decoding
 // Originally written by Mike Hearn for BitcoinJ
 // Copyright (c) 2011 Google Inc
@@ -101456,7 +101898,7 @@ exports.createContext = Script.createContext = function (context) {
 })(typeof module !== 'undefined' && typeof module.exports !== 'undefined');
 
 
-},{}],297:[function(require,module,exports){
+},{}],299:[function(require,module,exports){
 (function (isNode) {
     var jsSHA = isNode ? require('jssha') : window.jsSHA;
 
@@ -101492,7 +101934,7 @@ exports.createContext = Script.createContext = function (context) {
         window.WAValidator.__imports.cryptoUtils = cryptoUtils;
     }
 })(typeof module !== 'undefined' && typeof module.exports !== 'undefined');
-},{"jssha":216}],298:[function(require,module,exports){
+},{"jssha":218}],300:[function(require,module,exports){
 (function (isNode) {
     // defines P2PKH and P2SH address types for standard (prod) and testnet networks
     var CURRENCIES = [{
@@ -101565,7 +102007,7 @@ exports.createContext = Script.createContext = function (context) {
         window.WAValidator.__imports.currencies = currencies;
     }
 })(typeof module !== 'undefined' && typeof module.exports !== 'undefined');
-},{}],299:[function(require,module,exports){
+},{}],301:[function(require,module,exports){
 (function (isNode) {
     var base58, cryptoUtils, currencies;
 
@@ -101635,4 +102077,4 @@ exports.createContext = Script.createContext = function (context) {
 
 
 
-},{"./base58":296,"./crypto_utils":297,"./currencies":298}]},{},[48]);
+},{"./base58":298,"./crypto_utils":299,"./currencies":300}]},{},[48]);

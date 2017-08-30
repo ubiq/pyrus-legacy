@@ -50,7 +50,7 @@
       
       <div class="tagline">
 
-        <span>3.10.1.5</span>
+        <span>3.10.2.6</span>
 
 
         <span class="dropdown dropdown-lang" ng-cloak>
@@ -1628,7 +1628,7 @@ Rate: {{swapOrder.swapRate}} {{swapOrder.swapPair}}</textarea>
 
 
 
-    <main class="tab-pane active" ng-if="globalService.currentTab==globalService.tabs.offlineTransaction.id" ng-controller='offlineTxCtrl' ng-cloak style="max-width:1000px; margin: auto">
+    <main class="tab-pane active" ng-if="globalService.currentTab==globalService.tabs.offlineTransaction.id" ng-controller='offlineTxCtrl' ng-cloak>
 
   <h1 translate="OFFLINE_Title"> Generate & Send Offline Transaction </h1>
 
@@ -1797,31 +1797,34 @@ Rate: {{swapOrder.swapRate}} {{swapOrder.swapPair}}</textarea>
   <section class="col-xs-12 clearfix">
     <a class="btn btn-info" ng-click="generateTx()" translate="SEND_generate">Generate Signed Transaction</a>
   </section>
-  <section class="col-sm-5 clearfix">
+  <section class="col-sm-6 clearfix">
     <label translate="SEND_raw"> Raw Transaction </label>
     <textarea class="form-control" placeholder="" readonly="readonly" rows="5" ng-model="rawTx"></textarea>
   </section>
-  <section class="col-sm-5 clearfix">
+  <section class="col-sm-6 clearfix">
     <label translate="SEND_signed"> Signed Transaction </label>
     <textarea class="form-control" placeholder="" readonly="readonly" rows="5" ng-model="signedTx"></textarea>
-  </section>
-  <section class="col-sm-2 cleafix">
-    <div class="qr-code" qr-code="{{signedTx}}" watch-var="signedTx" width="100%"></div>
   </section>
 </article>
  
 
   
-   <article class="block">
+   <article class="row block">
 
-  <h2 translate="OFFLINE_Step3_Title"> Step 3: Send / Publish Transaction </h2>
+  <div class="col-xs-12">
+    <h2 translate="OFFLINE_Step3_Title"> Step 3: Send / Publish Transaction </h2>
+  </div>
 
-  <p translate="OFFLINE_Step3_Label_1"> Paste the signed transaction from Step 2 </p>
+  <div class="col-sm-6 col-xs-12">
+    <p translate="OFFLINE_Step3_Label_1"> Paste the signed transaction from Step 2 </p>
+    <label translate="SEND_signed"> Signed Transaction </label>
+    <textarea class="form-control" rows="7" ng-model="signedTx"></textarea>
+    <a class="btn btn-primary" ng-click="confirmSendTx()" translate="SEND_trans">SEND TRANSACTION</a>
+  </div>
 
-  <label translate="SEND_signed"> Signed Transaction </label>
-  <textarea class="form-control" rows="3" ng-model="signedTx"></textarea>
-
-  <a class="btn btn-primary" ng-click="confirmSendTx()" translate="SEND_trans">SEND TRANSACTION</a>
+  <div class="col-sm-6 col-xs-12">
+    <div class="qr-code" qr-code="{{signedTx}}" watch-var="signedTx" width="100%" style="  max-width: 20rem; margin: 1rem auto;"></div>
+  </div>
 
 </article>
  
@@ -2717,9 +2720,9 @@ Rate: {{swapOrder.swapRate}} {{swapOrder.swapPair}}</textarea>
   <article class="block__wrap" style="max-width: 1780px; margin: auto;">
 
     <section class="footer--left">
-
-      <a href="/"><img src="images/logo-myetherwallet.svg" height="45px" width="auto" alt="Ubiq Wallet" class="footer--logo"/></a>
-
+      <div class="well well-sm well-notopmargin">
+        <a href="/"><img src="images/logo-myetherwallet.svg" height="45px" width="auto" alt="Ubiq Wallet" class="footer--logo"/></a>
+      </div>
       <p><span translate="FOOTER_1">Free, open-source, client-side interface for generating Ubiq wallets &amp; more. Interact with the Ubiq blockchain easily &amp; securely. Double-check the URL ( .com ) before unlocking your wallet.</span></p>
 
       <p><a aria-label="knowledge base" href="https://myetherwallet.groovehq.com/help_center" target="_blank" rel="noopener" role="link" tabindex="0">
@@ -2739,7 +2742,6 @@ Rate: {{swapOrder.swapRate}} {{swapOrder.swapPair}}</textarea>
     </section>
 
     <section class="footer--cent">
-
         <h5> <i aria-hidden="true">👫</i> You can support us by supporting our blockchain-family.</h5>
         <p>Consider using MEW affiliate links to...</p>
         <p><a href="https://www.ledgerwallet.com/r/fa4b?path=/products/" target="_blank" rel="noopener">Buy a Ledger Wallet</a></p>

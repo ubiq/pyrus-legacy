@@ -6,7 +6,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     $scope.customNodeModal = document.getElementById('customNodeModal') ? new Modal(document.getElementById('customNodeModal')) : null;
     $scope.Validator = Validator;
     $scope.nodeList = nodes.nodeList;
-    $scope.defaultNodeKey = 'ubq_pyrus';
+    $scope.defaultNodeKey = 'ubq_us';
     $scope.customNode = { options: 'ubq', name: '', url: '', port: '', httpBasicAuth: null, eip155: true, chainId: '8' };
     $scope.customNodeCount = 0;
     $scope.nodeIsConnected = true;
@@ -41,7 +41,7 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
             curVal: 21,
             value: globalFuncs.localStorage.getItem(gasPriceKey, null) ? parseInt(globalFuncs.localStorage.getItem(gasPriceKey)) : 21,
             max: 60,
-            min: 1
+            min: 20
         }
         ethFuncs.gasAdjustment = $scope.gas.value;
     }
@@ -94,12 +94,12 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     $scope.addCustomNodeToList = function(nodeInfo) {
         var tempObj = null;
 
-        if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.ubq_pyrus));
-        else if (nodeInfo.options == 'eth') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.eth_ethscan));
-        else if (nodeInfo.options == 'etc') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.etc_epool));
+        if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.ubq_us));
+        else if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.eth_eu));
+        /*else if (nodeInfo.options == 'etc') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.etc_epool));
         else if (nodeInfo.options == 'rop') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rop_mew));
         else if (nodeInfo.options == 'kov') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.kov_ethscan));
-        else if (nodeInfo.options == 'rin') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rin_ethscan));
+        else if (nodeInfo.options == 'rin') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rin_ethscan));*/
         else if (nodeInfo.options == 'cus') {
             tempObj = JSON.parse(JSON.stringify(nodes.customNodeObj));
             tempObj.eip155 = nodeInfo.eip155;
