@@ -150,7 +150,7 @@ MNEM_prev                   : 'Previous Addresses ',
 /* Hardware wallets */
 x_Ledger                    : 'Ledger Wallet ',
 ADD_Ledger_1                : 'Connect your Ledger Wallet ',
-ADD_Ledger_2                : 'Open the Ethereum application (or a contract application) ',
+ADD_Ledger_2                : 'Open the Ubiq application (or a contract application) ',
 ADD_Ledger_3                : 'Verify that Browser Support is enabled in Settings ',
 ADD_Ledger_4                : 'If no Browser Support is found in settings, verify that you have [Firmware >1.2](https://www.ledgerwallet.com/apps/manager) ',
 ADD_Ledger_0a               : 'You must access Pyrus via a secure (SSL / HTTPS) connection to connect. ',
