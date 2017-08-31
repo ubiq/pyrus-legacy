@@ -33,7 +33,7 @@
 
     <section class="footer--cent">
         <h5> <i aria-hidden="true">👫</i> You can support us by supporting our blockchain-family.</h5>
-        <p>Consider using MEW affiliate links to...</p>
+        <p>Consider using affiliate links to...</p>
         <p><a href="https://www.ledgerwallet.com/r/fa4b?path=/products/" target="_blank" rel="noopener">Buy a Ledger Wallet</a></p>
 
         <h5><i aria-hidden="true">💝</i> Donations are always appreciated!</h5>
