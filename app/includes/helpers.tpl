@@ -1,6 +1,6 @@
 <div class="" ng-controller="helpersCtrl">
-  <h1> Convert Ethererum Units (e.g. Ether <-> Wei) </h1>
-  <h2 class="p"> Ether Wei Converter </h2>
+  <h1> Convert Ubiq Units (e.g. Ubiq <-> Wei) </h1>
+  <h2 class="p">Unit Converter </h2>
   <section class="mono">
     <div class="input-group form-group">
       <input class="form-control" type="text" ng-model="units.wei" ng-change="convertUnit('wei')" />
@@ -41,7 +41,7 @@
     <div class="input-group form-group">
       <input class="form-control" type="text" ng-model="units.ether" ng-change="convertUnit('ether')" />
       <div class="input-group-btn">
-        <a class="btn btn-primary" style="min-width: 170px;"> ether </a>
+        <a class="btn btn-primary" style="min-width: 170px;"> ubiq <small>(ether)</small> </a>
       </div>
     </div>
     <div class="input-group form-group">
@@ -72,7 +72,7 @@
 
   <br /><br /><br />
 
-  <h1> ENS Debugger & Data Grabber </h1>
+  <!--<h1> ENS Debugger & Data Grabber </h1>
   <h2 class="p">Ethereum Name Service Data String Generator</h2>
   <p class="text-danger"> This is meant to be a helpful tool for debugging and checking and generating manual reveals when necessary. Use at your own risk. There is no validation on these fields. </p>
 
@@ -169,7 +169,7 @@
   </section>
 
 
-  <br /><br /><br />
+  <br /><br /><br />-->
 
   <h1> Convert Decimal to Hexidecimal and Hex to Decimal </h1>
   <div class="form-group">
@@ -202,7 +202,7 @@
   <br /><br /><br />
 
 
-  <h1> Ether Unit Reference Guide </h1>
+  <h1> Unit Reference Guide </h1>
   <table class="table table-striped mono">
     <tr>
       <td><strong>wei</strong></td>
@@ -247,8 +247,8 @@
       <td>10<sup>15</sup></td>
     </tr>
     <tr>
-      <td><strong>ether</strong></td>
-      <td><small></small></td>
+      <td><strong>ubiq</strong></td>
+      <td><small>ether</small></td>
       <td>1000000000000000000</td>
       <td>1,000,000,000,000,000,000</td>
       <td>10<sup>18</sup></td>
