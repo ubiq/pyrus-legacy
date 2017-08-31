@@ -350,8 +350,8 @@
             Select HD derivation path:
           </h4>
 
-          <p class="alert alert-danger" ng-hide="ajaxReq.type=='ETH'||ajaxReq.type=='ETC'||ajaxReq.type=='ROPSTEN ETH'||ajaxReq.type=='RINKEBY ETH'||ajaxReq.type=='KOVAN ETH'||ajaxReq.type=='EXP'"> We do not know the correct path for this network. <a href="https://github.com/kvhnuke/etherwallet/issues" target="_blank" rel="noopener">Please open a github issue</a> so we can discuss / be enlightened.</p>
-          <section class="row">
+          <p class="alert alert-danger" ng-hide="ajaxReq.type=='UBQ'"> We do not know the correct path for this network.</p>
+          <!--<section class="row">
 
             <div class="col-sm-4">
               <label class="radio small">
@@ -398,9 +398,21 @@
               </label>
             </div>
 
-          </section>
+          </section>-->
 
           <section class="row">
+            <div class="col-sm-4">
+              <label class="radio small">
+                <input aria-describedby="Path: LEDGER (UBQ) {{HDWallet.defaultDPath}}"
+                       ng-change="onHDDPathChange()"
+                       ng-model="HDWallet.dPath"
+                       type="radio"
+                      value="{{HDWallet.defaultDPath}}"/>
+                <span ng-bind="HDWallet.defaultDPath"></span>
+                <p class="small">Ledger (UBQ) & Ubiq based tokens</p>
+              </label>
+            </div>
+
             <div class="col-sm-4">
               <label class="radio small">
               <p class="small"><strong>Your Custom Path</strong></p>
@@ -417,19 +429,7 @@
               </label>
             </div>
 
-            <div class="col-sm-4">
-              <label class="radio small">
-                <input aria-describedby="Path: TREZOR - TESTNET - {{HDWallet.trezorTestnetPath}}"
-                       ng-change="onHDDPathChange()"
-                       ng-model="HDWallet.dPath"
-                       type="radio"
-                      value="{{HDWallet.trezorTestnetPath}}"/>
-                <span ng-bind="HDWallet.trezorTestnetPath"></span>
-                <p class="small">Network: Testnets</p>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
+            <!--<div class="col-sm-4">
               <label class="radio small">
                 <input aria-describedby="Path: TREZOR (ETC) {{HDWallet.hwExpansePath}}"
                        ng-change="onHDDPathChange()"
@@ -439,7 +439,7 @@
                 <span ng-bind="HDWallet.hwExpansePath"></span>
                 <p class="small">Network: Expanse</p>
               </label>
-            </div>
+            </div>-->
           </section>
 
 

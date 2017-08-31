@@ -15,7 +15,7 @@ var decryptWalletCtrl = function($scope, $sce, walletService) {
         id: 0,
         hdk: null,
         dPath: '',
-        defaultDPath:      "m/44'/60'/0'/0",       // first address: m/44'/60'/0'/0/0
+        defaultDPath:      "m/44'/108'/0'/0",       // first address: m/44'/108'/0'/0/0
         alternativeDPath:  "m/44'/60'/0'",         // first address: m/44'/60'/0/0
         customDPath:       "m/44'/60'/1'/0",       // first address: m/44'/60'/1'/0/0
         ledgerPath:        "m/44'/60'/0'",         // first address: m/44'/60'/0/0
