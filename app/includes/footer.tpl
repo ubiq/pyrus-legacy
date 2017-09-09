@@ -65,13 +65,13 @@
         Github: Current Site &amp; CX
       </a></p>
 
-      <p><a aria-label="our organization on github" href="https://github.com/Ubiq" target="_blank" rel="noopener" role="link" tabindex="0">
+      <!--<p><a aria-label="our organization on github" href="https://github.com/Ubiq" target="_blank" rel="noopener" role="link" tabindex="0">
         Github: Ubiq
       </a></p>
 
       <p><a aria-label="download & run locally" href="https://github.com/ubiq/pyruswallet/releases/latest" target="_blank" rel="noopener" role="link" tabindex="0">
         Github: Latest Release
-      </a></p>
+      </a></p>-->
 
       <p><a aria-label="my ether wallet chrome extension" href="https://chrome.google.com/webstore/detail/pyrus-cx/kkllochpehlephblgmhibpmgmeagkbfa?hl=en" target="_blank" rel="noopener" role="link" tabindex="0">
         Pyrus CX
