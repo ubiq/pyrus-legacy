@@ -24,6 +24,12 @@
     "type":"default"
   },
   {
+    "address":"0x0826180A4c981d5095Cb5c48BB2A098A44cf6f73",
+    "symbol":"GRANS",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0x4b4899a10f3e507db207b0ee2426029efa168a67",
     "symbol":"QWARK",
     "decimal":8,
