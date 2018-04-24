@@ -24,6 +24,12 @@
     "type":"default"
   },
   {
+    "address":"0xcf3222b7fda7a7563b9e1e6c966bead04ac23c36",
+    "symbol":"ESCH",
+    "decimal":18,
+    "type":"default"
+  },
+  {
     "address":"0x500684ce0d4f04abedff3e54fcf8acc5e6cfc4bd",
     "symbol":"GEO",
     "decimal":8,
