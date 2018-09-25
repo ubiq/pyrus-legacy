@@ -23,8 +23,8 @@ nodes.customNodeObj = {
 nodes.nodeList = {
     'ubq_us': {
         'name': 'UBQ (US)',
-        'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
+        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
         'eip155': true,
         'chainId': 8,
@@ -36,8 +36,8 @@ nodes.nodeList = {
     },
     'ubq_eu': {
         'name': 'UBQ (EU)',
-        'blockExplorerTX': 'https://ubiqscan.io/en/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://ubiqscan.io/en/address/[[address]]',
+        'blockExplorerTX': 'https://ubiqscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ubiqscan.io/address/[[address]]',
         'type': nodes.nodeTypes.UBQ,
         'eip155': true,
         'chainId': 8,
