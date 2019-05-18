@@ -27,7 +27,7 @@
 <meta property="og:image" content="/images/myetherwallet-banner-fun.jpg" />
 <meta property="og:description" content="Pyrus: Open-Source & Client-Side Ubiq Wallet. Double-check the URL ( .com ) before unlocking your wallet." />
 <script type='application/ld+json'>{"@context":"http://schema.org","@type":"Organization","@id":"#organization","url":"https://pyrus.ubiqsmart.com/","name":"Pyrus",
-"logo":"https://pyrus.ubiqsmart.com/images/myetherwallet-logo-banner.png","description": "Pyrus: Open-Source & Client-Side Ubiq Wallet. Double-check the URL ( .com ) before unlocking your wallet.","sameAs":["https://pyrus.ubiqsmart.com","https://chrome.google.com/webstore/detail/myetherwallet-cx/nlbmnnijcnlegkjjpcfjclmcfggfefdm","https://twitter.com/ubiqsmart","https://medium.com/the-ubiq-report","https://github.com/ubiq/pyruswallet","https://github.com/Ubiq","https://github.com/ubiq/pyruswallet/releases/latest","https://ubiqsmart.slack.com/","https://www.reddit.com/r/Ubiq/"]}</script>
+"logo":"https://pyrus.ubiqsmart.com/images/myetherwallet-logo-banner.png","description": "Pyrus: Open-Source & Client-Side Ubiq Wallet. Double-check the URL ( .com ) before unlocking your wallet.","sameAs":["https://pyrus.ubiqsmart.com","https://chrome.google.com/webstore/detail/myetherwallet-cx/nlbmnnijcnlegkjjpcfjclmcfggfefdm","https://twitter.com/ubiqsmart","https://blog.ubiqsmart.com","https://github.com/ubiq/pyruswallet","https://github.com/Ubiq","https://github.com/ubiq/pyruswallet/releases/latest","https://discord.gg/HF6vEGF","https://www.reddit.com/r/Ubiq/"]}</script>
 </head>
 <body>
 <header class="{{curNode.name}} {{curNode.service}} {{curNode.service}} nav-index-{{gService.currentTab}}" aria-label="header" ng-controller='tabsCtrl' >

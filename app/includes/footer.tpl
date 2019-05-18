@@ -82,13 +82,13 @@
       </a></p>
 
       <p>
-        <a aria-label="join our slack" href="https://slack.ubiqsmart.com/" target="_blank" rel="noopener" role="link" tabindex="0">Slack</a>
+        <a aria-label="join our discord" href="https://discord.gg/HF6vEGF" target="_blank" rel="noopener" role="link" tabindex="0">Discord</a>
         &middot;
         <a aria-label="reddit" href="https://www.reddit.com/r/Ubiq/" target="_blank" rel="noopener" role="link" tabindex="0">Reddit</a>
         &middot;
         <a aria-label="twitter" href="https://twitter.com/ubiqsmart" target="_blank" rel="noopener" role="link" tabindex="0">Twitter</a>
         &middot;
-        <a aria-label="medium" href="https://medium.com/the-ubiq-report" target="_blank" rel="noopener" role="link" tabindex="0">Medium</a>
+        <a aria-label="medium" href="https://blog.ubiqsmart.com" target="_blank" rel="noopener" role="link" tabindex="0">Medium</a>
       </p>
 
 
