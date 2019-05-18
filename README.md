@@ -21,7 +21,7 @@
 - [Github Ubiq: https://github.com/Ubiq](https://github.com/Ubiq)
 - [Github Latest Releases: https://github.com/ubiq/pyruswallet/releases/latest](https://github.com/ubiq/pyruswallet/releases/latest)
 - [Github Anti-phish CX: https://github.com/409H/EtherAddressLookup](https://github.com/409H/EtherAddressLookup)
-- [Ubiq Discord: https://discord.gg/HF6vEGF] (https://discord.gg/HF6vEGF)
+- [Ubiq Discord: https://discord.gg/HF6vEGF](https://discord.gg/HF6vEGF)
 - [Reddit: https://www.reddit.com/r/Ubiq/](https://www.reddit.com/r/Ubiq/)
 -  The Ubiq Devs Donation Address: 0xE0F39621764F2540cd2bC3017DA041B1E4eEDCc2
 -  MyEtherWallet Donation Address: 0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8
