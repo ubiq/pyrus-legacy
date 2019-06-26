@@ -145,7 +145,7 @@ var signMsgCtrl = function($scope, $sce, walletService) {
             msg: thisMessage,
             sig: "0x" + combinedHex,
             version: "3",
-            signer: "MEW"
+            signer: "Pyrus"
           },
           null,
           2
