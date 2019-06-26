@@ -92,7 +92,7 @@
         </tr>
         <tr>
           <td>
-            <a class="account-help-icon" href="https://myetherwallet.groovehq.com/knowledge_base/topics/what-is-gas" target="_blank" rel="noopener">
+            <a class="account-help-icon" href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html" target="_blank" rel="noopener">
               <img src="images/icon-help.svg" class="help-icon" />
               <p class="account-help-text" translate="GAS_LIMIT_Desc"></p>
             </a>
@@ -102,7 +102,7 @@
         </tr>
         <tr>
           <td>
-            <a class="account-help-icon" href="https://myetherwallet.groovehq.com/knowledge_base/topics/what-is-gas" target="_blank" rel="noopener">
+            <a class="account-help-icon" href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html" target="_blank" rel="noopener">
               <img src="images/icon-help.svg" class="help-icon" />
               <p class="account-help-text" translate="GAS_PRICE_Desc"></p>
             </a>
@@ -115,7 +115,7 @@
 <!--
         <tr>
           <td>
-            <a class="account-help-icon" href="https://myetherwallet.groovehq.com/knowledge_base/topics/what-is-gas" target="_blank" rel="noopener">
+            <a class="account-help-icon" href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html" target="_blank" rel="noopener">
               <img src="images/icon-help.svg" class="help-icon" />
               <p class="account-help-text" translate="TXFEE_Desc"></p>
             </a>

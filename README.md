@@ -16,7 +16,7 @@
 - [Anti-phish CX](https://chrome.google.com/webstore/detail/etheraddresslookup/pdknmigbbbhmllnmgdfalmedcmcefdfn)
 - [Twitter: https://twitter.com/ubiqsmart](https://twitter.com/ubiqsmart)
 - [Medium: https://blog.ubiqsmart.com](https://blog.ubiqsmart.com)
-- [Help Center: https://myetherwallet.groovehq.com/help_center](https://myetherwallet.groovehq.com/help_center)
+- [Help Center: https://kb.myetherwallet.com](https://kb.myetherwallet.com)
 - [Github Pyrus Repo: https://github.com/ubiq/pyruswallet](https://github.com/ubiq/pyruswallet)
 - [Github Ubiq: https://github.com/Ubiq](https://github.com/Ubiq)
 - [Github Latest Releases: https://github.com/ubiq/pyruswallet/releases/latest](https://github.com/ubiq/pyruswallet/releases/latest)
