@@ -101,75 +101,6 @@ var signMsgCtrl = function($scope, $sce, walletService) {
           localCallback
         );
 
-        // Sign via BitBox
-      } else if (typeof hwType != "undefined" && hwType == "digitalBitbox") {
-        var msg = ethUtil.hashPersonalMessage(ethUtil.toBuffer(thisMessage));
-        var localCallback = function(signed, error) {
-          if (typeof error != "undefined") {
-            error = error.errorCode
-              ? u2f.getErrorByCode(error.errorCode)
-              : error;
-            $scope.notifier.danger(error);
-            return;
-          }
-          var combined = signed["r"] + signed["s"] + signed["v"];
-          var combinedHex = combined.toString("hex");
-          var signingAddr = $scope.wallet.getAddressString();
-          $scope.signMsg.signedMsg = JSON.stringify(
-            {
-              address: $scope.wallet.getAddressString(),
-              msg: thisMessage,
-              sig: "0x" + combinedHex,
-              version: "3",
-              signer: "digitalBitbox"
-            },
-            null,
-            2
-          );
-          $scope.notifier.success(
-            "Successfully Signed Message with " + signingAddr
-          );
-        };
-        $scope.notifier.info(
-          "Touch the LED for 3 seconds to sign the message. Or tap the LED to cancel."
-        );
-        var app = new DigitalBitboxEth($scope.wallet.getHWTransport(), "");
-        app.signMessage($scope.wallet.getPath(), msg, localCallback);
-
-        // Sign via Secalot
-      } else if (typeof hwType != "undefined" && hwType == "secalot") {
-        var localCallback = function(signed, error) {
-          if (typeof error != "undefined") {
-            error = error.errorCode
-              ? u2f.getErrorByCode(error.errorCode)
-              : error;
-            $scope.notifier.danger(error);
-            return;
-          }
-          var combined = signed["r"] + signed["s"] + signed["v"];
-          var combinedHex = combined.toString("hex");
-          var signingAddr = $scope.wallet.getAddressString();
-          $scope.signMsg.signedMsg = JSON.stringify(
-            {
-              address: $scope.wallet.getAddressString(),
-              msg: thisMessage,
-              sig: "0x" + combinedHex,
-              version: "3",
-              signer: "secalot"
-            },
-            null,
-            2
-          );
-          $scope.notifier.success(
-            "Successfully Signed Message with " + signingAddr
-          );
-        };
-        $scope.notifier.info(
-          "Tap a touch button on your device to confirm signing."
-        );
-        var app = new SecalotEth($scope.wallet.getHWTransport());
-        app.signMessage($scope.wallet.getPath(), thisMessage, localCallback);
-
         // Sign via trezor
       } else if (typeof hwType != "undefined" && hwType == "trezor") {
         TrezorConnect.ethereumSignMessage({
@@ -196,40 +127,6 @@ var signMsgCtrl = function($scope, $sce, walletService) {
             $scope.notifier.danger(response.error);
           }
         });
-
-        //================= Mew Connect (start)==============================
-      } else if (typeof hwType != "undefined" && hwType == "mewConnect") {
-        //TODO reset ui when rtc disconnects
-        // var msg = Buffer.from(thisMessage).toString("hex");
-        var connectApp = new MewConnectEth();
-        var mewConnect =globalFuncs.MEWconnectStatus.MEWconnect;
-        connectApp.setMewConnect(mewConnect);
-        mewConnect.on("signMessage", function(data) {
-          $scope.signMsg.signedMsg = JSON.stringify(
-            {
-              address: $scope.wallet.getAddressString(),
-              msg: thisMessage,
-              sig: data.sig,
-              version: "3",
-              signer: "MEW"
-            },
-            null,
-            2
-          );
-          $scope.notifier.success(
-            "Successfully Signed Message with " +
-              $scope.wallet.getAddressString()
-          );
-        });
-        var hashedMessage = ethUtil
-          .hashPersonalMessage(ethUtil.toBuffer(thisMessage))
-          .toString("hex");
-        connectApp.signMessage({
-          hash: hashedMessage,
-          text: thisMessage
-        });
-
-        //================= Mew Connect (end)==============================
 
         // Sign via PK
       } else {
@@ -304,11 +201,5 @@ var signMsgCtrl = function($scope, $sce, walletService) {
     $scope.visibility = str;
   };
 
-  $scope.reOpenDecryptWalletMEWconnect = function() {
-    $scope.wd = false;
-  };
-  globalFuncs.MEWconnectStatus.registerDecryptOpeners(
-    $scope.reOpenDecryptWalletMEWconnect.bind(this)
-  );
 };
 module.exports = signMsgCtrl;
