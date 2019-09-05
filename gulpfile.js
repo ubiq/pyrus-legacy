@@ -384,13 +384,13 @@ gulp.task('pushlive', gulp.series('getVersion', function() {
 // git push --tags
 // gulp pushlive ( git subtree push --prefix dist origin gh-pages )
 
-gulp.task('watchJS',      function() { gulp.watch(js_watchFolder,   ['js']            ) })
-gulp.task('watchJSDebug', function() { gulp.watch(js_watchFolder,   ['js-debug']      ) })
-gulp.task('watchJSProd',  function() { gulp.watch(js_watchFolder,   ['js-production'] ) })
-gulp.task('watchLess',    function() { gulp.watch(less_watchFolder, ['styles']        ) })
-gulp.task('watchPAGES',   function() { gulp.watch(htmlFiles,        ['html']          ) })
-gulp.task('watchTPL',     function() { gulp.watch(tplFiles,         ['html']          ) })
-gulp.task('watchCX',      function() { gulp.watch(cxSrcFiles,       ['copy']          ) })
+gulp.task('watchJS',      function() { gulp.watch(js_watchFolder,   gulp.series('js')            ) })
+gulp.task('watchJSDebug', function() { gulp.watch(js_watchFolder,   gulp.series('js-debug')      ) })
+gulp.task('watchJSProd',  function() { gulp.watch(js_watchFolder,   gulp.series('js-production') ) })
+gulp.task('watchLess',    function() { gulp.watch(less_watchFolder, gulp.series('styles')        ) })
+gulp.task('watchPAGES',   function() { gulp.watch(htmlFiles,        gulp.series('html')          ) })
+gulp.task('watchTPL',     function() { gulp.watch(tplFiles,         gulp.series('html')          ) })
+gulp.task('watchCX',      function() { gulp.watch(cxSrcFiles,       gulp.series('copy')          ) })
 
 gulp.task('bump',          function() { return bumpFunc( 'patch' ) });
 gulp.task('bump-patch',    function() { return bumpFunc( 'patch' ) });
