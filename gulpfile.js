@@ -131,9 +131,10 @@ function bundle_js_debug(bundler) {
 }
 
 
-gulp.task('js', function() {
+gulp.task('js', (done) => {
     let bundler = browserify(js_srcFile).transform(babelify).transform(html2js);
     bundle_js(bundler)
+    done();
 });
 
 gulp.task('js-production', function() {
@@ -175,7 +176,7 @@ let staticJSSrcFile = js_destFolderStatic + js_destFileStatic;
 let readMe = './README.md';
 
 
-gulp.task('copy', ['staticJS'], function() {
+gulp.task('copy', gulp.series('staticJS', function() {
     gulp.src(imgSrcFolder)
         .pipe(gulp.dest(dist + 'images'))
         .pipe(gulp.dest(dist_CX + 'images'));
@@ -206,7 +207,7 @@ gulp.task('copy', ['staticJS'], function() {
         .pipe(gulp.dest(dist_CX + 'browser_action'))
 
     .pipe(notify(onSuccess(' Copy ')))
-});
+}));
 
 
 
@@ -253,7 +254,7 @@ gulp.task('getVersion', function() {
 
 
 // zips dist folder
-gulp.task('zip', ['getVersion'], function() {
+gulp.task('zip', gulp.series('getVersion', function() {
     gulp.src(dist + '**/**/*')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(rename(function (path) {
@@ -267,7 +268,7 @@ gulp.task('zip', ['getVersion'], function() {
         .pipe(zip('./chrome-extension-' + versionNum + '.zip'))
         .pipe(gulp.dest('./releases/'))
         .pipe(notify(onSuccess('Zip CX ' + versionNum)))
-});
+}));
 
 
 function archive() {
@@ -304,7 +305,7 @@ function archive() {
 }
 
 
-gulp.task('travisZip', ['getVersion'], function() {
+gulp.task('travisZip', gulp.series('getVersion', function() {
     gulp.src(dist + '**/**/*')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(rename(function (path) {
@@ -318,7 +319,7 @@ gulp.task('travisZip', ['getVersion'], function() {
         .pipe(zip('./chrome-extension-' + versionNum + '.zip'))
         .pipe(gulp.dest('./deploy/'))
         .pipe(notify(onSuccess('Zip CX ' + versionNum)))
-});
+}));
 
 
 // add all
@@ -331,50 +332,50 @@ gulp.task('add', function() {
 });
 
 // commit with current v# in manifest
-gulp.task('commit', ['getVersion'], function() {
+gulp.task('commit', gulp.series('getVersion', function() {
     return gulp.src('*.js', { read: false })
         .pipe(shell([
             'git commit -m "Rebuilt and cleaned everything. Done for now."'
         ]))
         .pipe(notify(onSuccess('Commit')))
-});
+}));
 
 // commit with current v# in manifest
-gulp.task('commitV', ['getVersion'], function() {
+gulp.task('commitV', gulp.series('getVersion', function() {
     return gulp.src('*.js', { read: false })
         .pipe(shell([
             'git commit -m " ' + versionMsg + ' "'
         ]))
         .pipe(notify(onSuccess('Commit w ' + versionMsg)))
-});
+}));
 
 // tag with current v# in manifest
-gulp.task('tag', ['getVersion'], function() {
+gulp.task('tag', gulp.series('getVersion', function() {
     return gulp.src('*.js', { read: false })
         .pipe(shell([
             'git tag -a ' + versionNum + ' -m " ' + versionMsg + '"'
         ]))
         .pipe(notify(onSuccess('Tagged Commit' + versionMsg)))
-});
+}));
 
 // Push Release to Mercury
-gulp.task('push', ['getVersion'], function() {
+gulp.task('push', gulp.series('getVersion', function() {
     return gulp.src('*.js', { read: false })
         .pipe(shell([
             'git push origin mercury ' + versionNum
         ]))
         .pipe(notify(onSuccess('Push')))
-});
+}));
 
 // Push Live
 // Pushes dist folder to gh-pages branch
-gulp.task('pushlive', ['getVersion'], function() {
+gulp.task('pushlive', gulp.series('getVersion', function() {
     return gulp.src('*.js', { read: false })
         .pipe(shell([
             'git subtree push --prefix dist origin gh-pages'
         ]))
         .pipe(notify(onSuccess('Push Live')))
-});
+}));
 
 // Prep & Release
 // gulp prep
@@ -405,10 +406,10 @@ gulp.task('zipit',  function(cb) { runSequence('clean', 'zip', cb);             
 
 gulp.task('commit', function(cb) { runSequence('add', 'commitV', 'tag', cb);                   });
 
-gulp.task('watch',     ['watchJS',     'watchLess', 'watchPAGES', 'watchTPL', 'watchCX'])
-gulp.task('watchProd', ['watchJSProd', 'watchLess', 'watchPAGES', 'watchTPL', 'watchCX'])
+gulp.task('watch',     gulp.series('watchJS',     'watchLess', 'watchPAGES', 'watchTPL', 'watchCX'))
+gulp.task('watchProd', gulp.series('watchJSProd', 'watchLess', 'watchPAGES', 'watchTPL', 'watchCX'))
 
-gulp.task('build', ['js', 'html', 'styles', 'copy']);
-gulp.task('build-debug', ['js-debug', 'html', 'styles', 'watchJSDebug', 'watchLess', 'watchPAGES', 'watchTPL', 'watchCX'])
+gulp.task('build', gulp.series('js', 'html', 'styles', 'copy'));
+gulp.task('build-debug', gulp.series('js-debug', 'html', 'styles', 'watchJSDebug', 'watchLess', 'watchPAGES', 'watchTPL', 'watchCX'))
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', gulp.series('build', 'watch'));

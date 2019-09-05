@@ -19,7 +19,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.3.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-bump": "^2.7.0",
     "gulp-clean": "^0.3.2",
@@ -39,7 +39,7 @@
     "trezor-connect": "^7.0.1",
     "u2f-api": "^1.0.8",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
+    "vinyl-source-stream": "^2.0.0",
     "xss-filters": "^1.2.7"
   },
   "devDependencies": {
