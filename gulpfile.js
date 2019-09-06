@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const archiver     = require('archiver');
 const bump         = require('gulp-bump');
 const babelify     = require('babelify');
@@ -8,12 +8,13 @@ const browserify   = require('browserify');
 const buffer       = require('vinyl-buffer');
 const clean        = require('gulp-clean');
 const concat       = require('gulp-concat');
-const cssnano      = require('gulp-cssnano');
+const cssnano      = require('cssnano');
 const fileinclude  = require('gulp-file-include');
 const gulp         = require('gulp');
 const less         = require('gulp-less');
 const notify       = require('gulp-notify');
 const plumber      = require('gulp-plumber' );
+const postcss      = require('gulp-postcss' );
 const rename       = require('gulp-rename');
 const runSequence  = require('run-sequence');
 const shell        = require('gulp-shell');
@@ -80,14 +81,17 @@ let less_destFile = 'etherwallet-master.css';
 let less_destFileMin = 'etherwallet-master.min.css';
 
 gulp.task('styles', function() {
+    var plugins = [
+        autoprefixer({ remove: false }),
+        cssnano({ autoprefixer: false, safe: true })
+    ];
     return gulp.src(less_srcFile)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(less({ compress: false }))
-        .pipe(autoprefixer({ browsers: ['last 4 versions', 'iOS > 7'], remove: false }))
         .pipe(rename(less_destFile))
         //.pipe( gulp.dest   (  less_destFolder                                         )) // unminified css
         //.pipe( gulp.dest   (  less_destFolder_CX                                      )) // unminified css
-        .pipe(cssnano({ autoprefixer: false, safe: true }))
+        .pipe(postcss(plugins))
         .pipe(rename(less_destFileMin))
         .pipe(gulp.dest(less_destFolder))
         .pipe(gulp.dest(less_destFolder_CX))
