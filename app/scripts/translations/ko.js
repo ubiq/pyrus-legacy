@@ -81,7 +81,6 @@ NAV_Offline                 : '오프라인 전송 ',
 NAV_SendEther               : '이더리움 & 토큰 전송 ',
 NAV_SendTokens              : '토큰 전송 ',
 NAV_SignMsg                 : '메세지 서명 ',
-NAV_Swap                    : '교환 ',
 NAV_ViewWallet              : '지갑 정보 보기 ',
 NAV_YourWallets             : '내 지갑 ',
 
@@ -301,28 +300,6 @@ NODE_Warning                : 'MyEtherWallet.com을 통해 연결하기 위해�
 NODE_Name                   : '노드 명 ',
 NODE_Port                   : '노드 포트 ',
 NODE_CTA                    : '커스텀 노드 저장 또는 사용 ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "현재 시세 ",
-SWAP_init_1                 : "환전하실 ",
-SWAP_init_2                 : "에서 ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "진행합니다! ", // or "Continue"
-SWAP_information            : "당신의 정보 ",
-SWAP_send_amt               : "전송량 ",
-SWAP_rec_amt                : "수신량 ",
-SWAP_your_rate              : "당신의 비율 ",
-SWAP_rec_add                : "당신의 받는 주소 ",
-SWAP_start_CTA              : "교환 시작 ",
-SWAP_ref_num                : "참조 번호 ",
-SWAP_time                   : "남은 전송 시간 ",
-SWAP_elapsed                : "전송 시간 경과 ",
-SWAP_progress_1             : "주문 개시 ",
-SWAP_progress_2             : "기다리는 중… : ", // Waiting for your BTC...
-SWAP_progress_3             : "수신 완료! ", // ETH Received!
-SWAP_progress_4             : "{{order Result.output,currency}} 전송하는 중 ",
-SWAP_progress_5             : "주문 완료 ",
-SWAP_order_CTA              : "전송해주세요 : ", // Please send 1 ETH...
-SWAP_unlock                 : "ETH 또는 토큰을 이 페이지에서 바로 전송하기 위해 당신의 지갑 비밀번호를 해제해주세요. ",
 
 /* Sign Message */
 MSG_message                 : '메세지 ',

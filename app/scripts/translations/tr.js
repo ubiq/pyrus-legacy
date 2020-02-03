@@ -84,7 +84,6 @@ NAV_Offline                 : 'Offline gönder ',
 NAV_SendEther               : 'Ether ve Tokens gönder ',
 NAV_SendTokens              : 'Tokens gönder ',
 NAV_SignMsg                 : 'Mesajı Doğrula ',
-NAV_Swap                    : 'Çevir ',
 NAV_ViewWallet              : 'Cüzdan bilgilerni göster ',
 NAV_YourWallets             : 'Cüzdanin ',
 
@@ -294,28 +293,6 @@ CONTRACT_Interact_CTA       : 'Select a function ',
 CONTRACT_ByteCode           : 'Byte Code ',
 CONTRACT_Read               : 'OKU ',
 CONTRACT_Write              : 'YAZ ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Güncel Fiyatlar ",
-SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Let's do this! ", // or "Continue"
-SWAP_information            : "Bilgilerin ",
-SWAP_send_amt               : "Gönderilecek miktar ",
-SWAP_rec_amt                : "Alınacak miktar ",
-SWAP_your_rate              : "Oran ",
-SWAP_rec_add                : "Alınan Adres ",
-SWAP_start_CTA              : "Start Swap ",
-SWAP_ref_num                : "Your reference number ",
-SWAP_time                   : "Time remaining to send ",
-SWAP_elapsed				        : "Time elapsed since sent ",
-SWAP_progress_1             : "Order Initiated ",
-SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // ETH Received!
-SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Order Complete ",
-SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock your wallet to send ETH or Tokens directly from this page. ",
 
 /* Sign Message */
 MSG_message                 : 'Mesaj ',

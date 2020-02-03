@@ -85,7 +85,6 @@ NAV_Offline                 : 'オフライン送出 ',
 NAV_SendEther               : 'Ether/トークンの送出 ',
 NAV_SendTokens              : 'トークン送出 ',
 NAV_SignMsg                 : 'メッセージ署名 ',
-NAV_Swap                    : '通貨の両替 ',
 NAV_ViewWallet              : 'お財布情報を見る ',
 NAV_YourWallets             : '自分のお財布 ',
 
@@ -322,28 +321,6 @@ NODE_Warning                : 'MyEtherWallet.com 経由で接続するために�
 NODE_Name                   : 'ノード名',
 NODE_Port                   : 'ノードポート',
 NODE_CTA                    : '保存してカスタムノードを使用',
-
-/* Swap / Exchange */
-SWAP_rates                  : "現在のレート ",
-SWAP_init_1                 : "これから両替で ",
-SWAP_init_2                 : " を ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "次へ ", // or "Continue"
-SWAP_information            : "あなたの情報 ",
-SWAP_send_amt               : "送出総額 ",
-SWAP_rec_amt                : "受け取り総額 ",
-SWAP_your_rate              : "変換レート ",
-SWAP_rec_add                : "受け取りアドレス ",
-SWAP_start_CTA              : "交換開始 ",
-SWAP_ref_num                : "参照番号 ",
-SWAP_time                   : "送出するまでにあと、 ",
-SWAP_elapsed				        : "Time elapsed since sent ", 
-SWAP_progress_1             : "注文を開始しました ",
-SWAP_progress_2             : "到着待機中 ", // Waiting for your BTC...
-SWAP_progress_3             : "ETH受け取り完了 ", // ETH Received!
-SWAP_progress_4             : "送出中 {{orderResult.output.currency}} ",
-SWAP_progress_5             : "注文完了 ",
-SWAP_order_CTA              : "お送りいただきたいのは ", // Please send 1 ETH...
-SWAP_unlock                 : "このページから直接ETHあるいはトークンを送出するためには、お財布を解錠してください。",
 
 /* Sign Message */
 MSG_message                 : 'メッセージ ',

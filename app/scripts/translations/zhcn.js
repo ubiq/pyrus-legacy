@@ -84,7 +84,6 @@ NAV_Offline                 : '离线发送 ',
 NAV_SendEther               : '发送以太币 / 发送代币 ', //combined these tabs
 NAV_SendTokens              : 'Send Tokens ',
 NAV_SignMsg                 : 'Sign Message ',
-NAV_Swap                    : 'Swap ',
 NAV_ViewWallet              : '查看钱包信息 ',
 NAV_YourWallets             : '你的钱包 ',
 
@@ -304,28 +303,6 @@ CONTRACT_Interact_CTA       : 'Select a function ',
 CONTRACT_ByteCode           : 'Byte Code ',
 CONTRACT_Read               : 'READ ',
 CONTRACT_Write              : 'WRITE ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Current Rates ",
-SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Let's do this! ", // or "Continue"
-SWAP_information            : "Your Information ",
-SWAP_send_amt               : "Amount to send ",
-SWAP_rec_amt                : "Amount to receive ",
-SWAP_your_rate              : "Your rate ",
-SWAP_rec_add                : "Your Receiving Address ",
-SWAP_start_CTA              : "Start Swap ",
-SWAP_ref_num                : "Your reference number ",
-SWAP_time                   : "Time remaining to send ",
-SWAP_elapsed				        : "Time elapsed since sent ",
-SWAP_progress_1             : "Order Initiated ",
-SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // ETH Received!
-SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Order Complete ",
-SWAP_order_CTA              : "Please send ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock your wallet to send ETH or Tokens directly from this page. ",
 
 /* Sign Message */
 MSG_message                 : 'Message ',

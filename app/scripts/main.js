@@ -51,8 +51,6 @@ var ethFuncs = require("./ethFuncs");
 window.ethFuncs = ethFuncs;
 var Validator = require("./validator");
 window.Validator = Validator;
-var bity = require("./bity");
-window.bity = bity;
 var ens = require("./ens");
 window.ens = ens;
 var translate = require("./translations/translate.js");
@@ -105,7 +103,6 @@ var decryptWalletCtrl = require("./controllers/decryptWalletCtrl");
 var viewWalletCtrl = require("./controllers/viewWalletCtrl");
 var txStatusCtrl = require("./controllers/txStatusCtrl");
 var sendTxCtrl = require("./controllers/sendTxCtrl");
-var swapCtrl = require("./controllers/swapCtrl");
 var signMsgCtrl = require("./controllers/signMsgCtrl");
 var contractsCtrl = require("./controllers/contractsCtrl");
 var ensCtrl = require("./controllers/ensCtrl");
@@ -197,7 +194,6 @@ app.controller("sendTxCtrl", [
   "$rootScope",
   sendTxCtrl
 ]);
-app.controller("swapCtrl", ["$scope", "$sce", "walletService", swapCtrl]);
 app.controller("signMsgCtrl", ["$scope", "$sce", "walletService", signMsgCtrl]);
 app.controller("contractsCtrl", [
   "$scope",

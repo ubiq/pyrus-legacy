@@ -82,7 +82,6 @@ NAV_Offline                 : 'Invia offline ',
 NAV_SendEther               : 'Invia ether e token ',
 NAV_SendTokens              : 'Invia token ',
 NAV_SignMsg                 : 'Firma messaggio ',
-NAV_Swap                    : 'Scambia ',
 NAV_ViewWallet              : 'Informazioni portafoglio ',
 NAV_YourWallets             : 'I tuoi portafogli ',
 
@@ -321,28 +320,6 @@ NODE_Warning                : 'Il tuo nodo deve utilizzare HTTPS per potertici c
 NODE_Name                   : 'Nome del nodo',
 NODE_Port                   : 'Porta del nodo',
 NODE_CTA                    : 'Salva & utilizza il nodo',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Tassi correnti ",
-SWAP_init_1                 : "Voglio scambiare i miei ",
-SWAP_init_2                 : " per ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Facciamolo! ", // or "Continue"
-SWAP_information            : "Il tuo riepilogo ",
-SWAP_send_amt               : "Importo da inviare ",
-SWAP_rec_amt                : "Importo da ricevere ",
-SWAP_your_rate              : "Il tuo tasso ",
-SWAP_rec_add                : "Indirizzo di ricezione ",
-SWAP_start_CTA              : "Avvia scambio ",
-SWAP_ref_num                : "Il tuo codice di riferimento ",
-SWAP_time                   : "Tempo rimanente per l\'invio ",
-SWAP_elapsed                : "Tempo trascorso dall\'invio ",
-SWAP_progress_1             : "Ordine creato ",
-SWAP_progress_2             : "In attesa dei tuoi ", // Waiting for your BTC...
-SWAP_progress_3             : "ricevuti! ", // ETH Received!
-SWAP_progress_4             : "Invio dei tuoi {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Ordine completato ",
-SWAP_order_CTA              : "Invia ", // Please send 1 ETH...
-SWAP_unlock                 : "Sblocca il tuo portafoglio per inviare ETH o token direttamente da questa pagina. ",
 
 /* Error Messages */
 ERROR_0                     : 'Ti preghiamo di inserire una quantità valida. ',

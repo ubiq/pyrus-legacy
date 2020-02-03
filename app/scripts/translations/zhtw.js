@@ -84,7 +84,6 @@ NAV_Offline                 : '離線發送 ',
 NAV_SendEther               : '發送乙太幣 / 代幣 ',
 NAV_SendTokens              : '發送代幣 ',
 NAV_SignMsg                 : '對訊息做簽名 ',
-NAV_Swap                    : 'Swap ',
 NAV_ViewWallet              : '查看錢包 ',
 NAV_YourWallets             : '你的錢包 ',
 
@@ -305,30 +304,7 @@ NODE_Name                   : '節點名稱',
 NODE_Port                   : '節點連線的端口號碼',
 NODE_CTA                    : '儲存設定並使用客製節點',
 
-/* Swap / Exchange */
-SWAP_rates                  : "當前的匯率 ",
-SWAP_init_1                 : "我想要用我的 ",
-SWAP_init_2                 : " 換 ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "下一步 ", // or "Continue"
-SWAP_information            : "你的相關資料 ",
-SWAP_send_amt               : "送出多少金額 ",
-SWAP_rec_amt                : "收入多少金額 ",
-SWAP_your_rate              : "你的匯率 ",
-SWAP_rec_add                : "你收錢的地址 ",
-SWAP_start_CTA              : "開始交換 ",
-SWAP_ref_num                : "你的交易編號 ",
-SWAP_time                   : "剩餘多少時間可送出交易 ",
-SWAP_elapsed                : "送出交易後已經經過了 ",
-SWAP_progress_1             : "訂單已產生 ",
-SWAP_progress_2             : "正在等待你的 ", // Waiting for your BTC...
-SWAP_progress_3             : "收到了! ", // ETH Received!
-SWAP_progress_4             : "正在傳送你的 {{orderResult.output.currency}} ",
-SWAP_progress_5             : "訂單完成 ",
-SWAP_order_CTA              : "請傳送 ", // Please send 1 ETH...
-SWAP_unlock                 : "解鎖你的錢包來從這個頁面轉錢或轉代幣 ",
-
-/* Sign Message */
-MSG_message                 : '訊息 ',
+/* Sign Message */ MSG_message                 : '訊息 ',
 MSG_date                    : '日期 ',
 MSG_signature               : '簽名 ',
 MSG_verify                  : '驗證訊息 ',
