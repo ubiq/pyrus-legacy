@@ -33,8 +33,8 @@ var tabs = {
   },
   swapRemoved: {
     id: 4,
-    name: "NAV_SwapRemoved",
-    url: "swapRemoved",
+    name: "",
+    url: "",
     mew: false,
     cx: false
   },
