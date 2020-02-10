@@ -19,7 +19,7 @@ const rename       = require('gulp-rename');
 const runSequence  = require('run-sequence');
 const shell        = require('gulp-shell');
 const source       = require('vinyl-source-stream');
-const uglify       = require('gulp-uglify');
+const terser       = require('gulp-terser');
 const zip          = require('gulp-zip');
 const html2js      = require('html2js-browserify');
 
@@ -117,6 +117,7 @@ function bundle_js(bundler) {
         .pipe(plumber({ errorHandler: onError }))
         .pipe(source('main.js'))
         .pipe(buffer())
+        .pipe(terser())
         .pipe(rename(js_destFile))
         .pipe(gulp.dest(js_destFolder))
         .pipe(gulp.dest(js_destFolder_CX))
@@ -162,7 +163,7 @@ gulp.task('staticJS', function() {
     return gulp.src(js_srcFilesStatic)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(concat(js_destFileStatic))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(gulp.dest(js_destFolderStatic))
         .pipe(notify(onSuccess('StaticJS')))
 });
