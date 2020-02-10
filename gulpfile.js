@@ -117,7 +117,6 @@ function bundle_js(bundler) {
         .pipe(plumber({ errorHandler: onError }))
         .pipe(source('main.js'))
         .pipe(buffer())
-        .pipe(terser())
         .pipe(rename(js_destFile))
         .pipe(gulp.dest(js_destFolder))
         .pipe(gulp.dest(js_destFolder_CX))
