@@ -80,7 +80,6 @@ NAV_Offline                 : 'Envoyer hors-ligne ',
 NAV_SendEther               : 'Envoyer des Ethers et des Tokens ',
 NAV_SendTokens              : 'Envoyer des tokens ',
 NAV_SignMsg                 : 'Signer un message ',
-NAV_Swap                    : 'Échange ',
 NAV_ViewWallet              : 'Visualiser un portefeuille ',
 NAV_YourWallets             : 'Vos portefeuilles ',
 
@@ -333,28 +332,6 @@ DEP_generate                : 'Générer le bytecode ',
 DEP_generated               : 'Bytecode généré ',
 DEP_signtx                  : 'Signer la transaction ',
 DEP_interface               : 'Interface générée ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Taux actuels ",
-SWAP_init_1                 : "Je veux échanger ",
-SWAP_init_2                 : " contre ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Allons-y ! ", // or "Continue"
-SWAP_information            : "Vos informations ",
-SWAP_send_amt               : "Montant à envoyer ",
-SWAP_rec_amt                : "Montant à recevoir ",
-SWAP_your_rate              : "Votre taux ",
-SWAP_rec_add                : "Votre adresse de réception ",
-SWAP_start_CTA              : "Commencer l\'échange ",
-SWAP_ref_num                : "Votre numéro de référence ",
-SWAP_time                   : "Temps restant pour l\'envoi ",
-SWAP_elapsed                : "Temps passé depuis l\'envoi ",
-SWAP_progress_1             : "Ordre déclenché ",
-SWAP_progress_2             : "En attente de vos ", // Waiting for your BTC...
-SWAP_progress_3             : "reçu ! ", // ETH Received!
-SWAP_progress_4             : "Envoi de vos {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Ordre exécuté ",
-SWAP_order_CTA              : "Envoyer ", // Please send 1 ETH...
-SWAP_unlock                 : "Déverrouillez votre portefeuille pour envoyer des ETH ou des tokens directement depuis cette page. ",
 
 /* Error Messages */
 ERROR_0                     : 'Veuillez entrer un montant valide. ',

@@ -84,7 +84,6 @@ NAV_Offline                 : 'Kirim Offline ',
 NAV_SendEther               : 'Kirim Ether dan Tokens ',
 NAV_SendTokens              : 'Kirim Token ',
 NAV_SignMsg                 : 'Penandaan Pesan ',
-NAV_Swap                    : 'Tukarkan ',
 NAV_ViewWallet              : 'Lihat Info Dompet ',
 NAV_YourWallets             : 'Dompet Anda ',
 
@@ -336,28 +335,6 @@ DEP_generate                : 'Buat Bytecode ',
 DEP_generated               : 'Bytecode yang dibuat ',
 DEP_signtx                  : 'Laksanakan Transaksi ',
 DEP_interface               : 'Interface yang dibuat ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Nilai Tukar yang berlaku ",
-SWAP_init_1                 : "Saya ingin menukar ",
-SWAP_init_2                 : " menjadi ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Lanjutkan! ", // or "Continue"
-SWAP_information            : "Informasi Anda ",
-SWAP_send_amt               : "Jumlah untuk dikirim ",
-SWAP_rec_amt                : "Jumlah untuk diterima ",
-SWAP_your_rate              : "Nilai tukar Anda ",
-SWAP_rec_add                : "Alamat penerima Anda ",
-SWAP_start_CTA              : "Tukarkan ",
-SWAP_ref_num                : "Nomor referensi Anda ",
-SWAP_time                   : "Sisa waktu untuk mengirim ",
-SWAP_elapsed				        : "Time elapsed since sent ",
-SWAP_progress_1             : "Perintah Dijalankan ",
-SWAP_progress_2             : "Menunggu ", // Waiting for your BTC...
-SWAP_progress_3             : "Diterima! ", // ETH Received!
-SWAP_progress_4             : "Mengirim {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Perintah Selesai ",
-SWAP_order_CTA              : "Kirimkan ", // Please send 1 ETH...
-SWAP_unlock                 : "Unlock wallet Anda untuk mengirim ETH atau Token langsung dari halaman ini. ",
 
 /* Error Messages */
 ERROR_0                     : 'Masukkan jumlah yang valid. ',

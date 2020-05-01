@@ -81,7 +81,6 @@ NAV_Offline                 : 'Send Offline ',
 NAV_SendEther               : 'Send Ether & Tokens ',
 NAV_SendTokens              : 'Send Tokens ',
 NAV_SignMsg                 : 'Signér Melding ',
-NAV_Swap                    : 'Veksling ',
 NAV_ViewWallet              : 'Vis lommebok-info ',
 NAV_YourWallets             : 'Dine lommebøker ',
 
@@ -306,28 +305,6 @@ DEP_generate                : 'Generer Bytecode ',
 DEP_generated               : 'Generert Bytecode ',
 DEP_signtx                  : 'Signer transaksjon ',
 DEP_interface               : 'Generer grensesnitt ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Aktuelle vekslingskurser ",
-SWAP_init_1                 : "Jeg vil veksle mine ",
-SWAP_init_2                 : " med ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Gjennomfør! ", // "Let's do this!" or "Continue"
-SWAP_information            : "Din informasjon ",
-SWAP_send_amt               : "Beløp som sendes ",
-SWAP_rec_amt                : "Beløp som mottas ",
-SWAP_your_rate              : "Din vekslingskurs ",
-SWAP_rec_add                : "Din mottakeradresse ",
-SWAP_start_CTA              : "Start byttet ",
-SWAP_ref_num                : "Ditt referansenummer ",
-SWAP_time                   : "Gjenstående tid til å sende ",
-SWAP_elapsed				        : "Time elapsed since sent ",
-SWAP_progress_1             : "Ordre initiert ",
-SWAP_progress_2             : "Venter på dine ", // Waiting for your BTC...
-SWAP_progress_3             : "Mottatt! ", // ETH Received!
-SWAP_progress_4             : "Sender dine {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Ordre fullført ",
-SWAP_order_CTA              : "Vennligst send ", // Please send 1 ETH...
-SWAP_unlock                 : "Lås opp din lommebok for å sende ETH eller Tokens direkte fra denne siden. ",
 
 /* My Wallet */
 MYWAL_Nick                  : 'Lommebok-kallenavn ',

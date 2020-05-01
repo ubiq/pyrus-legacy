@@ -47,12 +47,12 @@
       <h2 translate="GEN_Help_4">Guides &amp; FAQ</h2>
       <ul>
         <li><strong>
-          <a href="https://myetherwallet.groovehq.com/knowledge_base/topics/how-do-i-create-a-new-wallet" target="_blank" rel="noopener" translate="GEN_Help_5">
+          <a href="https://kb.myetherwallet.com/getting-started/creating-a-new-wallet-on-myetherwallet.html" target="_blank" rel="noopener" translate="GEN_Help_5">
             How to Create a Wallet
           </a>
         </strong></li>
         <li><strong>
-          <a href="https://myetherwallet.groovehq.com/knowledge_base/categories/getting-started-443" target="_blank" rel="noopener" translate="GEN_Help_6">
+          <a href="https://kb.myetherwallet.com/getting-started/getting-started-new.html" target="_blank" rel="noopener" translate="GEN_Help_6">
             Getting Started
           </a></strong></li>
       </ul>
@@ -151,7 +151,7 @@
         <li><a href="https://myetherwallet.groovehq.com/knowledge_base/topics/how-do-i-save-slash-backup-my-wallet" target="_blank" rel="noopener">
           <strong translate="HELP_2a_Title">How to Save & Backup Your Wallet.</strong>
         </a></li>
-        <li><a href="https://myetherwallet.groovehq.com/knowledge_base/topics/protecting-yourself-and-your-funds" target="_blank" rel="noopener">
+        <li><a href="https://kb.myetherwallet.com/en/getting-started/back-to-the-basics/" target="_blank" rel="noopener">
           <strong translate="GEN_Help_15">Preventing loss &amp; theft of your funds.</strong>
         </a></li>
         <li><a href="https://myetherwallet.groovehq.com/knowledge_base/topics/what-are-the-different-formats-of-a-private-key" target="_blank" rel="noopener">

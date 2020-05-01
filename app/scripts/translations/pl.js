@@ -81,7 +81,6 @@ NAV_Offline                 : 'Wyślij Offline ',
 NAV_SendEther               : 'Wyślij Ether i Tokeny ',
 NAV_SendTokens              : 'Wyślij Tokeny ',
 NAV_SignMsg                 : 'Podpisz Wiadomość ',
-NAV_Swap                    : 'Giełda ',
 NAV_ViewWallet              : 'Wyświetl informacje o portfelu ',
 NAV_YourWallets             : 'Twoje Portfele ',
 
@@ -335,28 +334,6 @@ CONTRACT_Interact_CTA       : 'Wybierz funkcję ',
 CONTRACT_ByteCode           : 'Kod Bajtowy ',
 CONTRACT_Read               : 'ODCZYTAJ ',
 CONTRACT_Write              : 'ZAPISZ ',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Aktualne Kursy ",
-SWAP_init_1                 : "Chcę wymienić ",
-SWAP_init_2                 : " na ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Zatwierdź! ", // or "Continue"
-SWAP_information            : "Dane transakcji ",
-SWAP_send_amt               : "Kwota zlecenia ",
-SWAP_rec_amt                : "Otrzymasz ",
-SWAP_your_rate              : "Kurs wymiany ",
-SWAP_rec_add                : "Twój Adres Odbiorczy ",
-SWAP_start_CTA              : "Rozpocznij Wymianę ",
-SWAP_ref_num                : "Twój numer referencyjny ",
-SWAP_time                   : "Pozostały czas na wysyłkę ",
-SWAP_elapsed				        : "Time elapsed since sent ",
-SWAP_progress_1             : "Zlecenie Rozpoczęte ",
-SWAP_progress_2             : "Oczekiwanie na Twoje ", // Waiting for your BTC...
-SWAP_progress_3             : "Otrzymano! ", // ETH Received!
-SWAP_progress_4             : "Wysyłanie Twoich {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Zlecenie Zakończone ",
-SWAP_order_CTA              : "Wyślij ", // Please send 1 ETH...
-SWAP_unlock                 : "Odblokuj Twój portfel, aby wysłać ETH lub Tokeny wprost z tej strony. ",
 
 /* Error Messages */
 ERROR_0                     : 'Wprowadź prawidłową kwotę. ',

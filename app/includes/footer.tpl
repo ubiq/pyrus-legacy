@@ -15,7 +15,7 @@
       </div>
       <p><span translate="FOOTER_1">Free, open-source, client-side interface for generating Ubiq wallets &amp; more. Interact with the Ubiq blockchain easily &amp; securely. Double-check the URL ( .com ) before unlocking your wallet.</span></p>
 
-      <p><a aria-label="knowledge base" href="https://myetherwallet.groovehq.com/help_center" target="_blank" rel="noopener" role="link" tabindex="0">
+      <p><a aria-label="knowledge base" href="https://kb.myetherwallet.com" target="_blank" rel="noopener" role="link" tabindex="0">
         Knowledge Base
       </a></p>
 
@@ -40,9 +40,6 @@
         <p>Pyrus is based on MyEtherWallet, and is developed/maintained by the Ubiq development team. You can support Pyrus or the MEW devs by donating UBQ or ETH.</p>
         <p>The Ubiq Devs: <span class="mono wrap"><small>0xE0F39621764F2540cd2bC3017DA041B1E4eEDCc2</small></span></p>
         <p>MyEtherWallet: <span class="mono wrap"><small>0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8</small></span></p>
-        <!--
-        <p>MYD: <span class="mono wrap">mewsupport.eth <small>0xf7e983781609012307f2514f63D526D83D24F466</small></span></p>
-        -->
 
         <h5 ng-hide="curLang=='en'"> <i>🏅</i> <span translate="Translator_Desc"> Thank you to our translators </span></h5>
         <p ng-hide="curLang=='en'">
@@ -62,33 +59,17 @@
       </a></p>
 
       <p><a aria-label="Pyrus github" href="https://github.com/ubiq/pyruswallet" target="_blank" rel="noopener" role="link" tabindex="0">
-        Github: Current Site &amp; CX
-      </a></p>
-
-      <!--<p><a aria-label="our organization on github" href="https://github.com/Ubiq" target="_blank" rel="noopener" role="link" tabindex="0">
-        Github: Ubiq
-      </a></p>
-
-      <p><a aria-label="download & run locally" href="https://github.com/ubiq/pyruswallet/releases/latest" target="_blank" rel="noopener" role="link" tabindex="0">
-        Github: Latest Release
-      </a></p>-->
-
-      <p><a aria-label="my ether wallet chrome extension" href="https://chrome.google.com/webstore/detail/pyrus-cx/kkllochpehlephblgmhibpmgmeagkbfa?hl=en" target="_blank" rel="noopener" role="link" tabindex="0">
-        Pyrus CX
-      </a></p>
-
-      <p><a aria-label="Anti-Phishing chrome extension" href="https://chrome.google.com/webstore/detail/etheraddresslookup/pdknmigbbbhmllnmgdfalmedcmcefdfn" target="_blank" rel="noopener" role="link" tabindex="0">
-        Anti-Phishing CX
+        Github: Current Site
       </a></p>
 
       <p>
-        <a aria-label="join our slack" href="https://slack.ubiqsmart.com/" target="_blank" rel="noopener" role="link" tabindex="0">Slack</a>
+        <a aria-label="join our discord" href="https://discord.gg/XaqzJB4" target="_blank" rel="noopener" role="link" tabindex="0">Discord</a>
         &middot;
         <a aria-label="reddit" href="https://www.reddit.com/r/Ubiq/" target="_blank" rel="noopener" role="link" tabindex="0">Reddit</a>
         &middot;
         <a aria-label="twitter" href="https://twitter.com/ubiqsmart" target="_blank" rel="noopener" role="link" tabindex="0">Twitter</a>
         &middot;
-        <a aria-label="medium" href="https://medium.com/the-ubiq-report" target="_blank" rel="noopener" role="link" tabindex="0">Medium</a>
+        <a aria-label="medium" href="https://blog.ubiqsmart.com" target="_blank" rel="noopener" role="link" tabindex="0">Medium</a>
       </p>
 
 

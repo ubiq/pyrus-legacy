@@ -50,5 +50,4 @@ nodes.nodeList = {
 };
 
 
-nodes.ethPrice = require('./nodeHelpers/ethPrice');
 module.exports = nodes;

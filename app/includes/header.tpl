@@ -27,14 +27,14 @@
 <meta property="og:image" content="/images/myetherwallet-banner-fun.jpg" />
 <meta property="og:description" content="Pyrus: Open-Source & Client-Side Ubiq Wallet. Double-check the URL ( .com ) before unlocking your wallet." />
 <script type='application/ld+json'>{"@context":"http://schema.org","@type":"Organization","@id":"#organization","url":"https://pyrus.ubiqsmart.com/","name":"Pyrus",
-"logo":"https://pyrus.ubiqsmart.com/images/myetherwallet-logo-banner.png","description": "Pyrus: Open-Source & Client-Side Ubiq Wallet. Double-check the URL ( .com ) before unlocking your wallet.","sameAs":["https://pyrus.ubiqsmart.com","https://chrome.google.com/webstore/detail/myetherwallet-cx/nlbmnnijcnlegkjjpcfjclmcfggfefdm","https://twitter.com/ubiqsmart","https://medium.com/the-ubiq-report","https://github.com/ubiq/pyruswallet","https://github.com/Ubiq","https://github.com/ubiq/pyruswallet/releases/latest","https://ubiqsmart.slack.com/","https://www.reddit.com/r/Ubiq/"]}</script>
+"logo":"https://pyrus.ubiqsmart.com/images/myetherwallet-logo-banner.png","description": "Pyrus: Open-Source & Client-Side Ubiq Wallet. Double-check the URL ( .com ) before unlocking your wallet.","sameAs":["https://pyrus.ubiqsmart.com","https://chrome.google.com/webstore/detail/myetherwallet-cx/nlbmnnijcnlegkjjpcfjclmcfggfefdm","https://twitter.com/ubiqsmart","https://blog.ubiqsmart.com","https://github.com/ubiq/pyruswallet","https://github.com/Ubiq","https://github.com/ubiq/pyruswallet/releases/latest","https://discord.gg/HF6vEGF","https://www.reddit.com/r/Ubiq/"]}</script>
 </head>
 <body>
 <header class="{{curNode.name}} {{curNode.service}} {{curNode.service}} nav-index-{{gService.currentTab}}" aria-label="header" ng-controller='tabsCtrl' >
 
   @@if (site === 'mew' ) {
     <div class="small announcement annoucement-danger">
-      <div class="container">Always check the URL and the connection is secure. Look for https://pyrus.ubiqsmart.com/. <a href="https://myetherwallet.groovehq.com/knowledge_base/topics/protecting-yourself-and-your-funds" target="_blank" rel="noopener">Be safe &amp; secure</a>.</div>
+      <div class="container">Always check the URL and the connection is secure. Look for https://pyrus.ubiqsmart.com/. <a href="https://kb.myetherwallet.com/en/getting-started/back-to-the-basics/" target="_blank" rel="noopener">Be safe &amp; secure</a>.</div>
     </div>
   }
 
@@ -83,7 +83,7 @@
               <p class="small col-xs-4 text-center">Fast</p>
               <p class="small col-xs-4 text-right">Fast AF</p>
               <p class="small" style="white-space:normal;font-weight:300;margin: 2rem 0 0;" translate="GAS_PRICE_Desc"></p>
-              <a class="small" translate="x_ReadMore" href="https://myetherwallet.groovehq.com/knowledge_base/topics/what-is-gas" target="_blank" rel="noopener"></a>
+              <a class="small" translate="x_ReadMore" href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html" target="_blank" rel="noopener"></a>
             </div>
           </ul>
         </span>
@@ -155,7 +155,7 @@
         @@if (site === 'cx' ) {
         <li ng-repeat="tab in tabNames track by $index" class="nav-item {{tab.name}}" ng-class="{active: $index==gService.currentTab}" ng-show="tab.cx" ng-click="tabClick($index)"> <a tabindex="0" aria-label="nav item: {{tab.name | translate}}" translate="{{tab.name}}"></a></li>
         }
-        <li class="nav-item help"><a href="https://myetherwallet.groovehq.com/help_center" target="_blank" rel="noopener">Help</a></li>
+        <li class="nav-item help"><a href="https://kb.myetherwallet.com" target="_blank" rel="noopener">Help</a></li>
       </ul>
     </div>
     <a aria-hidden="true" ng-show="showRightArrow" class="nav-arrow-right" ng-click="scrollRight(100);" ng-mouseover="scrollHoverIn(false,2);" ng-mouseleave="scrollHoverOut()">&#187;</a>

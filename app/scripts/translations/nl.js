@@ -81,7 +81,6 @@ NAV_Offline                 : 'Verzend Offline ',
 NAV_SendEther               : 'Verzend Ether & Tokens ',
 NAV_SendTokens              : 'Verzend Tokens ',
 NAV_SignMsg                 : 'Onderteken Bericht ',
-NAV_Swap                    : 'Omwisselen ',
 NAV_ViewWallet              : 'Bekijk Wallet Info ',
 NAV_YourWallets             : 'Jouw Wallets ',
 
@@ -298,28 +297,6 @@ NODE_Warning                : 'Je node dient HTTPS te zijn om met MyEtherWallet.
 NODE_Name                   : 'Node Naam',
 NODE_Port                   : 'Node Poort',
 NODE_CTA                    : 'Opslaan & Custom Node gebruiken',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Actuele Koersen ",
-SWAP_init_1                 : "Ik wil mijn ",
-SWAP_init_2                 : " omwisselen voor ", // "I want to swap my X ETH for X BTC"
-SWAP_init_CTA               : "Naar de volgende stap ", // or "Continue"
-SWAP_information            : "Je informatie ",
-SWAP_send_amt               : "Te verzenden bedrag ",
-SWAP_rec_amt                : "Te ontvangen bedrag ",
-SWAP_your_rate              : "Je wisselkoers ",
-SWAP_rec_add                : "Je ontvangst Adres ",
-SWAP_start_CTA              : "Start Omwisselen ",
-SWAP_ref_num                : "Je referentie nummer ",
-SWAP_time                   : "Resterende tijd om te verzenden ",
-SWAP_elapsed                : "Verstreken tijd sinds verzonden",
-SWAP_progress_1             : "Bestelling Gestart ",
-SWAP_progress_2             : "Wachten op je ", // Waiting for your BTC...
-SWAP_progress_3             : "Ontvangen! ", // ETH Received!
-SWAP_progress_4             : "Verzenden van je {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Bestelling Voltooid ",
-SWAP_order_CTA              : "Verzend alsjeblieft ", // Please send 1 ETH...
-SWAP_unlock                 : "Open je Wallet op deze pagina om ETH of Tokens direct te verzenden. ",
 
 /* Sign Message */
 MSG_message                 : 'Bericht ',

@@ -80,7 +80,6 @@ NAV_Offline                 : 'Send Offline ',
 NAV_SendEther               : 'Send UBQ & Tokens ',
 NAV_SendTokens              : 'Send Tokens ',
 NAV_SignMsg                 : 'Sign Message ',
-NAV_Swap                    : 'Swap ',
 NAV_ViewWallet              : 'View Wallet Info ',
 NAV_YourWallets             : 'Your Wallets ',
 
@@ -301,28 +300,6 @@ NODE_Warning                : 'Your node must be HTTPS in order to connect to it
 NODE_Name                   : 'Node Name',
 NODE_Port                   : 'Node Port',
 NODE_CTA                    : 'Save & Use Custom Node',
-
-/* Swap / Exchange */
-SWAP_rates                  : "Current Rates ",
-SWAP_init_1                 : "I want to swap my ",
-SWAP_init_2                 : " for ", // "I want to swap my X UBQ for X BTC"
-SWAP_init_CTA               : "Let's do this! ", // or "Continue"
-SWAP_information            : "Your Information ",
-SWAP_send_amt               : "Amount to send ",
-SWAP_rec_amt                : "Amount to receive ",
-SWAP_your_rate              : "Your rate ",
-SWAP_rec_add                : "Your Receiving Address ",
-SWAP_start_CTA              : "Start Swap ",
-SWAP_ref_num                : "Your reference number ",
-SWAP_time                   : "Time remaining to send ",
-SWAP_elapsed				        : "Time elapsed since sent ",
-SWAP_progress_1             : "Order Initiated ",
-SWAP_progress_2             : "Waiting for your ", // Waiting for your BTC...
-SWAP_progress_3             : "Received! ", // UBQ Received!
-SWAP_progress_4             : "Sending your {{orderResult.output.currency}} ",
-SWAP_progress_5             : "Order Complete ",
-SWAP_order_CTA              : "Please send ", // Please send 1 UBQ...
-SWAP_unlock                 : "Unlock your wallet to send UBQ or Tokens directly from this page. ",
 
 /* Sign Message */
 MSG_message                 : 'Message ',

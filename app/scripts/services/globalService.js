@@ -2,8 +2,6 @@
 var globalService = function($http, $httpParamSerializerJQLike) {
   ajaxReq.http = $http;
   ajaxReq.postSerializer = $httpParamSerializerJQLike;
-  ajaxReq.getETHvalue = nodes.ethPrice.getETHvalue;
-  ajaxReq.getRates = nodes.ethPrice.getRates;
 var tabs = {
   generateWallet: {
     id: 0,
@@ -33,10 +31,10 @@ var tabs = {
     mew: true,
     cx: true
   },
-  swap: {
+  swapRemoved: {
     id: 4,
-    name: "NAV_Swap",
-    url: "swap",
+    name: "",
+    url: "",
     mew: false,
     cx: false
   },
