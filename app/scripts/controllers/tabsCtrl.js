@@ -38,10 +38,10 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     }
     var setGasValues = function() {
         $scope.gas = {
-            curVal: 21,
+            curVal: 100,
             value: globalFuncs.localStorage.getItem(gasPriceKey, null) ? parseInt(globalFuncs.localStorage.getItem(gasPriceKey)) : 21,
-            max: 60,
-            min: 20
+            max: 500,
+            min: 80
         }
         ethFuncs.gasAdjustment = $scope.gas.value;
     }
@@ -96,10 +96,6 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
 
         if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.ubq_us));
         else if (nodeInfo.options == 'ubq') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.eth_eu));
-        /*else if (nodeInfo.options == 'etc') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.etc_epool));
-        else if (nodeInfo.options == 'rop') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rop_mew));
-        else if (nodeInfo.options == 'kov') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.kov_ethscan));
-        else if (nodeInfo.options == 'rin') tempObj = JSON.parse(JSON.stringify(nodes.nodeList.rin_ethscan));*/
         else if (nodeInfo.options == 'cus') {
             tempObj = JSON.parse(JSON.stringify(nodes.customNodeObj));
             tempObj.eip155 = nodeInfo.eip155;
@@ -162,11 +158,6 @@ var tabsCtrl = function($scope, globalService, $translate, $sce) {
     $scope.setTab = function(hval) {
         if (hval != '') {
             hval = hval.replace('#', '');
-            //          //Check if URL contains Parameters
-            //          if(hval.indexOf('=') != -1) {
-            //              //Remove URL parameter from hval
-            //              hval = hval.substring(0,hval.indexOf('='));
-            //          }
             for (var key in $scope.tabNames) {
                 if ($scope.tabNames[key].url == hval) {
                     $scope.activeTab = globalService.currentTab = $scope.tabNames[key].id;
