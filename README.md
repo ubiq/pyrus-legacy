@@ -12,9 +12,7 @@
 - [Twitter: https://twitter.com/ubiqsmart](https://twitter.com/ubiqsmart)
 - [Medium: https://blog.ubiqsmart.com](https://blog.ubiqsmart.com)
 - [Github Ubiq: https://github.com/Ubiq](https://github.com/Ubiq)
-- [Github Latest Releases: https://github.com/ubiq/pyruswallet/releases/latest](https://github.com/ubiq/pyruswallet/releases/latest)
-- [Ubiq Discord: https://discord.com/invite/ubiq](https://discord.com/invite/ubiq)
+- [Ubiq Discord: https://discord.com/invite/XaqzJB4](https://discord.com/invite/XaqzJB4)
 - [Reddit: https://www.reddit.com/r/Ubiq/](https://www.reddit.com/r/Ubiq/)
 -  The Ubiq Devs Donation Address: 0xE0F39621764F2540cd2bC3017DA041B1E4eEDCc2
--  MyEtherWallet Donation Address: 0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8
 
