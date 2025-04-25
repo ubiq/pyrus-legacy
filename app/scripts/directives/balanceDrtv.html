@@ -91,20 +91,4 @@
     </div>
   </div>
 
-  <div class="block" ng-show="ajaxReq.type=='ETH'">
-    <h5 translate="sidebar_Equiv">Equivalent Values:</h5>
-    <div class="row">
-      <ul class="account-info col-xs-6">
-        <li>BTC: <span class="mono wrap">{{wallet.btcBalance | number}}</span></li>
-        <li>USD: <span class="mono wrap">{{wallet.usdBalance | currency:"$"}}</span></li>
-        <li>CHF: <span class="mono wrap">{{wallet.chfBalance | currency:" "}}</span></li>
-      </ul>
-      <ul class="account-info col-xs-6">
-        <li>REP: <span class="mono wrap">{{wallet.repBalance | number}}</span></li>
-        <li>EUR: <span class="mono wrap">{{wallet.eurBalance | currency:"€"}}</span></li>
-        <li>GBP: <span class="mono wrap">{{wallet.gbpBalance | currency:"£"}}</span></li>
-      </ul>
-    </div>
-  </div>
-
 </aside>
